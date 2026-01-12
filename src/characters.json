@@ -910,7 +910,7 @@
         }
     },
     {
-        "id":"81",
+        "id": "81",
         "name": "Haruka 01",
         "character": "Haruka",
         "img": "Haruka/Haruka_01.png",
@@ -924,7 +924,7 @@
         }
     },
     {
-        "id":"82",
+        "id": "82",
         "name": "Haruka 02",
         "character": "Haruka",
         "img": "Haruka/Haruka_02.png",
@@ -938,7 +938,7 @@
         }
     },
     {
-        "id":"83",
+        "id": "83",
         "name": "Haruka 03",
         "character": "Haruka",
         "img": "Haruka/Haruka_03.png",
@@ -952,7 +952,7 @@
         }
     },
     {
-        "id":"84",
+        "id": "84",
         "name": "Haruka 04",
         "character": "Haruka",
         "img": "Haruka/Haruka_04.png",
@@ -966,7 +966,7 @@
         }
     },
     {
-        "id":"85",
+        "id": "85",
         "name": "Haruka 06",
         "character": "Haruka",
         "img": "Haruka/Haruka_06.png",
@@ -980,7 +980,7 @@
         }
     },
     {
-        "id":"86",
+        "id": "86",
         "name": "Haruka 07",
         "character": "Haruka",
         "img": "Haruka/Haruka_07.png",
@@ -994,7 +994,7 @@
         }
     },
     {
-        "id":"87",
+        "id": "87",
         "name": "Haruka 08",
         "character": "Haruka",
         "img": "Haruka/Haruka_08.png",
@@ -1008,7 +1008,7 @@
         }
     },
     {
-        "id":"88",
+        "id": "88",
         "name": "Haruka 09",
         "character": "Haruka",
         "img": "Haruka/Haruka_09.png",
@@ -1022,7 +1022,7 @@
         }
     },
     {
-        "id":"89",
+        "id": "89",
         "name": "Haruka 11",
         "character": "Haruka",
         "img": "Haruka/Haruka_11.png",
@@ -1036,7 +1036,7 @@
         }
     },
     {
-        "id":"90",
+        "id": "90",
         "name": "Haruka 12",
         "character": "Haruka",
         "img": "Haruka/Haruka_12.png",
@@ -1050,7 +1050,7 @@
         }
     },
     {
-        "id":"91",
+        "id": "91",
         "name": "Haruka 13",
         "character": "Haruka",
         "img": "Haruka/Haruka_13.png",
@@ -1064,7 +1064,7 @@
         }
     },
     {
-        "id":"92",
+        "id": "92",
         "name": "Haruka 14",
         "character": "Haruka",
         "img": "Haruka/Haruka_14.png",
@@ -1078,7 +1078,7 @@
         }
     },
     {
-        "id":"93",
+        "id": "93",
         "name": "Haruka 16",
         "character": "Haruka",
         "img": "Haruka/Haruka_16.png",
@@ -1092,7 +1092,7 @@
         }
     },
     {
-        "id":"94",
+        "id": "94",
         "name": "Honami 01",
         "character": "Honami",
         "img": "Honami/Honami_01.png",
@@ -1106,7 +1106,7 @@
         }
     },
     {
-        "id":"95",
+        "id": "95",
         "name": "Honami 02",
         "character": "Honami",
         "img": "Honami/Honami_02.png",
@@ -1120,7 +1120,7 @@
         }
     },
     {
-        "id":"96",
+        "id": "96",
         "name": "Honami 03",
         "character": "Honami",
         "img": "Honami/Honami_03.png",
@@ -1134,7 +1134,7 @@
         }
     },
     {
-        "id":"97",
+        "id": "97",
         "name": "Honami 04",
         "character": "Honami",
         "img": "Honami/Honami_04.png",
@@ -1148,7 +1148,7 @@
         }
     },
     {
-        "id":"98",
+        "id": "98",
         "name": "Honami 06",
         "character": "Honami",
         "img": "Honami/Honami_06.png",
@@ -1162,7 +1162,7 @@
         }
     },
     {
-        "id":"99",
+        "id": "99",
         "name": "Honami 07",
         "character": "Honami",
         "img": "Honami/Honami_07.png",
@@ -1176,7 +1176,7 @@
         }
     },
     {
-        "id":"100",
+        "id": "100",
         "name": "Honami 08",
         "character": "Honami",
         "img": "Honami/Honami_08.png",
@@ -1190,7 +1190,7 @@
         }
     },
     {
-        "id":"101",
+        "id": "101",
         "name": "Honami 09",
         "character": "Honami",
         "img": "Honami/Honami_09.png",
@@ -1204,7 +1204,7 @@
         }
     },
     {
-        "id":"102",
+        "id": "102",
         "name": "Honami 11",
         "character": "Honami",
         "img": "Honami/Honami_11.png",
@@ -1218,7 +1218,7 @@
         }
     },
     {
-        "id":"103",
+        "id": "103",
         "name": "Honami 12",
         "character": "Honami",
         "img": "Honami/Honami_12.png",
@@ -1232,7 +1232,7 @@
         }
     },
     {
-        "id":"104",
+        "id": "104",
         "name": "Honami 13",
         "character": "Honami",
         "img": "Honami/Honami_13.png",
@@ -1246,7 +1246,7 @@
         }
     },
     {
-        "id":"105",
+        "id": "105",
         "name": "Honami 14",
         "character": "Honami",
         "img": "Honami/Honami_14.png",
@@ -1260,7 +1260,7 @@
         }
     },
     {
-        "id":"106",
+        "id": "106",
         "name": "Honami 16",
         "character": "Honami",
         "img": "Honami/Honami_16.png",
@@ -1274,7 +1274,7 @@
         }
     },
     {
-        "id":"107",
+        "id": "107",
         "name": "Honami 17",
         "character": "Honami",
         "img": "Honami/Honami_17.png",
@@ -1288,7 +1288,7 @@
         }
     },
     {
-        "id":"108",
+        "id": "108",
         "name": "Honami 18",
         "character": "Honami",
         "img": "Honami/Honami_18.png",
@@ -1302,7 +1302,7 @@
         }
     },
     {
-        "id":"109",
+        "id": "109",
         "name": "Ichika 01",
         "character": "Ichika",
         "img": "Ichika/Ichika_01.png",
@@ -1316,7 +1316,7 @@
         }
     },
     {
-        "id":"110",
+        "id": "110",
         "name": "Ichika 02",
         "character": "Ichika",
         "img": "Ichika/Ichika_02.png",
@@ -1330,7 +1330,7 @@
         }
     },
     {
-        "id":"111",
+        "id": "111",
         "name": "Ichika 03",
         "character": "Ichika",
         "img": "Ichika/Ichika_03.png",
@@ -1344,7 +1344,7 @@
         }
     },
     {
-        "id":"112",
+        "id": "112",
         "name": "Ichika 04",
         "character": "Ichika",
         "img": "Ichika/Ichika_04.png",
@@ -1358,7 +1358,7 @@
         }
     },
     {
-        "id":"113",
+        "id": "113",
         "name": "Ichika 06",
         "character": "Ichika",
         "img": "Ichika/Ichika_06.png",
@@ -1372,7 +1372,7 @@
         }
     },
     {
-        "id":"114",
+        "id": "114",
         "name": "Ichika 07",
         "character": "Ichika",
         "img": "Ichika/Ichika_07.png",
@@ -1386,7 +1386,7 @@
         }
     },
     {
-        "id":"115",
+        "id": "115",
         "name": "Ichika 08",
         "character": "Ichika",
         "img": "Ichika/Ichika_08.png",
@@ -1400,7 +1400,7 @@
         }
     },
     {
-        "id":"116",
+        "id": "116",
         "name": "Ichika 09",
         "character": "Ichika",
         "img": "Ichika/Ichika_09.png",
@@ -1414,7 +1414,7 @@
         }
     },
     {
-        "id":"117",
+        "id": "117",
         "name": "Ichika 11",
         "character": "Ichika",
         "img": "Ichika/Ichika_11.png",
@@ -1428,7 +1428,7 @@
         }
     },
     {
-        "id":"118",
+        "id": "118",
         "name": "Ichika 12",
         "character": "Ichika",
         "img": "Ichika/Ichika_12.png",
@@ -1442,7 +1442,7 @@
         }
     },
     {
-        "id":"119",
+        "id": "119",
         "name": "Ichika 13",
         "character": "Ichika",
         "img": "Ichika/Ichika_13.png",
@@ -1456,7 +1456,7 @@
         }
     },
     {
-        "id":"120",
+        "id": "120",
         "name": "Ichika 14",
         "character": "Ichika",
         "img": "Ichika/Ichika_14.png",
@@ -1470,7 +1470,7 @@
         }
     },
     {
-        "id":"121",
+        "id": "121",
         "name": "Ichika 16",
         "character": "Ichika",
         "img": "Ichika/Ichika_16.png",
@@ -1484,7 +1484,7 @@
         }
     },
     {
-        "id":"122",
+        "id": "122",
         "name": "Ichika 17",
         "character": "Ichika",
         "img": "Ichika/Ichika_17.png",
@@ -1498,7 +1498,7 @@
         }
     },
     {
-        "id":"123",
+        "id": "123",
         "name": "Ichika 18",
         "character": "Ichika",
         "img": "Ichika/Ichika_18.png",
@@ -1512,7 +1512,7 @@
         }
     },
     {
-        "id":"124",
+        "id": "124",
         "name": "KAITO 01",
         "character": "KAITO",
         "img": "KAITO/KAITO_01.png",
@@ -1526,7 +1526,7 @@
         }
     },
     {
-        "id":"125",
+        "id": "125",
         "name": "KAITO 02",
         "character": "KAITO",
         "img": "KAITO/KAITO_02.png",
@@ -1540,7 +1540,7 @@
         }
     },
     {
-        "id":"126",
+        "id": "126",
         "name": "KAITO 03",
         "character": "KAITO",
         "img": "KAITO/KAITO_03.png",
@@ -1554,7 +1554,7 @@
         }
     },
     {
-        "id":"127",
+        "id": "127",
         "name": "KAITO 04",
         "character": "KAITO",
         "img": "KAITO/KAITO_04.png",
@@ -1568,7 +1568,7 @@
         }
     },
     {
-        "id":"128",
+        "id": "128",
         "name": "KAITO 06",
         "character": "KAITO",
         "img": "KAITO/KAITO_06.png",
@@ -1582,7 +1582,7 @@
         }
     },
     {
-        "id":"129",
+        "id": "129",
         "name": "KAITO 07",
         "character": "KAITO",
         "img": "KAITO/KAITO_07.png",
@@ -1596,7 +1596,7 @@
         }
     },
     {
-        "id":"130",
+        "id": "130",
         "name": "KAITO 08",
         "character": "KAITO",
         "img": "KAITO/KAITO_08.png",
@@ -1610,7 +1610,7 @@
         }
     },
     {
-        "id":"131",
+        "id": "131",
         "name": "KAITO 09",
         "character": "KAITO",
         "img": "KAITO/KAITO_09.png",
@@ -1624,7 +1624,7 @@
         }
     },
     {
-        "id":"132",
+        "id": "132",
         "name": "KAITO 11",
         "character": "KAITO",
         "img": "KAITO/KAITO_11.png",
@@ -1638,7 +1638,7 @@
         }
     },
     {
-        "id":"133",
+        "id": "133",
         "name": "KAITO 12",
         "character": "KAITO",
         "img": "KAITO/KAITO_12.png",
@@ -1652,7 +1652,7 @@
         }
     },
     {
-        "id":"134",
+        "id": "134",
         "name": "KAITO 13",
         "character": "KAITO",
         "img": "KAITO/KAITO_13.png",
@@ -1666,7 +1666,7 @@
         }
     },
     {
-        "id":"135",
+        "id": "135",
         "name": "KAITO 14",
         "character": "KAITO",
         "img": "KAITO/KAITO_14.png",
@@ -1680,7 +1680,7 @@
         }
     },
     {
-        "id":"136",
+        "id": "136",
         "name": "KAITO 16",
         "character": "KAITO",
         "img": "KAITO/KAITO_16.png",
@@ -1694,7 +1694,7 @@
         }
     },
     {
-        "id":"137",
+        "id": "137",
         "name": "Kanade 01",
         "character": "Kanade",
         "img": "Kanade/Kanade_01.png",
@@ -1708,7 +1708,7 @@
         }
     },
     {
-        "id":"138",
+        "id": "138",
         "name": "Kanade 02",
         "character": "Kanade",
         "img": "Kanade/Kanade_02.png",
@@ -1722,7 +1722,7 @@
         }
     },
     {
-        "id":"139",
+        "id": "139",
         "name": "Kanade 03",
         "character": "Kanade",
         "img": "Kanade/Kanade_03.png",
@@ -1736,7 +1736,7 @@
         }
     },
     {
-        "id":"140",
+        "id": "140",
         "name": "Kanade 04",
         "character": "Kanade",
         "img": "Kanade/Kanade_04.png",
@@ -1750,7 +1750,7 @@
         }
     },
     {
-        "id":"141",
+        "id": "141",
         "name": "Kanade 06",
         "character": "Kanade",
         "img": "Kanade/Kanade_06.png",
@@ -1764,7 +1764,7 @@
         }
     },
     {
-        "id":"142",
+        "id": "142",
         "name": "Kanade 07",
         "character": "Kanade",
         "img": "Kanade/Kanade_07.png",
@@ -1778,7 +1778,7 @@
         }
     },
     {
-        "id":"143",
+        "id": "143",
         "name": "Kanade 08",
         "character": "Kanade",
         "img": "Kanade/Kanade_08.png",
@@ -1792,7 +1792,7 @@
         }
     },
     {
-        "id":"144",
+        "id": "144",
         "name": "Kanade 09",
         "character": "Kanade",
         "img": "Kanade/Kanade_09.png",
@@ -1806,7 +1806,7 @@
         }
     },
     {
-        "id":"145",
+        "id": "145",
         "name": "Kanade 11",
         "character": "Kanade",
         "img": "Kanade/Kanade_11.png",
@@ -1820,7 +1820,7 @@
         }
     },
     {
-        "id":"146",
+        "id": "146",
         "name": "Kanade 12",
         "character": "Kanade",
         "img": "Kanade/Kanade_12.png",
@@ -1834,7 +1834,7 @@
         }
     },
     {
-        "id":"147",
+        "id": "147",
         "name": "Kanade 13",
         "character": "Kanade",
         "img": "Kanade/Kanade_13.png",
@@ -1848,7 +1848,7 @@
         }
     },
     {
-        "id":"148",
+        "id": "148",
         "name": "Kanade 14",
         "character": "Kanade",
         "img": "Kanade/Kanade_14.png",
@@ -1862,7 +1862,7 @@
         }
     },
     {
-        "id":"149",
+        "id": "149",
         "name": "Kanade 16",
         "character": "Kanade",
         "img": "Kanade/Kanade_16.png",
@@ -1876,7 +1876,7 @@
         }
     },
     {
-        "id":"150",
+        "id": "150",
         "name": "Kanade 17",
         "character": "Kanade",
         "img": "Kanade/Kanade_17.png",
@@ -1890,7 +1890,7 @@
         }
     },
     {
-        "id":"151",
+        "id": "151",
         "name": "Kohane 01",
         "character": "Kohane",
         "img": "Kohane/Kohane_01.png",
@@ -1904,7 +1904,7 @@
         }
     },
     {
-        "id":"152",
+        "id": "152",
         "name": "Kohane 02",
         "character": "Kohane",
         "img": "Kohane/Kohane_02.png",
@@ -1918,7 +1918,7 @@
         }
     },
     {
-        "id":"153",
+        "id": "153",
         "name": "Kohane 03",
         "character": "Kohane",
         "img": "Kohane/Kohane_03.png",
@@ -1932,7 +1932,7 @@
         }
     },
     {
-        "id":"154",
+        "id": "154",
         "name": "Kohane 04",
         "character": "Kohane",
         "img": "Kohane/Kohane_04.png",
@@ -1946,7 +1946,7 @@
         }
     },
     {
-        "id":"155",
+        "id": "155",
         "name": "Kohane 06",
         "character": "Kohane",
         "img": "Kohane/Kohane_06.png",
@@ -1960,7 +1960,7 @@
         }
     },
     {
-        "id":"156",
+        "id": "156",
         "name": "Kohane 07",
         "character": "Kohane",
         "img": "Kohane/Kohane_07.png",
@@ -1974,7 +1974,7 @@
         }
     },
     {
-        "id":"157",
+        "id": "157",
         "name": "Kohane 08",
         "character": "Kohane",
         "img": "Kohane/Kohane_08.png",
@@ -1988,7 +1988,7 @@
         }
     },
     {
-        "id":"158",
+        "id": "158",
         "name": "Kohane 09",
         "character": "Kohane",
         "img": "Kohane/Kohane_09.png",
@@ -2002,7 +2002,7 @@
         }
     },
     {
-        "id":"159",
+        "id": "159",
         "name": "Kohane 11",
         "character": "Kohane",
         "img": "Kohane/Kohane_11.png",
@@ -2016,7 +2016,7 @@
         }
     },
     {
-        "id":"160",
+        "id": "160",
         "name": "Kohane 12",
         "character": "Kohane",
         "img": "Kohane/Kohane_12.png",
@@ -2030,7 +2030,7 @@
         }
     },
     {
-        "id":"161",
+        "id": "161",
         "name": "Kohane 13",
         "character": "Kohane",
         "img": "Kohane/Kohane_13.png",
@@ -2044,7 +2044,7 @@
         }
     },
     {
-        "id":"162",
+        "id": "162",
         "name": "Kohane 14",
         "character": "Kohane",
         "img": "Kohane/Kohane_14.png",
@@ -2058,7 +2058,7 @@
         }
     },
     {
-        "id":"163",
+        "id": "163",
         "name": "Kohane 16",
         "character": "Kohane",
         "img": "Kohane/Kohane_16.png",
@@ -2072,7 +2072,7 @@
         }
     },
     {
-        "id":"164",
+        "id": "164",
         "name": "Kohane 17",
         "character": "Kohane",
         "img": "Kohane/Kohane_17.png",
@@ -2086,7 +2086,7 @@
         }
     },
     {
-        "id":"165",
+        "id": "165",
         "name": "Len 01",
         "character": "Len",
         "img": "Len/Len_01.png",
@@ -2100,7 +2100,7 @@
         }
     },
     {
-        "id":"166",
+        "id": "166",
         "name": "Len 02",
         "character": "Len",
         "img": "Len/Len_02.png",
@@ -2114,7 +2114,7 @@
         }
     },
     {
-        "id":"167",
+        "id": "167",
         "name": "Len 03",
         "character": "Len",
         "img": "Len/Len_03.png",
@@ -2128,7 +2128,7 @@
         }
     },
     {
-        "id":"168",
+        "id": "168",
         "name": "Len 04",
         "character": "Len",
         "img": "Len/Len_04.png",
@@ -2142,7 +2142,7 @@
         }
     },
     {
-        "id":"169",
+        "id": "169",
         "name": "Len 06",
         "character": "Len",
         "img": "Len/Len_06.png",
@@ -2156,7 +2156,7 @@
         }
     },
     {
-        "id":"170",
+        "id": "170",
         "name": "Len 07",
         "character": "Len",
         "img": "Len/Len_07.png",
@@ -2170,7 +2170,7 @@
         }
     },
     {
-        "id":"171",
+        "id": "171",
         "name": "Len 08",
         "character": "Len",
         "img": "Len/Len_08.png",
@@ -2184,7 +2184,7 @@
         }
     },
     {
-        "id":"172",
+        "id": "172",
         "name": "Len 09",
         "character": "Len",
         "img": "Len/Len_09.png",
@@ -2198,7 +2198,7 @@
         }
     },
     {
-        "id":"173",
+        "id": "173",
         "name": "Len 11",
         "character": "Len",
         "img": "Len/Len_11.png",
@@ -2212,7 +2212,7 @@
         }
     },
     {
-        "id":"174",
+        "id": "174",
         "name": "Len 12",
         "character": "Len",
         "img": "Len/Len_12.png",
@@ -2226,7 +2226,7 @@
         }
     },
     {
-        "id":"175",
+        "id": "175",
         "name": "Len 13",
         "character": "Len",
         "img": "Len/Len_13.png",
@@ -2240,7 +2240,7 @@
         }
     },
     {
-        "id":"176",
+        "id": "176",
         "name": "Len 14",
         "character": "Len",
         "img": "Len/Len_14.png",
@@ -2254,7 +2254,7 @@
         }
     },
     {
-        "id":"177",
+        "id": "177",
         "name": "Len 16",
         "character": "Len",
         "img": "Len/Len_16.png",
@@ -2268,7 +2268,7 @@
         }
     },
     {
-        "id":"178",
+        "id": "178",
         "name": "Len 17",
         "character": "Len",
         "img": "Len/Len_17.png",
@@ -2282,7 +2282,7 @@
         }
     },
     {
-        "id":"179",
+        "id": "179",
         "name": "Luka 01",
         "character": "Luka",
         "img": "Luka/Luka_01.png",
@@ -2296,7 +2296,7 @@
         }
     },
     {
-        "id":"180",
+        "id": "180",
         "name": "Luka 02",
         "character": "Luka",
         "img": "Luka/Luka_02.png",
@@ -2310,7 +2310,7 @@
         }
     },
     {
-        "id":"181",
+        "id": "181",
         "name": "Luka 03",
         "character": "Luka",
         "img": "Luka/Luka_03.png",
@@ -2324,7 +2324,7 @@
         }
     },
     {
-        "id":"182",
+        "id": "182",
         "name": "Luka 04",
         "character": "Luka",
         "img": "Luka/Luka_04.png",
@@ -2338,7 +2338,7 @@
         }
     },
     {
-        "id":"183",
+        "id": "183",
         "name": "Luka 06",
         "character": "Luka",
         "img": "Luka/Luka_06.png",
@@ -2352,7 +2352,7 @@
         }
     },
     {
-        "id":"184",
+        "id": "184",
         "name": "Luka 07",
         "character": "Luka",
         "img": "Luka/Luka_07.png",
@@ -2366,7 +2366,7 @@
         }
     },
     {
-        "id":"185",
+        "id": "185",
         "name": "Luka 08",
         "character": "Luka",
         "img": "Luka/Luka_08.png",
@@ -2380,7 +2380,7 @@
         }
     },
     {
-        "id":"186",
+        "id": "186",
         "name": "Luka 09",
         "character": "Luka",
         "img": "Luka/Luka_09.png",
@@ -2394,7 +2394,7 @@
         }
     },
     {
-        "id":"187",
+        "id": "187",
         "name": "Luka 11",
         "character": "Luka",
         "img": "Luka/Luka_11.png",
@@ -2408,7 +2408,7 @@
         }
     },
     {
-        "id":"188",
+        "id": "188",
         "name": "Luka 12",
         "character": "Luka",
         "img": "Luka/Luka_12.png",
@@ -2422,7 +2422,7 @@
         }
     },
     {
-        "id":"189",
+        "id": "189",
         "name": "Luka 13",
         "character": "Luka",
         "img": "Luka/Luka_13.png",
@@ -2436,7 +2436,7 @@
         }
     },
     {
-        "id":"190",
+        "id": "190",
         "name": "Luka 14",
         "character": "Luka",
         "img": "Luka/Luka_14.png",
@@ -2450,7 +2450,7 @@
         }
     },
     {
-        "id":"191",
+        "id": "191",
         "name": "Luka 16",
         "character": "Luka",
         "img": "Luka/Luka_16.png",
@@ -2464,7 +2464,7 @@
         }
     },
     {
-        "id":"192",
+        "id": "192",
         "name": "Mafuyu 01",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_01.png",
@@ -2478,7 +2478,7 @@
         }
     },
     {
-        "id":"193",
+        "id": "193",
         "name": "Mafuyu 02",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_02.png",
@@ -2492,7 +2492,7 @@
         }
     },
     {
-        "id":"194",
+        "id": "194",
         "name": "Mafuyu 03",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_03.png",
@@ -2506,7 +2506,7 @@
         }
     },
     {
-        "id":"195",
+        "id": "195",
         "name": "Mafuyu 04",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_04.png",
@@ -2520,7 +2520,7 @@
         }
     },
     {
-        "id":"196",
+        "id": "196",
         "name": "Mafuyu 06",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_06.png",
@@ -2534,7 +2534,7 @@
         }
     },
     {
-        "id":"197",
+        "id": "197",
         "name": "Mafuyu 07",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_07.png",
@@ -2548,7 +2548,7 @@
         }
     },
     {
-        "id":"198",
+        "id": "198",
         "name": "Mafuyu 08",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_08.png",
@@ -2562,7 +2562,7 @@
         }
     },
     {
-        "id":"199",
+        "id": "199",
         "name": "Mafuyu 09",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_09.png",
@@ -2576,7 +2576,7 @@
         }
     },
     {
-        "id":"200",
+        "id": "200",
         "name": "Mafuyu 11",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_11.png",
@@ -2590,7 +2590,7 @@
         }
     },
     {
-        "id":"201",
+        "id": "201",
         "name": "Mafuyu 12",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_12.png",
@@ -2604,7 +2604,7 @@
         }
     },
     {
-        "id":"202",
+        "id": "202",
         "name": "Mafuyu 13",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_13.png",
@@ -2618,7 +2618,7 @@
         }
     },
     {
-        "id":"203",
+        "id": "203",
         "name": "Mafuyu 14",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_14.png",
@@ -2632,7 +2632,7 @@
         }
     },
     {
-        "id":"204",
+        "id": "204",
         "name": "Mafuyu 16",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_16.png",
@@ -2646,7 +2646,7 @@
         }
     },
     {
-        "id":"205",
+        "id": "205",
         "name": "Mafuyu 17",
         "character": "Mafuyu",
         "img": "Mafuyu/Mafuyu_17.png",
@@ -2660,7 +2660,7 @@
         }
     },
     {
-        "id":"206",
+        "id": "206",
         "name": "Meiko 01",
         "character": "Meiko",
         "img": "Meiko/Meiko_01.png",
@@ -2674,7 +2674,7 @@
         }
     },
     {
-        "id":"207",
+        "id": "207",
         "name": "Meiko 02",
         "character": "Meiko",
         "img": "Meiko/Meiko_02.png",
@@ -2688,7 +2688,7 @@
         }
     },
     {
-        "id":"208",
+        "id": "208",
         "name": "Meiko 03",
         "character": "Meiko",
         "img": "Meiko/Meiko_03.png",
@@ -2702,7 +2702,7 @@
         }
     },
     {
-        "id":"209",
+        "id": "209",
         "name": "Meiko 04",
         "character": "Meiko",
         "img": "Meiko/Meiko_04.png",
@@ -2716,7 +2716,7 @@
         }
     },
     {
-        "id":"210",
+        "id": "210",
         "name": "Meiko 06",
         "character": "Meiko",
         "img": "Meiko/Meiko_06.png",
@@ -2730,7 +2730,7 @@
         }
     },
     {
-        "id":"211",
+        "id": "211",
         "name": "Meiko 07",
         "character": "Meiko",
         "img": "Meiko/Meiko_07.png",
@@ -2744,7 +2744,7 @@
         }
     },
     {
-        "id":"212",
+        "id": "212",
         "name": "Meiko 08",
         "character": "Meiko",
         "img": "Meiko/Meiko_08.png",
@@ -2758,7 +2758,7 @@
         }
     },
     {
-        "id":"213",
+        "id": "213",
         "name": "Meiko 09",
         "character": "Meiko",
         "img": "Meiko/Meiko_09.png",
@@ -2772,7 +2772,7 @@
         }
     },
     {
-        "id":"214",
+        "id": "214",
         "name": "Meiko 11",
         "character": "Meiko",
         "img": "Meiko/Meiko_11.png",
@@ -2786,7 +2786,7 @@
         }
     },
     {
-        "id":"215",
+        "id": "215",
         "name": "Meiko 12",
         "character": "Meiko",
         "img": "Meiko/Meiko_12.png",
@@ -2800,7 +2800,7 @@
         }
     },
     {
-        "id":"216",
+        "id": "216",
         "name": "Meiko 13",
         "character": "Meiko",
         "img": "Meiko/Meiko_13.png",
@@ -2814,7 +2814,7 @@
         }
     },
     {
-        "id":"217",
+        "id": "217",
         "name": "Meiko 14",
         "character": "Meiko",
         "img": "Meiko/Meiko_14.png",
@@ -2828,7 +2828,7 @@
         }
     },
     {
-        "id":"218",
+        "id": "218",
         "name": "Meiko 16",
         "character": "Meiko",
         "img": "Meiko/Meiko_16.png",
@@ -2842,7 +2842,7 @@
         }
     },
     {
-        "id":"219",
+        "id": "219",
         "name": "Miku 01",
         "character": "Miku",
         "img": "Miku/Miku_01.png",
@@ -2856,7 +2856,7 @@
         }
     },
     {
-        "id":"220",
+        "id": "220",
         "name": "Miku 02",
         "character": "Miku",
         "img": "Miku/Miku_02.png",
@@ -2870,7 +2870,7 @@
         }
     },
     {
-        "id":"221",
+        "id": "221",
         "name": "Miku 03",
         "character": "Miku",
         "img": "Miku/Miku_03.png",
@@ -2884,7 +2884,7 @@
         }
     },
     {
-        "id":"222",
+        "id": "222",
         "name": "Miku 04",
         "character": "Miku",
         "img": "Miku/Miku_04.png",
@@ -2898,7 +2898,7 @@
         }
     },
     {
-        "id":"223",
+        "id": "223",
         "name": "Miku 06",
         "character": "Miku",
         "img": "Miku/Miku_06.png",
@@ -2912,7 +2912,7 @@
         }
     },
     {
-        "id":"224",
+        "id": "224",
         "name": "Miku 07",
         "character": "Miku",
         "img": "Miku/Miku_07.png",
@@ -2926,7 +2926,7 @@
         }
     },
     {
-        "id":"225",
+        "id": "225",
         "name": "Miku 08",
         "character": "Miku",
         "img": "Miku/Miku_08.png",
@@ -2940,7 +2940,7 @@
         }
     },
     {
-        "id":"226",
+        "id": "226",
         "name": "Miku 09",
         "character": "Miku",
         "img": "Miku/Miku_09.png",
@@ -2954,7 +2954,7 @@
         }
     },
     {
-        "id":"227",
+        "id": "227",
         "name": "Miku 11",
         "character": "Miku",
         "img": "Miku/Miku_11.png",
@@ -2968,7 +2968,7 @@
         }
     },
     {
-        "id":"228",
+        "id": "228",
         "name": "Miku 12",
         "character": "Miku",
         "img": "Miku/Miku_12.png",
@@ -2982,7 +2982,7 @@
         }
     },
     {
-        "id":"229",
+        "id": "229",
         "name": "Miku 13",
         "character": "Miku",
         "img": "Miku/Miku_13.png",
@@ -2996,7 +2996,7 @@
         }
     },
     {
-        "id":"230",
+        "id": "230",
         "name": "Miku 14",
         "character": "Miku",
         "img": "Miku/Miku_14.png",
@@ -3010,7 +3010,7 @@
         }
     },
     {
-        "id":"231",
+        "id": "231",
         "name": "Miku 16",
         "character": "Miku",
         "img": "Miku/Miku_16.png",
@@ -3024,7 +3024,7 @@
         }
     },
     {
-        "id":"232",
+        "id": "232",
         "name": "Minori 01",
         "character": "Minori",
         "img": "Minori/Minori_01.png",
@@ -3038,7 +3038,7 @@
         }
     },
     {
-        "id":"233",
+        "id": "233",
         "name": "Minori 02",
         "character": "Minori",
         "img": "Minori/Minori_02.png",
@@ -3052,7 +3052,7 @@
         }
     },
     {
-        "id":"234",
+        "id": "234",
         "name": "Minori 03",
         "character": "Minori",
         "img": "Minori/Minori_03.png",
@@ -3066,7 +3066,7 @@
         }
     },
     {
-        "id":"235",
+        "id": "235",
         "name": "Minori 04",
         "character": "Minori",
         "img": "Minori/Minori_04.png",
@@ -3080,7 +3080,7 @@
         }
     },
     {
-        "id":"236",
+        "id": "236",
         "name": "Minori 06",
         "character": "Minori",
         "img": "Minori/Minori_06.png",
@@ -3094,7 +3094,7 @@
         }
     },
     {
-        "id":"237",
+        "id": "237",
         "name": "Minori 07",
         "character": "Minori",
         "img": "Minori/Minori_07.png",
@@ -3108,7 +3108,7 @@
         }
     },
     {
-        "id":"238",
+        "id": "238",
         "name": "Minori 08",
         "character": "Minori",
         "img": "Minori/Minori_08.png",
@@ -3122,7 +3122,7 @@
         }
     },
     {
-        "id":"239",
+        "id": "239",
         "name": "Minori 09",
         "character": "Minori",
         "img": "Minori/Minori_09.png",
@@ -3136,7 +3136,7 @@
         }
     },
     {
-        "id":"240",
+        "id": "240",
         "name": "Minori 11",
         "character": "Minori",
         "img": "Minori/Minori_11.png",
@@ -3150,7 +3150,7 @@
         }
     },
     {
-        "id":"241",
+        "id": "241",
         "name": "Minori 12",
         "character": "Minori",
         "img": "Minori/Minori_12.png",
@@ -3164,7 +3164,7 @@
         }
     },
     {
-        "id":"242",
+        "id": "242",
         "name": "Minori 13",
         "character": "Minori",
         "img": "Minori/Minori_13.png",
@@ -3178,7 +3178,7 @@
         }
     },
     {
-        "id":"243",
+        "id": "243",
         "name": "Minori 14",
         "character": "Minori",
         "img": "Minori/Minori_14.png",
@@ -3192,7 +3192,7 @@
         }
     },
     {
-        "id":"244",
+        "id": "244",
         "name": "Minori 16",
         "character": "Minori",
         "img": "Minori/Minori_16.png",
@@ -3206,7 +3206,7 @@
         }
     },
     {
-        "id":"245",
+        "id": "245",
         "name": "Minori 17",
         "character": "Minori",
         "img": "Minori/Minori_17.png",
@@ -3220,7 +3220,7 @@
         }
     },
     {
-        "id":"246",
+        "id": "246",
         "name": "Mizuki 01",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_01.png",
@@ -3234,7 +3234,7 @@
         }
     },
     {
-        "id":"247",
+        "id": "247",
         "name": "Mizuki 02",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_02.png",
@@ -3248,7 +3248,7 @@
         }
     },
     {
-        "id":"248",
+        "id": "248",
         "name": "Mizuki 03",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_03.png",
@@ -3262,7 +3262,7 @@
         }
     },
     {
-        "id":"249",
+        "id": "249",
         "name": "Mizuki 04",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_04.png",
@@ -3276,7 +3276,7 @@
         }
     },
     {
-        "id":"250",
+        "id": "250",
         "name": "Mizuki 06",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_06.png",
@@ -3290,7 +3290,7 @@
         }
     },
     {
-        "id":"251",
+        "id": "251",
         "name": "Mizuki 07",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_07.png",
@@ -3304,7 +3304,7 @@
         }
     },
     {
-        "id":"252",
+        "id": "252",
         "name": "Mizuki 08",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_08.png",
@@ -3318,7 +3318,7 @@
         }
     },
     {
-        "id":"253",
+        "id": "253",
         "name": "Mizuki 09",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_09.png",
@@ -3332,7 +3332,7 @@
         }
     },
     {
-        "id":"254",
+        "id": "254",
         "name": "Mizuki 11",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_11.png",
@@ -3346,7 +3346,7 @@
         }
     },
     {
-        "id":"255",
+        "id": "255",
         "name": "Mizuki 12",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_12.png",
@@ -3360,7 +3360,7 @@
         }
     },
     {
-        "id":"256",
+        "id": "256",
         "name": "Mizuki 13",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_13.png",
@@ -3374,7 +3374,7 @@
         }
     },
     {
-        "id":"257",
+        "id": "257",
         "name": "Mizuki 14",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_14.png",
@@ -3388,7 +3388,7 @@
         }
     },
     {
-        "id":"258",
+        "id": "258",
         "name": "Mizuki 16",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_16.png",
@@ -3402,7 +3402,7 @@
         }
     },
     {
-        "id":"259",
+        "id": "259",
         "name": "Mizuki 17",
         "character": "Mizuki",
         "img": "Mizuki/Mizuki_17.png",
@@ -3416,7 +3416,7 @@
         }
     },
     {
-        "id":"260",
+        "id": "260",
         "name": "Nene 01",
         "character": "Nene",
         "img": "Nene/Nene_01.png",
@@ -3430,7 +3430,7 @@
         }
     },
     {
-        "id":"261",
+        "id": "261",
         "name": "Nene 02",
         "character": "Nene",
         "img": "Nene/Nene_02.png",
@@ -3444,7 +3444,7 @@
         }
     },
     {
-        "id":"262",
+        "id": "262",
         "name": "Nene 03",
         "character": "Nene",
         "img": "Nene/Nene_03.png",
@@ -3458,7 +3458,7 @@
         }
     },
     {
-        "id":"263",
+        "id": "263",
         "name": "Nene 04",
         "character": "Nene",
         "img": "Nene/Nene_04.png",
@@ -3472,7 +3472,7 @@
         }
     },
     {
-        "id":"264",
+        "id": "264",
         "name": "Nene 06",
         "character": "Nene",
         "img": "Nene/Nene_06.png",
@@ -3486,7 +3486,7 @@
         }
     },
     {
-        "id":"265",
+        "id": "265",
         "name": "Nene 07",
         "character": "Nene",
         "img": "Nene/Nene_07.png",
@@ -3500,7 +3500,7 @@
         }
     },
     {
-        "id":"266",
+        "id": "266",
         "name": "Nene 08",
         "character": "Nene",
         "img": "Nene/Nene_08.png",
@@ -3514,7 +3514,7 @@
         }
     },
     {
-        "id":"267",
+        "id": "267",
         "name": "Nene 09",
         "character": "Nene",
         "img": "Nene/Nene_09.png",
@@ -3528,7 +3528,7 @@
         }
     },
     {
-        "id":"268",
+        "id": "268",
         "name": "Nene 11",
         "character": "Nene",
         "img": "Nene/Nene_11.png",
@@ -3542,7 +3542,7 @@
         }
     },
     {
-        "id":"269",
+        "id": "269",
         "name": "Nene 12",
         "character": "Nene",
         "img": "Nene/Nene_12.png",
@@ -3556,7 +3556,7 @@
         }
     },
     {
-        "id":"270",
+        "id": "270",
         "name": "Nene 13",
         "character": "Nene",
         "img": "Nene/Nene_13.png",
@@ -3570,7 +3570,7 @@
         }
     },
     {
-        "id":"271",
+        "id": "271",
         "name": "Nene 14",
         "character": "Nene",
         "img": "Nene/Nene_14.png",
@@ -3584,7 +3584,7 @@
         }
     },
     {
-        "id":"272",
+        "id": "272",
         "name": "Nene 16",
         "character": "Nene",
         "img": "Nene/Nene_16.png",
@@ -3598,7 +3598,7 @@
         }
     },
     {
-        "id":"273",
+        "id": "273",
         "name": "Rin 01",
         "character": "Rin",
         "img": "Rin/Rin_01.png",
@@ -3612,7 +3612,7 @@
         }
     },
     {
-        "id":"274",
+        "id": "274",
         "name": "Rin 02",
         "character": "Rin",
         "img": "Rin/Rin_02.png",
@@ -3626,7 +3626,7 @@
         }
     },
     {
-        "id":"275",
+        "id": "275",
         "name": "Rin 03",
         "character": "Rin",
         "img": "Rin/Rin_03.png",
@@ -3640,7 +3640,7 @@
         }
     },
     {
-        "id":"276",
+        "id": "276",
         "name": "Rin 04",
         "character": "Rin",
         "img": "Rin/Rin_04.png",
@@ -3654,7 +3654,7 @@
         }
     },
     {
-        "id":"277",
+        "id": "277",
         "name": "Rin 06",
         "character": "Rin",
         "img": "Rin/Rin_06.png",
@@ -3668,7 +3668,7 @@
         }
     },
     {
-        "id":"278",
+        "id": "278",
         "name": "Rin 07",
         "character": "Rin",
         "img": "Rin/Rin_07.png",
@@ -3682,7 +3682,7 @@
         }
     },
     {
-        "id":"279",
+        "id": "279",
         "name": "Rin 08",
         "character": "Rin",
         "img": "Rin/Rin_08.png",
@@ -3696,7 +3696,7 @@
         }
     },
     {
-        "id":"280",
+        "id": "280",
         "name": "Rin 09",
         "character": "Rin",
         "img": "Rin/Rin_09.png",
@@ -3710,7 +3710,7 @@
         }
     },
     {
-        "id":"281",
+        "id": "281",
         "name": "Rin 11",
         "character": "Rin",
         "img": "Rin/Rin_11.png",
@@ -3724,7 +3724,7 @@
         }
     },
     {
-        "id":"282",
+        "id": "282",
         "name": "Rin 12",
         "character": "Rin",
         "img": "Rin/Rin_12.png",
@@ -3738,7 +3738,7 @@
         }
     },
     {
-        "id":"283",
+        "id": "283",
         "name": "Rin 13",
         "character": "Rin",
         "img": "Rin/Rin_13.png",
@@ -3752,7 +3752,7 @@
         }
     },
     {
-        "id":"284",
+        "id": "284",
         "name": "Rin 14",
         "character": "Rin",
         "img": "Rin/Rin_14.png",
@@ -3766,7 +3766,7 @@
         }
     },
     {
-        "id":"285",
+        "id": "285",
         "name": "Rin 16",
         "character": "Rin",
         "img": "Rin/Rin_16.png",
@@ -3780,7 +3780,7 @@
         }
     },
     {
-        "id":"286",
+        "id": "286",
         "name": "Rui 01",
         "character": "Rui",
         "img": "Rui/Rui_01.png",
@@ -3794,7 +3794,7 @@
         }
     },
     {
-        "id":"287",
+        "id": "287",
         "name": "Rui 02",
         "character": "Rui",
         "img": "Rui/Rui_02.png",
@@ -3808,7 +3808,7 @@
         }
     },
     {
-        "id":"288",
+        "id": "288",
         "name": "Rui 03",
         "character": "Rui",
         "img": "Rui/Rui_03.png",
@@ -3822,7 +3822,7 @@
         }
     },
     {
-        "id":"289",
+        "id": "289",
         "name": "Rui 04",
         "character": "Rui",
         "img": "Rui/Rui_04.png",
@@ -3836,7 +3836,7 @@
         }
     },
     {
-        "id":"290",
+        "id": "290",
         "name": "Rui 06",
         "character": "Rui",
         "img": "Rui/Rui_06.png",
@@ -3850,7 +3850,7 @@
         }
     },
     {
-        "id":"291",
+        "id": "291",
         "name": "Rui 07",
         "character": "Rui",
         "img": "Rui/Rui_07.png",
@@ -3864,7 +3864,7 @@
         }
     },
     {
-        "id":"292",
+        "id": "292",
         "name": "Rui 08",
         "character": "Rui",
         "img": "Rui/Rui_08.png",
@@ -3878,7 +3878,7 @@
         }
     },
     {
-        "id":"293",
+        "id": "293",
         "name": "Rui 09",
         "character": "Rui",
         "img": "Rui/Rui_09.png",
@@ -3892,7 +3892,7 @@
         }
     },
     {
-        "id":"294",
+        "id": "294",
         "name": "Rui 11",
         "character": "Rui",
         "img": "Rui/Rui_11.png",
@@ -3906,7 +3906,7 @@
         }
     },
     {
-        "id":"295",
+        "id": "295",
         "name": "Rui 12",
         "character": "Rui",
         "img": "Rui/Rui_12.png",
@@ -3920,7 +3920,7 @@
         }
     },
     {
-        "id":"296",
+        "id": "296",
         "name": "Rui 13",
         "character": "Rui",
         "img": "Rui/Rui_13.png",
@@ -3934,7 +3934,7 @@
         }
     },
     {
-        "id":"297",
+        "id": "297",
         "name": "Rui 14",
         "character": "Rui",
         "img": "Rui/Rui_14.png",
@@ -3948,7 +3948,7 @@
         }
     },
     {
-        "id":"298",
+        "id": "298",
         "name": "Rui 16",
         "character": "Rui",
         "img": "Rui/Rui_16.png",
@@ -3962,7 +3962,7 @@
         }
     },
     {
-        "id":"299",
+        "id": "299",
         "name": "Rui 17",
         "character": "Rui",
         "img": "Rui/Rui_17.png",
@@ -3976,7 +3976,7 @@
         }
     },
     {
-        "id":"300",
+        "id": "300",
         "name": "Rui 18",
         "character": "Rui",
         "img": "Rui/Rui_18.png",
@@ -3990,7 +3990,7 @@
         }
     },
     {
-        "id":"301",
+        "id": "301",
         "name": "Rui 19",
         "character": "Rui",
         "img": "Rui/Rui_19.png",
@@ -4004,7 +4004,7 @@
         }
     },
     {
-        "id":"302",
+        "id": "302",
         "name": "Saki 01",
         "character": "Saki",
         "img": "Saki/Saki_01.png",
@@ -4018,7 +4018,7 @@
         }
     },
     {
-        "id":"303",
+        "id": "303",
         "name": "Saki 02",
         "character": "Saki",
         "img": "Saki/Saki_02.png",
@@ -4032,7 +4032,7 @@
         }
     },
     {
-        "id":"304",
+        "id": "304",
         "name": "Saki 03",
         "character": "Saki",
         "img": "Saki/Saki_03.png",
@@ -4046,7 +4046,7 @@
         }
     },
     {
-        "id":"305",
+        "id": "305",
         "name": "Saki 04",
         "character": "Saki",
         "img": "Saki/Saki_04.png",
@@ -4060,7 +4060,7 @@
         }
     },
     {
-        "id":"306",
+        "id": "306",
         "name": "Saki 06",
         "character": "Saki",
         "img": "Saki/Saki_06.png",
@@ -4074,7 +4074,7 @@
         }
     },
     {
-        "id":"307",
+        "id": "307",
         "name": "Saki 07",
         "character": "Saki",
         "img": "Saki/Saki_07.png",
@@ -4088,7 +4088,7 @@
         }
     },
     {
-        "id":"308",
+        "id": "308",
         "name": "Saki 08",
         "character": "Saki",
         "img": "Saki/Saki_08.png",
@@ -4102,7 +4102,7 @@
         }
     },
     {
-        "id":"309",
+        "id": "309",
         "name": "Saki 09",
         "character": "Saki",
         "img": "Saki/Saki_09.png",
@@ -4116,7 +4116,7 @@
         }
     },
     {
-        "id":"310",
+        "id": "310",
         "name": "Saki 11",
         "character": "Saki",
         "img": "Saki/Saki_11.png",
@@ -4130,7 +4130,7 @@
         }
     },
     {
-        "id":"311",
+        "id": "311",
         "name": "Saki 12",
         "character": "Saki",
         "img": "Saki/Saki_12.png",
@@ -4144,7 +4144,7 @@
         }
     },
     {
-        "id":"312",
+        "id": "312",
         "name": "Saki 13",
         "character": "Saki",
         "img": "Saki/Saki_13.png",
@@ -4158,7 +4158,7 @@
         }
     },
     {
-        "id":"313",
+        "id": "313",
         "name": "Saki 14",
         "character": "Saki",
         "img": "Saki/Saki_14.png",
@@ -4172,7 +4172,7 @@
         }
     },
     {
-        "id":"314",
+        "id": "314",
         "name": "Saki 16",
         "character": "Saki",
         "img": "Saki/Saki_16.png",
@@ -4186,7 +4186,7 @@
         }
     },
     {
-        "id":"315",
+        "id": "315",
         "name": "Saki 17",
         "character": "Saki",
         "img": "Saki/Saki_17.png",
@@ -4200,7 +4200,7 @@
         }
     },
     {
-        "id":"316",
+        "id": "316",
         "name": "Saki 18",
         "character": "Saki",
         "img": "Saki/Saki_18.png",
@@ -4214,7 +4214,7 @@
         }
     },
     {
-        "id":"317",
+        "id": "317",
         "name": "Shiho 01",
         "character": "Shiho",
         "img": "Shiho/Shiho_01.png",
@@ -4228,7 +4228,7 @@
         }
     },
     {
-        "id":"318",
+        "id": "318",
         "name": "Shiho 02",
         "character": "Shiho",
         "img": "Shiho/Shiho_02.png",
@@ -4242,7 +4242,7 @@
         }
     },
     {
-        "id":"319",
+        "id": "319",
         "name": "Shiho 03",
         "character": "Shiho",
         "img": "Shiho/Shiho_03.png",
@@ -4256,7 +4256,7 @@
         }
     },
     {
-        "id":"320",
+        "id": "320",
         "name": "Shiho 04",
         "character": "Shiho",
         "img": "Shiho/Shiho_04.png",
@@ -4270,7 +4270,7 @@
         }
     },
     {
-        "id":"321",
+        "id": "321",
         "name": "Shiho 06",
         "character": "Shiho",
         "img": "Shiho/Shiho_06.png",
@@ -4284,7 +4284,7 @@
         }
     },
     {
-        "id":"322",
+        "id": "322",
         "name": "Shiho 07",
         "character": "Shiho",
         "img": "Shiho/Shiho_07.png",
@@ -4298,7 +4298,7 @@
         }
     },
     {
-        "id":"323",
+        "id": "323",
         "name": "Shiho 08",
         "character": "Shiho",
         "img": "Shiho/Shiho_08.png",
@@ -4312,7 +4312,7 @@
         }
     },
     {
-        "id":"324",
+        "id": "324",
         "name": "Shiho 09",
         "character": "Shiho",
         "img": "Shiho/Shiho_09.png",
@@ -4326,7 +4326,7 @@
         }
     },
     {
-        "id":"325",
+        "id": "325",
         "name": "Shiho 11",
         "character": "Shiho",
         "img": "Shiho/Shiho_11.png",
@@ -4340,7 +4340,7 @@
         }
     },
     {
-        "id":"326",
+        "id": "326",
         "name": "Shiho 12",
         "character": "Shiho",
         "img": "Shiho/Shiho_12.png",
@@ -4354,7 +4354,7 @@
         }
     },
     {
-        "id":"327",
+        "id": "327",
         "name": "Shiho 13",
         "character": "Shiho",
         "img": "Shiho/Shiho_13.png",
@@ -4368,7 +4368,7 @@
         }
     },
     {
-        "id":"328",
+        "id": "328",
         "name": "Shiho 14",
         "character": "Shiho",
         "img": "Shiho/Shiho_14.png",
@@ -4382,7 +4382,7 @@
         }
     },
     {
-        "id":"329",
+        "id": "329",
         "name": "Shiho 16",
         "character": "Shiho",
         "img": "Shiho/Shiho_16.png",
@@ -4396,7 +4396,7 @@
         }
     },
     {
-        "id":"330",
+        "id": "330",
         "name": "Shiho 17",
         "character": "Shiho",
         "img": "Shiho/Shiho_17.png",
@@ -4410,7 +4410,7 @@
         }
     },
     {
-        "id":"331",
+        "id": "331",
         "name": "Shiho 18",
         "character": "Shiho",
         "img": "Shiho/Shiho_18.png",
@@ -4424,7 +4424,7 @@
         }
     },
     {
-        "id":"332",
+        "id": "332",
         "name": "Shizuku 01",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_01.png",
@@ -4438,7 +4438,7 @@
         }
     },
     {
-        "id":"333",
+        "id": "333",
         "name": "Shizuku 02",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_02.png",
@@ -4452,7 +4452,7 @@
         }
     },
     {
-        "id":"334",
+        "id": "334",
         "name": "Shizuku 03",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_03.png",
@@ -4466,7 +4466,7 @@
         }
     },
     {
-        "id":"335",
+        "id": "335",
         "name": "Shizuku 04",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_04.png",
@@ -4480,7 +4480,7 @@
         }
     },
     {
-        "id":"336",
+        "id": "336",
         "name": "Shizuku 06",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_06.png",
@@ -4494,7 +4494,7 @@
         }
     },
     {
-        "id":"337",
+        "id": "337",
         "name": "Shizuku 07",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_07.png",
@@ -4508,7 +4508,7 @@
         }
     },
     {
-        "id":"338",
+        "id": "338",
         "name": "Shizuku 08",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_08.png",
@@ -4522,7 +4522,7 @@
         }
     },
     {
-        "id":"339",
+        "id": "339",
         "name": "Shizuku 09",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_09.png",
@@ -4536,7 +4536,7 @@
         }
     },
     {
-        "id":"340",
+        "id": "340",
         "name": "Shizuku 11",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_11.png",
@@ -4550,7 +4550,7 @@
         }
     },
     {
-        "id":"341",
+        "id": "341",
         "name": "Shizuku 12",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_12.png",
@@ -4564,7 +4564,7 @@
         }
     },
     {
-        "id":"342",
+        "id": "342",
         "name": "Shizuku 13",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_13.png",
@@ -4578,7 +4578,7 @@
         }
     },
     {
-        "id":"343",
+        "id": "343",
         "name": "Shizuku 14",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_14.png",
@@ -4592,7 +4592,7 @@
         }
     },
     {
-        "id":"344",
+        "id": "344",
         "name": "Shizuku 16",
         "character": "Shizuku",
         "img": "Shizuku/Shizuku_16.png",
@@ -4606,7 +4606,7 @@
         }
     },
     {
-        "id":"345",
+        "id": "345",
         "name": "Touya 01",
         "character": "Touya",
         "img": "Touya/Touya_01.png",
@@ -4620,7 +4620,7 @@
         }
     },
     {
-        "id":"346",
+        "id": "346",
         "name": "Touya 02",
         "character": "Touya",
         "img": "Touya/Touya_02.png",
@@ -4634,7 +4634,7 @@
         }
     },
     {
-        "id":"347",
+        "id": "347",
         "name": "Touya 03",
         "character": "Touya",
         "img": "Touya/Touya_03.png",
@@ -4648,7 +4648,7 @@
         }
     },
     {
-        "id":"348",
+        "id": "348",
         "name": "Touya 04",
         "character": "Touya",
         "img": "Touya/Touya_04.png",
@@ -4662,7 +4662,7 @@
         }
     },
     {
-        "id":"349",
+        "id": "349",
         "name": "Touya 06",
         "character": "Touya",
         "img": "Touya/Touya_06.png",
@@ -4676,7 +4676,7 @@
         }
     },
     {
-        "id":"350",
+        "id": "350",
         "name": "Touya 07",
         "character": "Touya",
         "img": "Touya/Touya_07.png",
@@ -4690,7 +4690,7 @@
         }
     },
     {
-        "id":"351",
+        "id": "351",
         "name": "Touya 08",
         "character": "Touya",
         "img": "Touya/Touya_08.png",
@@ -4704,7 +4704,7 @@
         }
     },
     {
-        "id":"352",
+        "id": "352",
         "name": "Touya 09",
         "character": "Touya",
         "img": "Touya/Touya_09.png",
@@ -4718,7 +4718,7 @@
         }
     },
     {
-        "id":"353",
+        "id": "353",
         "name": "Touya 11",
         "character": "Touya",
         "img": "Touya/Touya_11.png",
@@ -4732,7 +4732,7 @@
         }
     },
     {
-        "id":"354",
+        "id": "354",
         "name": "Touya 12",
         "character": "Touya",
         "img": "Touya/Touya_12.png",
@@ -4746,7 +4746,7 @@
         }
     },
     {
-        "id":"355",
+        "id": "355",
         "name": "Touya 13",
         "character": "Touya",
         "img": "Touya/Touya_13.png",
@@ -4760,7 +4760,7 @@
         }
     },
     {
-        "id":"356",
+        "id": "356",
         "name": "Touya 14",
         "character": "Touya",
         "img": "Touya/Touya_14.png",
@@ -4774,7 +4774,7 @@
         }
     },
     {
-        "id":"357",
+        "id": "357",
         "name": "Touya 16",
         "character": "Touya",
         "img": "Touya/Touya_16.png",
@@ -4788,7 +4788,7 @@
         }
     },
     {
-        "id":"358",
+        "id": "358",
         "name": "Touya 17",
         "character": "Touya",
         "img": "Touya/Touya_17.png",
@@ -4802,7 +4802,7 @@
         }
     },
     {
-        "id":"359",
+        "id": "359",
         "name": "Touya 18",
         "character": "Touya",
         "img": "Touya/Touya_18.png",
@@ -4816,7 +4816,7 @@
         }
     },
     {
-        "id":"360",
+        "id": "360",
         "name": "Tsukasa 01",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_01.png",
@@ -4830,7 +4830,7 @@
         }
     },
     {
-        "id":"361",
+        "id": "361",
         "name": "Tsukasa 02",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_02.png",
@@ -4844,7 +4844,7 @@
         }
     },
     {
-        "id":"362",
+        "id": "362",
         "name": "Tsukasa 03",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_03.png",
@@ -4858,7 +4858,7 @@
         }
     },
     {
-        "id":"363",
+        "id": "363",
         "name": "Tsukasa 04",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_04.png",
@@ -4872,7 +4872,7 @@
         }
     },
     {
-        "id":"364",
+        "id": "364",
         "name": "Tsukasa 06",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_06.png",
@@ -4886,7 +4886,7 @@
         }
     },
     {
-        "id":"365",
+        "id": "365",
         "name": "Tsukasa 07",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_07.png",
@@ -4900,7 +4900,7 @@
         }
     },
     {
-        "id":"366",
+        "id": "366",
         "name": "Tsukasa 08",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_08.png",
@@ -4914,7 +4914,7 @@
         }
     },
     {
-        "id":"367",
+        "id": "367",
         "name": "Tsukasa 09",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_09.png",
@@ -4928,7 +4928,7 @@
         }
     },
     {
-        "id":"368",
+        "id": "368",
         "name": "Tsukasa 11",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_11.png",
@@ -4942,7 +4942,7 @@
         }
     },
     {
-        "id":"369",
+        "id": "369",
         "name": "Tsukasa 12",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_12.png",
@@ -4956,7 +4956,7 @@
         }
     },
     {
-        "id":"370",
+        "id": "370",
         "name": "Tsukasa 13",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_13.png",
@@ -4970,7 +4970,7 @@
         }
     },
     {
-        "id":"371",
+        "id": "371",
         "name": "Tsukasa 14",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_14.png",
@@ -4984,7 +4984,7 @@
         }
     },
     {
-        "id":"372",
+        "id": "372",
         "name": "Tsukasa 16",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_16.png",
@@ -4998,7 +4998,7 @@
         }
     },
     {
-        "id":"373",
+        "id": "373",
         "name": "Tsukasa 17",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_17.png",
@@ -5012,7 +5012,7 @@
         }
     },
     {
-        "id":"374",
+        "id": "374",
         "name": "Tsukasa 18",
         "character": "Tsukasa",
         "img": "Tsukasa/Tsukasa_18.png",
@@ -5024,6 +5024,5591 @@
             "r": -2,
             "s": 47
         }
+    },
+    {
+        "id": "375",
+        "name": "Kohane 375",
+        "character": "Kohane",
+        "img": "Kohane/1-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "376",
+        "name": "Kohane 376",
+        "character": "Kohane",
+        "img": "Kohane/2-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "377",
+        "name": "Kohane 377",
+        "character": "Kohane",
+        "img": "Kohane/3-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "378",
+        "name": "Kohane 378",
+        "character": "Kohane",
+        "img": "Kohane/4-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "379",
+        "name": "Kohane 379",
+        "character": "Kohane",
+        "img": "Kohane/5-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "380",
+        "name": "Kohane 380",
+        "character": "Kohane",
+        "img": "Kohane/6-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "381",
+        "name": "Kohane 381",
+        "character": "Kohane",
+        "img": "Kohane/7-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "382",
+        "name": "Kohane 382",
+        "character": "Kohane",
+        "img": "Kohane/8-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "383",
+        "name": "Kohane 383",
+        "character": "Kohane",
+        "img": "Kohane/9-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "384",
+        "name": "Kohane 384",
+        "character": "Kohane",
+        "img": "Kohane/10-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "385",
+        "name": "Kohane 385",
+        "character": "Kohane",
+        "img": "Kohane/11-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "386",
+        "name": "Kohane 386",
+        "character": "Kohane",
+        "img": "Kohane/12-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "387",
+        "name": "Kohane 387",
+        "character": "Kohane",
+        "img": "Kohane/13-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "388",
+        "name": "Kohane 388",
+        "character": "Kohane",
+        "img": "Kohane/14-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "389",
+        "name": "Kohane 389",
+        "character": "Kohane",
+        "img": "Kohane/15-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "390",
+        "name": "Kohane 390",
+        "character": "Kohane",
+        "img": "Kohane/16-khn-cc.png",
+        "color": "#FF6699",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "391",
+        "name": "Touya 391",
+        "character": "Touya",
+        "img": "Touya/1-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "392",
+        "name": "Touya 392",
+        "character": "Touya",
+        "img": "Touya/2-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "393",
+        "name": "Touya 393",
+        "character": "Touya",
+        "img": "Touya/3-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "394",
+        "name": "Touya 394",
+        "character": "Touya",
+        "img": "Touya/4-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "395",
+        "name": "Touya 395",
+        "character": "Touya",
+        "img": "Touya/5-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "396",
+        "name": "Touya 396",
+        "character": "Touya",
+        "img": "Touya/6-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "397",
+        "name": "Touya 397",
+        "character": "Touya",
+        "img": "Touya/7-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "398",
+        "name": "Touya 398",
+        "character": "Touya",
+        "img": "Touya/8-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "399",
+        "name": "Touya 399",
+        "character": "Touya",
+        "img": "Touya/9-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "400",
+        "name": "Touya 400",
+        "character": "Touya",
+        "img": "Touya/10-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "401",
+        "name": "Touya 401",
+        "character": "Touya",
+        "img": "Touya/11-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "402",
+        "name": "Touya 402",
+        "character": "Touya",
+        "img": "Touya/12-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "403",
+        "name": "Touya 403",
+        "character": "Touya",
+        "img": "Touya/13-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "404",
+        "name": "Touya 404",
+        "character": "Touya",
+        "img": "Touya/14-toya-cc.png",
+        "color": "#0077DD",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "405",
+        "name": "an 405",
+        "character": "an",
+        "img": "an/1-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "406",
+        "name": "an 406",
+        "character": "an",
+        "img": "an/2-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "407",
+        "name": "an 407",
+        "character": "an",
+        "img": "an/3-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "408",
+        "name": "an 408",
+        "character": "an",
+        "img": "an/4-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "409",
+        "name": "an 409",
+        "character": "an",
+        "img": "an/5-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "410",
+        "name": "an 410",
+        "character": "an",
+        "img": "an/6-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "411",
+        "name": "an 411",
+        "character": "an",
+        "img": "an/7-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "412",
+        "name": "an 412",
+        "character": "an",
+        "img": "an/8-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "413",
+        "name": "an 413",
+        "character": "an",
+        "img": "an/9-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "414",
+        "name": "an 414",
+        "character": "an",
+        "img": "an/10-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "415",
+        "name": "an 415",
+        "character": "an",
+        "img": "an/11-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "416",
+        "name": "an 416",
+        "character": "an",
+        "img": "an/12-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "417",
+        "name": "an 417",
+        "character": "an",
+        "img": "an/13-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "418",
+        "name": "an 418",
+        "character": "an",
+        "img": "an/14-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "419",
+        "name": "an 419",
+        "character": "an",
+        "img": "an/15-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "420",
+        "name": "an 420",
+        "character": "an",
+        "img": "an/16-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "421",
+        "name": "an 421",
+        "character": "an",
+        "img": "an/17-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "422",
+        "name": "an 422",
+        "character": "an",
+        "img": "an/18-shiraishi An-cc.png",
+        "color": "#00BADC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "423",
+        "name": "akito 423",
+        "character": "akito",
+        "img": "akito/1-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "424",
+        "name": "akito 424",
+        "character": "akito",
+        "img": "akito/2-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "425",
+        "name": "akito 425",
+        "character": "akito",
+        "img": "akito/3-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "426",
+        "name": "akito 426",
+        "character": "akito",
+        "img": "akito/4-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "427",
+        "name": "akito 427",
+        "character": "akito",
+        "img": "akito/5-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "428",
+        "name": "akito 428",
+        "character": "akito",
+        "img": "akito/6-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "429",
+        "name": "akito 429",
+        "character": "akito",
+        "img": "akito/7-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "430",
+        "name": "akito 430",
+        "character": "akito",
+        "img": "akito/8-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "431",
+        "name": "akito 431",
+        "character": "akito",
+        "img": "akito/9-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "432",
+        "name": "akito 432",
+        "character": "akito",
+        "img": "akito/10-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "433",
+        "name": "akito 433",
+        "character": "akito",
+        "img": "akito/11-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "434",
+        "name": "akito 434",
+        "character": "akito",
+        "img": "akito/12-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "435",
+        "name": "akito 435",
+        "character": "akito",
+        "img": "akito/13-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "436",
+        "name": "akito 436",
+        "character": "akito",
+        "img": "akito/14-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "437",
+        "name": "akito 437",
+        "character": "akito",
+        "img": "akito/15-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "438",
+        "name": "akito 438",
+        "character": "akito",
+        "img": "akito/16-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "439",
+        "name": "akito 439",
+        "character": "akito",
+        "img": "akito/17-akc-cc.png",
+        "color": "#FF7722",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "440",
+        "name": "Saki 440",
+        "character": "Saki",
+        "img": "Saki/1-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "441",
+        "name": "Saki 441",
+        "character": "Saki",
+        "img": "Saki/2-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "442",
+        "name": "Saki 442",
+        "character": "Saki",
+        "img": "Saki/3-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "443",
+        "name": "Saki 443",
+        "character": "Saki",
+        "img": "Saki/4-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "444",
+        "name": "Saki 444",
+        "character": "Saki",
+        "img": "Saki/5-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "445",
+        "name": "Saki 445",
+        "character": "Saki",
+        "img": "Saki/6-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "446",
+        "name": "Saki 446",
+        "character": "Saki",
+        "img": "Saki/7-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "447",
+        "name": "Saki 447",
+        "character": "Saki",
+        "img": "Saki/8-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "448",
+        "name": "Saki 448",
+        "character": "Saki",
+        "img": "Saki/9-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "449",
+        "name": "Saki 449",
+        "character": "Saki",
+        "img": "Saki/10-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "450",
+        "name": "Saki 450",
+        "character": "Saki",
+        "img": "Saki/11-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "451",
+        "name": "Saki 451",
+        "character": "Saki",
+        "img": "Saki/12-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "452",
+        "name": "Saki 452",
+        "character": "Saki",
+        "img": "Saki/13-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "453",
+        "name": "Saki 453",
+        "character": "Saki",
+        "img": "Saki/14-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "454",
+        "name": "Saki 454",
+        "character": "Saki",
+        "img": "Saki/15-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "455",
+        "name": "Saki 455",
+        "character": "Saki",
+        "img": "Saki/16-saki-cc.png",
+        "color": "#F5B303",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "456",
+        "name": "Shiho 456",
+        "character": "Shiho",
+        "img": "Shiho/1-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "457",
+        "name": "Shiho 457",
+        "character": "Shiho",
+        "img": "Shiho/2-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "458",
+        "name": "Shiho 458",
+        "character": "Shiho",
+        "img": "Shiho/3-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "459",
+        "name": "Shiho 459",
+        "character": "Shiho",
+        "img": "Shiho/4-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "460",
+        "name": "Shiho 460",
+        "character": "Shiho",
+        "img": "Shiho/5-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "461",
+        "name": "Shiho 461",
+        "character": "Shiho",
+        "img": "Shiho/6-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "462",
+        "name": "Shiho 462",
+        "character": "Shiho",
+        "img": "Shiho/7-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "463",
+        "name": "Shiho 463",
+        "character": "Shiho",
+        "img": "Shiho/9-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "464",
+        "name": "Shiho 464",
+        "character": "Shiho",
+        "img": "Shiho/10-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "465",
+        "name": "Shiho 465",
+        "character": "Shiho",
+        "img": "Shiho/11-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "466",
+        "name": "Shiho 466",
+        "character": "Shiho",
+        "img": "Shiho/12-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "467",
+        "name": "Shiho 467",
+        "character": "Shiho",
+        "img": "Shiho/13-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "468",
+        "name": "Shiho 468",
+        "character": "Shiho",
+        "img": "Shiho/14-Hinomori Shiho-cc.png",
+        "color": "#A0C10B",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "469",
+        "name": "Honami 469",
+        "character": "Honami",
+        "img": "Honami/1-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "470",
+        "name": "Honami 470",
+        "character": "Honami",
+        "img": "Honami/2-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "471",
+        "name": "Honami 471",
+        "character": "Honami",
+        "img": "Honami/3-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "472",
+        "name": "Honami 472",
+        "character": "Honami",
+        "img": "Honami/4-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "473",
+        "name": "Honami 473",
+        "character": "Honami",
+        "img": "Honami/5-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "474",
+        "name": "Honami 474",
+        "character": "Honami",
+        "img": "Honami/6-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "475",
+        "name": "Honami 475",
+        "character": "Honami",
+        "img": "Honami/7-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "476",
+        "name": "Honami 476",
+        "character": "Honami",
+        "img": "Honami/8-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "477",
+        "name": "Honami 477",
+        "character": "Honami",
+        "img": "Honami/9-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "478",
+        "name": "Honami 478",
+        "character": "Honami",
+        "img": "Honami/10-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "479",
+        "name": "Honami 479",
+        "character": "Honami",
+        "img": "Honami/11-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "480",
+        "name": "Honami 480",
+        "character": "Honami",
+        "img": "Honami/12-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "481",
+        "name": "Honami 481",
+        "character": "Honami",
+        "img": "Honami/13-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "482",
+        "name": "Honami 482",
+        "character": "Honami",
+        "img": "Honami/14-Mochizuki Honami-cc.png",
+        "color": "#F86666",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "483",
+        "name": "Ichika 483",
+        "character": "Ichika",
+        "img": "Ichika/1-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "484",
+        "name": "Ichika 484",
+        "character": "Ichika",
+        "img": "Ichika/2-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "485",
+        "name": "Ichika 485",
+        "character": "Ichika",
+        "img": "Ichika/3-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "486",
+        "name": "Ichika 486",
+        "character": "Ichika",
+        "img": "Ichika/4-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "487",
+        "name": "Ichika 487",
+        "character": "Ichika",
+        "img": "Ichika/5-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "488",
+        "name": "Ichika 488",
+        "character": "Ichika",
+        "img": "Ichika/6-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "489",
+        "name": "Ichika 489",
+        "character": "Ichika",
+        "img": "Ichika/7-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "490",
+        "name": "Ichika 490",
+        "character": "Ichika",
+        "img": "Ichika/8-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "491",
+        "name": "Ichika 491",
+        "character": "Ichika",
+        "img": "Ichika/9-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "492",
+        "name": "Ichika 492",
+        "character": "Ichika",
+        "img": "Ichika/10-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "493",
+        "name": "Ichika 493",
+        "character": "Ichika",
+        "img": "Ichika/11-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "494",
+        "name": "Ichika 494",
+        "character": "Ichika",
+        "img": "Ichika/12-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "495",
+        "name": "Ichika 495",
+        "character": "Ichika",
+        "img": "Ichika/13-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "496",
+        "name": "Ichika 496",
+        "character": "Ichika",
+        "img": "Ichika/14-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "497",
+        "name": "Ichika 497",
+        "character": "Ichika",
+        "img": "Ichika/15-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "498",
+        "name": "Ichika 498",
+        "character": "Ichika",
+        "img": "Ichika/16-nes-Hoshino Ichika-cw.png",
+        "color": "#33AAEE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "499",
+        "name": "Haruka 499",
+        "character": "Haruka",
+        "img": "Haruka/3-hrk-c.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "500",
+        "name": "Haruka 500",
+        "character": "Haruka",
+        "img": "Haruka/1767973754841_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "501",
+        "name": "Haruka 501",
+        "character": "Haruka",
+        "img": "Haruka/1767973758366_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "502",
+        "name": "Haruka 502",
+        "character": "Haruka",
+        "img": "Haruka/1767973763076_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "503",
+        "name": "Haruka 503",
+        "character": "Haruka",
+        "img": "Haruka/1767973771529_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "504",
+        "name": "Haruka 504",
+        "character": "Haruka",
+        "img": "Haruka/1767973775215_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "505",
+        "name": "Haruka 505",
+        "character": "Haruka",
+        "img": "Haruka/1767973780061_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "506",
+        "name": "Haruka 506",
+        "character": "Haruka",
+        "img": "Haruka/1767973783720_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "507",
+        "name": "Haruka 507",
+        "character": "Haruka",
+        "img": "Haruka/1767973791829_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "508",
+        "name": "Haruka 508",
+        "character": "Haruka",
+        "img": "Haruka/1767973795671_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "509",
+        "name": "Haruka 509",
+        "character": "Haruka",
+        "img": "Haruka/1767973804108_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "510",
+        "name": "Haruka 510",
+        "character": "Haruka",
+        "img": "Haruka/1767973809262_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "511",
+        "name": "Haruka 511",
+        "character": "Haruka",
+        "img": "Haruka/1767973946124_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "512",
+        "name": "Haruka 512",
+        "character": "Haruka",
+        "img": "Haruka/1767973951670_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "513",
+        "name": "Haruka 513",
+        "character": "Haruka",
+        "img": "Haruka/1767974000985_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "514",
+        "name": "Haruka 514",
+        "character": "Haruka",
+        "img": "Haruka/1767974006091_download.png",
+        "color": "#6495F0",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "515",
+        "name": "Shizuku 515",
+        "character": "Shizuku",
+        "img": "Shizuku/1-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "516",
+        "name": "Shizuku 516",
+        "character": "Shizuku",
+        "img": "Shizuku/2-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "517",
+        "name": "Shizuku 517",
+        "character": "Shizuku",
+        "img": "Shizuku/3-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "518",
+        "name": "Shizuku 518",
+        "character": "Shizuku",
+        "img": "Shizuku/4-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "519",
+        "name": "Shizuku 519",
+        "character": "Shizuku",
+        "img": "Shizuku/5-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "520",
+        "name": "Shizuku 520",
+        "character": "Shizuku",
+        "img": "Shizuku/6-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "521",
+        "name": "Shizuku 521",
+        "character": "Shizuku",
+        "img": "Shizuku/7-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "522",
+        "name": "Shizuku 522",
+        "character": "Shizuku",
+        "img": "Shizuku/8-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "523",
+        "name": "Shizuku 523",
+        "character": "Shizuku",
+        "img": "Shizuku/9-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "524",
+        "name": "Shizuku 524",
+        "character": "Shizuku",
+        "img": "Shizuku/10-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "525",
+        "name": "Shizuku 525",
+        "character": "Shizuku",
+        "img": "Shizuku/11-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "526",
+        "name": "Shizuku 526",
+        "character": "Shizuku",
+        "img": "Shizuku/12-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "527",
+        "name": "Shizuku 527",
+        "character": "Shizuku",
+        "img": "Shizuku/13-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "528",
+        "name": "Shizuku 528",
+        "character": "Shizuku",
+        "img": "Shizuku/14-szk-cc.png",
+        "color": "#5CD0B9",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "529",
+        "name": "airi 529",
+        "character": "airi",
+        "img": "airi/2-airi-c.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "530",
+        "name": "airi 530",
+        "character": "airi",
+        "img": "airi/1767974576544_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "531",
+        "name": "airi 531",
+        "character": "airi",
+        "img": "airi/1767974645737_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "532",
+        "name": "airi 532",
+        "character": "airi",
+        "img": "airi/1767974652682_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "533",
+        "name": "airi 533",
+        "character": "airi",
+        "img": "airi/1767974659611_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "534",
+        "name": "airi 534",
+        "character": "airi",
+        "img": "airi/1767974663352_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "535",
+        "name": "airi 535",
+        "character": "airi",
+        "img": "airi/1767974666462_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "536",
+        "name": "airi 536",
+        "character": "airi",
+        "img": "airi/1767974669791_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "537",
+        "name": "airi 537",
+        "character": "airi",
+        "img": "airi/1767974672654_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "538",
+        "name": "airi 538",
+        "character": "airi",
+        "img": "airi/1767974675819_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "539",
+        "name": "airi 539",
+        "character": "airi",
+        "img": "airi/1767974679467_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "540",
+        "name": "airi 540",
+        "character": "airi",
+        "img": "airi/1767974683105_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "541",
+        "name": "airi 541",
+        "character": "airi",
+        "img": "airi/1767974692766_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "542",
+        "name": "airi 542",
+        "character": "airi",
+        "img": "airi/1767974698321_download.png",
+        "color": "#FB8AAC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "543",
+        "name": "Minori 543",
+        "character": "Minori",
+        "img": "Minori/1-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "544",
+        "name": "Minori 544",
+        "character": "Minori",
+        "img": "Minori/2-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "545",
+        "name": "Minori 545",
+        "character": "Minori",
+        "img": "Minori/3-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "546",
+        "name": "Minori 546",
+        "character": "Minori",
+        "img": "Minori/4-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "547",
+        "name": "Minori 547",
+        "character": "Minori",
+        "img": "Minori/5-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "548",
+        "name": "Minori 548",
+        "character": "Minori",
+        "img": "Minori/6-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "549",
+        "name": "Minori 549",
+        "character": "Minori",
+        "img": "Minori/7-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "550",
+        "name": "Minori 550",
+        "character": "Minori",
+        "img": "Minori/8-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "551",
+        "name": "Minori 551",
+        "character": "Minori",
+        "img": "Minori/9-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "552",
+        "name": "Minori 552",
+        "character": "Minori",
+        "img": "Minori/10-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "553",
+        "name": "Minori 553",
+        "character": "Minori",
+        "img": "Minori/11-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "554",
+        "name": "Minori 554",
+        "character": "Minori",
+        "img": "Minori/12-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "555",
+        "name": "Minori 555",
+        "character": "Minori",
+        "img": "Minori/13-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "556",
+        "name": "Minori 556",
+        "character": "Minori",
+        "img": "Minori/14-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "557",
+        "name": "Minori 557",
+        "character": "Minori",
+        "img": "Minori/15-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "558",
+        "name": "Minori 558",
+        "character": "Minori",
+        "img": "Minori/16-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "559",
+        "name": "Minori 559",
+        "character": "Minori",
+        "img": "Minori/17-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "560",
+        "name": "Minori 560",
+        "character": "Minori",
+        "img": "Minori/18-Hanasato Minor-cc.png",
+        "color": "#F39E7D",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "561",
+        "name": "ena 561",
+        "character": "ena",
+        "img": "ena/1--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "562",
+        "name": "ena 562",
+        "character": "ena",
+        "img": "ena/2--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "563",
+        "name": "ena 563",
+        "character": "ena",
+        "img": "ena/3--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "564",
+        "name": "ena 564",
+        "character": "ena",
+        "img": "ena/4--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "565",
+        "name": "ena 565",
+        "character": "ena",
+        "img": "ena/5--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "566",
+        "name": "ena 566",
+        "character": "ena",
+        "img": "ena/6--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "567",
+        "name": "ena 567",
+        "character": "ena",
+        "img": "ena/7--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "568",
+        "name": "ena 568",
+        "character": "ena",
+        "img": "ena/8--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "569",
+        "name": "ena 569",
+        "character": "ena",
+        "img": "ena/9--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "570",
+        "name": "ena 570",
+        "character": "ena",
+        "img": "ena/10--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "571",
+        "name": "ena 571",
+        "character": "ena",
+        "img": "ena/11--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "572",
+        "name": "ena 572",
+        "character": "ena",
+        "img": "ena/12--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "573",
+        "name": "ena 573",
+        "character": "ena",
+        "img": "ena/13--nes-ena-cw.png",
+        "color": "#B18F6C",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "574",
+        "name": "Mafuyu 574",
+        "character": "Mafuyu",
+        "img": "Mafuyu/1--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "575",
+        "name": "Mafuyu 575",
+        "character": "Mafuyu",
+        "img": "Mafuyu/2--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "576",
+        "name": "Mafuyu 576",
+        "character": "Mafuyu",
+        "img": "Mafuyu/3--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "577",
+        "name": "Mafuyu 577",
+        "character": "Mafuyu",
+        "img": "Mafuyu/4--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "578",
+        "name": "Mafuyu 578",
+        "character": "Mafuyu",
+        "img": "Mafuyu/5--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "579",
+        "name": "Mafuyu 579",
+        "character": "Mafuyu",
+        "img": "Mafuyu/6--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "580",
+        "name": "Mafuyu 580",
+        "character": "Mafuyu",
+        "img": "Mafuyu/7--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "581",
+        "name": "Mafuyu 581",
+        "character": "Mafuyu",
+        "img": "Mafuyu/8--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "582",
+        "name": "Mafuyu 582",
+        "character": "Mafuyu",
+        "img": "Mafuyu/9--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "583",
+        "name": "Mafuyu 583",
+        "character": "Mafuyu",
+        "img": "Mafuyu/10--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "584",
+        "name": "Mafuyu 584",
+        "character": "Mafuyu",
+        "img": "Mafuyu/11--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "585",
+        "name": "Mafuyu 585",
+        "character": "Mafuyu",
+        "img": "Mafuyu/12--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "586",
+        "name": "Mafuyu 586",
+        "character": "Mafuyu",
+        "img": "Mafuyu/13--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "587",
+        "name": "Mafuyu 587",
+        "character": "Mafuyu",
+        "img": "Mafuyu/14--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "588",
+        "name": "Mafuyu 588",
+        "character": "Mafuyu",
+        "img": "Mafuyu/15--nes-mfy-cw.png",
+        "color": "#7171AF",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "589",
+        "name": "Kanade 589",
+        "character": "Kanade",
+        "img": "Kanade/1-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "590",
+        "name": "Kanade 590",
+        "character": "Kanade",
+        "img": "Kanade/2-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "591",
+        "name": "Kanade 591",
+        "character": "Kanade",
+        "img": "Kanade/3-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "592",
+        "name": "Kanade 592",
+        "character": "Kanade",
+        "img": "Kanade/4-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "593",
+        "name": "Kanade 593",
+        "character": "Kanade",
+        "img": "Kanade/5-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "594",
+        "name": "Kanade 594",
+        "character": "Kanade",
+        "img": "Kanade/6-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "595",
+        "name": "Kanade 595",
+        "character": "Kanade",
+        "img": "Kanade/7-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "596",
+        "name": "Kanade 596",
+        "character": "Kanade",
+        "img": "Kanade/8-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "597",
+        "name": "Kanade 597",
+        "character": "Kanade",
+        "img": "Kanade/9-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "598",
+        "name": "Kanade 598",
+        "character": "Kanade",
+        "img": "Kanade/10-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "599",
+        "name": "Kanade 599",
+        "character": "Kanade",
+        "img": "Kanade/11-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "600",
+        "name": "Kanade 600",
+        "character": "Kanade",
+        "img": "Kanade/12-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "601",
+        "name": "Kanade 601",
+        "character": "Kanade",
+        "img": "Kanade/13-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "602",
+        "name": "Kanade 602",
+        "character": "Kanade",
+        "img": "Kanade/14-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "603",
+        "name": "Kanade 603",
+        "character": "Kanade",
+        "img": "Kanade/15-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "604",
+        "name": "Kanade 604",
+        "character": "Kanade",
+        "img": "Kanade/16-nes-knd-cw.png",
+        "color": "#BB6688",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "605",
+        "name": "Mizuki 605",
+        "character": "Mizuki",
+        "img": "Mizuki/1-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "606",
+        "name": "Mizuki 606",
+        "character": "Mizuki",
+        "img": "Mizuki/2-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "607",
+        "name": "Mizuki 607",
+        "character": "Mizuki",
+        "img": "Mizuki/3-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "608",
+        "name": "Mizuki 608",
+        "character": "Mizuki",
+        "img": "Mizuki/4-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "609",
+        "name": "Mizuki 609",
+        "character": "Mizuki",
+        "img": "Mizuki/5-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "610",
+        "name": "Mizuki 610",
+        "character": "Mizuki",
+        "img": "Mizuki/6-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "611",
+        "name": "Mizuki 611",
+        "character": "Mizuki",
+        "img": "Mizuki/7-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "612",
+        "name": "Mizuki 612",
+        "character": "Mizuki",
+        "img": "Mizuki/8-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "613",
+        "name": "Mizuki 613",
+        "character": "Mizuki",
+        "img": "Mizuki/9-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "614",
+        "name": "Mizuki 614",
+        "character": "Mizuki",
+        "img": "Mizuki/10-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "615",
+        "name": "Mizuki 615",
+        "character": "Mizuki",
+        "img": "Mizuki/11-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "616",
+        "name": "Mizuki 616",
+        "character": "Mizuki",
+        "img": "Mizuki/12-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "617",
+        "name": "Mizuki 617",
+        "character": "Mizuki",
+        "img": "Mizuki/13-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "618",
+        "name": "Mizuki 618",
+        "character": "Mizuki",
+        "img": "Mizuki/14-mik-cc.png",
+        "color": "#CA8DB6",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "619",
+        "name": "KAITO 619",
+        "character": "KAITO",
+        "img": "KAITO/1-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "620",
+        "name": "KAITO 620",
+        "character": "KAITO",
+        "img": "KAITO/2-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "621",
+        "name": "KAITO 621",
+        "character": "KAITO",
+        "img": "KAITO/3-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "622",
+        "name": "KAITO 622",
+        "character": "KAITO",
+        "img": "KAITO/4-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "623",
+        "name": "KAITO 623",
+        "character": "KAITO",
+        "img": "KAITO/5-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "624",
+        "name": "KAITO 624",
+        "character": "KAITO",
+        "img": "KAITO/6-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "625",
+        "name": "KAITO 625",
+        "character": "KAITO",
+        "img": "KAITO/7-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "626",
+        "name": "KAITO 626",
+        "character": "KAITO",
+        "img": "KAITO/8-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "627",
+        "name": "KAITO 627",
+        "character": "KAITO",
+        "img": "KAITO/9-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "628",
+        "name": "KAITO 628",
+        "character": "KAITO",
+        "img": "KAITO/10-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "629",
+        "name": "KAITO 629",
+        "character": "KAITO",
+        "img": "KAITO/11-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "630",
+        "name": "KAITO 630",
+        "character": "KAITO",
+        "img": "KAITO/12-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "631",
+        "name": "KAITO 631",
+        "character": "KAITO",
+        "img": "KAITO/13-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "632",
+        "name": "KAITO 632",
+        "character": "KAITO",
+        "img": "KAITO/14-KAITO-cc.png",
+        "color": "#3366CC",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "633",
+        "name": "Meiko 633",
+        "character": "Meiko",
+        "img": "Meiko/1-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "634",
+        "name": "Meiko 634",
+        "character": "Meiko",
+        "img": "Meiko/2-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "635",
+        "name": "Meiko 635",
+        "character": "Meiko",
+        "img": "Meiko/3-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "636",
+        "name": "Meiko 636",
+        "character": "Meiko",
+        "img": "Meiko/4-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "637",
+        "name": "Meiko 637",
+        "character": "Meiko",
+        "img": "Meiko/5-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "638",
+        "name": "Meiko 638",
+        "character": "Meiko",
+        "img": "Meiko/6-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "639",
+        "name": "Meiko 639",
+        "character": "Meiko",
+        "img": "Meiko/7-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "640",
+        "name": "Meiko 640",
+        "character": "Meiko",
+        "img": "Meiko/8-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "641",
+        "name": "Meiko 641",
+        "character": "Meiko",
+        "img": "Meiko/9-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "642",
+        "name": "Meiko 642",
+        "character": "Meiko",
+        "img": "Meiko/10-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "643",
+        "name": "Meiko 643",
+        "character": "Meiko",
+        "img": "Meiko/11-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "644",
+        "name": "Meiko 644",
+        "character": "Meiko",
+        "img": "Meiko/12-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "645",
+        "name": "Meiko 645",
+        "character": "Meiko",
+        "img": "Meiko/13-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "646",
+        "name": "Meiko 646",
+        "character": "Meiko",
+        "img": "Meiko/14-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "647",
+        "name": "Meiko 647",
+        "character": "Meiko",
+        "img": "Meiko/15-MEIKO-cc.png",
+        "color": "#E4485F",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "648",
+        "name": "Rin 648",
+        "character": "Rin",
+        "img": "Rin/1-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "649",
+        "name": "Rin 649",
+        "character": "Rin",
+        "img": "Rin/2-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "650",
+        "name": "Rin 650",
+        "character": "Rin",
+        "img": "Rin/3-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "651",
+        "name": "Rin 651",
+        "character": "Rin",
+        "img": "Rin/4-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "652",
+        "name": "Rin 652",
+        "character": "Rin",
+        "img": "Rin/5-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "653",
+        "name": "Rin 653",
+        "character": "Rin",
+        "img": "Rin/6-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "654",
+        "name": "Rin 654",
+        "character": "Rin",
+        "img": "Rin/7-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "655",
+        "name": "Rin 655",
+        "character": "Rin",
+        "img": "Rin/8-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "656",
+        "name": "Rin 656",
+        "character": "Rin",
+        "img": "Rin/9-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "657",
+        "name": "Rin 657",
+        "character": "Rin",
+        "img": "Rin/10-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "658",
+        "name": "Rin 658",
+        "character": "Rin",
+        "img": "Rin/12-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "659",
+        "name": "Rin 659",
+        "character": "Rin",
+        "img": "Rin/13-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "660",
+        "name": "Rin 660",
+        "character": "Rin",
+        "img": "Rin/14-rin-cc.png",
+        "color": "#E8A505",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "661",
+        "name": "Miku 661",
+        "character": "Miku",
+        "img": "Miku/1-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "662",
+        "name": "Miku 662",
+        "character": "Miku",
+        "img": "Miku/2-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "663",
+        "name": "Miku 663",
+        "character": "Miku",
+        "img": "Miku/3-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "664",
+        "name": "Miku 664",
+        "character": "Miku",
+        "img": "Miku/4-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "665",
+        "name": "Miku 665",
+        "character": "Miku",
+        "img": "Miku/5-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "666",
+        "name": "Miku 666",
+        "character": "Miku",
+        "img": "Miku/6-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "667",
+        "name": "Miku 667",
+        "character": "Miku",
+        "img": "Miku/7-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "668",
+        "name": "Miku 668",
+        "character": "Miku",
+        "img": "Miku/8-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "669",
+        "name": "Miku 669",
+        "character": "Miku",
+        "img": "Miku/9-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "670",
+        "name": "Miku 670",
+        "character": "Miku",
+        "img": "Miku/10-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "671",
+        "name": "Miku 671",
+        "character": "Miku",
+        "img": "Miku/11-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "672",
+        "name": "Miku 672",
+        "character": "Miku",
+        "img": "Miku/12-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "673",
+        "name": "Miku 673",
+        "character": "Miku",
+        "img": "Miku/13-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "674",
+        "name": "Miku 674",
+        "character": "Miku",
+        "img": "Miku/14-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "675",
+        "name": "Miku 675",
+        "character": "Miku",
+        "img": "Miku/15-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "676",
+        "name": "Miku 676",
+        "character": "Miku",
+        "img": "Miku/16-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "677",
+        "name": "Miku 677",
+        "character": "Miku",
+        "img": "Miku/17-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "678",
+        "name": "Miku 678",
+        "character": "Miku",
+        "img": "Miku/18-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "679",
+        "name": "Miku 679",
+        "character": "Miku",
+        "img": "Miku/19-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "680",
+        "name": "Miku 680",
+        "character": "Miku",
+        "img": "Miku/20-miku-cc.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "681",
+        "name": "Miku 681",
+        "character": "Miku",
+        "img": "Miku/1768072275001_download.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "682",
+        "name": "Miku 682",
+        "character": "Miku",
+        "img": "Miku/1768072349356_download.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "683",
+        "name": "Miku 683",
+        "character": "Miku",
+        "img": "Miku/1768072356043_download.png",
+        "color": "#33CCBB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "684",
+        "name": "Len 684",
+        "character": "Len",
+        "img": "Len/1-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "685",
+        "name": "Len 685",
+        "character": "Len",
+        "img": "Len/2-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "686",
+        "name": "Len 686",
+        "character": "Len",
+        "img": "Len/3-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "687",
+        "name": "Len 687",
+        "character": "Len",
+        "img": "Len/4-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "688",
+        "name": "Len 688",
+        "character": "Len",
+        "img": "Len/5-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "689",
+        "name": "Len 689",
+        "character": "Len",
+        "img": "Len/6-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "690",
+        "name": "Len 690",
+        "character": "Len",
+        "img": "Len/7-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "691",
+        "name": "Len 691",
+        "character": "Len",
+        "img": "Len/8-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "692",
+        "name": "Len 692",
+        "character": "Len",
+        "img": "Len/9-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "693",
+        "name": "Len 693",
+        "character": "Len",
+        "img": "Len/10-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "694",
+        "name": "Len 694",
+        "character": "Len",
+        "img": "Len/11-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "695",
+        "name": "Len 695",
+        "character": "Len",
+        "img": "Len/12-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "696",
+        "name": "Len 696",
+        "character": "Len",
+        "img": "Len/13-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "697",
+        "name": "Len 697",
+        "character": "Len",
+        "img": "Len/14-len-cc.png",
+        "color": "#D3BD00",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "698",
+        "name": "Luka 698",
+        "character": "Luka",
+        "img": "Luka/1-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "699",
+        "name": "Luka 699",
+        "character": "Luka",
+        "img": "Luka/2-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "700",
+        "name": "Luka 700",
+        "character": "Luka",
+        "img": "Luka/3-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "701",
+        "name": "Luka 701",
+        "character": "Luka",
+        "img": "Luka/4-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "702",
+        "name": "Luka 702",
+        "character": "Luka",
+        "img": "Luka/7-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "703",
+        "name": "Luka 703",
+        "character": "Luka",
+        "img": "Luka/9-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "704",
+        "name": "Luka 704",
+        "character": "Luka",
+        "img": "Luka/10-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "705",
+        "name": "Luka 705",
+        "character": "Luka",
+        "img": "Luka/11-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "706",
+        "name": "Luka 706",
+        "character": "Luka",
+        "img": "Luka/12-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "707",
+        "name": "Luka 707",
+        "character": "Luka",
+        "img": "Luka/13-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "708",
+        "name": "Luka 708",
+        "character": "Luka",
+        "img": "Luka/14-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "709",
+        "name": "Luka 709",
+        "character": "Luka",
+        "img": "Luka/15-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "710",
+        "name": "Luka 710",
+        "character": "Luka",
+        "img": "Luka/16-luk-cc.png",
+        "color": "#F88CA7",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "711",
+        "name": "Rui 711",
+        "character": "Rui",
+        "img": "Rui/1-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "712",
+        "name": "Rui 712",
+        "character": "Rui",
+        "img": "Rui/2-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "713",
+        "name": "Rui 713",
+        "character": "Rui",
+        "img": "Rui/3-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "714",
+        "name": "Rui 714",
+        "character": "Rui",
+        "img": "Rui/4-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "715",
+        "name": "Rui 715",
+        "character": "Rui",
+        "img": "Rui/5-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "716",
+        "name": "Rui 716",
+        "character": "Rui",
+        "img": "Rui/6-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "717",
+        "name": "Rui 717",
+        "character": "Rui",
+        "img": "Rui/7-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "718",
+        "name": "Rui 718",
+        "character": "Rui",
+        "img": "Rui/8-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "719",
+        "name": "Rui 719",
+        "character": "Rui",
+        "img": "Rui/9-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "720",
+        "name": "Rui 720",
+        "character": "Rui",
+        "img": "Rui/10-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "721",
+        "name": "Rui 721",
+        "character": "Rui",
+        "img": "Rui/11-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "722",
+        "name": "Rui 722",
+        "character": "Rui",
+        "img": "Rui/12-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "723",
+        "name": "Rui 723",
+        "character": "Rui",
+        "img": "Rui/13-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "724",
+        "name": "Rui 724",
+        "character": "Rui",
+        "img": "Rui/14-kamishiro.png",
+        "color": "#BB88EE",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "725",
+        "name": "Tsukasa 725",
+        "character": "Tsukasa",
+        "img": "Tsukasa/1-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "726",
+        "name": "Tsukasa 726",
+        "character": "Tsukasa",
+        "img": "Tsukasa/2-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "727",
+        "name": "Tsukasa 727",
+        "character": "Tsukasa",
+        "img": "Tsukasa/3-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "728",
+        "name": "Tsukasa 728",
+        "character": "Tsukasa",
+        "img": "Tsukasa/4-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "729",
+        "name": "Tsukasa 729",
+        "character": "Tsukasa",
+        "img": "Tsukasa/5-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "730",
+        "name": "Tsukasa 730",
+        "character": "Tsukasa",
+        "img": "Tsukasa/6-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "731",
+        "name": "Tsukasa 731",
+        "character": "Tsukasa",
+        "img": "Tsukasa/7-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "732",
+        "name": "Tsukasa 732",
+        "character": "Tsukasa",
+        "img": "Tsukasa/8-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "733",
+        "name": "Tsukasa 733",
+        "character": "Tsukasa",
+        "img": "Tsukasa/9-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "734",
+        "name": "Tsukasa 734",
+        "character": "Tsukasa",
+        "img": "Tsukasa/10-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "735",
+        "name": "Tsukasa 735",
+        "character": "Tsukasa",
+        "img": "Tsukasa/11-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "736",
+        "name": "Tsukasa 736",
+        "character": "Tsukasa",
+        "img": "Tsukasa/12-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "737",
+        "name": "Tsukasa 737",
+        "character": "Tsukasa",
+        "img": "Tsukasa/13-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "738",
+        "name": "Tsukasa 738",
+        "character": "Tsukasa",
+        "img": "Tsukasa/14-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "739",
+        "name": "Tsukasa 739",
+        "character": "Tsukasa",
+        "img": "Tsukasa/15-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "740",
+        "name": "Tsukasa 740",
+        "character": "Tsukasa",
+        "img": "Tsukasa/16-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "741",
+        "name": "Tsukasa 741",
+        "character": "Tsukasa",
+        "img": "Tsukasa/17-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "742",
+        "name": "Tsukasa 742",
+        "character": "Tsukasa",
+        "img": "Tsukasa/18-tks.png",
+        "color": "#F09A04",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "743",
+        "name": "emu 743",
+        "character": "emu",
+        "img": "emu/1-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "744",
+        "name": "emu 744",
+        "character": "emu",
+        "img": "emu/2-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "745",
+        "name": "emu 745",
+        "character": "emu",
+        "img": "emu/3-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "746",
+        "name": "emu 746",
+        "character": "emu",
+        "img": "emu/4-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "747",
+        "name": "emu 747",
+        "character": "emu",
+        "img": "emu/5-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "748",
+        "name": "emu 748",
+        "character": "emu",
+        "img": "emu/6-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "749",
+        "name": "emu 749",
+        "character": "emu",
+        "img": "emu/7-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "750",
+        "name": "emu 750",
+        "character": "emu",
+        "img": "emu/8-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "751",
+        "name": "emu 751",
+        "character": "emu",
+        "img": "emu/9-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "752",
+        "name": "emu 752",
+        "character": "emu",
+        "img": "emu/10-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "753",
+        "name": "emu 753",
+        "character": "emu",
+        "img": "emu/11-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "754",
+        "name": "emu 754",
+        "character": "emu",
+        "img": "emu/12-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "755",
+        "name": "emu 755",
+        "character": "emu",
+        "img": "emu/13-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "756",
+        "name": "emu 756",
+        "character": "emu",
+        "img": "emu/14-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "757",
+        "name": "emu 757",
+        "character": "emu",
+        "img": "emu/15-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "758",
+        "name": "emu 758",
+        "character": "emu",
+        "img": "emu/16-emu-cc.png",
+        "color": "#FF66BB",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "759",
+        "name": "Nene 759",
+        "character": "Nene",
+        "img": "Nene/1-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "760",
+        "name": "Nene 760",
+        "character": "Nene",
+        "img": "Nene/2-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "761",
+        "name": "Nene 761",
+        "character": "Nene",
+        "img": "Nene/3-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "762",
+        "name": "Nene 762",
+        "character": "Nene",
+        "img": "Nene/4-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "763",
+        "name": "Nene 763",
+        "character": "Nene",
+        "img": "Nene/5-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "764",
+        "name": "Nene 764",
+        "character": "Nene",
+        "img": "Nene/6-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "765",
+        "name": "Nene 765",
+        "character": "Nene",
+        "img": "Nene/7-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "766",
+        "name": "Nene 766",
+        "character": "Nene",
+        "img": "Nene/8-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "767",
+        "name": "Nene 767",
+        "character": "Nene",
+        "img": "Nene/9-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "768",
+        "name": "Nene 768",
+        "character": "Nene",
+        "img": "Nene/10-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "769",
+        "name": "Nene 769",
+        "character": "Nene",
+        "img": "Nene/11-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "770",
+        "name": "Nene 770",
+        "character": "Nene",
+        "img": "Nene/12-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "771",
+        "name": "Nene 771",
+        "character": "Nene",
+        "img": "Nene/13-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "772",
+        "name": "Nene 772",
+        "character": "Nene",
+        "img": "Nene/14-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
+    },
+    {
+        "id": "773",
+        "name": "Nene 773",
+        "character": "Nene",
+        "img": "Nene/15-Kusanagi Nene-cc.png",
+        "color": "#19CD94",
+        "defaultText": {
+            "text": "New Sticker",
+            "x": 148,
+            "y": 58,
+            "r": -2,
+            "s": 47
+        }
     }
-  
 ]

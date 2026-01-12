@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sekai-stickers:
+    build: .
+    container_name: sekai_stickers_container
+    ports:
+      - "3000:80"  # Master 访问 VPS 的 3000 端口就能看到了
+    restart: always
