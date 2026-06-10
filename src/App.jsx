@@ -168,6 +168,9 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <h1 className="visually-hidden">Project Sekai Stickers Maker | PJSK表情包在线生成器</h1>
+      </header>
       <Info open={infoOpen} handleClose={handleClose} config={config} />
       {!bannerView && (
         <div className="bannercontainer">
@@ -200,10 +203,10 @@ function App() {
       <div className="counter">
         Total Stickers you made: {config?.total || "Not available"}
       </div>
-      <div className="container">
+      <main className="container">
         <div className="vertical">
           <div className="canvas">
-            <Canvas draw={draw} />
+            <Canvas draw={draw} aria-label="Project Sekai Sticker Canvas" role="img" />
           </div>
           <Slider
             value={curve ? 256 - position.y + fontSize * 3 : 256 - position.y}
@@ -305,12 +308,12 @@ function App() {
             </Button>
           </div>
         </div>
-        <div className="footer">
+        <footer className="footer">
           <Button color="secondary" onClick={handleClickOpen}>
             Info
           </Button>
-        </div>
-      </div>
+        </footer>
+      </main>
     </div>
   );
 }

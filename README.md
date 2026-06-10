@@ -1,4 +1,5 @@
 Note: This app is no longer maintained as I'm working on an upcoming app. Stay tuned for updates!
+pgntgz:I also don't have any programming experience. What I did was add some new textures that weren't there before. The way I made them was using AI: the model is gemini-3-pro-img. I know I'm useless, so I chose to fork this branch...
 ---
 
 [![Contributors][contributors-shield]][contributors-url]

@@ -25,8 +25,8 @@ RUN npm run build
 FROM nginx:alpine
 
 # 【修正】这里去掉了错误的 --rm 参数
-# 把第一阶段打包好的文件复制到 Nginx 的服务目录
-COPY --from=builder /app/build /usr/share/nginx/html
+# 把第一阶段打包好的文件复制到 Nginx 的服务目录（放置在 pjsk 子目录下以适配 package.json 中的 homepage）
+COPY --from=builder /app/build /usr/share/nginx/html/pjsk
 
 # 暴露 80 端口让外面访问
 EXPOSE 80

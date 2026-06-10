@@ -26,41 +26,44 @@ export default function Picker({ setCharacter }) {
   // Memoize the filtered image list items to avoid recomputing them
   // at every render
   const memoizedImageListItems = useMemo(() => {
-    const s = search.toLowerCase();
-    return characters.map((c, index) => {
-      if (
+    const s = search.toLowerCase().trim();
+    // Keep track of the original index for setCharacter
+    const charactersWithIndex = characters.map((c, idx) => ({ ...c, originalIndex: idx }));
+
+    const filtered = charactersWithIndex.filter((c) => {
+      if (!s) return true;
+      return (
         s === c.id ||
         c.name.toLowerCase().includes(s) ||
         c.character.toLowerCase().includes(s)
-      ) {
-        return (
-          <ImageListItem
-            key={index}
-            onClick={() => {
-              handleClose();
-              setCharacter(index);
-            }}
-            sx={{
-              cursor: "pointer",
-              "&:hover": {
-                opacity: 0.5,
-              },
-              "&:active": {
-                opacity: 0.8,
-              },
-            }}
-          >
-            <img
-              src={`/img/${c.img}`}
-              srcSet={`/img/${c.img}`}
-              alt={c.name}
-              loading="lazy"
-            />
-          </ImageListItem>
-        );
-      }
-      return null;
+      );
     });
+
+    return filtered.map((c) => (
+      <ImageListItem
+        key={c.originalIndex}
+        onClick={() => {
+          handleClose();
+          setCharacter(c.originalIndex);
+        }}
+        sx={{
+          cursor: "pointer",
+          "&:hover": {
+            opacity: 0.5,
+          },
+          "&:active": {
+            opacity: 0.8,
+          },
+        }}
+      >
+        <img
+          src={`/img/${c.img}`}
+          srcSet={`/img/${c.img}`}
+          alt={c.name}
+          loading="lazy"
+        />
+      </ImageListItem>
+    ));
   }, [search, setCharacter]);
 
   return (
@@ -84,31 +87,35 @@ export default function Picker({ setCharacter }) {
         }}
         className="modal"
       >
-        <div className="picker-search">
-          <TextField
-            label="Search character"
-            size="small"
-            color="secondary"
-            value={search}
-            multiline={true}
-            fullWidth
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-        <div className="image-grid-wrapper">
-          <ImageList
-            sx={{
-              width: window.innerWidth < 600 ? 300 : 500,
-              height: 450,
-              overflow: "visible",
-            }}
-            cols={window.innerWidth < 600 ? 3 : 4}
-            rowHeight={140}
-            className="image-grid"
-          >
-            {memoizedImageListItems}
-          </ImageList>
-        </div>
+        {open && (
+          <>
+            <div className="picker-search">
+              <TextField
+                label="Search character"
+                size="small"
+                color="secondary"
+                value={search}
+                multiline={true}
+                fullWidth
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+            <div className="image-grid-wrapper">
+              <ImageList
+                sx={{
+                  width: window.innerWidth < 600 ? 300 : 500,
+                  height: 450,
+                  overflow: "visible",
+                }}
+                cols={window.innerWidth < 600 ? 3 : 4}
+                rowHeight={140}
+                className="image-grid"
+              >
+                {memoizedImageListItems}
+              </ImageList>
+            </div>
+          </>
+        )}
       </Popover>
     </div>
   );
