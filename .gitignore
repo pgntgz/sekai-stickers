@@ -26,4 +26,4 @@ yarn-error.log*
 
 # dev
 src/*.dev.jsx
-src/*.old
+src/*.old*.tar.gz

@@ -57,8 +57,8 @@ export default function Picker({ setCharacter }) {
         }}
       >
         <img
-          src={`/img/${c.img}`}
-          srcSet={`/img/${c.img}`}
+          src={`${process.env.PUBLIC_URL}/img/${c.img}`}
+          srcSet={`${process.env.PUBLIC_URL}/img/${c.img}`}
           alt={c.name}
           loading="lazy"
         />

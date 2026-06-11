@@ -1,35 +1,45 @@
-# Master... 第一阶段是构建环境 (Build Stage)
+# ============================================
+#  sekai-stickers Dockerfile
+#  用途: 在本地或 CI 中构建静态产物
+#  部署方式: 构建完成后将 build/ 目录上传到 VPS
+# ============================================
+
+# 构建阶段 (Build Stage)
 FROM node:18-alpine as builder
 
-# 设置工作目录
 WORKDIR /app
 
-# 先只复制依赖描述文件，利用 Docker 缓存加速下载
+# 先复制依赖描述文件，利用 Docker 缓存加速
 COPY package.json package-lock.json ./
 
-# 安装依赖
-# 如果 Master 在国内网络环境不好，可以取消下面这行的注释
+# 如果在国内网络不好，可以取消下面这行的注释
 # RUN npm config set registry https://registry.npmmirror.com
 
 RUN npm install
 
-# 把剩下的源代码都复制进去
+# 复制源代码
 COPY . .
 
-# 开始打包... (Build)
+# 打包构建
 RUN npm run build
 
-# ---
-
-# Master... 第二阶段是运行环境 (Production Stage)
+# ============================================
+#  生产阶段 (Production Stage)
+#  直接使用 nginx:alpine 托管静态文件
+# ============================================
 FROM nginx:alpine
 
-# 【修正】这里去掉了错误的 --rm 参数
-# 把第一阶段打包好的文件复制到 Nginx 的服务目录（放置在 pjsk 子目录下以适配 package.json 中的 homepage）
-COPY --from=builder /app/build /usr/share/nginx/html/pjsk
+# 移除默认的 nginx 配置
+RUN rm /etc/nginx/conf.d/default.conf
 
-# 暴露 80 端口让外面访问
+# 复制自定义 nginx 配置
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# 将构建产物复制到 nginx 静态文件目录
+# 注意: 因为 package.json homepage="/pjsk"，所以 build 产物需要放在根目录
+# 而 nginx.conf 中用 alias 将 /pjsk 映射到 /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
+
 EXPOSE 80
 
-# 启动 Nginx
 CMD ["nginx", "-g", "daemon off;"]
