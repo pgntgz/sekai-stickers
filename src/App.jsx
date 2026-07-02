@@ -15,6 +15,16 @@ import { useTranslation } from "react-i18next";
 
 const { ClipboardItem } = window;
 
+// 可选的贴纸渲染字体
+const STICKER_FONTS = [
+  { id: "yuruka", label: "font_yuruka", fontFamily: "YurukaStd, SSFangTangTi" },
+  { id: "tangtang", label: "font_tangtang", fontFamily: "SSFangTangTi, YurukaStd" },
+  { id: "huangyou", label: "font_huangyou", fontFamily: "'ZCOOL QingKe HuangYou', YurukaStd" },
+  { id: "kuaile", label: "font_kuaile", fontFamily: "'ZCOOL KuaiLe', YurukaStd" },
+  { id: "brush", label: "font_brush", fontFamily: "'Ma Shan Zheng', YurukaStd" },
+  { id: "system", label: "font_system", fontFamily: "system-ui, sans-serif" },
+];
+
 function App() {
   const { t, i18n } = useTranslation();
   const [config, setConfig] = useState(null);
@@ -22,10 +32,22 @@ function App() {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    localStorage.setItem('pjsk_lang', lng);
+    localStorage.setItem("pjsk_lang", lng);
   };
 
-  // using this to trigger the useEffect because lazy to think of a better way
+  // 贴纸字体状态
+  const [stickerFont, setStickerFont] = useState(
+    localStorage.getItem("pjsk_font") || "yuruka"
+  );
+  const handleFontChange = (fontId) => {
+    setStickerFont(fontId);
+    localStorage.setItem("pjsk_font", fontId);
+  };
+  const currentFontFamily =
+    STICKER_FONTS.find((f) => f.id === stickerFont)?.fontFamily ||
+    STICKER_FONTS[0].fontFamily;
+
+  // Config fetch
   const [rand, setRand] = useState(0);
   useEffect(() => {
     try {
@@ -40,14 +62,8 @@ function App() {
   }, [rand]);
 
   const [infoOpen, setInfoOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setInfoOpen(true);
-  };
-
-  const handleClose = () => {
-    setInfoOpen(false);
-  };
+  const handleClickOpen = () => setInfoOpen(true);
+  const handleClose = () => setInfoOpen(false);
 
   const [character, setCharacter] = useState(49);
   const [text, setText] = useState(characters[character].defaultText.text);
@@ -74,10 +90,7 @@ function App() {
   }, [character]);
 
   img.src = import.meta.env.BASE_URL + "img/" + characters[character].img;
-
-  img.onload = () => {
-    setLoaded(true);
-  };
+  img.onload = () => setLoaded(true);
 
   let angle = (Math.PI * text.length) / 7;
 
@@ -85,7 +98,13 @@ function App() {
     ctx.canvas.width = 296;
     ctx.canvas.height = 256;
 
-    if (loaded && document.fonts.check("12px YurukaStd")) {
+    // 使用用户选择的字体进行字体检测和渲染
+    const primaryFont = currentFontFamily.split(",")[0].trim().replace(/'/g, "");
+    const fontReady =
+      primaryFont === "system-ui" ||
+      document.fonts.check(`12px ${primaryFont}`);
+
+    if (loaded && fontReady) {
       var hRatio = ctx.canvas.width / img.width;
       var vRatio = ctx.canvas.height / img.height;
       var ratio = Math.min(hRatio, vRatio);
@@ -94,16 +113,11 @@ function App() {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       ctx.drawImage(
         img,
-        0,
-        0,
-        img.width,
-        img.height,
-        centerShift_x,
-        centerShift_y,
-        img.width * ratio,
-        img.height * ratio
+        0, 0, img.width, img.height,
+        centerShift_x, centerShift_y,
+        img.width * ratio, img.height * ratio
       );
-      ctx.font = `${fontSize}px YurukaStd, SSFangTangTi`;
+      ctx.font = `${fontSize}px ${currentFontFamily}`;
       ctx.lineWidth = 9;
       ctx.save();
 
@@ -138,7 +152,7 @@ function App() {
   const download = async () => {
     const canvas = document.getElementsByTagName("canvas")[0];
     const link = document.createElement("a");
-    link.download = `${characters[character].name}_st.ayaka.one.png`;
+    link.download = `${characters[character].name}_pjsk-sticker.png`;
     link.href = canvas.toDataURL();
     link.click();
     await log(characters[character].id, characters[character].name, "download");
@@ -179,6 +193,8 @@ function App() {
         <h1 className="visually-hidden">{t("app_title")}</h1>
       </header>
       <Info open={infoOpen} handleClose={handleClose} config={config} />
+
+      {/* Banner */}
       {!bannerView && (
         <div className="bannercontainer">
           <div className="bannermessage">
@@ -207,36 +223,65 @@ function App() {
           </div>
         </div>
       )}
-      <div className="language-selector" style={{ margin: '15px 0', display: 'flex', justifyContent: 'center', gap: '8px' }}>
-        <Button size="small" variant={i18n.language === 'zh' ? 'contained' : 'outlined'} color="secondary" onClick={() => changeLanguage('zh')}>简中</Button>
-        <Button size="small" variant={i18n.language === 'en' ? 'contained' : 'outlined'} color="secondary" onClick={() => changeLanguage('en')}>EN</Button>
-        <Button size="small" variant={i18n.language === 'ja' ? 'contained' : 'outlined'} color="secondary" onClick={() => changeLanguage('ja')}>日本語</Button>
+
+      {/* Language Selector */}
+      <div className="language-selector">
+        <Button
+          size="small"
+          variant={i18n.language === "zh" ? "contained" : "outlined"}
+          onClick={() => changeLanguage("zh")}
+        >
+          简中
+        </Button>
+        <Button
+          size="small"
+          variant={i18n.language === "en" ? "contained" : "outlined"}
+          onClick={() => changeLanguage("en")}
+        >
+          EN
+        </Button>
+        <Button
+          size="small"
+          variant={i18n.language === "ja" ? "contained" : "outlined"}
+          onClick={() => changeLanguage("ja")}
+        >
+          日本語
+        </Button>
       </div>
+
       <div className="counter">
-        {t("total_stickers")}{config?.total || t("not_available")}
+        {t("total_stickers")}
+        {config?.total || t("not_available")}
       </div>
+
       <main className="container">
-        <div className="vertical">
-          <div className="canvas">
-            <Canvas draw={draw} aria-label="Project Sekai Sticker Canvas" role="img" />
+        {/* Canvas Card */}
+        <div className="canvas-card">
+          <div className="vertical">
+            <div className="canvas">
+              <Canvas
+                draw={draw}
+                aria-label="Project Sekai Sticker Canvas"
+                role="img"
+              />
+            </div>
+            <Slider
+              value={
+                curve ? 256 - position.y + fontSize * 3 : 256 - position.y
+              }
+              onChange={(e, v) =>
+                setPosition({
+                  ...position,
+                  y: curve ? 256 + fontSize * 3 - v : 256 - v,
+                })
+              }
+              min={0}
+              max={256}
+              step={1}
+              orientation="vertical"
+              track={false}
+            />
           </div>
-          <Slider
-            value={curve ? 256 - position.y + fontSize * 3 : 256 - position.y}
-            onChange={(e, v) =>
-              setPosition({
-                ...position,
-                y: curve ? 256 + fontSize * 3 - v : 256 - v,
-              })
-            }
-            min={0}
-            max={256}
-            step={1}
-            orientation="vertical"
-            track={false}
-            color="secondary"
-          />
-        </div>
-        <div className="horizontal">
           <Slider
             className="slider-horizontal"
             value={position.x}
@@ -245,8 +290,25 @@ function App() {
             max={296}
             step={1}
             track={false}
-            color="secondary"
           />
+        </div>
+
+        {/* Settings Card */}
+        <div className="settings-card">
+          {/* Font Selector */}
+          <div className="font-selector">
+            {STICKER_FONTS.map((f) => (
+              <Button
+                key={f.id}
+                size="small"
+                variant={stickerFont === f.id ? "contained" : "outlined"}
+                onClick={() => handleFontChange(f.id)}
+              >
+                {t(f.label)}
+              </Button>
+            ))}
+          </div>
+
           <div className="settings">
             <div>
               <label>{t("rotate")}</label>
@@ -257,13 +319,10 @@ function App() {
                 max={10}
                 step={0.2}
                 track={false}
-                color="secondary"
               />
             </div>
             <div>
-              <label>
-                <nobr>{t("font_size")}</nobr>
-              </label>
+              <label>{t("font_size")}</label>
               <Slider
                 value={fontSize}
                 onChange={(e, v) => setFontSize(v)}
@@ -271,13 +330,10 @@ function App() {
                 max={100}
                 step={1}
                 track={false}
-                color="secondary"
               />
             </div>
             <div>
-              <label>
-                <nobr>{t("spacing")}</nobr>
-              </label>
+              <label>{t("spacing")}</label>
               <Slider
                 value={spaceSize}
                 onChange={(e, v) => setSpaceSize(v)}
@@ -285,7 +341,6 @@ function App() {
                 max={100}
                 step={1}
                 track={false}
-                color="secondary"
               />
             </div>
             <div>
@@ -293,37 +348,40 @@ function App() {
               <Switch
                 checked={curve}
                 onChange={(e) => setCurve(e.target.checked)}
-                color="secondary"
               />
             </div>
           </div>
-          <div className="text">
-            <TextField
-              label={t("text_label")}
-              size="small"
-              color="secondary"
-              value={text}
-              multiline={true}
-              fullWidth
-              onChange={(e) => setText(e.target.value)}
-            />
-          </div>
-          <div className="picker">
-            <Picker setCharacter={setCharacter} />
-          </div>
-          <div className="buttons">
-            <Button color="secondary" onClick={copy}>
-              {t("copy")}
-            </Button>
-            <Button color="secondary" onClick={download}>
-              {t("download")}
-            </Button>
-          </div>
         </div>
-        <footer className="footer">
-          <Button color="secondary" onClick={handleClickOpen}>
-            {t("info")}
+
+        {/* Text Input */}
+        <div className="text" style={{ width: "100%", marginBottom: 16 }}>
+          <TextField
+            label={t("text_label")}
+            size="small"
+            value={text}
+            multiline={true}
+            fullWidth
+            onChange={(e) => setText(e.target.value)}
+          />
+        </div>
+
+        {/* Character Picker */}
+        <div className="picker">
+          <Picker setCharacter={setCharacter} />
+        </div>
+
+        {/* Action Buttons */}
+        <div className="buttons">
+          <Button variant="outlined" onClick={copy}>
+            {t("copy")}
           </Button>
+          <Button variant="contained" onClick={download}>
+            {t("download")}
+          </Button>
+        </div>
+
+        <footer className="footer">
+          <Button onClick={handleClickOpen}>{t("info")}</Button>
         </footer>
       </main>
 
@@ -331,8 +389,13 @@ function App() {
       <ul className="visually-hidden" aria-hidden="false">
         {characters.map((c, index) => (
           <li key={index}>
-            <img src={`${import.meta.env.BASE_URL}img/${c.img}`} alt={`${c.name} - ${c.defaultText?.text}`} />
-            <span>{c.name} - {c.defaultText?.text}</span>
+            <img
+              src={`${import.meta.env.BASE_URL}img/${c.img}`}
+              alt={`${c.name} - ${c.defaultText?.text}`}
+            />
+            <span>
+              {c.name} - {c.defaultText?.text}
+            </span>
           </li>
         ))}
       </ul>

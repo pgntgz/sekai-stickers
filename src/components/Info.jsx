@@ -25,7 +25,7 @@ export default function Info({ open, handleClose, config }) {
     >
     <DialogTitle id="alert-dialog-title">{t("info_title")}</DialogTitle>
     <DialogContent>
-    <DialogContentText id="alert-dialog-description">
+    <DialogContentText id="alert-dialog-description" component="div">
     <Typography variant="h6" component="h3">
     {t("made_possible_by")}
     </Typography>
@@ -44,7 +44,7 @@ export default function Info({ open, handleClose, config }) {
     </ListItemAvatar>
     <ListItemText
     primary="Ayaka"
-    secondary="for the original idea"
+    secondary={t("contrib_ayaka")}
     />
     </ListItem>
     <ListItem
@@ -61,7 +61,7 @@ export default function Info({ open, handleClose, config }) {
     </ListItemAvatar>
     <ListItemText
     primary="Modder4869"
-    secondary="for the help with the code"
+    secondary={t("contrib_modder")}
     />
     </ListItem>
     <ListItem
@@ -79,7 +79,7 @@ export default function Info({ open, handleClose, config }) {
     </ListItemAvatar>
     <ListItemText
     primary="u/SherenPlaysGames"
-    secondary="for the original stamps"
+    secondary={t("contrib_sheren")}
     />
     </ListItem>
     <ListItem
@@ -97,7 +97,7 @@ export default function Info({ open, handleClose, config }) {
     </ListItemAvatar>
     <ListItemText
     primary="Contributors"
-    secondary="for the help with the code"
+    secondary={t("contrib_contributors")}
     />
     </ListItem>
     {/* 这里是 Master 的信息！ */}
@@ -115,8 +115,8 @@ export default function Info({ open, handleClose, config }) {
     primary="pgntgz"
     secondary={
       <>
-      {t("pgntgz_contrib_1")}<br />
-      {t("pgntgz_contrib_2")}
+      {t("contrib_pgntgz_1")}<br />
+      {t("contrib_pgntgz_2")}
       </>
     }
     />
@@ -139,7 +139,7 @@ export default function Info({ open, handleClose, config }) {
     src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
     />
     </ListItemAvatar>
-    <ListItemText primary="GitHub" secondary="Original Source Code" />
+    <ListItemText primary="GitHub" secondary={t("link_original_code")} />
     </ListItem>
     {/* 这里是 Master 的 fork 链接！ */}
     <ListItem
@@ -154,7 +154,7 @@ export default function Info({ open, handleClose, config }) {
     src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
     />
     </ListItemAvatar>
-    <ListItemText primary="GitHub" secondary="Fork by pgntgz" />
+    <ListItemText primary="GitHub" secondary={t("link_fork_code")} />
     </ListItem>
     </List>
     <Typography variant="h6" component="h3">
@@ -175,7 +175,7 @@ export default function Info({ open, handleClose, config }) {
     </ListItemAvatar>
     <ListItemText
     primary="Sekai Stickers"
-    secondary="Add more fun to your server."
+    secondary={t("bot_slogan")}
     />
     </ListItem>
     </List>

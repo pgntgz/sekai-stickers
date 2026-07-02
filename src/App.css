@@ -1,68 +1,226 @@
+/* ============================================
+   App.css — MD3 Component Styles
+   ============================================ */
+
+/* --- App Shell --- */
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* --- Language Selector (Segmented Button Group) --- */
+.language-selector {
+  display: inline-flex;
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 4px;
+  gap: 2px;
+  margin: 16px 0 !important;
+}
+
+.language-selector .MuiButton-root {
+  border-radius: var(--md-sys-shape-corner-full) !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  padding: 6px 16px !important;
+  min-width: auto !important;
+  letter-spacing: 0.02em !important;
+  border: none !important;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+.language-selector .MuiButton-contained {
+  background-color: var(--md-sys-color-secondary-container) !important;
+  color: var(--md-sys-color-on-secondary-container) !important;
+  box-shadow: none !important;
+}
+
+.language-selector .MuiButton-outlined {
+  background-color: transparent !important;
+  color: var(--md-sys-color-on-surface-variant) !important;
+  border: none !important;
+}
+
+.language-selector .MuiButton-outlined:hover {
+  background-color: var(--md-sys-color-surface-container-high) !important;
+}
+
+/* --- Counter --- */
+.counter {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 4px 16px;
+  margin-bottom: 8px;
+}
+
+/* --- Main Container --- */
 .container {
-  padding: 2rem;
+  padding: 16px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* --- Canvas Card --- */
+.canvas-card {
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large);
+  padding: 24px;
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .canvas {
   height: 256px;
   width: 296px;
-  border: 1px solid #ddd;
+  margin: 0 auto;
+  border-radius: var(--md-sys-shape-corner-medium);
+  overflow: hidden;
 }
 
+/* --- Vertical / Horizontal Layout --- */
 .vertical {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 256px;
+  gap: 8px;
 }
 
 .horizontal {
-  width: 296px;
-  /* margin-left: -30px; */
-
+  width: 100%;
 }
 
 .slider-horizontal {
-  margin-left: -30px;
+  margin: 8px 0 !important;
+}
+
+/* --- Settings Panel --- */
+.settings-card {
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large);
+  padding: 20px 24px;
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.settings-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .settings {
-  color: white;
-  font-family: "YurukaStd";
-  margin: 1.5rem 0 1.5rem 0;
+  color: var(--md-sys-color-on-surface);
 }
 
 .settings > div {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 16px;
+  margin-bottom: 8px;
 }
 
+.settings > div:last-child {
+  margin-bottom: 0;
+}
+
+.settings label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  white-space: nowrap;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* --- Font Selector (Segmented) --- */
+.font-selector {
+  display: inline-flex;
+  background: var(--md-sys-color-surface-container-high);
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 3px;
+  gap: 2px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.font-selector .MuiButton-root {
+  border-radius: var(--md-sys-shape-corner-full) !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  padding: 5px 12px !important;
+  min-width: auto !important;
+  flex: 1 !important;
+  border: none !important;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+.font-selector .MuiButton-contained {
+  background-color: var(--md-sys-color-primary-container) !important;
+  color: var(--md-sys-color-on-primary-container) !important;
+  box-shadow: none !important;
+}
+
+.font-selector .MuiButton-outlined {
+  background-color: transparent !important;
+  color: var(--md-sys-color-on-surface-variant) !important;
+  border: none !important;
+}
+
+.font-selector .MuiButton-outlined:hover {
+  background-color: var(--md-sys-color-surface-container-highest) !important;
+}
+
+/* --- Text Input --- */
 .text {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
+/* --- Picker --- */
 .picker {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 16px;
 }
 
 .modal > .MuiPopover-paper {
   overflow: hidden;
+  border-radius: var(--md-sys-shape-corner-large) !important;
+  background: var(--md-sys-color-surface-container-high) !important;
 }
 
 .picker-search {
-  margin: 0.5rem;
+  margin: 12px;
 }
 
 .image-grid-wrapper {
@@ -70,103 +228,90 @@
 }
 
 .image-grid {
-  margin: 0.5rem;
-  border-radius: 0.25rem;
+  margin: 0 12px 12px;
+  border-radius: var(--md-sys-shape-corner-small);
 }
 
+/* --- Action Buttons --- */
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
+.buttons .MuiButton-root {
+  border-radius: var(--md-sys-shape-corner-full) !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  padding: 10px 28px !important;
+  font-size: 14px !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* --- Footer --- */
 .footer {
-  margin-top: 2rem;
-  font-family: "YurukaStd";
+  margin-top: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 24px;
 }
 
-/* .footer > a {
-  color: rgb(199, 199, 199);
-  text-decoration: none;
-  margin-bottom: 0.5rem;
+.footer .MuiButton-root {
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  color: var(--md-sys-color-on-surface-variant) !important;
+  border-radius: var(--md-sys-shape-corner-full) !important;
 }
 
-.footer > a:hover {
-  color: rgb(255, 255, 255);
-} */
-
-::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 1rem;
-  min-height: 2rem;
-}
-
-.counter {
-  left: 0;
-  top: 0;
-  text-align: left;
-  color: white;
-  font-weight: bold;
-  font-family: YurukaStd;
-}
-
-/* banner */
-
+/* --- Banner --- */
 .bannercontainer {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   overflow: hidden;
-  background-color: #702464;
-  padding: 10px 15px;
-  font-family: "YurukaStd";
+  background: linear-gradient(135deg, var(--md-sys-color-primary-container), var(--md-sys-color-secondary-container));
+  padding: 10px 16px;
+  width: 100%;
 }
 
 .bannermessage {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .bannermessage p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
-}
-
-.bannermessage strong {
-  font-weight: bold;
+  color: var(--md-sys-color-on-primary-container);
+  font-weight: 500;
 }
 
 .bannerbutton {
   flex: none;
-  border-radius: 9999px;
-  background-color: #c56d87;
-  padding: 4px 14px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #FFFFFF;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-primary);
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--md-sys-color-on-primary);
+  box-shadow: none;
   text-decoration: none;
+  transition: opacity 0.15s ease;
 }
 
 .bannerbutton:hover {
-  background-color: #c55778;
+  opacity: 0.85;
 }
 
 .bannerbutton span {
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .bannerdismiss {
@@ -176,24 +321,91 @@
 }
 
 .bannerdismiss button {
-  margin: -10px;
-  padding: 10px;
+  margin: -8px;
+  padding: 8px;
   appearance: none;
   border: none;
   background-color: transparent;
-  color: inherit;
-  font: inherit;
+  color: var(--md-sys-color-on-primary-container);
   cursor: pointer;
   outline: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: background-color 0.15s ease;
+}
+
+.bannerdismiss button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .bannerdismiss button svg {
   height: 20px;
   width: 20px;
-  color: white;
 }
 
-/* SEO and Accessibility utilities */
+/* --- MUI Slider Override for M3 --- */
+.MuiSlider-root {
+  color: var(--md-sys-color-primary) !important;
+  height: 4px !important;
+}
+
+.MuiSlider-thumb {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: var(--md-sys-color-primary) !important;
+  box-shadow: 0 0 0 4px var(--md-sys-color-surface-container) !important;
+}
+
+.MuiSlider-thumb:hover,
+.MuiSlider-thumb.Mui-focusVisible {
+  box-shadow: 0 0 0 8px rgba(208, 188, 255, 0.16) !important;
+}
+
+.MuiSlider-rail {
+  background-color: var(--md-sys-color-surface-container-highest) !important;
+  opacity: 1 !important;
+}
+
+/* --- MUI TextField Override for M3 --- */
+.MuiOutlinedInput-root {
+  border-radius: var(--md-sys-shape-corner-medium) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--md-sys-color-outline-variant) !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--md-sys-color-on-surface-variant) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--md-sys-color-primary) !important;
+  border-width: 2px !important;
+}
+
+.MuiInputLabel-root {
+  color: var(--md-sys-color-on-surface-variant) !important;
+  font-weight: 400 !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: var(--md-sys-color-primary) !important;
+}
+
+/* --- MUI Switch Override for M3 --- */
+.MuiSwitch-root .MuiSwitch-track {
+  border-radius: var(--md-sys-shape-corner-full) !important;
+  background-color: var(--md-sys-color-surface-container-highest) !important;
+  opacity: 1 !important;
+}
+
+.MuiSwitch-root .Mui-checked + .MuiSwitch-track {
+  background-color: var(--md-sys-color-primary) !important;
+  opacity: 1 !important;
+}
+
+/* --- SEO and Accessibility --- */
 .visually-hidden {
   position: absolute;
   width: 1px;

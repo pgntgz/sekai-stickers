@@ -72,8 +72,7 @@ export default function Picker({ setCharacter }) {
     <div>
       <Button
         aria-describedby={id}
-        variant="contained"
-        color="secondary"
+        variant="outlined"
         onClick={handleClick}
       >
         {t("pick_character")}

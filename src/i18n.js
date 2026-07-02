@@ -27,8 +27,26 @@ const resources = {
       "total_stickers_made": "本站累计生成贴纸总数：",
       "sticker_unit": " 个贴纸",
       "close": "关闭",
-      "pgntgz_contrib_1": "1. 增加新贴图",
-      "pgntgz_contrib_2": "2. 维护本站"
+      
+      // 贡献者描述翻译
+      "contrib_ayaka": "最初的创意来源",
+      "contrib_modder": "协助核心代码编写",
+      "contrib_sheren": "提供初代表情包资源",
+      "contrib_contributors": "协助核心代码编写",
+      "contrib_pgntgz_1": "1. 增加新贴图",
+      "contrib_pgntgz_2": "2. 维护及现代化重构本站",
+      "link_original_code": "原作者开源仓库",
+      "link_fork_code": "pgntgz 的独立定制主仓库",
+      "bot_slogan": "为您的服务器增添更多乐趣",
+      
+      // 字体翻译
+      "sticker_font": "贴纸字体：",
+      "font_yuruka": "Yuruka二次元",
+      "font_tangtang": "唐糖体",
+      "font_huangyou": "黄油体",
+      "font_kuaile": "快乐体",
+      "font_brush": "狂草毛笔",
+      "font_system": "系统黑体"
     }
   },
   en: {
@@ -55,20 +73,38 @@ const resources = {
       "total_stickers_made": "Total stickers made using the app:",
       "sticker_unit": " Stickers",
       "close": "Close",
-      "pgntgz_contrib_1": "1. Added new stickers",
-      "pgntgz_contrib_2": "2. Maintain this site"
+
+      // 贡献者描述翻译
+      "contrib_ayaka": "for the original idea",
+      "contrib_modder": "for the help with the code",
+      "contrib_sheren": "for the original stamps",
+      "contrib_contributors": "for the help with the code",
+      "contrib_pgntgz_1": "1. Added new stickers",
+      "contrib_pgntgz_2": "2. Maintained and modernized this site",
+      "link_original_code": "Original Source Code",
+      "link_fork_code": "Fork & Rebrand by pgntgz",
+      "bot_slogan": "Add more fun to your server.",
+
+      // 字体翻译
+      "sticker_font": "Sticker Font: ",
+      "font_yuruka": "Yuruka Std",
+      "font_tangtang": "TangTang",
+      "font_huangyou": "HuangYou",
+      "font_kuaile": "KuaiLe",
+      "font_brush": "Brush",
+      "font_system": "System Sans"
     }
   },
   ja: {
     translation: {
       "app_title": "プロセカスタンプメーカー",
-      "banner_text": "プロセカスタンプのモバイルアプリが间もなくリリースされます！",
-      "learn_more": "详细はこちら",
+      "banner_text": "プロセカスタンプのモバイルアプリが間もなくリリースされます！",
+      "learn_more": "詳細はこちら",
       "total_stickers": "作成されたスタンプの総数：",
       "not_available": "取得不可",
       "rotate": "回転：",
       "font_size": "文字サイズ：",
-      "spacing": "文字间隔：",
+      "spacing": "文字間隔：",
       "curve": "テキスト湾曲 (Beta)：",
       "text_label": "テキスト入力",
       "pick_character": "キャラクターを選択",
@@ -83,8 +119,26 @@ const resources = {
       "total_stickers_made": "アプリで作成されたスタンプの総数：",
       "sticker_unit": " スタンプ",
       "close": "閉じる",
-      "pgntgz_contrib_1": "1. 新規スタンプの追加",
-      "pgntgz_contrib_2": "2. サイトのメンテナンス"
+
+      // 贡献者描述翻译
+      "contrib_ayaka": "オリジナルの発案・企画",
+      "contrib_modder": "コアコード開発への協力",
+      "contrib_sheren": "初期スタンプ素材の提供",
+      "contrib_contributors": "コアコード開発への協力",
+      "contrib_pgntgz_1": "1. 新規スタンプの追加",
+      "contrib_pgntgz_2": "2. サイトのメンテナンスおよび近代化",
+      "link_original_code": "オリジナルソースコード",
+      "link_fork_code": "pgntgz によるカスタムフォーク主倉庫",
+      "bot_slogan": "サーバーにさらに楽しさをプラス",
+
+      // 字体翻译
+      "sticker_font": "スタンプフォント：",
+      "font_yuruka": "ゆるか二次元",
+      "font_tangtang": "唐糖体",
+      "font_huangyou": "黄油体",
+      "font_kuaile": "快乐体",
+      "font_brush": "毛筆ブラシ",
+      "font_system": "システム"
     }
   }
 };
