@@ -6,8 +6,6 @@ const resources = {
   zh: {
     translation: {
       "app_title": "PJSK表情包在线生成器",
-      "banner_text": "世界计划贴纸 App 即将推出！",
-      "learn_more": "了解更多",
       "total_stickers": "已制作贴纸数：",
       "not_available": "无法获取",
       "rotate": "旋转：",
@@ -52,8 +50,6 @@ const resources = {
   en: {
     translation: {
       "app_title": "Project Sekai Stickers Maker",
-      "banner_text": "New Sekai Stickers mobile app is coming soon",
-      "learn_more": "Learn more",
       "total_stickers": "Total Stickers you made: ",
       "not_available": "Not available",
       "rotate": "Rotate: ",
@@ -98,8 +94,6 @@ const resources = {
   ja: {
     translation: {
       "app_title": "プロセカスタンプメーカー",
-      "banner_text": "プロセカスタンプのモバイルアプリが間もなくリリースされます！",
-      "learn_more": "詳細はこちら",
       "total_stickers": "作成されたスタンプの総数：",
       "not_available": "取得不可",
       "rotate": "回転：",

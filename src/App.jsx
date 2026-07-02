@@ -6,11 +6,14 @@ import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Switch from "@mui/material/Switch";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 import Picker from "./components/Picker";
 import Info from "./components/Info";
 import getConfiguration from "./utils/config";
 import log from "./utils/log";
-import { bannerViewed, setBannerViewed } from "./utils/banner";
 import { useTranslation } from "react-i18next";
 
 const { ClipboardItem } = window;
@@ -28,7 +31,6 @@ const STICKER_FONTS = [
 function App() {
   const { t, i18n } = useTranslation();
   const [config, setConfig] = useState(null);
-  const [bannerView, setBannerView] = useState(bannerViewed());
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -78,6 +80,15 @@ function App() {
   const [loaded, setLoaded] = useState(false);
   const img = new Image();
 
+  // 当外部字体异步加载完成后，自动触发重绘 Canvas
+  useEffect(() => {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        setRand((r) => r + 1);
+      });
+    }
+  }, [text, stickerFont]);
+
   useEffect(() => {
     setText(characters[character].defaultText.text);
     setPosition({
@@ -98,13 +109,7 @@ function App() {
     ctx.canvas.width = 296;
     ctx.canvas.height = 256;
 
-    // 使用用户选择的字体进行字体检测和渲染
-    const primaryFont = currentFontFamily.split(",")[0].trim().replace(/'/g, "");
-    const fontReady =
-      primaryFont === "system-ui" ||
-      document.fonts.check(`12px ${primaryFont}`);
-
-    if (loaded && fontReady) {
+    if (loaded) {
       var hRatio = ctx.canvas.width / img.width;
       var vRatio = ctx.canvas.height / img.height;
       var ratio = Math.min(hRatio, vRatio);
@@ -194,36 +199,6 @@ function App() {
       </header>
       <Info open={infoOpen} handleClose={handleClose} config={config} />
 
-      {/* Banner */}
-      {!bannerView && (
-        <div className="bannercontainer">
-          <div className="bannermessage">
-            <p>{t("banner_text")}</p>
-            <a
-              href="https://link.ayaka.one/boM9XJ"
-              className="bannerbutton"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("learn_more")} <span>&rarr;</span>
-            </a>
-          </div>
-          <div className="bannerdismiss">
-            <button
-              type="button"
-              onClick={() => {
-                setBannerViewed();
-                setBannerView(true);
-              }}
-            >
-              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Language Selector */}
       <div className="language-selector">
         <Button
@@ -295,19 +270,22 @@ function App() {
 
         {/* Settings Card */}
         <div className="settings-card">
-          {/* Font Selector */}
-          <div className="font-selector">
-            {STICKER_FONTS.map((f) => (
-              <Button
-                key={f.id}
-                size="small"
-                variant={stickerFont === f.id ? "contained" : "outlined"}
-                onClick={() => handleFontChange(f.id)}
-              >
-                {t(f.label)}
-              </Button>
-            ))}
-          </div>
+          {/* Font Selector Dropdown */}
+          <FormControl fullWidth size="small" style={{ marginBottom: 16 }}>
+            <InputLabel id="font-select-label">{t("sticker_font")}</InputLabel>
+            <Select
+              labelId="font-select-label"
+              value={stickerFont}
+              label={t("sticker_font")}
+              onChange={(e) => handleFontChange(e.target.value)}
+            >
+              {STICKER_FONTS.map((f) => (
+                <MenuItem key={f.id} value={f.id}>
+                  {t(f.label)}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
 
           <div className="settings">
             <div>
@@ -399,6 +377,13 @@ function App() {
           </li>
         ))}
       </ul>
+
+      {/* Preheat WebFonts to avoid delayed downloading issues on Canvas */}
+      <div style={{ position: 'absolute', opacity: 0, pointerEvents: 'none', height: 0, width: 0, overflow: 'hidden' }}>
+        <span style={{ fontFamily: "'ZCOOL QingKe HuangYou'" }}>Preheat</span>
+        <span style={{ fontFamily: "'ZCOOL KuaiLe'" }}>Preheat</span>
+        <span style={{ fontFamily: "'Ma Shan Zheng'" }}>Preheat</span>
+      </div>
     </div>
   );
 }
