@@ -10,8 +10,11 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
+import { useTranslation } from "react-i18next";
 
 export default function Info({ open, handleClose, config }) {
+  const { t } = useTranslation();
+
   return (
     <div>
     <Dialog
@@ -20,11 +23,11 @@ export default function Info({ open, handleClose, config }) {
     aria-labelledby="alert-dialog-title"
     aria-describedby="alert-dialog-description"
     >
-    <DialogTitle id="alert-dialog-title">Info</DialogTitle>
+    <DialogTitle id="alert-dialog-title">{t("info_title")}</DialogTitle>
     <DialogContent>
     <DialogContentText id="alert-dialog-description">
     <Typography variant="h6" component="h3">
-    This tool made possible by:
+    {t("made_possible_by")}
     </Typography>
     <List>
     <ListItem
@@ -112,15 +115,15 @@ export default function Info({ open, handleClose, config }) {
     primary="pgntgz"
     secondary={
       <>
-      1. 增加新贴图<br />
-      2. 维护本站
+      {t("pgntgz_contrib_1")}<br />
+      {t("pgntgz_contrib_2")}
       </>
     }
     />
     </ListItem>
     </List>
     <Typography variant="h6" component="h3">
-    You can find the source code or contribute here:
+    {t("source_code_contrib")}
     </Typography>
     <List>
     <ListItem
@@ -155,7 +158,7 @@ export default function Info({ open, handleClose, config }) {
     </ListItem>
     </List>
     <Typography variant="h6" component="h3">
-    The discord bot:
+    {t("discord_bot")}
     </Typography>
     <List>
     <ListItem
@@ -177,17 +180,17 @@ export default function Info({ open, handleClose, config }) {
     </ListItem>
     </List>
     <Typography variant="h6" component="h3">
-    Total stickers made using the app:
+    {t("total_stickers_made")}
     <br />
     {config?.global
-      ? config?.global.toLocaleString() + " Sticker"
-      : "not available"}
+      ? config?.global.toLocaleString() + t("sticker_unit")
+      : t("not_available")}
       </Typography>
       </DialogContentText>
       </DialogContent>
       <DialogActions>
       <Button onClick={handleClose} color="secondary" autoFocus>
-      Close
+      {t("close")}
       </Button>
       </DialogActions>
       </Dialog>

@@ -11,12 +11,19 @@ import Info from "./components/Info";
 import getConfiguration from "./utils/config";
 import log from "./utils/log";
 import { bannerViewed, setBannerViewed } from "./utils/banner";
+import { useTranslation } from "react-i18next";
 
 const { ClipboardItem } = window;
 
 function App() {
+  const { t, i18n } = useTranslation();
   const [config, setConfig] = useState(null);
   const [bannerView, setBannerView] = useState(bannerViewed());
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('pjsk_lang', lng);
+  };
 
   // using this to trigger the useEffect because lazy to think of a better way
   const [rand, setRand] = useState(0);
@@ -66,7 +73,7 @@ function App() {
     setLoaded(false);
   }, [character]);
 
-  img.src = process.env.PUBLIC_URL + "/img/" + characters[character].img;
+  img.src = import.meta.env.BASE_URL + "img/" + characters[character].img;
 
   img.onload = () => {
     setLoaded(true);
@@ -169,20 +176,20 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="visually-hidden">Project Sekai Stickers Maker | PJSK表情包在线生成器</h1>
+        <h1 className="visually-hidden">{t("app_title")}</h1>
       </header>
       <Info open={infoOpen} handleClose={handleClose} config={config} />
       {!bannerView && (
         <div className="bannercontainer">
           <div className="bannermessage">
-            <p>New Sekai Stickers mobile app is coming soon</p>
+            <p>{t("banner_text")}</p>
             <a
               href="https://link.ayaka.one/boM9XJ"
               className="bannerbutton"
               target="_blank"
               rel="noreferrer"
             >
-              Learn more <span>&rarr;</span>
+              {t("learn_more")} <span>&rarr;</span>
             </a>
           </div>
           <div className="bannerdismiss">
@@ -200,8 +207,13 @@ function App() {
           </div>
         </div>
       )}
+      <div className="language-selector" style={{ margin: '15px 0', display: 'flex', justifyContent: 'center', gap: '8px' }}>
+        <Button size="small" variant={i18n.language === 'zh' ? 'contained' : 'outlined'} color="secondary" onClick={() => changeLanguage('zh')}>简中</Button>
+        <Button size="small" variant={i18n.language === 'en' ? 'contained' : 'outlined'} color="secondary" onClick={() => changeLanguage('en')}>EN</Button>
+        <Button size="small" variant={i18n.language === 'ja' ? 'contained' : 'outlined'} color="secondary" onClick={() => changeLanguage('ja')}>日本語</Button>
+      </div>
       <div className="counter">
-        Total Stickers you made: {config?.total || "Not available"}
+        {t("total_stickers")}{config?.total || t("not_available")}
       </div>
       <main className="container">
         <div className="vertical">
@@ -237,7 +249,7 @@ function App() {
           />
           <div className="settings">
             <div>
-              <label>Rotate: </label>
+              <label>{t("rotate")}</label>
               <Slider
                 value={rotate}
                 onChange={(e, v) => setRotate(v)}
@@ -250,7 +262,7 @@ function App() {
             </div>
             <div>
               <label>
-                <nobr>Font size: </nobr>
+                <nobr>{t("font_size")}</nobr>
               </label>
               <Slider
                 value={fontSize}
@@ -264,7 +276,7 @@ function App() {
             </div>
             <div>
               <label>
-                <nobr>Spacing: </nobr>
+                <nobr>{t("spacing")}</nobr>
               </label>
               <Slider
                 value={spaceSize}
@@ -277,7 +289,7 @@ function App() {
               />
             </div>
             <div>
-              <label>Curve (Beta): </label>
+              <label>{t("curve")}</label>
               <Switch
                 checked={curve}
                 onChange={(e) => setCurve(e.target.checked)}
@@ -287,7 +299,7 @@ function App() {
           </div>
           <div className="text">
             <TextField
-              label="Text"
+              label={t("text_label")}
               size="small"
               color="secondary"
               value={text}
@@ -301,19 +313,29 @@ function App() {
           </div>
           <div className="buttons">
             <Button color="secondary" onClick={copy}>
-              copy
+              {t("copy")}
             </Button>
             <Button color="secondary" onClick={download}>
-              download
+              {t("download")}
             </Button>
           </div>
         </div>
         <footer className="footer">
           <Button color="secondary" onClick={handleClickOpen}>
-            Info
+            {t("info")}
           </Button>
         </footer>
       </main>
+
+      {/* SEO 贴纸文本与图片列表（视觉上隐藏） */}
+      <ul className="visually-hidden" aria-hidden="false">
+        {characters.map((c, index) => (
+          <li key={index}>
+            <img src={`${import.meta.env.BASE_URL}img/${c.img}`} alt={`${c.name} - ${c.defaultText?.text}`} />
+            <span>{c.name} - {c.defaultText?.text}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

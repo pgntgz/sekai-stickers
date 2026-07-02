@@ -7,8 +7,10 @@ import {
 } from "@mui/material";
 import { useState, useMemo } from "react";
 import characters from "../characters.json";
+import { useTranslation } from "react-i18next";
 
 export default function Picker({ setCharacter }) {
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState(null);
   const [search, setSearch] = useState("");
 
@@ -57,8 +59,8 @@ export default function Picker({ setCharacter }) {
         }}
       >
         <img
-          src={`${process.env.PUBLIC_URL}/img/${c.img}`}
-          srcSet={`${process.env.PUBLIC_URL}/img/${c.img}`}
+          src={`${import.meta.env.BASE_URL}img/${c.img}`}
+          srcSet={`${import.meta.env.BASE_URL}img/${c.img}`}
           alt={c.name}
           loading="lazy"
         />
@@ -74,7 +76,7 @@ export default function Picker({ setCharacter }) {
         color="secondary"
         onClick={handleClick}
       >
-        Pick character
+        {t("pick_character")}
       </Button>
       <Popover
         id={id}
@@ -91,7 +93,7 @@ export default function Picker({ setCharacter }) {
           <>
             <div className="picker-search">
               <TextField
-                label="Search character"
+                label={t("search_placeholder")}
                 size="small"
                 color="secondary"
                 value={search}

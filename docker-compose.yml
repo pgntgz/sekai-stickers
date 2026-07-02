@@ -4,7 +4,7 @@ services:
     image: nginx:alpine
     container_name: sekai_stickers_container
     ports:
-      - "3000:80"  # 访问 VPS 的 3000 端口（Cloudflare 代理会转发到这里）
+      - "80:80" # 访问 VPS 的 3000 端口（Cloudflare 代理会转发到这里）
     volumes:
       # 挂载构建产物到 Nginx 静态文件目录
       - /home/sekai-stickers/dist:/usr/share/nginx/html:ro
