@@ -27,6 +27,7 @@ const resources = {
       "contrib_modder": "协助核心代码编写",
       "contrib_sheren": "提供初代表情包资源",
       "contrib_contributors": "协助核心代码编写",
+      "contrib_gemini": "核心架构重构与 MD3 现代化",
       "contrib_pgntgz_1": "1. 增加新贴图",
       "contrib_pgntgz_2": "2. 维护及现代化重构本站",
       "link_original_code": "原作者开源仓库",
@@ -44,6 +45,7 @@ const resources = {
       "font_dela": "Dela爆裂海报",
       "font_mochiy": "Mochiy圆滚",
       "font_pixel": "8Bit像素",
+      "font_wqy": "文泉正黑 (标准)",
       "font_system": "系统黑体"
     }
   },
@@ -71,6 +73,7 @@ const resources = {
       "contrib_modder": "for the help with the code",
       "contrib_sheren": "for the original stamps",
       "contrib_contributors": "for the help with the code",
+      "contrib_gemini": "for core architecture rebuild & MD3 modernization",
       "contrib_pgntgz_1": "1. Added new stickers",
       "contrib_pgntgz_2": "2. Maintained and modernized this site",
       "link_original_code": "Original Source Code",
@@ -88,6 +91,7 @@ const resources = {
       "font_dela": "Dela Poster",
       "font_mochiy": "Mochiy Round",
       "font_pixel": "8Bit Pixel",
+      "font_wqy": "Zen Hei (Standard)",
       "font_system": "System Sans"
     }
   },
@@ -115,6 +119,7 @@ const resources = {
       "contrib_modder": "コアコード開発への協力",
       "contrib_sheren": "初期スタンプ素材の提供",
       "contrib_contributors": "コアコード開発への協力",
+      "contrib_gemini": "コア構造の再構築とMD3の近代化への協力",
       "contrib_pgntgz_1": "1. 新規スタンプの追加",
       "contrib_pgntgz_2": "2. サイトのメンテナンスおよび近代化",
       "link_original_code": "オリジナルソースコード",
@@ -132,6 +137,7 @@ const resources = {
       "font_dela": "デラゴシック",
       "font_mochiy": "モチポップ",
       "font_pixel": "ドットゴシック",
+      "font_wqy": "禅の黒 (標準)",
       "font_system": "システム"
     }
   }

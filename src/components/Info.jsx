@@ -100,6 +100,23 @@ export default function Info({ open, handleClose }) {
     secondary={t("contrib_contributors")}
     />
     </ListItem>
+    <ListItem
+    button
+    onClick={() =>
+      (window.location.href = "https://gemini.google.com")
+    }
+    >
+    <ListItemAvatar>
+    <Avatar
+    alt="Gemini"
+    src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d472dc298db33c3dcdade.svg"
+    />
+    </ListItemAvatar>
+    <ListItemText
+    primary="Gemini (AI Agent)"
+    secondary={t("contrib_gemini")}
+    />
+    </ListItem>
     {/* 这里是 Master 的信息！ */}
     <ListItem
     button

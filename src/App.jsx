@@ -27,6 +27,7 @@ const STICKER_FONTS = [
   { id: "dela", label: "font_dela", fontFamily: "'Dela Gothic One', YurukaStd" },
   { id: "mochiy", label: "font_mochiy", fontFamily: "'Mochiy Pop One', YurukaStd" },
   { id: "pixel", label: "font_pixel", fontFamily: "'DotGothic16', YurukaStd" },
+  { id: "wqy", label: "font_wqy", fontFamily: '"WenQuanYi Micro Hei", "WenQuanYi Zen Hei", "Noto Sans SC", sans-serif' },
   { id: "system", label: "font_system", fontFamily: "system-ui, sans-serif" },
 ];
 
@@ -368,6 +369,7 @@ function App() {
         <span style={{ fontFamily: "'Dela Gothic One'" }}>Preheat</span>
         <span style={{ fontFamily: "'Mochiy Pop One'" }}>Preheat</span>
         <span style={{ fontFamily: "'DotGothic16'" }}>Preheat</span>
+        <span style={{ fontFamily: "'Noto Sans SC'" }}>Preheat</span>
         <span style={{ fontFamily: 'ChenYuLuoLi' }}>Preheat</span>
       </div>
     </div>
