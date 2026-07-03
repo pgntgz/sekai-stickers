@@ -6,8 +6,6 @@ const resources = {
   zh: {
     translation: {
       "app_title": "PJSK表情包在线生成器",
-      "total_stickers": "已制作贴纸数：",
-      "not_available": "无法获取",
       "rotate": "旋转：",
       "font_size": "字号大小：",
       "spacing": "字间距：",
@@ -22,8 +20,6 @@ const resources = {
       "made_possible_by": "本站的诞生离不开以下贡献：",
       "source_code_contrib": "你可以在这里查看源码或参与贡献：",
       "discord_bot": "Discord 机器人：",
-      "total_stickers_made": "本站累计生成贴纸总数：",
-      "sticker_unit": " 个贴纸",
       "close": "关闭",
       
       // 贡献者描述翻译
@@ -44,14 +40,16 @@ const resources = {
       "font_huangyou": "黄油体",
       "font_kuaile": "快乐体",
       "font_brush": "狂草毛笔",
+      "font_loli": "陈宇萝莉体",
+      "font_dela": "Dela爆裂海报",
+      "font_mochiy": "Mochiy圆滚",
+      "font_pixel": "8Bit像素",
       "font_system": "系统黑体"
     }
   },
   en: {
     translation: {
       "app_title": "Project Sekai Stickers Maker",
-      "total_stickers": "Total Stickers you made: ",
-      "not_available": "Not available",
       "rotate": "Rotate: ",
       "font_size": "Font size: ",
       "spacing": "Spacing: ",
@@ -66,8 +64,6 @@ const resources = {
       "made_possible_by": "This tool made possible by:",
       "source_code_contrib": "You can find the source code or contribute here:",
       "discord_bot": "The discord bot:",
-      "total_stickers_made": "Total stickers made using the app:",
-      "sticker_unit": " Stickers",
       "close": "Close",
 
       // 贡献者描述翻译
@@ -88,14 +84,16 @@ const resources = {
       "font_huangyou": "HuangYou",
       "font_kuaile": "KuaiLe",
       "font_brush": "Brush",
+      "font_loli": "Loli Type v2",
+      "font_dela": "Dela Poster",
+      "font_mochiy": "Mochiy Round",
+      "font_pixel": "8Bit Pixel",
       "font_system": "System Sans"
     }
   },
   ja: {
     translation: {
       "app_title": "プロセカスタンプメーカー",
-      "total_stickers": "作成されたスタンプの総数：",
-      "not_available": "取得不可",
       "rotate": "回転：",
       "font_size": "文字サイズ：",
       "spacing": "文字間隔：",
@@ -107,11 +105,9 @@ const resources = {
       "search_placeholder": "キャラクターを検索...",
       "info": "情報",
       "info_title": "情報",
-      "made_possible_by": "このツールは以下の方々の協力により実現しました：",
+      "made_possible_by": "このツールは以下の方々の協力により实现しました：",
       "source_code_contrib": "ソースコードの確認や貢献はこちらから：",
       "discord_bot": "Discord ボット：",
-      "total_stickers_made": "アプリで作成されたスタンプの総数：",
-      "sticker_unit": " スタンプ",
       "close": "閉じる",
 
       // 贡献者描述翻译
@@ -132,6 +128,10 @@ const resources = {
       "font_huangyou": "黄油体",
       "font_kuaile": "快乐体",
       "font_brush": "毛筆ブラシ",
+      "font_loli": "ロリ体V2",
+      "font_dela": "デラゴシック",
+      "font_mochiy": "モチポップ",
+      "font_pixel": "ドットゴシック",
       "font_system": "システム"
     }
   }

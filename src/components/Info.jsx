@@ -12,7 +12,7 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import { useTranslation } from "react-i18next";
 
-export default function Info({ open, handleClose, config }) {
+export default function Info({ open, handleClose }) {
   const { t } = useTranslation();
 
   return (
@@ -179,15 +179,8 @@ export default function Info({ open, handleClose, config }) {
     />
     </ListItem>
     </List>
-    <Typography variant="h6" component="h3">
-    {t("total_stickers_made")}
-    <br />
-    {config?.global
-      ? config?.global.toLocaleString() + t("sticker_unit")
-      : t("not_available")}
-      </Typography>
-      </DialogContentText>
-      </DialogContent>
+    </DialogContentText>
+    </DialogContent>
       <DialogActions>
       <Button onClick={handleClose} color="secondary" autoFocus>
       {t("close")}

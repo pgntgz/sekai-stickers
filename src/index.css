@@ -77,6 +77,12 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'ChenYuLuoLi';
+  src: url('https://cdn.jsdelivr.net/gh/cy-font/ChenYuLuoLi@v2.0/ChenYuLuoLi.woff2') format('woff2');
+  font-display: swap;
+}
+
 /* --- Scrollbar --- */
 ::-webkit-scrollbar {
   width: 6px;

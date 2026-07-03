@@ -12,8 +12,6 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Picker from "./components/Picker";
 import Info from "./components/Info";
-import getConfiguration from "./utils/config";
-import log from "./utils/log";
 import { useTranslation } from "react-i18next";
 
 const { ClipboardItem } = window;
@@ -22,15 +20,18 @@ const { ClipboardItem } = window;
 const STICKER_FONTS = [
   { id: "yuruka", label: "font_yuruka", fontFamily: "YurukaStd, SSFangTangTi" },
   { id: "tangtang", label: "font_tangtang", fontFamily: "SSFangTangTi, YurukaStd" },
+  { id: "loli", label: "font_loli", fontFamily: "ChenYuLuoLi, YurukaStd" },
   { id: "huangyou", label: "font_huangyou", fontFamily: "'ZCOOL QingKe HuangYou', YurukaStd" },
   { id: "kuaile", label: "font_kuaile", fontFamily: "'ZCOOL KuaiLe', YurukaStd" },
   { id: "brush", label: "font_brush", fontFamily: "'Ma Shan Zheng', YurukaStd" },
+  { id: "dela", label: "font_dela", fontFamily: "'Dela Gothic One', YurukaStd" },
+  { id: "mochiy", label: "font_mochiy", fontFamily: "'Mochiy Pop One', YurukaStd" },
+  { id: "pixel", label: "font_pixel", fontFamily: "'DotGothic16', YurukaStd" },
   { id: "system", label: "font_system", fontFamily: "system-ui, sans-serif" },
 ];
 
 function App() {
   const { t, i18n } = useTranslation();
-  const [config, setConfig] = useState(null);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -49,19 +50,8 @@ function App() {
     STICKER_FONTS.find((f) => f.id === stickerFont)?.fontFamily ||
     STICKER_FONTS[0].fontFamily;
 
-  // Config fetch
-  const [rand, setRand] = useState(0);
-  useEffect(() => {
-    try {
-      const data = async () => {
-        const res = await getConfiguration();
-        setConfig(res);
-      };
-      data();
-    } catch (error) {
-      console.log(error);
-    }
-  }, [rand]);
+  // 强制页面刷新指示器
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
 
   const [infoOpen, setInfoOpen] = useState(false);
   const handleClickOpen = () => setInfoOpen(true);
@@ -84,7 +74,7 @@ function App() {
   useEffect(() => {
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(() => {
-        setRand((r) => r + 1);
+        setRefreshTrigger((prev) => prev + 1);
       });
     }
   }, [text, stickerFont]);
@@ -154,14 +144,12 @@ function App() {
     }
   };
 
-  const download = async () => {
+  const download = () => {
     const canvas = document.getElementsByTagName("canvas")[0];
     const link = document.createElement("a");
     link.download = `${characters[character].name}_pjsk-sticker.png`;
     link.href = canvas.toDataURL();
     link.click();
-    await log(characters[character].id, characters[character].name, "download");
-    setRand(rand + 1);
   };
 
   function b64toBlob(b64Data, contentType = null, sliceSize = null) {
@@ -188,8 +176,6 @@ function App() {
         "image/png": b64toBlob(canvas.toDataURL().split(",")[1]),
       }),
     ]);
-    await log(characters[character].id, characters[character].name, "copy");
-    setRand(rand + 1);
   };
 
   return (
@@ -197,7 +183,7 @@ function App() {
       <header>
         <h1 className="visually-hidden">{t("app_title")}</h1>
       </header>
-      <Info open={infoOpen} handleClose={handleClose} config={config} />
+      <Info open={infoOpen} handleClose={handleClose} />
 
       {/* Language Selector */}
       <div className="language-selector">
@@ -224,10 +210,6 @@ function App() {
         </Button>
       </div>
 
-      <div className="counter">
-        {t("total_stickers")}
-        {config?.total || t("not_available")}
-      </div>
 
       <main className="container">
         {/* Canvas Card */}
@@ -383,6 +365,10 @@ function App() {
         <span style={{ fontFamily: "'ZCOOL QingKe HuangYou'" }}>Preheat</span>
         <span style={{ fontFamily: "'ZCOOL KuaiLe'" }}>Preheat</span>
         <span style={{ fontFamily: "'Ma Shan Zheng'" }}>Preheat</span>
+        <span style={{ fontFamily: "'Dela Gothic One'" }}>Preheat</span>
+        <span style={{ fontFamily: "'Mochiy Pop One'" }}>Preheat</span>
+        <span style={{ fontFamily: "'DotGothic16'" }}>Preheat</span>
+        <span style={{ fontFamily: 'ChenYuLuoLi' }}>Preheat</span>
       </div>
     </div>
   );
