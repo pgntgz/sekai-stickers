@@ -1,411 +1,480 @@
 /* ============================================
-   App.css — MD3 Component Styles
+   App.css — Clean, Restrained, PJSK Game Minimalist
    ============================================ */
 
-/* --- App Shell --- */
 .App {
-  text-align: center;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  padding: 0 16px 40px;
 }
 
-/* --- Language Selector (Segmented Button Group) --- */
-.language-selector {
-  display: inline-flex;
-  background: var(--md-sys-color-surface-container);
-  border-radius: var(--md-sys-shape-corner-full);
-  padding: 4px;
-  gap: 2px;
-  margin: 16px 0 !important;
-}
-
-.language-selector .MuiButton-root {
-  border-radius: var(--md-sys-shape-corner-full) !important;
-  text-transform: none !important;
-  font-weight: 500 !important;
-  font-size: 13px !important;
-  padding: 6px 16px !important;
-  min-width: auto !important;
-  letter-spacing: 0.02em !important;
-  border: none !important;
-  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
-}
-
-.language-selector .MuiButton-contained {
-  background-color: var(--md-sys-color-secondary-container) !important;
-  color: var(--md-sys-color-on-secondary-container) !important;
-  box-shadow: none !important;
-}
-
-.language-selector .MuiButton-outlined {
-  background-color: transparent !important;
-  color: var(--md-sys-color-on-surface-variant) !important;
-  border: none !important;
-}
-
-.language-selector .MuiButton-outlined:hover {
-  background-color: var(--md-sys-color-surface-container-high) !important;
-}
-
-/* --- Counter --- */
-.counter {
-  color: var(--md-sys-color-on-surface-variant);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  padding: 4px 16px;
+/* --- Top Navigation Header --- */
+.app-header {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 4px 8px;
   margin-bottom: 8px;
 }
 
-/* --- Main Container --- */
-.container {
-  padding: 16px;
+.brand-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 420px;
-}
-
-/* --- Canvas Card --- */
-.canvas-card {
-  background: var(--md-sys-color-surface-container);
-  border-radius: var(--md-sys-shape-corner-large);
-  padding: 24px;
-  width: 100%;
-  margin-bottom: 16px;
-  position: relative;
-  overflow: hidden;
-}
-
-.canvas-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 1px solid var(--md-sys-color-outline-variant);
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.canvas {
-  height: 256px;
-  width: 296px;
-  margin: 0 auto;
-  border-radius: var(--md-sys-shape-corner-medium);
-  overflow: hidden;
-}
-
-/* --- Vertical / Horizontal Layout --- */
-.vertical {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 256px;
   gap: 8px;
 }
 
-.horizontal {
-  width: 100%;
+.brand-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--pjsk-color-text-main);
+  text-transform: uppercase;
 }
 
-.slider-horizontal {
-  margin: 8px 0 !important;
+.brand-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--pjsk-radius-sm);
+  background: var(--pjsk-color-primary-container);
+  color: var(--pjsk-color-primary);
+  letter-spacing: 0.05em;
 }
 
-/* --- Settings Panel --- */
-.settings-card {
-  background: var(--md-sys-color-surface-container);
-  border-radius: var(--md-sys-shape-corner-large);
-  padding: 20px 24px;
-  width: 100%;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.settings-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 1px solid var(--md-sys-color-outline-variant);
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.settings {
-  color: var(--md-sys-color-on-surface);
-}
-
-.settings > div {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 8px;
-}
-
-.settings > div:last-child {
-  margin-bottom: 0;
-}
-
-.settings label {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--md-sys-color-on-surface-variant);
-  white-space: nowrap;
-  min-width: 80px;
-  text-align: right;
-}
-
-/* --- Font Selector (Segmented) --- */
-.font-selector {
+/* --- Language Selector (Pill Segmented) --- */
+.language-selector {
   display: inline-flex;
-  background: var(--md-sys-color-surface-container-high);
-  border-radius: var(--md-sys-shape-corner-full);
+  background: var(--pjsk-color-surface-container);
+  border: 1px solid var(--pjsk-color-border);
+  border-radius: var(--pjsk-radius-pill);
   padding: 3px;
   gap: 2px;
-  width: 100%;
-  margin-bottom: 12px;
 }
 
-.font-selector .MuiButton-root {
-  border-radius: var(--md-sys-shape-corner-full) !important;
-  text-transform: none !important;
-  font-weight: 500 !important;
-  font-size: 12px !important;
-  padding: 5px 12px !important;
-  min-width: auto !important;
-  flex: 1 !important;
-  border: none !important;
-  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+.language-selector button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--pjsk-color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: var(--pjsk-radius-pill);
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.2, 0, 0, 1);
 }
 
-.font-selector .MuiButton-contained {
-  background-color: var(--md-sys-color-primary-container) !important;
-  color: var(--md-sys-color-on-primary-container) !important;
-  box-shadow: none !important;
+.language-selector button:hover {
+  color: var(--pjsk-color-text-main);
 }
 
-.font-selector .MuiButton-outlined {
-  background-color: transparent !important;
-  color: var(--md-sys-color-on-surface-variant) !important;
-  border: none !important;
+.language-selector button.active {
+  background: var(--pjsk-color-surface-container-highest);
+  color: var(--pjsk-color-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.font-selector .MuiButton-outlined:hover {
-  background-color: var(--md-sys-color-surface-container-highest) !important;
-}
-
-/* --- Text Input --- */
-.text {
-  margin-bottom: 16px;
-}
-
-/* --- Picker --- */
-.picker {
+/* --- Main Layout Container --- */
+.container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 16px;
+  width: 100%;
+  max-width: 440px;
+  gap: 14px;
 }
 
-.modal > .MuiPopover-paper {
-  overflow: hidden;
-  border-radius: var(--md-sys-shape-corner-large) !important;
-  background: var(--md-sys-color-surface-container-high) !important;
+/* --- Card Base (MD3 Surface Container) --- */
+.pjsk-card {
+  background: var(--pjsk-color-surface);
+  border: 1px solid var(--pjsk-color-border);
+  border-radius: var(--pjsk-radius-lg);
+  padding: 18px 20px;
+  width: 100%;
+  transition: border-color 0.2s ease;
 }
 
-.picker-search {
-  margin: 12px;
+.pjsk-card:hover {
+  border-color: var(--pjsk-color-border-hover);
 }
 
-.image-grid-wrapper {
-  overflow: auto;
+/* --- Canvas Stage Card --- */
+.canvas-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.image-grid {
-  margin: 0 12px 12px;
-  border-radius: var(--md-sys-shape-corner-small);
-}
-
-/* --- Action Buttons --- */
-.buttons {
+.canvas-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 16px;
-}
-
-.buttons .MuiButton-root {
-  border-radius: var(--md-sys-shape-corner-full) !important;
-  text-transform: none !important;
-  font-weight: 600 !important;
-  padding: 10px 28px !important;
-  font-size: 14px !important;
-  letter-spacing: 0.02em !important;
-}
-
-/* --- Footer --- */
-.footer {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-bottom: 24px;
-}
-
-.footer .MuiButton-root {
-  text-transform: none !important;
-  font-weight: 500 !important;
-  font-size: 13px !important;
-  color: var(--md-sys-color-on-surface-variant) !important;
-  border-radius: var(--md-sys-shape-corner-full) !important;
-}
-
-/* --- Banner --- */
-.bannercontainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--md-sys-color-primary-container), var(--md-sys-color-secondary-container));
-  padding: 10px 16px;
   width: 100%;
 }
 
-.bannermessage {
+.canvas-viewport {
+  width: 296px;
+  height: 256px;
+  border-radius: var(--pjsk-radius-md);
+  border: 1px solid var(--pjsk-color-border);
+  overflow: hidden;
+  position: relative;
+  background-color: var(--pjsk-checker-color-1);
+  background-image: 
+    linear-gradient(45deg, var(--pjsk-checker-color-2) 25%, transparent 25%), 
+    linear-gradient(-45deg, var(--pjsk-checker-color-2) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, var(--pjsk-checker-color-2) 75%), 
+    linear-gradient(-45deg, transparent 75%, var(--pjsk-checker-color-2) 75%);
+  background-size: var(--pjsk-checker-size) var(--pjsk-checker-size);
+  background-position: 0 0, 0 calc(var(--pjsk-checker-size) / 2), calc(var(--pjsk-checker-size) / 2) calc(var(--pjsk-checker-size) / -2), calc(var(--pjsk-checker-size) / -2) 0;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.canvas-viewport canvas {
+  display: block;
+}
+
+.canvas-axis-x {
+  width: 296px;
+  margin-top: 6px;
+  padding: 0 4px;
+}
+
+.canvas-axis-y {
+  height: 256px;
   display: flex;
   align-items: center;
+}
+
+/* --- Section Headers --- */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--pjsk-color-text-secondary);
+}
+
+/* --- Settings Rows --- */
+.settings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.setting-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pjsk-color-text-secondary);
+  min-width: 70px;
+}
+
+.setting-slider-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.setting-val-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--pjsk-color-primary);
+  min-width: 44px;
+  text-align: right;
+}
+
+/* --- Text Input & Random Quote Integration --- */
+.text-input-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
-.bannermessage p {
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--md-sys-color-on-primary-container);
-  font-weight: 500;
+.text-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.bannerbutton {
-  flex: none;
-  border-radius: var(--md-sys-shape-corner-full);
-  background-color: var(--md-sys-color-primary);
-  padding: 5px 14px;
+.quote-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-random-quote {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--pjsk-color-surface-container);
+  border: 1px solid var(--pjsk-color-border);
+  color: var(--pjsk-color-primary);
+  border-radius: var(--pjsk-radius-pill);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.btn-random-quote:hover {
+  background: var(--pjsk-color-surface-container-high);
+  border-color: var(--pjsk-color-primary);
+  transform: translateY(-1px);
+}
+
+.btn-random-quote:active {
+  transform: translateY(0);
+}
+
+.btn-reset-text {
+  background: transparent;
+  border: 1px solid var(--pjsk-color-border);
+  color: var(--pjsk-color-text-secondary);
+  border-radius: var(--pjsk-radius-pill);
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.btn-reset-text:hover {
+  color: var(--pjsk-color-text-main);
+  border-color: var(--pjsk-color-border-hover);
+}
+
+/* --- Action Buttons (Download & Copy) --- */
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: var(--pjsk-radius-pill);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.18s cubic-bezier(0.2, 0, 0, 1);
+  text-transform: uppercase;
+}
+
+.btn-download {
+  background: var(--pjsk-color-primary);
+  color: var(--pjsk-color-on-primary);
+}
+
+.btn-download:hover {
+  background: var(--pjsk-color-primary-dark);
+  box-shadow: 0 4px 16px rgba(0, 245, 212, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-download:active {
+  transform: translateY(0);
+}
+
+.btn-copy {
+  background: var(--pjsk-color-surface-container);
+  border: 1px solid var(--pjsk-color-border);
+  color: var(--pjsk-color-text-main);
+}
+
+.btn-copy:hover {
+  background: var(--pjsk-color-surface-container-high);
+  border-color: var(--pjsk-color-border-hover);
+  transform: translateY(-1px);
+}
+
+.btn-copy:active {
+  transform: translateY(0);
+}
+
+/* --- Character Picker Trigger Button --- */
+.character-picker-bar {
+  width: 100%;
+}
+
+.btn-character-picker {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  background: var(--pjsk-color-surface-container);
+  border: 1px solid var(--pjsk-color-border);
+  border-radius: var(--pjsk-radius-pill);
+  color: var(--pjsk-color-text-main);
   font-size: 13px;
   font-weight: 600;
-  color: var(--md-sys-color-on-primary);
-  box-shadow: none;
-  text-decoration: none;
-  transition: opacity 0.15s ease;
-}
-
-.bannerbutton:hover {
-  opacity: 0.85;
-}
-
-.bannerbutton span {
-  margin-left: 4px;
-}
-
-.bannerdismiss {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.bannerdismiss button {
-  margin: -8px;
-  padding: 8px;
-  appearance: none;
-  border: none;
-  background-color: transparent;
-  color: var(--md-sys-color-on-primary-container);
   cursor: pointer;
-  outline: none;
-  border-radius: var(--md-sys-shape-corner-full);
-  transition: background-color 0.15s ease;
+  transition: all 0.18s ease;
 }
 
-.bannerdismiss button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.btn-character-picker:hover {
+  background: var(--pjsk-color-surface-container-high);
+  border-color: var(--pjsk-color-primary);
 }
 
-.bannerdismiss button svg {
-  height: 20px;
-  width: 20px;
+/* --- Footer --- */
+.app-footer {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
-/* --- MUI Slider Override for M3 --- */
+.btn-info-link {
+  background: transparent;
+  border: none;
+  color: var(--pjsk-color-text-tertiary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.16s ease;
+}
+
+.btn-info-link:hover {
+  color: var(--pjsk-color-text-secondary);
+}
+
+/* --- MUI Global Dark Theme Overrides --- */
 .MuiSlider-root {
-  color: var(--md-sys-color-primary) !important;
-  height: 4px !important;
+  color: var(--pjsk-color-primary) !important;
+  height: 5px !important;
+}
+
+.MuiSlider-track {
+  border: none !important;
+  background-color: var(--pjsk-color-primary) !important;
+}
+
+.MuiSlider-rail {
+  background-color: var(--pjsk-color-surface-container-highest) !important;
+  opacity: 1 !important;
 }
 
 .MuiSlider-thumb {
-  width: 20px !important;
-  height: 20px !important;
-  background-color: var(--md-sys-color-primary) !important;
-  box-shadow: 0 0 0 4px var(--md-sys-color-surface-container) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: var(--pjsk-color-primary) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+  transition: box-shadow 0.15s ease, transform 0.15s ease !important;
 }
 
 .MuiSlider-thumb:hover,
 .MuiSlider-thumb.Mui-focusVisible {
-  box-shadow: 0 0 0 8px rgba(208, 188, 255, 0.16) !important;
+  box-shadow: 0 0 0 7px rgba(0, 245, 212, 0.2) !important;
 }
 
-.MuiSlider-rail {
-  background-color: var(--md-sys-color-surface-container-highest) !important;
-  opacity: 1 !important;
-}
-
-/* --- MUI TextField Override for M3 --- */
-.MuiOutlinedInput-root {
-  border-radius: var(--md-sys-shape-corner-medium) !important;
-}
-
-.MuiOutlinedInput-notchedOutline {
-  border-color: var(--md-sys-color-outline-variant) !important;
-  transition: border-color 0.2s ease !important;
-}
-
-.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-  border-color: var(--md-sys-color-on-surface-variant) !important;
-}
-
-.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: var(--md-sys-color-primary) !important;
-  border-width: 2px !important;
-}
-
+/* MUI Select & FormControl */
 .MuiInputLabel-root {
-  color: var(--md-sys-color-on-surface-variant) !important;
-  font-weight: 400 !important;
+  color: var(--pjsk-color-text-secondary) !important;
+  font-size: 14px !important;
 }
 
 .MuiInputLabel-root.Mui-focused {
-  color: var(--md-sys-color-primary) !important;
+  color: var(--pjsk-color-primary) !important;
 }
 
-/* --- MUI Switch Override for M3 --- */
+.MuiOutlinedInput-root {
+  background: var(--pjsk-color-surface-container) !important;
+  border-radius: var(--pjsk-radius-md) !important;
+  color: var(--pjsk-color-text-main) !important;
+  font-size: 14px !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--pjsk-color-border) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--pjsk-color-border-hover) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--pjsk-color-primary) !important;
+  border-width: 1.5px !important;
+}
+
+.MuiSelect-icon {
+  color: var(--pjsk-color-text-secondary) !important;
+}
+
+/* Menu Dropdown */
+.MuiMenu-paper {
+  background: var(--pjsk-color-surface-container) !important;
+  border: 1px solid var(--pjsk-color-border) !important;
+  border-radius: var(--pjsk-radius-md) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+  color: var(--pjsk-color-text-main) !important;
+}
+
+.MuiMenuItem-root {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 8px 16px !important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: var(--pjsk-color-surface-container-high) !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background-color: var(--pjsk-color-primary-container) !important;
+  color: var(--pjsk-color-primary) !important;
+}
+
+/* Switch */
 .MuiSwitch-root .MuiSwitch-track {
-  border-radius: var(--md-sys-shape-corner-full) !important;
-  background-color: var(--md-sys-color-surface-container-highest) !important;
+  background-color: var(--pjsk-color-surface-container-highest) !important;
   opacity: 1 !important;
+  border-radius: var(--pjsk-radius-pill) !important;
 }
 
 .MuiSwitch-root .Mui-checked + .MuiSwitch-track {
-  background-color: var(--md-sys-color-primary) !important;
-  opacity: 1 !important;
+  background-color: var(--pjsk-color-primary) !important;
 }
 
-/* --- SEO and Accessibility --- */
+.MuiSwitch-root .MuiSwitch-thumb {
+  background-color: #ffffff !important;
+}
+
+/* SEO List */
 .visually-hidden {
   position: absolute;
   width: 1px;

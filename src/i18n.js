@@ -33,6 +33,10 @@ const resources = {
       "link_original_code": "原作者开源仓库",
       "link_fork_code": "pgntgz 的独立定制主仓库",
       "bot_slogan": "为您的服务器增添更多乐趣",
+      "random_quote": "🎲 抽象灵感",
+      "reset_text": "↺ 默认",
+      "settings_title": "控制中心",
+      "canvas_title": "贴纸画布",
       
       // 字体翻译
       "sticker_font": "贴纸字体：",
@@ -79,6 +83,10 @@ const resources = {
       "link_original_code": "Original Source Code",
       "link_fork_code": "Fork & Rebrand by pgntgz",
       "bot_slogan": "Add more fun to your server.",
+      "random_quote": "🎲 Random Meme",
+      "reset_text": "↺ Default",
+      "settings_title": "Controls",
+      "canvas_title": "Canvas Stage",
 
       // 字体翻译
       "sticker_font": "Sticker Font: ",
@@ -125,6 +133,10 @@ const resources = {
       "link_original_code": "オリジナルソースコード",
       "link_fork_code": "pgntgz によるカスタムフォーク主倉庫",
       "bot_slogan": "サーバーにさらに楽しさをプラス",
+      "random_quote": "🎲 ネタ文章",
+      "reset_text": "↺ 初期値",
+      "settings_title": "コントロール",
+      "canvas_title": "スタンプ画面",
 
       // 字体翻译
       "sticker_font": "スタンプフォント：",

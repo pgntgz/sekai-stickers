@@ -70,13 +70,14 @@ export default function Picker({ setCharacter }) {
 
   return (
     <div>
-      <Button
+      <button
+        type="button"
         aria-describedby={id}
-        variant="outlined"
+        className="btn-character-picker"
         onClick={handleClick}
       >
-        {t("pick_character")}
-      </Button>
+        🎭 {t("pick_character")}
+      </button>
       <Popover
         id={id}
         open={open}

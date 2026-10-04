@@ -13,6 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Picker from "./components/Picker";
 import Info from "./components/Info";
 import { useTranslation } from "react-i18next";
+import { getRandomQuote, prefetchQuotes } from "./utils/quotes";
 
 const { ClipboardItem } = window;
 
@@ -73,7 +74,26 @@ function App() {
   const handleClose = () => setInfoOpen(false);
 
   const [character, setCharacter] = useState(49);
-  const [text, setText] = useState(characters[character].defaultText.text);
+  // 首次打开自动从抽象段子库中摇一条好玩的短段子，避免死板固定词
+  const [text, setText] = useState(() => getRandomQuote() || characters[49].defaultText.text);
+
+  // 挂载时后台静默预取更多段子
+  useEffect(() => {
+    prefetchQuotes();
+  }, []);
+
+  // 摇一发抽象段子
+  const handleRandomQuote = () => {
+    const quote = getRandomQuote();
+    if (quote) {
+      setText(quote);
+    }
+  };
+
+  // 恢复角色官方初始文字
+  const handleResetText = () => {
+    setText(characters[character].defaultText.text);
+  };
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
     y: characters[character].defaultText.y,
@@ -244,42 +264,46 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1 className="visually-hidden">{t("app_title")}</h1>
+      {/* 极简精致顶栏 */}
+      <header className="app-header">
+        <div className="brand-badge">
+          <span className="brand-title">Sekai Stickers</span>
+          <span className="brand-tag">PRO</span>
+        </div>
+
+        {/* 语言切换胶囊 */}
+        <div className="language-selector">
+          <button
+            type="button"
+            className={i18n.language === "zh" ? "active" : ""}
+            onClick={() => changeLanguage("zh")}
+          >
+            简中
+          </button>
+          <button
+            type="button"
+            className={i18n.language === "en" ? "active" : ""}
+            onClick={() => changeLanguage("en")}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            className={i18n.language === "ja" ? "active" : ""}
+            onClick={() => changeLanguage("ja")}
+          >
+            日本語
+          </button>
+        </div>
       </header>
+
       <Info open={infoOpen} handleClose={handleClose} />
 
-      {/* Language Selector */}
-      <div className="language-selector">
-        <Button
-          size="small"
-          variant={i18n.language === "zh" ? "contained" : "outlined"}
-          onClick={() => changeLanguage("zh")}
-        >
-          简中
-        </Button>
-        <Button
-          size="small"
-          variant={i18n.language === "en" ? "contained" : "outlined"}
-          onClick={() => changeLanguage("en")}
-        >
-          EN
-        </Button>
-        <Button
-          size="small"
-          variant={i18n.language === "ja" ? "contained" : "outlined"}
-          onClick={() => changeLanguage("ja")}
-        >
-          日本語
-        </Button>
-      </div>
-
-
       <main className="container">
-        {/* Canvas Card */}
-        <div className="canvas-card">
-          <div className="vertical">
-            <div className="canvas">
+        {/* 贴纸舞台画布卡片 (MD3 Surface) */}
+        <div className="pjsk-card canvas-card">
+          <div className="canvas-wrapper">
+            <div className="canvas-viewport">
               <Canvas
                 draw={draw}
                 redrawTrigger={fontLoadedVersion}
@@ -287,38 +311,82 @@ function App() {
                 role="img"
               />
             </div>
+            {/* Y轴位置微调滑块 */}
+            <div className="canvas-axis-y">
+              <Slider
+                value={
+                  curve ? 256 - position.y + fontSize * 3 : 256 - position.y
+                }
+                onChange={(e, v) =>
+                  setPosition({
+                    ...position,
+                    y: curve ? 256 + fontSize * 3 - v : 256 - v,
+                  })
+                }
+                min={0}
+                max={256}
+                step={1}
+                orientation="vertical"
+                track={false}
+              />
+            </div>
+          </div>
+          {/* X轴位置微调滑块 */}
+          <div className="canvas-axis-x">
             <Slider
-              value={
-                curve ? 256 - position.y + fontSize * 3 : 256 - position.y
-              }
-              onChange={(e, v) =>
-                setPosition({
-                  ...position,
-                  y: curve ? 256 + fontSize * 3 - v : 256 - v,
-                })
-              }
+              value={position.x}
+              onChange={(e, v) => setPosition({ ...position, x: v })}
               min={0}
-              max={256}
+              max={296}
               step={1}
-              orientation="vertical"
               track={false}
             />
           </div>
-          <Slider
-            className="slider-horizontal"
-            value={position.x}
-            onChange={(e, v) => setPosition({ ...position, x: v })}
-            min={0}
-            max={296}
-            step={1}
-            track={false}
-          />
         </div>
 
-        {/* Settings Card */}
-        <div className="settings-card">
-          {/* Font Selector Dropdown */}
-          <FormControl fullWidth size="small" style={{ marginBottom: 16 }}>
+        {/* 文字与抽象段子灵感卡片 */}
+        <div className="pjsk-card">
+          <div className="text-input-wrap">
+            <div className="text-action-bar">
+              <span className="section-title">{t("text_label")}</span>
+              <div className="quote-btn-group">
+                <button
+                  type="button"
+                  className="btn-random-quote"
+                  onClick={handleRandomQuote}
+                  title="随机摇一条抽象中文短段子"
+                >
+                  {t("random_quote")}
+                </button>
+                <button
+                  type="button"
+                  className="btn-reset-text"
+                  onClick={handleResetText}
+                  title="恢复角色官方默认台词"
+                >
+                  {t("reset_text")}
+                </button>
+              </div>
+            </div>
+            <TextField
+              size="small"
+              value={text}
+              multiline={true}
+              fullWidth
+              placeholder="输入表情包文字..."
+              onChange={(e) => setText(e.target.value)}
+            />
+          </div>
+        </div>
+
+        {/* 控制中心卡片 (字体 / 旋转 / 字号 / 间距 / 弧形) */}
+        <div className="pjsk-card">
+          <div className="section-header">
+            <span className="section-title">{t("settings_title")}</span>
+          </div>
+
+          {/* 贴纸字体下拉 */}
+          <FormControl fullWidth size="small" style={{ marginBottom: 14 }}>
             <InputLabel id="font-select-label">{t("sticker_font")}</InputLabel>
             <Select
               labelId="font-select-label"
@@ -334,43 +402,56 @@ function App() {
             </Select>
           </FormControl>
 
-          <div className="settings">
-            <div>
-              <label>{t("rotate")}</label>
-              <Slider
-                value={rotate}
-                onChange={(e, v) => setRotate(v)}
-                min={-10}
-                max={10}
-                step={0.2}
-                track={false}
-              />
+          <div className="settings-grid">
+            <div className="setting-row">
+              <span className="setting-label">{t("rotate")}</span>
+              <div className="setting-slider-wrap">
+                <Slider
+                  value={rotate}
+                  onChange={(e, v) => setRotate(v)}
+                  min={-10}
+                  max={10}
+                  step={0.2}
+                  track={false}
+                />
+                <span className="setting-val-tag">{(rotate * 5.7).toFixed(0)}°</span>
+              </div>
             </div>
-            <div>
-              <label>{t("font_size")}</label>
-              <Slider
-                value={fontSize}
-                onChange={(e, v) => setFontSize(v)}
-                min={10}
-                max={100}
-                step={1}
-                track={false}
-              />
+
+            <div className="setting-row">
+              <span className="setting-label">{t("font_size")}</span>
+              <div className="setting-slider-wrap">
+                <Slider
+                  value={fontSize}
+                  onChange={(e, v) => setFontSize(v)}
+                  min={10}
+                  max={100}
+                  step={1}
+                  track={false}
+                />
+                <span className="setting-val-tag">{fontSize}px</span>
+              </div>
             </div>
-            <div>
-              <label>{t("spacing")}</label>
-              <Slider
-                value={spaceSize}
-                onChange={(e, v) => setSpaceSize(v)}
-                min={18}
-                max={100}
-                step={1}
-                track={false}
-              />
+
+            <div className="setting-row">
+              <span className="setting-label">{t("spacing")}</span>
+              <div className="setting-slider-wrap">
+                <Slider
+                  value={spaceSize}
+                  onChange={(e, v) => setSpaceSize(v)}
+                  min={18}
+                  max={100}
+                  step={1}
+                  track={false}
+                />
+                <span className="setting-val-tag">{spaceSize}px</span>
+              </div>
             </div>
-            <div>
-              <label>{t("curve")}</label>
+
+            <div className="setting-row" style={{ paddingTop: 4 }}>
+              <span className="setting-label">{t("curve")}</span>
               <Switch
+                size="small"
                 checked={curve}
                 onChange={(e) => setCurve(e.target.checked)}
               />
@@ -378,39 +459,30 @@ function App() {
           </div>
         </div>
 
-        {/* Text Input */}
-        <div className="text" style={{ width: "100%", marginBottom: 16 }}>
-          <TextField
-            label={t("text_label")}
-            size="small"
-            value={text}
-            multiline={true}
-            fullWidth
-            onChange={(e) => setText(e.target.value)}
-          />
-        </div>
-
-        {/* Character Picker */}
-        <div className="picker">
+        {/* 角色选择器 */}
+        <div className="character-picker-bar">
           <Picker setCharacter={setCharacter} />
         </div>
 
-        {/* Action Buttons */}
-        <div className="buttons">
-          <Button variant="outlined" onClick={copy}>
-            {t("copy")}
-          </Button>
-          <Button variant="contained" onClick={download}>
-            {t("download")}
-          </Button>
+        {/* 底部行动主操作栏 */}
+        <div className="action-buttons">
+          <button type="button" className="btn-action btn-copy" onClick={copy}>
+            📋 {t("copy")}
+          </button>
+          <button type="button" className="btn-action btn-download" onClick={download}>
+            💾 {t("download")}
+          </button>
         </div>
 
-        <footer className="footer">
-          <Button onClick={handleClickOpen}>{t("info")}</Button>
+        {/* 页脚说明 */}
+        <footer className="app-footer">
+          <button type="button" className="btn-info-link" onClick={handleClickOpen}>
+            ℹ️ {t("info")}
+          </button>
         </footer>
       </main>
 
-      {/* SEO 贴纸文本与图片列表（视觉上隐藏） */}
+{/* SEO 贴纸文本与图片列表（视觉上隐藏） */}
       <ul className="visually-hidden" aria-hidden="false">
         {characters.map((c, index) => (
           <li key={index}>
