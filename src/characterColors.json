@@ -1,7 +1,7 @@
 [
   {
     "slug": "Miku",
-    "unit": "Virtual Singer",
+    "unit": "バーチャル・シンガー",
     "nameJa": "初音ミク",
     "nameZh": "初音未来",
     "nameEn": "Miku",
@@ -10,7 +10,7 @@
   },
   {
     "slug": "Rin",
-    "unit": "Virtual Singer",
+    "unit": "バーチャル・シンガー",
     "nameJa": "鏡音リン",
     "nameZh": "镜音铃",
     "nameEn": "Rin",
@@ -19,7 +19,7 @@
   },
   {
     "slug": "Len",
-    "unit": "Virtual Singer",
+    "unit": "バーチャル・シンガー",
     "nameJa": "鏡音レン",
     "nameZh": "镜音连",
     "nameEn": "Len",
@@ -28,7 +28,7 @@
   },
   {
     "slug": "Luka",
-    "unit": "Virtual Singer",
+    "unit": "バーチャル・シンガー",
     "nameJa": "巡音ルカ",
     "nameZh": "巡音流歌",
     "nameEn": "Luka",
@@ -37,7 +37,7 @@
   },
   {
     "slug": "Meiko",
-    "unit": "Virtual Singer",
+    "unit": "バーチャル・シンガー",
     "nameJa": "MEIKO",
     "nameZh": "MEIKO",
     "nameEn": "MEIKO",
@@ -46,7 +46,7 @@
   },
   {
     "slug": "KAITO",
-    "unit": "Virtual Singer",
+    "unit": "バーチャル・シンガー",
     "nameJa": "KAITO",
     "nameZh": "KAITO",
     "nameEn": "KAITO",
@@ -91,7 +91,7 @@
   },
   {
     "slug": "Minori",
-    "unit": "MORE MORE JUMP!",
+    "unit": "MORE MORE JUMP！",
     "nameJa": "花里みのり",
     "nameZh": "花里实乃理",
     "nameEn": "Minori",
@@ -100,7 +100,7 @@
   },
   {
     "slug": "Haruka",
-    "unit": "MORE MORE JUMP!",
+    "unit": "MORE MORE JUMP！",
     "nameJa": "桐谷遥",
     "nameZh": "桐谷遥",
     "nameEn": "Haruka",
@@ -109,7 +109,7 @@
   },
   {
     "slug": "airi",
-    "unit": "MORE MORE JUMP!",
+    "unit": "MORE MORE JUMP！",
     "nameJa": "桃井愛莉",
     "nameZh": "桃井爱莉",
     "nameEn": "Airi",
@@ -118,7 +118,7 @@
   },
   {
     "slug": "Shizuku",
-    "unit": "MORE MORE JUMP!",
+    "unit": "MORE MORE JUMP！",
     "nameJa": "日野森雫",
     "nameZh": "日野森雫",
     "nameEn": "Shizuku",
@@ -163,7 +163,7 @@
   },
   {
     "slug": "Tsukasa",
-    "unit": "Wonderlands×Showtime",
+    "unit": "ワンダーランズ×ショウタイム",
     "nameJa": "天馬司",
     "nameZh": "天马司",
     "nameEn": "Tsukasa",
@@ -172,7 +172,7 @@
   },
   {
     "slug": "emu",
-    "unit": "Wonderlands×Showtime",
+    "unit": "ワンダーランズ×ショウタイム",
     "nameJa": "鳳えむ",
     "nameZh": "凤笑梦",
     "nameEn": "Emu",
@@ -181,7 +181,7 @@
   },
   {
     "slug": "Nene",
-    "unit": "Wonderlands×Showtime",
+    "unit": "ワンダーランズ×ショウタイム",
     "nameJa": "草薙寧々",
     "nameZh": "草薙宁宁",
     "nameEn": "Nene",
@@ -190,7 +190,7 @@
   },
   {
     "slug": "Rui",
-    "unit": "Wonderlands×Showtime",
+    "unit": "ワンダーランズ×ショウタイム",
     "nameJa": "神代類",
     "nameZh": "神代类",
     "nameEn": "Rui",
@@ -199,7 +199,7 @@
   },
   {
     "slug": "Kanade",
-    "unit": "25-ji, Nightcord de.",
+    "unit": "25時、ナイトコードで。",
     "nameJa": "宵崎奏",
     "nameZh": "宵崎奏",
     "nameEn": "Kanade",
@@ -208,7 +208,7 @@
   },
   {
     "slug": "Mafuyu",
-    "unit": "25-ji, Nightcord de.",
+    "unit": "25時、ナイトコードで。",
     "nameJa": "朝比奈まふゆ",
     "nameZh": "朝比奈真冬",
     "nameEn": "Mafuyu",
@@ -217,7 +217,7 @@
   },
   {
     "slug": "ena",
-    "unit": "25-ji, Nightcord de.",
+    "unit": "25時、ナイトコードで。",
     "nameJa": "東雲絵名",
     "nameZh": "东云绘名",
     "nameEn": "Ena",
@@ -226,7 +226,7 @@
   },
   {
     "slug": "Mizuki",
-    "unit": "25-ji, Nightcord de.",
+    "unit": "25時、ナイトコードで。",
     "nameJa": "暁山瑞希",
     "nameZh": "晓山瑞希",
     "nameEn": "Mizuki",

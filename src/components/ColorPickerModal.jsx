@@ -33,13 +33,13 @@ const PRESET_COLORS = [
 ];
 
 const UNITS = [
-  { id: "all", labelZh: "全部", labelJa: "すべて", labelEn: "All" },
-  { id: "Virtual Singer", labelZh: "虚拟歌手", labelJa: "バチャシン", labelEn: "VS" },
-  { id: "Leo/need", labelZh: "Leo/need", labelJa: "レオニ", labelEn: "L/n" },
-  { id: "MORE MORE JUMP!", labelZh: "MMJ!", labelJa: "モモジャン", labelEn: "MMJ" },
-  { id: "Vivid BAD SQUAD", labelZh: "VBS", labelJa: "ビビバス", labelEn: "VBS" },
-  { id: "Wonderlands×Showtime", labelZh: "万圣秀", labelJa: "ワンダショ", labelEn: "WxS" },
-  { id: "25-ji, Nightcord de.", labelZh: "25时", labelJa: "ニーゴ", labelEn: "25-ji" },
+  { id: "all", label: "すべて" },
+  { id: "バーチャル・シンガー", label: "バーチャル・シンガー" },
+  { id: "Leo/need", label: "Leo/need" },
+  { id: "MORE MORE JUMP！", label: "MORE MORE JUMP！" },
+  { id: "Vivid BAD SQUAD", label: "Vivid BAD SQUAD" },
+  { id: "ワンダーランズ×ショウタイム", label: "ワンダーランズ×ショウタイム" },
+  { id: "25時、ナイトコードで。", label: "25時、ナイトコードで。" },
 ];
 
 export default function ColorPickerModal({
@@ -165,7 +165,7 @@ export default function ColorPickerModal({
               className={`color-unit-tab ${selectedUnit === u.id ? "active" : ""}`}
               onClick={() => setSelectedUnit(u.id)}
             >
-              {getUnitLabel(u)}
+              {u.label}
             </button>
           ))}
         </div>
