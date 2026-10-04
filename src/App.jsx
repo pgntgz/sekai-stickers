@@ -465,8 +465,17 @@ function App() {
                 role="img"
               />
             </div>
-            {/* Y轴位置微调滑块 */}
+            {/* Y轴位置微调滑块 (长轨平滑拖拽 + 1px像素级微调) */}
             <div className="canvas-axis-y">
+              <button
+                type="button"
+                className="axis-nudge-btn"
+                onClick={() => setPosition((p) => ({ ...p, y: Math.max(0, p.y - 1) }))}
+                title="上移 1px"
+                aria-label="Nudge up"
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+              </button>
               <Slider
                 value={
                   curve ? 256 - position.y + fontSize * 3 : 256 - position.y
@@ -477,24 +486,57 @@ function App() {
                     y: curve ? 256 + fontSize * 3 - v : 256 - v,
                   })
                 }
+                valueLabelDisplay="auto"
+                valueLabelFormat={(v) => `Y: ${curve ? 256 + fontSize * 3 - v : 256 - v}`}
                 min={0}
                 max={256}
                 step={1}
                 orientation="vertical"
                 track={false}
               />
+              <button
+                type="button"
+                className="axis-nudge-btn"
+                onClick={() => setPosition((p) => ({ ...p, y: Math.min(256, p.y + 1) }))}
+                title="下移 1px"
+                aria-label="Nudge down"
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
             </div>
           </div>
-          {/* X轴位置微调滑块 */}
-          <div className="canvas-axis-x">
-            <Slider
-              value={position.x}
-              onChange={(e, v) => setPosition({ ...position, x: v })}
-              min={0}
-              max={296}
-              step={1}
-              track={false}
-            />
+          {/* X轴位置微调滑块 (带左右 1px 微调) */}
+          <div className="canvas-axis-x-wrap">
+            <button
+              type="button"
+              className="axis-nudge-btn"
+              onClick={() => setPosition((p) => ({ ...p, x: Math.max(0, p.x - 1) }))}
+              title="左移 1px"
+              aria-label="Nudge left"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div className="canvas-axis-x">
+              <Slider
+                value={position.x}
+                onChange={(e, v) => setPosition({ ...position, x: v })}
+                valueLabelDisplay="auto"
+                valueLabelFormat={(v) => `X: ${v}`}
+                min={0}
+                max={296}
+                step={1}
+                track={false}
+              />
+            </div>
+            <button
+              type="button"
+              className="axis-nudge-btn"
+              onClick={() => setPosition((p) => ({ ...p, x: Math.min(296, p.x + 1) }))}
+              title="右移 1px"
+              aria-label="Nudge right"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
           </div>
         </div>
 

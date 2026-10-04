@@ -140,16 +140,57 @@
   display: block;
 }
 
-.canvas-axis-x {
+.canvas-axis-x-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   width: 296px;
-  margin-top: 6px;
-  padding: 0 4px;
+  margin-top: 8px;
+}
+
+.canvas-axis-x {
+  flex: 1;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
 }
 
 .canvas-axis-y {
   height: 256px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding: 2px 0;
+  width: 28px;
+}
+
+.canvas-axis-y .MuiSlider-root {
+  height: 196px !important;
+  width: 5px !important;
+  padding: 0 10px !important;
+}
+
+.axis-nudge-btn {
+  background: var(--pjsk-color-surface-container);
+  border: 1px solid var(--pjsk-color-border);
+  border-radius: var(--pjsk-radius-sm);
+  color: var(--pjsk-color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  transition: all 0.12s ease;
+  flex-shrink: 0;
+}
+
+.axis-nudge-btn:hover {
+  background: var(--pjsk-color-surface-container-high);
+  color: var(--pjsk-color-primary);
+  border-color: var(--pjsk-color-primary);
 }
 
 /* --- Section Headers --- */
@@ -404,7 +445,20 @@
 /* --- MUI Global Dark Theme Overrides --- */
 .MuiSlider-root {
   color: var(--pjsk-color-primary) !important;
+}
+
+.MuiSlider-root:not(.MuiSlider-vertical) {
   height: 5px !important;
+}
+
+.MuiSlider-root.MuiSlider-vertical {
+  width: 5px !important;
+  height: 100% !important;
+}
+
+.MuiSlider-vertical .MuiSlider-track,
+.MuiSlider-vertical .MuiSlider-rail {
+  width: 5px !important;
 }
 
 .MuiSlider-track {
