@@ -13,7 +13,66 @@ import MenuItem from "@mui/material/MenuItem";
 import Picker from "./components/Picker";
 import Info from "./components/Info";
 import { useTranslation } from "react-i18next";
-import { getRandomQuote, prefetchQuotes } from "./utils/quotes";
+import { getRandomQuote, prefetchQuotes, smartBreakText } from "./utils/quotes";
+
+// 精致单色 SVG 矢量图标（完全去除彩色 Emoji，确保所有操作系统渲染一致）
+const IconDice = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="4" />
+    <circle cx="8" cy="8" r="1.2" fill="currentColor" />
+    <circle cx="16" cy="8" r="1.2" fill="currentColor" />
+    <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+    <circle cx="8" cy="16" r="1.2" fill="currentColor" />
+    <circle cx="16" cy="16" r="1.2" fill="currentColor" />
+  </svg>
+);
+
+const IconPrev = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="15 18 9 12 15 6" />
+  </svg>
+);
+
+const IconNext = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
+);
+
+const IconReset = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+    <path d="M3 3v5h5" />
+  </svg>
+);
+
+const IconCopy = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="9" y="9" width="13" height="13" rx="2" />
+    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+  </svg>
+);
+
+const IconDownload = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+);
+
+const IconCharacter = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="7" r="4" />
+    <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+  </svg>
+);
+
+const SekaiDiamond = () => (
+  <svg width="8" height="8" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style={{ color: "var(--pjsk-color-primary)", marginRight: 6 }}>
+    <polygon points="8,0 16,8 8,16 0,8" />
+  </svg>
+);
 
 const { ClipboardItem } = window;
 
@@ -21,25 +80,26 @@ const { ClipboardItem } = window;
 const SYSTEM_FALLBACK =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif';
 
+// 贴纸可选字体栈：默认优先采用字库完备且可爱的中文二次元字体，日服原版作为可选
 const STICKER_FONTS = [
-  // 1. 原版经典二次元字体（日文专属字形，缺简体中文时优雅回退系统黑体，绝不消失）
-  { id: "yuruka", label: "font_yuruka", fontFamily: `'YurukaStd', ${SYSTEM_FALLBACK}` },
-  // 2. 文泉驿标准中文字体（中庸大方，字库完整覆盖简繁中日，绝不花哨）
+  // 1. 站酷快乐体（国服贴纸同款活泼可爱风，简体常用汉字全收录，绝不缺字）
+  { id: "kuaile", label: "font_kuaile", fontFamily: `'ZCOOL KuaiLe', ${SYSTEM_FALLBACK}` },
+  // 2. 文泉驿标准体（中庸大方，字库完整覆盖简繁中日，绝无缺字）
   { id: "wqy", label: "font_wqy", fontFamily: `'WenQuanYi Zen Hei', 'WenQuanYi Micro Hei', 'Noto Sans SC', ${SYSTEM_FALLBACK}` },
-  // 3. 系统原生黑体（本地加载零延迟，兼容性最强）
-  { id: "system", label: "font_system", fontFamily: SYSTEM_FALLBACK },
-  // 4. Dela 爆裂海报（高张力粗体，适合大声吐槽）
+  // 3. 原版经典二次元字体（日服原版贴纸字体，缺部分简中字时平滑回退系统中文）
+  { id: "yuruka", label: "font_yuruka", fontFamily: `'YurukaStd', ${SYSTEM_FALLBACK}` },
+  // 4. Dela 爆裂海报（日本高张力黑体，适合喊叫吐槽风格）
   { id: "dela", label: "font_dela", fontFamily: `'Dela Gothic One', ${SYSTEM_FALLBACK}` },
   // 5. Mochiy 圆滚体（肥润二次元萌感）
   { id: "mochiy", label: "font_mochiy", fontFamily: `'Mochiy Pop One', ${SYSTEM_FALLBACK}` },
   // 6. 8Bit 像素体（DotGothic16，复古游戏风格）
   { id: "pixel", label: "font_pixel", fontFamily: `'DotGothic16', ${SYSTEM_FALLBACK}` },
-  // 7. 站酷快乐体（活泼动感中文）
-  { id: "kuaile", label: "font_kuaile", fontFamily: `'ZCOOL KuaiLe', ${SYSTEM_FALLBACK}` },
-  // 8. 站酷黄油体（圆润厚实中文）
+  // 7. 站酷黄油体（圆润厚实中文）
   { id: "huangyou", label: "font_huangyou", fontFamily: `'ZCOOL QingKe HuangYou', ${SYSTEM_FALLBACK}` },
-  // 9. 马善政毛笔狂草体（水墨书法风）
+  // 8. 马善政毛笔狂草体（国风水墨书法）
   { id: "brush", label: "font_brush", fontFamily: `'Ma Shan Zheng', ${SYSTEM_FALLBACK}` },
+  // 9. 系统原生黑体（本地零延迟，最稳兼容）
+  { id: "system", label: "font_system", fontFamily: SYSTEM_FALLBACK },
   // 10. 尚手方糖体（可爱方块风格）
   { id: "tangtang", label: "font_tangtang", fontFamily: `'SSFangTangTi', 'ShangShouFangTangTi', ${SYSTEM_FALLBACK}` },
 ];
@@ -54,7 +114,7 @@ function App() {
 
   // 贴纸字体状态
   const [stickerFont, setStickerFont] = useState(
-    localStorage.getItem("pjsk_font") || "yuruka"
+    localStorage.getItem("pjsk_font") || "kuaile"
   );
   const handleFontChange = (fontId) => {
     setStickerFont(fontId);
@@ -74,25 +134,65 @@ function App() {
   const handleClose = () => setInfoOpen(false);
 
   const [character, setCharacter] = useState(49);
-  // 首次打开自动从抽象段子库中摇一条好玩的短段子，避免死板固定词
-  const [text, setText] = useState(() => getRandomQuote() || characters[49].defaultText.text);
+
+  // 文案历史队列与防误触撤销系统（支持前进/后退/历史找回）
+  const [history, setHistory] = useState(() => {
+    const init = smartBreakText(getRandomQuote() || characters[49].defaultText.text);
+    return [init];
+  });
+  const [historyIndex, setHistoryIndex] = useState(0);
+  const text = history[historyIndex] !== undefined ? history[historyIndex] : "";
 
   // 挂载时后台静默预取更多段子
   useEffect(() => {
     prefetchQuotes();
   }, []);
 
-  // 摇一发抽象段子
+  const handleTextChange = (newVal) => {
+    setHistory((prev) => {
+      const next = [...prev.slice(0, historyIndex + 1), newVal];
+      return next.slice(-30);
+    });
+    setHistoryIndex((prev) => Math.min(prev + 1, 29));
+  };
+
+  // 摇一发抽象段子（智能断行 + 自动排版防溢出 + 压入历史）
   const handleRandomQuote = () => {
-    const quote = getRandomQuote();
-    if (quote) {
-      setText(quote);
+    const raw = getRandomQuote();
+    if (raw) {
+      const formatted = smartBreakText(raw);
+      setHistory((prev) => {
+        const next = [...prev.slice(0, historyIndex + 1), formatted];
+        return next.slice(-30);
+      });
+      setHistoryIndex((prev) => Math.min(prev + 1, 29));
+
+      // 若为 2 行且当前字号过大，自适应下调到不顶框的舒适字号 38px
+      if (formatted.includes("\n") && fontSize > 42) {
+        setFontSize(38);
+      }
+    }
+  };
+
+  // 回到上一条文案（防多按误触）
+  const handlePrevQuote = () => {
+    if (historyIndex > 0) {
+      setHistoryIndex((idx) => idx - 1);
+    }
+  };
+
+  // 前进到下一条文案
+  const handleNextQuote = () => {
+    if (historyIndex < history.length - 1) {
+      setHistoryIndex((idx) => idx + 1);
     }
   };
 
   // 恢复角色官方初始文字
   const handleResetText = () => {
-    setText(characters[character].defaultText.text);
+    const defaultText = characters[character].defaultText.text;
+    setHistory((prev) => [...prev.slice(0, historyIndex + 1), defaultText].slice(-30));
+    setHistoryIndex((prev) => Math.min(prev + 1, 29));
   };
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
@@ -157,7 +257,9 @@ function App() {
   }, [text, stickerFont, fontSize, currentFontFamily]);
 
   useEffect(() => {
-    setText(characters[character].defaultText.text);
+    const defT = characters[character].defaultText.text;
+    setHistory((prev) => [...prev, defT].slice(-30));
+    setHistoryIndex((prev) => prev + 1);
     setPosition({
       x: characters[character].defaultText.x,
       y: characters[character].defaultText.y,
@@ -268,7 +370,7 @@ function App() {
       <header className="app-header">
         <div className="brand-badge">
           <span className="brand-title">Sekai Stickers</span>
-          <span className="brand-tag">PRO</span>
+          <SekaiDiamond /><span className="brand-tag">SEKAI</span>
         </div>
 
         {/* 语言切换胶囊 */}
@@ -344,27 +446,53 @@ function App() {
           </div>
         </div>
 
-        {/* 文字与抽象段子灵感卡片 */}
+        {/* 文字与抽象段子灵感卡片 (带撤销/前进历史记录) */}
         <div className="pjsk-card">
           <div className="text-input-wrap">
             <div className="text-action-bar">
               <span className="section-title">{t("text_label")}</span>
               <div className="quote-btn-group">
+                {/* 历史回退按钮（防多按误触） */}
+                <button
+                  type="button"
+                  className={`btn-history-step ${historyIndex > 0 ? "" : "disabled"}`}
+                  onClick={handlePrevQuote}
+                  disabled={historyIndex <= 0}
+                  title="回到上一条文案（防多抽误触）"
+                  aria-label="Previous quote"
+                >
+                  <IconPrev />
+                </button>
+                {/* 历史前进按钮 */}
+                <button
+                  type="button"
+                  className={`btn-history-step ${historyIndex < history.length - 1 ? "" : "disabled"}`}
+                  onClick={handleNextQuote}
+                  disabled={historyIndex >= history.length - 1}
+                  title="前进到下一条文案"
+                  aria-label="Next quote"
+                >
+                  <IconNext />
+                </button>
+                {/* 随机段子按钮 */}
                 <button
                   type="button"
                   className="btn-random-quote"
                   onClick={handleRandomQuote}
-                  title="随机摇一条抽象中文短段子"
+                  title="随机摇一条抽象中文短段子（自动分词折行）"
                 >
-                  {t("random_quote")}
+                  <IconDice />
+                  <span>{t("random_quote")}</span>
                 </button>
+                {/* 恢复官方默认台词 */}
                 <button
                   type="button"
                   className="btn-reset-text"
                   onClick={handleResetText}
                   title="恢复角色官方默认台词"
+                  aria-label="Reset to default text"
                 >
-                  {t("reset_text")}
+                  <IconReset />
                 </button>
               </div>
             </div>
@@ -374,7 +502,7 @@ function App() {
               multiline={true}
               fullWidth
               placeholder="输入表情包文字..."
-              onChange={(e) => setText(e.target.value)}
+              onChange={(e) => handleTextChange(e.target.value)}
             />
           </div>
         </div>
@@ -467,17 +595,17 @@ function App() {
         {/* 底部行动主操作栏 */}
         <div className="action-buttons">
           <button type="button" className="btn-action btn-copy" onClick={copy}>
-            📋 {t("copy")}
+            <IconCopy /><span>{t("copy")}</span>
           </button>
           <button type="button" className="btn-action btn-download" onClick={download}>
-            💾 {t("download")}
+            <IconDownload /><span>{t("download")}</span>
           </button>
         </div>
 
         {/* 页脚说明 */}
         <footer className="app-footer">
           <button type="button" className="btn-info-link" onClick={handleClickOpen}>
-            ℹ️ {t("info")}
+            <span>{t("info")}</span>
           </button>
         </footer>
       </main>

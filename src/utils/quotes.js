@@ -5,12 +5,58 @@ let quotePool = [...localQuotes];
 let isFetching = false;
 
 /**
- * 过滤清洗短段子：3~22 字，剔除过长文本与复杂换行
+ * 智能分词与折行算法：
+ * 当单行文字超过 7 个字且没有换行时，优先寻找居中合理的标点符号截断；
+ * 没有标点时在句子中间自然断行，防止贴纸画布左右溢出顶框。
+ */
+export function smartBreakText(text) {
+  if (!text) return "";
+  const trimmed = text.trim();
+  if (trimmed.includes("\n")) {
+    return trimmed; // 已经包含换行符，尊重用户排版
+  }
+
+  const len = trimmed.length;
+  if (len <= 7) {
+    return trimmed; // 7字以内单行展示最为饱满
+  }
+
+  // 标点符号集
+  const puncts = ["，", "。", "！", "？", "；", "…", ",", ".", "!", "?", "~", "～", " "];
+  const mid = len / 2;
+  let bestIdx = -1;
+  let minDiff = 999;
+
+  for (let i = 0; i < len; i++) {
+    const ch = trimmed[i];
+    if (puncts.includes(ch) && i >= 2 && i <= len - 3) {
+      const diff = Math.abs(i - mid);
+      if (diff < minDiff) {
+        minDiff = diff;
+        bestIdx = i;
+      }
+    }
+  }
+
+  if (bestIdx !== -1) {
+    if (trimmed[bestIdx] === " ") {
+      return trimmed.slice(0, bestIdx) + "\n" + trimmed.slice(bestIdx + 1);
+    }
+    return trimmed.slice(0, bestIdx + 1) + "\n" + trimmed.slice(bestIdx + 1);
+  }
+
+  // 没有合适标点，在正中间折行
+  const cut = Math.floor(len / 2);
+  return trimmed.slice(0, cut) + "\n" + trimmed.slice(cut);
+}
+
+/**
+ * 过滤清洗短段子：3~24 字
  */
 function cleanQuote(content) {
   if (!content) return null;
   const str = content.trim().replace(/\r/g, "");
-  if (str.length >= 3 && str.length <= 22 && str.split("\n").length <= 2) {
+  if (str.length >= 3 && str.length <= 24 && str.split("\n").length <= 2) {
     return str;
   }
   return null;
@@ -48,7 +94,7 @@ export async function prefetchQuotes() {
 }
 
 /**
- * 获取一条随机短段子（耗尽时自动循环并触发后台拉取）
+ * 获取一条随机短段子（自动进行智能断行）
  */
 export function getRandomQuote() {
   if (quotePool.length < 5) {
@@ -60,5 +106,5 @@ export function getRandomQuote() {
   const index = Math.floor(Math.random() * quotePool.length);
   const chosen = quotePool[index];
   quotePool.splice(index, 1);
-  return chosen;
+  return smartBreakText(chosen);
 }

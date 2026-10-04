@@ -225,6 +225,35 @@
   gap: 6px;
 }
 
+
+.btn-history-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: var(--pjsk-color-surface-container);
+  border: 1px solid var(--pjsk-color-border);
+  color: var(--pjsk-color-text-secondary);
+  border-radius: var(--pjsk-radius-pill);
+  cursor: pointer;
+  transition: all 0.16s ease;
+  padding: 0;
+}
+
+.btn-history-step:hover:not(:disabled) {
+  background: var(--pjsk-color-surface-container-high);
+  color: var(--pjsk-color-primary);
+  border-color: var(--pjsk-color-border-hover);
+}
+
+.btn-history-step.disabled,
+.btn-history-step:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+
 .btn-random-quote {
   display: inline-flex;
   align-items: center;

@@ -1,3 +1,9 @@
+const IconCharacter = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginRight: 6 }}>
+    <circle cx="12" cy="7" r="4" />
+    <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+  </svg>
+);
 import {
   ImageList,
   ImageListItem,
@@ -76,7 +82,8 @@ export default function Picker({ setCharacter }) {
         className="btn-character-picker"
         onClick={handleClick}
       >
-        🎭 {t("pick_character")}
+        <IconCharacter />
+        <span>{t("pick_character")}</span>
       </button>
       <Popover
         id={id}
