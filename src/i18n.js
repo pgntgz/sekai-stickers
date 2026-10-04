@@ -45,7 +45,7 @@ const resources = {
       "font_dela": "Dela爆裂海报",
       "font_mochiy": "Mochiy圆滚",
       "font_pixel": "8Bit像素",
-      "font_wqy": "文泉正黑 (标准)",
+      "font_wqy": "文泉驿圆体 (标准)",
       "font_system": "系统黑体"
     }
   },
@@ -91,7 +91,7 @@ const resources = {
       "font_dela": "Dela Poster",
       "font_mochiy": "Mochiy Round",
       "font_pixel": "8Bit Pixel",
-      "font_wqy": "Zen Hei (Standard)",
+      "font_wqy": "WenQuanYi Zen (Standard)",
       "font_system": "System Sans"
     }
   },
@@ -137,7 +137,7 @@ const resources = {
       "font_dela": "デラゴシック",
       "font_mochiy": "モチポップ",
       "font_pixel": "ドットゴシック",
-      "font_wqy": "禅の黒 (標準)",
+      "font_wqy": "文泉円体 (標準)",
       "font_system": "システム"
     }
   }

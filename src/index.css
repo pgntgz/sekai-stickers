@@ -73,15 +73,11 @@ body {
 
 @font-face {
   font-family: 'SSFangTangTi';
-  src: local('SSFangTangTi'), url(./fonts/ShangShouFangTangTi.woff2) format('woff2');
+  src: local('SSFangTangTi'), local('ShangShouFangTangTi');
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'ChenYuLuoLi';
-  src: url('https://cdn.jsdelivr.net/gh/cy-font/ChenYuLuoLi@v2.0/ChenYuLuoLi.woff2') format('woff2');
-  font-display: swap;
-}
+
 
 /* --- Scrollbar --- */
 ::-webkit-scrollbar {
