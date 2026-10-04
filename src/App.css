@@ -586,7 +586,8 @@
 
 .color-unit-tab.active {
   background: var(--pjsk-color-primary);
-  color: #ffffff;
+  color: #04201c;
+  font-weight: 700;
   border-color: var(--pjsk-color-primary);
 }
 
@@ -627,7 +628,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: var(--pjsk-color-surface-container, #1b1d25);
   transition: all 0.15s ease;
   overflow: visible;
 }
@@ -866,9 +867,10 @@
 
 .picker-unit-tab.active {
   background: var(--pjsk-color-primary);
-  color: #ffffff;
+  color: #04201c;
+  font-weight: 700;
   border-color: var(--pjsk-color-primary);
-  box-shadow: 0 2px 8px rgba(51, 204, 187, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 245, 212, 0.4);
 }
 
 .picker-character-chips-bar {
@@ -918,7 +920,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: var(--pjsk-color-surface-container, #1b1d25);
   flex-shrink: 0;
 }
 
@@ -1012,4 +1014,15 @@
   color: #ffffff;
   border-color: var(--pjsk-color-primary);
   transform: translateY(-1px);
+}
+
+/* Force all MUI Dialogs to native dark theme */
+.MuiDialog-paper {
+  background-color: var(--pjsk-color-surface, #14161c) !important;
+  color: var(--pjsk-color-text-main, #f3f5f8) !important;
+  border: 1px solid var(--pjsk-color-border, #262936) !important;
+}
+
+.MuiDialogTitle-root {
+  color: var(--pjsk-color-text-main, #f3f5f8) !important;
 }

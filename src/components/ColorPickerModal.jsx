@@ -32,16 +32,6 @@ const PRESET_COLORS = [
   { label: "罗兰紫", color: "#BB88EE" },
 ];
 
-const UNITS = [
-  { id: "all", label: "すべて" },
-  { id: "バーチャル・シンガー", label: "バーチャル・シンガー" },
-  { id: "Leo/need", label: "Leo/need" },
-  { id: "MORE MORE JUMP！", label: "MORE MORE JUMP！" },
-  { id: "Vivid BAD SQUAD", label: "Vivid BAD SQUAD" },
-  { id: "ワンダーランズ×ショウタイム", label: "ワンダーランズ×ショウタイム" },
-  { id: "25時、ナイトコードで。", label: "25時、ナイトコードで。" },
-];
-
 export default function ColorPickerModal({
   open,
   onClose,
@@ -59,6 +49,16 @@ export default function ColorPickerModal({
     }
   }, [currentColor]);
 
+  const units = [
+    { id: "all", label: t("unit_all") },
+    { id: "バーチャル・シンガー", label: "バーチャル・シンガー" },
+    { id: "Leo/need", label: "Leo/need" },
+    { id: "MORE MORE JUMP！", label: "MORE MORE JUMP！" },
+    { id: "Vivid BAD SQUAD", label: "Vivid BAD SQUAD" },
+    { id: "ワンダーランズ×ショウタイム", label: "ワンダーランズ×ショウタイム" },
+    { id: "25時、ナイトコードで。", label: "25時、ナイトコードで。" },
+  ];
+
   const filteredCharacters = React.useMemo(() => {
     if (selectedUnit === "all") return characterColors;
     return characterColors.filter((c) => c.unit === selectedUnit);
@@ -68,12 +68,6 @@ export default function ColorPickerModal({
     if (i18n.language.startsWith("zh")) return c.nameZh;
     if (i18n.language.startsWith("ja")) return c.nameJa;
     return c.nameEn;
-  };
-
-  const getUnitLabel = (u) => {
-    if (i18n.language.startsWith("zh")) return u.labelZh;
-    if (i18n.language.startsWith("ja")) return u.labelJa;
-    return u.labelEn;
   };
 
   const handleHexChange = (e) => {
@@ -100,9 +94,10 @@ export default function ColorPickerModal({
       PaperProps={{
         style: {
           borderRadius: 20,
-          background: "var(--card-bg, #ffffff)",
-          boxShadow: "0 20px 48px rgba(0, 0, 0, 0.16)",
-          color: "var(--text-primary, #1e293b)",
+          background: "var(--pjsk-color-surface, #14161c)",
+          border: "1px solid var(--pjsk-color-border, #262936)",
+          boxShadow: "0 24px 64px rgba(0, 0, 0, 0.6)",
+          color: "var(--pjsk-color-text-main, #f3f5f8)",
         },
       }}
     >
@@ -112,11 +107,11 @@ export default function ColorPickerModal({
           alignItems: "center",
           justifyContent: "space-between",
           padding: "16px 20px 12px",
-          borderBottom: "1px solid var(--border-color, #e2e8f0)",
+          borderBottom: "1px solid var(--pjsk-color-border, #262936)",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontSize: "1.1rem", fontWeight: 650 }}>
+          <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--pjsk-color-text-main, #f3f5f8)" }}>
             {t("text_color")}
           </span>
           <div
@@ -126,10 +121,12 @@ export default function ColorPickerModal({
               gap: 6,
               padding: "3px 8px",
               borderRadius: 20,
-              background: "rgba(0,0,0,0.04)",
+              background: "var(--pjsk-color-surface-container, #1b1d25)",
+              border: "1px solid var(--pjsk-color-border, #262936)",
               fontSize: "0.78rem",
-              fontFamily: "monospace",
+              fontFamily: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
               fontWeight: 600,
+              color: "var(--pjsk-color-text-main, #f3f5f8)",
             }}
           >
             <span
@@ -139,7 +136,8 @@ export default function ColorPickerModal({
                 borderRadius: "50%",
                 backgroundColor: currentColor,
                 display: "inline-block",
-                boxShadow: "0 0 2px rgba(0,0,0,0.3)",
+                border: "1.5px solid #ffffff",
+                boxShadow: "0 0 2px rgba(0,0,0,0.4)",
               }}
             />
             {currentColor?.toUpperCase()}
@@ -149,7 +147,7 @@ export default function ColorPickerModal({
           size="small"
           onClick={onClose}
           aria-label="close"
-          style={{ color: "inherit" }}
+          style={{ color: "var(--pjsk-color-text-secondary, #9aa0b0)" }}
         >
           <IconClose />
         </IconButton>
@@ -158,7 +156,7 @@ export default function ColorPickerModal({
       <DialogContent style={{ padding: "16px 20px 20px" }}>
         {/* 组合筛选栏 */}
         <div className="color-unit-tabs">
-          {UNITS.map((u) => (
+          {units.map((u) => (
             <button
               key={u.id}
               type="button"
@@ -192,8 +190,8 @@ export default function ColorPickerModal({
                   style={{
                     borderColor: c.color,
                     boxShadow: isSelected
-                      ? `0 0 0 2px var(--card-bg, #fff), 0 0 0 4px ${c.color}, 0 4px 12px ${c.color}66`
-                      : `0 0 0 1px rgba(0,0,0,0.06), 0 2px 6px ${c.color}33`,
+                      ? `0 0 0 2px var(--pjsk-color-surface, #14161c), 0 0 0 4px ${c.color}, 0 4px 14px ${c.color}77`
+                      : `0 0 0 1px rgba(0,0,0,0.3), 0 2px 8px ${c.color}44`,
                   }}
                 >
                   <img

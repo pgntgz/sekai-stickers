@@ -4,6 +4,13 @@
    ============================================ */
 
 :root {
+  color-scheme: dark;
+
+  /* --- Fallbacks & Aliases for Dark Mode Modals --- */
+  --card-bg: #14161c;
+  --text-primary: #f3f5f8;
+  --pjsk-color-text-sub: #9aa0b0;
+
   /* --- Canvas & Background --- */
   --pjsk-color-bg: #0c0d10;
   --pjsk-color-surface: #14161c;
@@ -48,6 +55,7 @@
 }
 
 html {
+  color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

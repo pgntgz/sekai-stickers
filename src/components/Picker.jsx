@@ -39,16 +39,6 @@ const IconClear = () => (
   </svg>
 );
 
-const UNITS = [
-  { id: "all", name: "すべて" },
-  { id: "バーチャル・シンガー", name: "バーチャル・シンガー" },
-  { id: "Leo/need", name: "Leo/need" },
-  { id: "MORE MORE JUMP！", name: "MORE MORE JUMP！" },
-  { id: "Vivid BAD SQUAD", name: "Vivid BAD SQUAD" },
-  { id: "ワンダーランズ×ショウタイム", name: "ワンダーランズ×ショウタイム" },
-  { id: "25時、ナイトコードで。", name: "25時、ナイトコードで。" },
-];
-
 // 建立 slug -> characterColors 字典，以小写为 key
 const CHAR_MAP = {};
 for (const item of characterColors) {
@@ -73,13 +63,23 @@ const STICKERS_WITH_META = characters.map((c, idx) => {
 const PAGE_SIZE = 60;
 
 export default function Picker({ setCharacter }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [selectedUnit, setSelectedUnit] = useState("all");
   const [selectedCharSlug, setSelectedCharSlug] = useState("all");
   const [displayLimit, setDisplayLimit] = useState(PAGE_SIZE);
   const listContainerRef = useRef(null);
+
+  const units = [
+    { id: "all", name: t("unit_all") },
+    { id: "バーチャル・シンガー", name: "バーチャル・シンガー" },
+    { id: "Leo/need", name: "Leo/need" },
+    { id: "MORE MORE JUMP！", name: "MORE MORE JUMP！" },
+    { id: "Vivid BAD SQUAD", name: "Vivid BAD SQUAD" },
+    { id: "ワンダーランズ×ショウタイム", name: "ワンダーランズ×ショウタイム" },
+    { id: "25時、ナイトコードで。", name: "25時、ナイトコードで。" },
+  ];
 
   const handleOpen = () => {
     setOpen(true);
@@ -90,13 +90,19 @@ export default function Picker({ setCharacter }) {
     setOpen(false);
   };
 
+  const getCharName = (c) => {
+    if (i18n.language.startsWith("zh")) return c.nameZh;
+    if (i18n.language.startsWith("ja")) return c.nameJa;
+    return c.nameEn;
+  };
+
   // 当前组合下的角色列表
   const unitCharacters = useMemo(() => {
     if (selectedUnit === "all") return characterColors;
     return characterColors.filter((c) => c.unit === selectedUnit);
   }, [selectedUnit]);
 
-  // 当切换组合时，若当前选中的角色不在新组合内，则重置角色筛选为 "all"
+  // 当切换组合时，重置角色筛选为 "all"
   const handleUnitChange = (unitId) => {
     setSelectedUnit(unitId);
     setSelectedCharSlug("all");
@@ -159,7 +165,7 @@ export default function Picker({ setCharacter }) {
         type="button"
         className="btn-character-picker"
         onClick={handleOpen}
-        title="打开贴纸选择器"
+        title={t("pick_character")}
       >
         <IconCharacter />
         <span>{t("pick_character")}</span>
@@ -174,9 +180,10 @@ export default function Picker({ setCharacter }) {
         PaperProps={{
           style: {
             borderRadius: 20,
-            background: "var(--card-bg, #ffffff)",
-            boxShadow: "0 24px 64px rgba(0, 0, 0, 0.2)",
-            color: "var(--text-primary, #1e293b)",
+            background: "var(--pjsk-color-surface, #14161c)",
+            border: "1px solid var(--pjsk-color-border, #262936)",
+            boxShadow: "0 24px 64px rgba(0, 0, 0, 0.6)",
+            color: "var(--pjsk-color-text-main, #f3f5f8)",
             maxHeight: "88vh",
             display: "flex",
             flexDirection: "column",
@@ -190,15 +197,15 @@ export default function Picker({ setCharacter }) {
             alignItems: "center",
             justifyContent: "space-between",
             padding: "16px 20px 12px",
-            borderBottom: "1px solid var(--border-color, #e2e8f0)",
+            borderBottom: "1px solid var(--pjsk-color-border, #262936)",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <span style={{ fontSize: "1.15rem", fontWeight: 700 }}>
+            <span style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--pjsk-color-text-main, #f3f5f8)" }}>
               {t("pick_character")}
             </span>
             <span className="picker-filter-count-pill">
-              {filteredStickers.length} 枚
+              {filteredStickers.length} {t("count_unit")}
             </span>
           </div>
 
@@ -206,7 +213,7 @@ export default function Picker({ setCharacter }) {
             size="small"
             onClick={handleClose}
             aria-label="close"
-            style={{ color: "inherit" }}
+            style={{ color: "var(--pjsk-color-text-secondary, #9aa0b0)" }}
           >
             <IconClose />
           </IconButton>
@@ -220,20 +227,40 @@ export default function Picker({ setCharacter }) {
               size="small"
               fullWidth
               value={search}
-              placeholder={t("search_placeholder") || "搜索角色名、台词或编号..."}
+              placeholder={t("search_placeholder")}
               onChange={(e) => {
                 setSearch(e.target.value);
                 setDisplayLimit(PAGE_SIZE);
               }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  backgroundColor: "var(--pjsk-color-surface-container, #1b1d25)",
+                  color: "var(--pjsk-color-text-main, #f3f5f8)",
+                  borderRadius: "var(--pjsk-radius-pill, 9999px)",
+                  "& fieldset": {
+                    borderColor: "var(--pjsk-color-border, #262936)",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "var(--pjsk-color-border-hover, #3b3f52)",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "var(--pjsk-color-primary, #00f5d4)",
+                  },
+                },
+                "& .MuiInputBase-input::placeholder": {
+                  color: "var(--pjsk-color-text-secondary, #9aa0b0)",
+                  opacity: 1,
+                },
+              }}
               InputProps={{
                 startAdornment: (
-                  <InputAdornment position="start" style={{ color: "var(--pjsk-color-text-sub)" }}>
+                  <InputAdornment position="start" style={{ color: "var(--pjsk-color-text-secondary, #9aa0b0)" }}>
                     <IconSearch />
                   </InputAdornment>
                 ),
                 endAdornment: search ? (
                   <InputAdornment position="end">
-                    <IconButton size="small" onClick={() => setSearch("")}>
+                    <IconButton size="small" onClick={() => setSearch("")} style={{ color: "var(--pjsk-color-text-secondary, #9aa0b0)" }}>
                       <IconClear />
                     </IconButton>
                   </InputAdornment>
@@ -244,7 +271,7 @@ export default function Picker({ setCharacter }) {
 
           {/* 第一层：组合筛选栏 (全日文官方名) */}
           <div className="picker-unit-tabs">
-            {UNITS.map((u) => (
+            {units.map((u) => (
               <button
                 key={u.id}
                 type="button"
@@ -263,10 +290,11 @@ export default function Picker({ setCharacter }) {
               className={`picker-char-chip ${selectedCharSlug === "all" ? "active" : ""}`}
               onClick={() => handleCharChange("all")}
             >
-              <span>{selectedUnit === "all" ? "全員" : "ユニット全員"}</span>
+              <span>{selectedUnit === "all" ? t("all_characters") : t("all_unit_characters")}</span>
             </button>
             {unitCharacters.map((c) => {
               const isSelected = selectedCharSlug.toLowerCase() === c.slug.toLowerCase();
+              const charName = getCharName(c);
               return (
                 <button
                   key={c.slug}
@@ -276,7 +304,7 @@ export default function Picker({ setCharacter }) {
                     borderColor: isSelected ? c.color : "transparent",
                   }}
                   onClick={() => handleCharChange(c.slug)}
-                  title={c.nameJa}
+                  title={charName}
                 >
                   <span
                     className="picker-char-chip-avatar"
@@ -284,11 +312,11 @@ export default function Picker({ setCharacter }) {
                   >
                     <img
                       src={`${import.meta.env.BASE_URL}img/${c.img}`}
-                      alt={c.nameJa}
+                      alt={charName}
                       loading="lazy"
                     />
                   </span>
-                  <span className="picker-char-chip-name">{c.nameJa}</span>
+                  <span className="picker-char-chip-name">{charName}</span>
                 </button>
               );
             })}
@@ -302,11 +330,12 @@ export default function Picker({ setCharacter }) {
             padding: "16px 20px 24px",
             overflowY: "auto",
             flex: 1,
+            background: "var(--pjsk-color-surface, #14161c)",
           }}
         >
           {visibleStickers.length === 0 ? (
             <div className="picker-empty-state">
-              <span>未找到匹配的贴纸</span>
+              <span>{t("no_stickers_found")}</span>
             </div>
           ) : (
             <>
@@ -333,7 +362,7 @@ export default function Picker({ setCharacter }) {
                       />
                     </div>
                     <span className="picker-sticker-caption">
-                      {item.defaultText?.text || item.name}
+                      {item.defaultText?.text || getCharName(item)}
                     </span>
                   </button>
                 ))}
@@ -347,7 +376,7 @@ export default function Picker({ setCharacter }) {
                     className="picker-load-more-btn"
                     onClick={handleLoadMore}
                   >
-                    もっと見る ({filteredStickers.length - displayLimit} 枚残り)
+                    {t("load_more")} ({t("remaining")} {filteredStickers.length - displayLimit} {t("count_unit")})
                   </button>
                 </div>
               )}
