@@ -103,18 +103,18 @@ export default function Info({ open, handleClose }) {
     <ListItem
     button
     onClick={() =>
-      (window.location.href = "https://gemini.google.com")
+      (window.location.href = "https://antigravity.google")
     }
     >
     <ListItemAvatar>
     <Avatar
-    alt="Gemini (AI Agent)"
-    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%231b1d2e'/><stop offset='100%25' stop-color='%230e1017'/></linearGradient><linearGradient id='gemini' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234285f4'/><stop offset='50%25' stop-color='%239b72cf'/><stop offset='100%25' stop-color='%23d96570'/></linearGradient></defs><rect width='100' height='100' rx='50' fill='url(%23bg)'/><path d='M50 16 C50 34 34 50 16 50 C34 50 50 66 50 84 C50 66 66 50 84 50 C66 50 50 34 50 16 Z' fill='url(%23gemini)'/><circle cx='68' cy='28' r='6' fill='%236ee7b7'/></svg>"
+    alt="Google Antigravity"
+    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%230f172a'/><stop offset='100%25' stop-color='%23020617'/></linearGradient></defs><rect width='100' height='100' rx='50' fill='url(%23bg)'/><ellipse cx='50' cy='68' rx='28' ry='8' fill='none' stroke='%234285F4' stroke-width='3' opacity='0.7'/><ellipse cx='50' cy='52' rx='20' ry='6' fill='none' stroke='%2334A853' stroke-width='2.5' opacity='0.85'/><path d='M50 20 L66 48 L34 48 Z' fill='%23EA4335'/><circle cx='50' cy='36' r='5' fill='%23FBBC05'/><polygon points='50,13 54,23 50,20 46,23' fill='%23ffffff'/></svg>"
     />
     </ListItemAvatar>
     <ListItemText
-    primary="Gemini (AI Agent)"
-    secondary={t("contrib_gemini")}
+    primary="Google Antigravity (AI Agent)"
+    secondary={t("contrib_antigravity")}
     />
     </ListItem>
     <ListItem

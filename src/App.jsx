@@ -12,6 +12,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Picker from "./components/Picker";
 import Info from "./components/Info";
+import ColorPickerModal from "./components/ColorPickerModal";
 import { useTranslation } from "react-i18next";
 import { getRandomQuote, prefetchQuotes, smartBreakText } from "./utils/quotes";
 
@@ -50,6 +51,16 @@ const IconCopy = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <rect x="9" y="9" width="13" height="13" rx="2" />
     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+  </svg>
+);
+
+const IconPalette = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: 2 }}>
+    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
   </svg>
 );
 
@@ -172,11 +183,16 @@ function App() {
       });
       setHistoryIndex((prev) => Math.min(prev + 1, 29));
 
-      // 多行排版保护：若为 2 行且当前字号过大，自适应下调到不顶框的舒适字号，并设置舒展透气的行间距
+      // 贴纸文字防溢出排版：默认字号微调更克制，依据字数与行数精准自适应
       if (formatted.includes("\n")) {
-        const targetFont = fontSize > 40 ? 36 : fontSize;
+        const longest = Math.max(...formatted.split("\n").map((l) => l.length));
+        const targetFont = longest >= 8 ? 28 : 32;
         setFontSize(targetFont);
-        setSpaceSize(Math.round(targetFont * 1.15)); // 智能行距，彻底杜绝两行粘连
+        setSpaceSize(Math.round(targetFont * 1.18)); // 舒适行间距，杜绝两行粘连
+      } else {
+        const targetFont = formatted.length >= 8 ? 32 : 36;
+        setFontSize(targetFont);
+        setSpaceSize(Math.round(targetFont * 1.18));
       }
     }
   };
@@ -195,10 +211,11 @@ function App() {
     }
   };
 
-  // 恢复角色官方初始文字与推荐参数
+  // 恢复角色官方初始文字与推荐参数（文字颜色同步恢复角色代表色）
   const handleResetText = () => {
     const defT = characters[character].defaultText.text;
     const defS = characters[character].defaultText.s;
+    const targetS = Math.min(defS, 36);
     setHistory((prev) => [...prev.slice(0, historyIndex + 1), defT].slice(-30));
     setHistoryIndex((prev) => Math.min(prev + 1, 29));
     setPosition({
@@ -206,26 +223,33 @@ function App() {
       y: characters[character].defaultText.y,
     });
     setRotate(characters[character].defaultText.r);
-    setFontSize(defS);
-    setSpaceSize(Math.round(defS * 1.15));
+    setFontSize(targetS);
+    setSpaceSize(Math.round(targetS * 1.18));
+    setTextColor(characters[character].color);
   };
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
     y: characters[character].defaultText.y,
   });
+  // 默认字号适度缩小，确保10字以内排版均不出界
   const [fontSize, setFontSize] = useState(() => {
     const isMulti = history[0] && history[0].includes("\n");
-    const s = characters[49].defaultText.s;
-    return isMulti && s > 40 ? 36 : s;
+    if (isMulti) {
+      const longest = Math.max(...history[0].split("\n").map((l) => l.length));
+      return longest >= 8 ? 28 : 32;
+    }
+    return (history[0] && history[0].length >= 8) ? 32 : 36;
   });
   const [spaceSize, setSpaceSize] = useState(() => {
     const isMulti = history[0] && history[0].includes("\n");
-    const s = isMulti && characters[49].defaultText.s > 40 ? 36 : characters[49].defaultText.s;
-    return Math.round(s * 1.15);
+    const baseFont = isMulti ? 30 : 36;
+    return Math.round(baseFont * 1.18);
   });
   const [rotate, setRotate] = useState(characters[character].defaultText.r);
   const [curve, setCurve] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [textColor, setTextColor] = useState(characters[character].color);
+  const [colorModalOpen, setColorModalOpen] = useState(false);
   const img = new Image();
 
   // 核心修复：精准监听字体加载与字体切片拉取，彻底杜绝切字体时继承上一个字体未加载状态的 Bug
@@ -326,7 +350,7 @@ function App() {
       ctx.rotate(rotate / 10);
       ctx.textAlign = "center";
       ctx.strokeStyle = "white";
-      ctx.fillStyle = characters[character].color;
+      ctx.fillStyle = textColor || characters[character].color;
       var lines = text.split("\n");
       if (curve) {
         for (let line of lines) {
@@ -421,6 +445,13 @@ function App() {
       </header>
 
       <Info open={infoOpen} handleClose={handleClose} />
+      <ColorPickerModal
+        open={colorModalOpen}
+        onClose={() => setColorModalOpen(false)}
+        currentColor={textColor}
+        onSelectColor={setTextColor}
+        defaultCharacterColor={characters[character].color}
+      />
 
       <main className="container">
         {/* 贴纸舞台画布卡片 (MD3 Surface) */}
@@ -552,6 +583,23 @@ function App() {
           </FormControl>
 
           <div className="settings-grid">
+            <div className="setting-row">
+              <span className="setting-label">{t("text_color")}</span>
+              <button
+                type="button"
+                className="btn-color-palette-trigger"
+                onClick={() => setColorModalOpen(true)}
+                title={t("color_palette")}
+              >
+                <span
+                  className="color-swatch-circle"
+                  style={{ backgroundColor: textColor }}
+                />
+                <span className="color-hex-label">{textColor?.toUpperCase()}</span>
+                <IconPalette />
+              </button>
+            </div>
+
             <div className="setting-row">
               <span className="setting-label">{t("rotate")}</span>
               <div className="setting-slider-wrap">

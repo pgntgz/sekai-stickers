@@ -5,20 +5,22 @@ let quotePool = [...localQuotes];
 let isFetching = false;
 
 /**
- * 智能分词与折行算法：
- * 当单行文字超过 7 个字且没有换行时，优先寻找居中合理的标点符号截断；
- * 没有标点时在句子中间自然断行，防止贴纸画布左右溢出顶框。
+ * 智能分词与折行算法（以 10 个字为判定点）：
+ * - 单行 <= 10 字保持单行饱满展示；
+ * - 超过 10 字时自动断行：优先在句子居中合理的标点符号处断开；若无标点则在正中间自然换行。
+ * 彻底避免单行字数过多导致的左右溢出贴纸出框问题。
  */
 export function smartBreakText(text) {
   if (!text) return "";
   const trimmed = text.trim();
   if (trimmed.includes("\n")) {
-    return trimmed; // 已经包含换行符，尊重用户排版
+    return trimmed; // 已经包含换行符，尊重排版
   }
 
   const len = trimmed.length;
-  if (len <= 7) {
-    return trimmed; // 7字以内单行展示最为饱满
+  // 十个字作为判定点：10 字以内保持单行
+  if (len <= 10) {
+    return trimmed;
   }
 
   // 标点符号集
@@ -29,7 +31,7 @@ export function smartBreakText(text) {
 
   for (let i = 0; i < len; i++) {
     const ch = trimmed[i];
-    if (puncts.includes(ch) && i >= 2 && i <= len - 3) {
+    if (puncts.includes(ch) && i >= 3 && i <= len - 4) {
       const diff = Math.abs(i - mid);
       if (diff < minDiff) {
         minDiff = diff;
@@ -51,12 +53,12 @@ export function smartBreakText(text) {
 }
 
 /**
- * 过滤清洗短段子：3~24 字
+ * 过滤清洗短段子：3~20 字（每行最多不超过 10 个字，杜绝画布顶框出界）
  */
 function cleanQuote(content) {
   if (!content) return null;
   const str = content.trim().replace(/\r/g, "");
-  if (str.length >= 3 && str.length <= 24 && str.split("\n").length <= 2) {
+  if (str.length >= 3 && str.length <= 20 && str.split("\n").length <= 2) {
     return str;
   }
   return null;

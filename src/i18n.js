@@ -27,7 +27,7 @@ const resources = {
       "contrib_modder": "协助核心代码编写",
       "contrib_sheren": "提供初代表情包资源",
       "contrib_contributors": "协助核心代码编写",
-      "contrib_gemini": "核心架构重构与 MD3 现代化",
+      "contrib_antigravity": "全栈架构现代化与敏捷重构 (AI Agent)",
       "contrib_chouxiang": "提供趣味中文抽象段子源支持",
       "contrib_pgntgz_1": "1. 增加新贴图",
       "contrib_pgntgz_2": "2. 维护及现代化重构本站",
@@ -38,6 +38,10 @@ const resources = {
       "reset_text": "恢复",
       "settings_title": "控制中心",
       "canvas_title": "贴纸画布",
+      "text_color": "文字颜色",
+      "color_palette": "角色代表色盘",
+      "free_color_picker": "自由调色盘",
+      "reset_char_color": "恢复当前角色色",
       
       // 字体翻译
       "sticker_font": "贴纸字体：",
@@ -78,7 +82,7 @@ const resources = {
       "contrib_modder": "for the help with the code",
       "contrib_sheren": "for the original stamps",
       "contrib_contributors": "for the help with the code",
-      "contrib_gemini": "for core architecture rebuild & MD3 modernization",
+      "contrib_antigravity": "for full-stack architecture rebuild & AI agent pairing",
       "contrib_chouxiang": "for providing the humorous Chinese meme quotes API",
       "contrib_pgntgz_1": "1. Added new stickers",
       "contrib_pgntgz_2": "2. Maintained and modernized this site",
@@ -89,6 +93,10 @@ const resources = {
       "reset_text": "Reset",
       "settings_title": "Controls",
       "canvas_title": "Canvas Stage",
+      "text_color": "Text Color",
+      "color_palette": "Character Palette",
+      "free_color_picker": "Custom Color",
+      "reset_char_color": "Reset to Character Color",
 
       // 字体翻译
       "sticker_font": "Sticker Font: ",
@@ -129,7 +137,7 @@ const resources = {
       "contrib_modder": "コアコード開発への協力",
       "contrib_sheren": "初期スタンプ素材の提供",
       "contrib_contributors": "コアコード開発への協力",
-      "contrib_gemini": "コア構造の再構築とMD3の近代化への協力",
+      "contrib_antigravity": "フルスタック近代化とAIエージェント開発支援",
       "contrib_chouxiang": "面白い中国語ネタ文章データ源の提供",
       "contrib_pgntgz_1": "1. 新規スタンプの追加",
       "contrib_pgntgz_2": "2. サイトのメンテナンスおよび近代化",
@@ -140,6 +148,10 @@ const resources = {
       "reset_text": "リセット",
       "settings_title": "コントロール",
       "canvas_title": "スタンプ画面",
+      "text_color": "文字の色",
+      "color_palette": "キャラパレット",
+      "free_color_picker": "自由カラーピッカー",
+      "reset_char_color": "キャラの既定色に戻す",
 
       // 字体翻译
       "sticker_font": "スタンプフォント：",

@@ -1,0 +1,236 @@
+[
+  {
+    "slug": "Miku",
+    "unit": "Virtual Singer",
+    "nameJa": "初音ミク",
+    "nameZh": "初音未来",
+    "nameEn": "Miku",
+    "color": "#33CCBB",
+    "img": "Miku/Miku_01.png"
+  },
+  {
+    "slug": "Rin",
+    "unit": "Virtual Singer",
+    "nameJa": "鏡音リン",
+    "nameZh": "镜音铃",
+    "nameEn": "Rin",
+    "color": "#E8A505",
+    "img": "Rin/Rin_01.png"
+  },
+  {
+    "slug": "Len",
+    "unit": "Virtual Singer",
+    "nameJa": "鏡音レン",
+    "nameZh": "镜音连",
+    "nameEn": "Len",
+    "color": "#D3BD00",
+    "img": "Len/Len_01.png"
+  },
+  {
+    "slug": "Luka",
+    "unit": "Virtual Singer",
+    "nameJa": "巡音ルカ",
+    "nameZh": "巡音流歌",
+    "nameEn": "Luka",
+    "color": "#F88CA7",
+    "img": "Luka/Luka_01.png"
+  },
+  {
+    "slug": "Meiko",
+    "unit": "Virtual Singer",
+    "nameJa": "MEIKO",
+    "nameZh": "MEIKO",
+    "nameEn": "MEIKO",
+    "color": "#E4485F",
+    "img": "Meiko/Meiko_01.png"
+  },
+  {
+    "slug": "KAITO",
+    "unit": "Virtual Singer",
+    "nameJa": "KAITO",
+    "nameZh": "KAITO",
+    "nameEn": "KAITO",
+    "color": "#3366CC",
+    "img": "KAITO/KAITO_01.png"
+  },
+  {
+    "slug": "Ichika",
+    "unit": "Leo/need",
+    "nameJa": "星乃一歌",
+    "nameZh": "星乃一歌",
+    "nameEn": "Ichika",
+    "color": "#33AAEE",
+    "img": "Ichika/Ichika_01.png"
+  },
+  {
+    "slug": "Saki",
+    "unit": "Leo/need",
+    "nameJa": "天馬咲希",
+    "nameZh": "天马咲希",
+    "nameEn": "Saki",
+    "color": "#F5B303",
+    "img": "Saki/Saki_01.png"
+  },
+  {
+    "slug": "Honami",
+    "unit": "Leo/need",
+    "nameJa": "望月穂波",
+    "nameZh": "望月穗波",
+    "nameEn": "Honami",
+    "color": "#F86666",
+    "img": "Honami/Honami_01.png"
+  },
+  {
+    "slug": "Shiho",
+    "unit": "Leo/need",
+    "nameJa": "日野森志歩",
+    "nameZh": "日野森志步",
+    "nameEn": "Shiho",
+    "color": "#A0C10B",
+    "img": "Shiho/Shiho_01.png"
+  },
+  {
+    "slug": "Minori",
+    "unit": "MORE MORE JUMP!",
+    "nameJa": "花里みのり",
+    "nameZh": "花里实乃理",
+    "nameEn": "Minori",
+    "color": "#F39E7D",
+    "img": "Minori/Minori_01.png"
+  },
+  {
+    "slug": "Haruka",
+    "unit": "MORE MORE JUMP!",
+    "nameJa": "桐谷遥",
+    "nameZh": "桐谷遥",
+    "nameEn": "Haruka",
+    "color": "#6495F0",
+    "img": "Haruka/Haruka_01.png"
+  },
+  {
+    "slug": "airi",
+    "unit": "MORE MORE JUMP!",
+    "nameJa": "桃井愛莉",
+    "nameZh": "桃井爱莉",
+    "nameEn": "Airi",
+    "color": "#FB8AAC",
+    "img": "airi/Airi_01.png"
+  },
+  {
+    "slug": "Shizuku",
+    "unit": "MORE MORE JUMP!",
+    "nameJa": "日野森雫",
+    "nameZh": "日野森雫",
+    "nameEn": "Shizuku",
+    "color": "#5CD0B9",
+    "img": "Shizuku/Shizuku_01.png"
+  },
+  {
+    "slug": "Kohane",
+    "unit": "Vivid BAD SQUAD",
+    "nameJa": "小豆沢こはね",
+    "nameZh": "小豆泽心羽",
+    "nameEn": "Kohane",
+    "color": "#FF6699",
+    "img": "Kohane/Kohane_01.png"
+  },
+  {
+    "slug": "an",
+    "unit": "Vivid BAD SQUAD",
+    "nameJa": "白石杏",
+    "nameZh": "白石杏",
+    "nameEn": "An",
+    "color": "#00BADC",
+    "img": "an/An_01.png"
+  },
+  {
+    "slug": "akito",
+    "unit": "Vivid BAD SQUAD",
+    "nameJa": "東雲彰人",
+    "nameZh": "东云彰人",
+    "nameEn": "Akito",
+    "color": "#FF7722",
+    "img": "akito/Akito_01.png"
+  },
+  {
+    "slug": "Touya",
+    "unit": "Vivid BAD SQUAD",
+    "nameJa": "青柳冬弥",
+    "nameZh": "青柳冬弥",
+    "nameEn": "Touya",
+    "color": "#0077DD",
+    "img": "Touya/Touya_01.png"
+  },
+  {
+    "slug": "Tsukasa",
+    "unit": "Wonderlands×Showtime",
+    "nameJa": "天馬司",
+    "nameZh": "天马司",
+    "nameEn": "Tsukasa",
+    "color": "#F09A04",
+    "img": "Tsukasa/Tsukasa_01.png"
+  },
+  {
+    "slug": "emu",
+    "unit": "Wonderlands×Showtime",
+    "nameJa": "鳳えむ",
+    "nameZh": "凤笑梦",
+    "nameEn": "Emu",
+    "color": "#FF66BB",
+    "img": "emu/Emu_01.png"
+  },
+  {
+    "slug": "Nene",
+    "unit": "Wonderlands×Showtime",
+    "nameJa": "草薙寧々",
+    "nameZh": "草薙宁宁",
+    "nameEn": "Nene",
+    "color": "#19CD94",
+    "img": "Nene/Nene_01.png"
+  },
+  {
+    "slug": "Rui",
+    "unit": "Wonderlands×Showtime",
+    "nameJa": "神代類",
+    "nameZh": "神代类",
+    "nameEn": "Rui",
+    "color": "#BB88EE",
+    "img": "Rui/Rui_01.png"
+  },
+  {
+    "slug": "Kanade",
+    "unit": "25-ji, Nightcord de.",
+    "nameJa": "宵崎奏",
+    "nameZh": "宵崎奏",
+    "nameEn": "Kanade",
+    "color": "#BB6688",
+    "img": "Kanade/Kanade_01.png"
+  },
+  {
+    "slug": "Mafuyu",
+    "unit": "25-ji, Nightcord de.",
+    "nameJa": "朝比奈まふゆ",
+    "nameZh": "朝比奈真冬",
+    "nameEn": "Mafuyu",
+    "color": "#7171AF",
+    "img": "Mafuyu/Mafuyu_01.png"
+  },
+  {
+    "slug": "ena",
+    "unit": "25-ji, Nightcord de.",
+    "nameJa": "東雲絵名",
+    "nameZh": "东云绘名",
+    "nameEn": "Ena",
+    "color": "#B18F6C",
+    "img": "ena/Ena_01.png"
+  },
+  {
+    "slug": "Mizuki",
+    "unit": "25-ji, Nightcord de.",
+    "nameJa": "暁山瑞希",
+    "nameZh": "晓山瑞希",
+    "nameEn": "Mizuki",
+    "color": "#CA8DB6",
+    "img": "Mizuki/Mizuki_01.png"
+  }
+]
