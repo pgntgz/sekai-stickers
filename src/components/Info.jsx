@@ -108,13 +108,30 @@ export default function Info({ open, handleClose }) {
     >
     <ListItemAvatar>
     <Avatar
-    alt="Gemini"
-    src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d472dc298db33c3dcdade.svg"
+    alt="Gemini (AI Agent)"
+    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%231b1d2e'/><stop offset='100%25' stop-color='%230e1017'/></linearGradient><linearGradient id='gemini' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234285f4'/><stop offset='50%25' stop-color='%239b72cf'/><stop offset='100%25' stop-color='%23d96570'/></linearGradient></defs><rect width='100' height='100' rx='50' fill='url(%23bg)'/><path d='M50 16 C50 34 34 50 16 50 C34 50 50 66 50 84 C50 66 66 50 84 50 C66 50 50 34 50 16 Z' fill='url(%23gemini)'/><circle cx='68' cy='28' r='6' fill='%236ee7b7'/></svg>"
     />
     </ListItemAvatar>
     <ListItemText
     primary="Gemini (AI Agent)"
     secondary={t("contrib_gemini")}
+    />
+    </ListItem>
+    <ListItem
+    button
+    onClick={() =>
+      (window.location.href = "https://chouxiang.world")
+    }
+    >
+    <ListItemAvatar>
+    <Avatar
+    alt="抽象世界"
+    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='cx' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f5d4'/><stop offset='100%25' stop-color='%237928ca'/></linearGradient></defs><rect width='100' height='100' rx='50' fill='%23161821'/><rect x='22' y='26' width='56' height='42' rx='10' fill='url(%23cx)'/><polygon points='34,68 34,78 48,68' fill='%237928ca'/><circle cx='40' cy='47' r='4' fill='%23ffffff'/><circle cx='50' cy='47' r='4' fill='%23ffffff'/><circle cx='60' cy='47' r='4' fill='%23ffffff'/></svg>"
+    />
+    </ListItemAvatar>
+    <ListItemText
+    primary="抽象世界 (chouxiang.world)"
+    secondary={t("contrib_chouxiang")}
     />
     </ListItem>
     {/* 这里是 Master 的信息！ */}

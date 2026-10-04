@@ -1,6 +1,6 @@
 import "./App.css";
 import Canvas from "./components/Canvas";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import characters from "./characters.json";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
@@ -148,15 +148,20 @@ function App() {
     prefetchQuotes();
   }, []);
 
+  // 手动输入文字：就地更新当前词条，防止打字按键刷爆历史队列
   const handleTextChange = (newVal) => {
     setHistory((prev) => {
-      const next = [...prev.slice(0, historyIndex + 1), newVal];
-      return next.slice(-30);
+      const next = [...prev];
+      next[historyIndex] = newVal;
+      return next;
     });
-    setHistoryIndex((prev) => Math.min(prev + 1, 29));
+    // 若用户手动输入了换行且当前行距过小，自动选用舒适透气的行距
+    if (newVal.includes("\n") && spaceSize < 24) {
+      setSpaceSize(Math.round(fontSize * 1.15));
+    }
   };
 
-  // 摇一发抽象段子（智能断行 + 自动排版防溢出 + 压入历史）
+  // 摇一发抽象段子（智能断行 + 自动行距防粘连 + 压入历史）
   const handleRandomQuote = () => {
     const raw = getRandomQuote();
     if (raw) {
@@ -167,9 +172,11 @@ function App() {
       });
       setHistoryIndex((prev) => Math.min(prev + 1, 29));
 
-      // 若为 2 行且当前字号过大，自适应下调到不顶框的舒适字号 38px
-      if (formatted.includes("\n") && fontSize > 42) {
-        setFontSize(38);
+      // 多行排版保护：若为 2 行且当前字号过大，自适应下调到不顶框的舒适字号，并设置舒展透气的行间距
+      if (formatted.includes("\n")) {
+        const targetFont = fontSize > 40 ? 36 : fontSize;
+        setFontSize(targetFont);
+        setSpaceSize(Math.round(targetFont * 1.15)); // 智能行距，彻底杜绝两行粘连
       }
     }
   };
@@ -188,18 +195,34 @@ function App() {
     }
   };
 
-  // 恢复角色官方初始文字
+  // 恢复角色官方初始文字与推荐参数
   const handleResetText = () => {
-    const defaultText = characters[character].defaultText.text;
-    setHistory((prev) => [...prev.slice(0, historyIndex + 1), defaultText].slice(-30));
+    const defT = characters[character].defaultText.text;
+    const defS = characters[character].defaultText.s;
+    setHistory((prev) => [...prev.slice(0, historyIndex + 1), defT].slice(-30));
     setHistoryIndex((prev) => Math.min(prev + 1, 29));
+    setPosition({
+      x: characters[character].defaultText.x,
+      y: characters[character].defaultText.y,
+    });
+    setRotate(characters[character].defaultText.r);
+    setFontSize(defS);
+    setSpaceSize(Math.round(defS * 1.15));
   };
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
     y: characters[character].defaultText.y,
   });
-  const [fontSize, setFontSize] = useState(characters[character].defaultText.s);
-  const [spaceSize, setSpaceSize] = useState(1);
+  const [fontSize, setFontSize] = useState(() => {
+    const isMulti = history[0] && history[0].includes("\n");
+    const s = characters[49].defaultText.s;
+    return isMulti && s > 40 ? 36 : s;
+  });
+  const [spaceSize, setSpaceSize] = useState(() => {
+    const isMulti = history[0] && history[0].includes("\n");
+    const s = isMulti && characters[49].defaultText.s > 40 ? 36 : characters[49].defaultText.s;
+    return Math.round(s * 1.15);
+  });
   const [rotate, setRotate] = useState(characters[character].defaultText.r);
   const [curve, setCurve] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -256,16 +279,14 @@ function App() {
     }
   }, [text, stickerFont, fontSize, currentFontFamily]);
 
+  // 核心体验优化：切换贴纸角色时，完整保留用户精心调整的自定义文案、字号、旋转与间距！
+  const isFirstMount = useRef(true);
   useEffect(() => {
-    const defT = characters[character].defaultText.text;
-    setHistory((prev) => [...prev, defT].slice(-30));
-    setHistoryIndex((prev) => prev + 1);
-    setPosition({
-      x: characters[character].defaultText.x,
-      y: characters[character].defaultText.y,
-    });
-    setRotate(characters[character].defaultText.r);
-    setFontSize(characters[character].defaultText.s);
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
+    // 切换贴纸时仅重新加载图片，保留现有文本和一切排版参数！
     setLoaded(false);
   }, [character]);
 
