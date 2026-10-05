@@ -57,12 +57,19 @@ const STICKERS_WITH_META = characters.map((c, idx) => {
     nameEn: meta.nameEn || c.character,
     charColor: meta.color || c.color || "#33CCBB",
     charImg: meta.img || c.img,
+    charAvatar: meta.avatar || `avatars/${(meta.slug || c.character).toLowerCase()}.png`,
   };
 });
 
+const IconChevronRight = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
+);
+
 const PAGE_SIZE = 60;
 
-export default function Picker({ setCharacter }) {
+export default function Picker({ setCharacter, currentCharacter, onSelectSticker }) {
   const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -80,6 +87,23 @@ export default function Picker({ setCharacter }) {
     { id: "ワンダーランズ×ショウタイム", name: "ワンダーランズ×ショウタイム" },
     { id: "25時、ナイトコードで。", name: "25時、ナイトコードで。" },
   ];
+
+  // 当前主界面生效的角色专属信息（用于一级菜单直观展示当前头像与名称）
+  const activeCharMeta = useMemo(() => {
+    if (!currentCharacter) return null;
+    const meta = CHAR_MAP[currentCharacter.character?.toLowerCase()] || {};
+    const name = i18n.language.startsWith("zh")
+      ? (meta.nameZh || currentCharacter.name)
+      : (i18n.language.startsWith("ja") ? (meta.nameJa || currentCharacter.name) : (meta.nameEn || currentCharacter.character));
+    return {
+      name,
+      color: meta.color || currentCharacter.color || "#33CCBB",
+      avatar: meta.avatar || `avatars/${(meta.slug || currentCharacter.character).toLowerCase()}.png`,
+      unit: meta.unit,
+      stickerName: currentCharacter.name,
+      stickerText: currentCharacter.defaultText?.text,
+    };
+  }, [currentCharacter, i18n.language]);
 
   const handleOpen = () => {
     setOpen(true);
@@ -165,11 +189,55 @@ export default function Picker({ setCharacter }) {
         type="button"
         className="btn-character-picker"
         onClick={handleOpen}
-        title={t("pick_character")}
+        title={`${t("pick_character")} - ${activeCharMeta ? activeCharMeta.name : ""}`}
+        style={activeCharMeta ? { "--char-theme-color": activeCharMeta.color } : {}}
       >
-        <IconCharacter />
-        <span>{t("pick_character")}</span>
-        <span className="picker-count-badge">758</span>
+        {activeCharMeta ? (
+          <div className="picker-trigger-inner">
+            <div
+              className="picker-trigger-avatar-ring"
+              style={{
+                borderColor: activeCharMeta.color,
+                boxShadow: `0 0 10px ${activeCharMeta.color}44`,
+              }}
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}${activeCharMeta.avatar}`}
+                alt={activeCharMeta.name}
+                className="picker-trigger-avatar-img"
+              />
+            </div>
+            <div className="picker-trigger-meta">
+              <div className="picker-trigger-top-row">
+                <span className="picker-trigger-name" style={{ color: activeCharMeta.color }}>
+                  {activeCharMeta.name}
+                </span>
+                {activeCharMeta.unit && (
+                  <span className="picker-trigger-unit-badge">{activeCharMeta.unit}</span>
+                )}
+              </div>
+              <div className="picker-trigger-sub">
+                <span className="picker-trigger-sticker-name">{activeCharMeta.stickerName}</span>
+                {activeCharMeta.stickerText && (
+                  <span className="picker-trigger-quote-preview">
+                    「{activeCharMeta.stickerText}」
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="picker-trigger-action-pill">
+              <span className="picker-trigger-action-text">{t("pick_character")}</span>
+              <span className="picker-count-badge">758</span>
+              <IconChevronRight />
+            </div>
+          </div>
+        ) : (
+          <>
+            <IconCharacter />
+            <span>{t("pick_character")}</span>
+            <span className="picker-count-badge">758</span>
+          </>
+        )}
       </button>
 
       <Dialog
@@ -311,7 +379,7 @@ export default function Picker({ setCharacter }) {
                     style={{ borderColor: c.color }}
                   >
                     <img
-                      src={`${import.meta.env.BASE_URL}img/${c.img}`}
+                      src={`${import.meta.env.BASE_URL}${c.avatar || `avatars/${c.slug.toLowerCase()}.png`}`}
                       alt={charName}
                       loading="lazy"
                     />
@@ -349,7 +417,11 @@ export default function Picker({ setCharacter }) {
                       "--hover-color": item.charColor,
                     }}
                     onClick={() => {
-                      setCharacter(item.originalIndex);
+                      if (onSelectSticker) {
+                        onSelectSticker(item.originalIndex);
+                      } else {
+                        setCharacter(item.originalIndex);
+                      }
                       handleClose();
                     }}
                     title={`${item.name} - ${item.defaultText?.text || ""}`}

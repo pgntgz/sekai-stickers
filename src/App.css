@@ -392,7 +392,7 @@
   transform: translateY(0);
 }
 
-/* --- Character Picker Trigger Button --- */
+/* --- Character Picker Trigger Button (Primary / 一级菜单) --- */
 .character-picker-bar {
   width: 100%;
 }
@@ -401,23 +401,209 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 11px 18px;
+  padding: 8px 14px;
   background: var(--pjsk-color-surface-container);
   border: 1px solid var(--pjsk-color-border);
-  border-radius: var(--pjsk-radius-pill);
+  border-radius: 16px;
   color: var(--pjsk-color-text-main);
   font-size: 13px;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.18s ease;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+  text-align: left;
+  box-sizing: border-box;
 }
 
 .btn-character-picker:hover {
   background: var(--pjsk-color-surface-container-high);
-  border-color: var(--pjsk-color-primary);
+  border-color: var(--char-theme-color, var(--pjsk-color-primary));
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 16px color-mix(in srgb, var(--char-theme-color, #00f5d4) 28%, transparent);
+  transform: translateY(-1px);
 }
+
+.picker-trigger-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.picker-trigger-avatar-ring {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--char-theme-color, #33ccbb);
+  overflow: hidden;
+  background: #14161c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-character-picker:hover .picker-trigger-avatar-ring {
+  transform: scale(1.08);
+}
+
+.picker-trigger-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.picker-trigger-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.picker-trigger-top-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.picker-trigger-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.picker-trigger-unit-badge {
+  font-size: 10.5px;
+  padding: 1px 7px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--pjsk-color-text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.picker-trigger-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--pjsk-color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.picker-trigger-sticker-name {
+  font-weight: 500;
+  color: var(--pjsk-color-text-secondary);
+}
+
+.picker-trigger-quote-preview {
+  color: var(--pjsk-color-text-main);
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.picker-trigger-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--pjsk-color-surface-container-highest);
+  border: 1px solid var(--pjsk-color-border-hover);
+  border-radius: 9999px;
+  color: var(--pjsk-color-text-main);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.btn-character-picker:hover .picker-trigger-action-pill {
+  background: var(--pjsk-color-primary);
+  border-color: var(--pjsk-color-primary);
+  color: #0b1117;
+}
+
+/* --- Editable Number Tag (点击修改数值组件) --- */
+.editable-val-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: var(--pjsk-color-surface-container-high, #21242e);
+  border: 1px solid var(--pjsk-color-border, #2d3142);
+  border-radius: var(--pjsk-radius-sm, 6px);
+  color: var(--pjsk-color-text-main, #f3f5f8);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2.5px 7px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  white-space: nowrap;
+  outline: none;
+}
+
+.editable-val-tag:hover {
+  border-color: var(--pjsk-color-primary, #00f5d4);
+  background: var(--pjsk-color-surface-container-highest, #2c303e);
+  color: var(--pjsk-color-primary, #00f5d4);
+  box-shadow: 0 0 8px rgba(0, 245, 212, 0.22);
+  transform: translateY(-0.5px);
+}
+
+.editable-val-icon {
+  opacity: 0.45;
+  transition: opacity 0.16s ease;
+}
+
+.editable-val-tag:hover .editable-val-icon {
+  opacity: 1;
+}
+
+.editable-val-wrap.editing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background: var(--pjsk-color-surface, #14161c);
+  border: 1px solid var(--pjsk-color-primary, #00f5d4);
+  border-radius: var(--pjsk-radius-sm, 6px);
+  padding: 1.5px 5px;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.3);
+}
+
+.editable-val-prefix,
+.editable-val-unit {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--pjsk-color-text-secondary, #9aa0b0);
+}
+
+.editable-val-input {
+  width: 44px;
+  background: transparent;
+  border: none;
+  color: var(--pjsk-color-primary, #00f5d4);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+
+.editable-val-input::-webkit-outer-spin-button,
+.editable-val-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 
 /* --- Footer --- */
 .app-footer {

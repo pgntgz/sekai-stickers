@@ -13,6 +13,8 @@ import MenuItem from "@mui/material/MenuItem";
 import Picker from "./components/Picker";
 import Info from "./components/Info";
 import ColorPickerModal from "./components/ColorPickerModal";
+import characterColors from "./characterColors.json";
+import EditableNumberTag from "./components/EditableNumberTag";
 import { useTranslation } from "react-i18next";
 import { getRandomQuote, prefetchQuotes, smartBreakText } from "./utils/quotes";
 
@@ -226,6 +228,29 @@ function App() {
     setFontSize(targetS);
     setSpaceSize(Math.round(targetS * 1.18));
     setTextColor(characters[character].color);
+  };
+
+  // 切换角色贴纸：颜色优先跟随角色专属代表色，同时保留用户精心微调的文案
+  const handleSelectSticker = (newIndex) => {
+    setCharacter(newIndex);
+    const newChar = characters[newIndex];
+    if (newChar) {
+      // 优先跟随角色代表色
+      const meta = characterColors.find(
+        (c) => c.slug.toLowerCase() === newChar.character?.toLowerCase()
+      );
+      const repColor = newChar.color || meta?.color || "#FB8AAC";
+      setTextColor(repColor);
+
+      // 更新贴纸默认文字坐标与旋转
+      if (newChar.defaultText) {
+        setPosition({
+          x: newChar.defaultText.x,
+          y: newChar.defaultText.y,
+        });
+        setRotate(newChar.defaultText.r);
+      }
+    }
   };
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
@@ -653,7 +678,15 @@ function App() {
                   step={0.2}
                   track={false}
                 />
-                <span className="setting-val-tag">{(rotate * 5.7).toFixed(0)}°</span>
+                <EditableNumberTag
+                  value={Math.round(rotate * 5.7296)}
+                  unit="°"
+                  min={-60}
+                  max={60}
+                  step={1}
+                  onChange={(deg) => setRotate(deg / 5.7296)}
+                  title="点击修改文字倾斜角度"
+                />
               </div>
             </div>
 
@@ -668,7 +701,15 @@ function App() {
                   step={1}
                   track={false}
                 />
-                <span className="setting-val-tag">{fontSize}px</span>
+                <EditableNumberTag
+                  value={fontSize}
+                  unit="px"
+                  min={10}
+                  max={100}
+                  step={1}
+                  onChange={(v) => setFontSize(v)}
+                  title="点击修改字体大小"
+                />
               </div>
             </div>
 
@@ -683,7 +724,15 @@ function App() {
                   step={1}
                   track={false}
                 />
-                <span className="setting-val-tag">{spaceSize}px</span>
+                <EditableNumberTag
+                  value={spaceSize}
+                  unit="px"
+                  min={18}
+                  max={100}
+                  step={1}
+                  onChange={(v) => setSpaceSize(v)}
+                  title="点击修改行间距/字间距"
+                />
               </div>
             </div>
 
@@ -698,9 +747,13 @@ function App() {
           </div>
         </div>
 
-        {/* 角色选择器 */}
+        {/* 角色选择器（一级菜单显示当前生效头像与名称） */}
         <div className="character-picker-bar">
-          <Picker setCharacter={setCharacter} />
+          <Picker
+            setCharacter={setCharacter}
+            currentCharacter={characters[character]}
+            onSelectSticker={handleSelectSticker}
+          />
         </div>
 
         {/* 底部行动主操作栏 */}

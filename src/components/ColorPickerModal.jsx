@@ -195,7 +195,7 @@ export default function ColorPickerModal({
                   }}
                 >
                   <img
-                    src={`${import.meta.env.BASE_URL}img/${c.img}`}
+                    src={`${import.meta.env.BASE_URL}${c.avatar || `avatars/${c.slug.toLowerCase()}.png`}`}
                     alt={getCharName(c)}
                     className="char-avatar-img"
                     loading="lazy"

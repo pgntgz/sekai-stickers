@@ -6,7 +6,8 @@
     "nameZh": "初音未来",
     "nameEn": "Miku",
     "color": "#33CCBB",
-    "img": "Miku/Miku_01.png"
+    "img": "Miku/Miku_01.png",
+    "avatar": "avatars/miku.png"
   },
   {
     "slug": "Rin",
@@ -15,7 +16,8 @@
     "nameZh": "镜音铃",
     "nameEn": "Rin",
     "color": "#E8A505",
-    "img": "Rin/Rin_01.png"
+    "img": "Rin/Rin_01.png",
+    "avatar": "avatars/rin.png"
   },
   {
     "slug": "Len",
@@ -24,7 +26,8 @@
     "nameZh": "镜音连",
     "nameEn": "Len",
     "color": "#D3BD00",
-    "img": "Len/Len_01.png"
+    "img": "Len/Len_01.png",
+    "avatar": "avatars/len.png"
   },
   {
     "slug": "Luka",
@@ -33,7 +36,8 @@
     "nameZh": "巡音流歌",
     "nameEn": "Luka",
     "color": "#F88CA7",
-    "img": "Luka/Luka_01.png"
+    "img": "Luka/Luka_01.png",
+    "avatar": "avatars/luka.png"
   },
   {
     "slug": "Meiko",
@@ -42,7 +46,8 @@
     "nameZh": "MEIKO",
     "nameEn": "MEIKO",
     "color": "#E4485F",
-    "img": "Meiko/Meiko_01.png"
+    "img": "Meiko/Meiko_01.png",
+    "avatar": "avatars/meiko.png"
   },
   {
     "slug": "KAITO",
@@ -51,7 +56,8 @@
     "nameZh": "KAITO",
     "nameEn": "KAITO",
     "color": "#3366CC",
-    "img": "KAITO/KAITO_01.png"
+    "img": "KAITO/KAITO_01.png",
+    "avatar": "avatars/kaito.png"
   },
   {
     "slug": "Ichika",
@@ -60,7 +66,8 @@
     "nameZh": "星乃一歌",
     "nameEn": "Ichika",
     "color": "#33AAEE",
-    "img": "Ichika/Ichika_01.png"
+    "img": "Ichika/Ichika_01.png",
+    "avatar": "avatars/ichika.png"
   },
   {
     "slug": "Saki",
@@ -69,7 +76,8 @@
     "nameZh": "天马咲希",
     "nameEn": "Saki",
     "color": "#F5B303",
-    "img": "Saki/Saki_01.png"
+    "img": "Saki/Saki_01.png",
+    "avatar": "avatars/saki.png"
   },
   {
     "slug": "Honami",
@@ -78,7 +86,8 @@
     "nameZh": "望月穗波",
     "nameEn": "Honami",
     "color": "#F86666",
-    "img": "Honami/Honami_01.png"
+    "img": "Honami/Honami_01.png",
+    "avatar": "avatars/honami.png"
   },
   {
     "slug": "Shiho",
@@ -87,7 +96,8 @@
     "nameZh": "日野森志步",
     "nameEn": "Shiho",
     "color": "#A0C10B",
-    "img": "Shiho/Shiho_01.png"
+    "img": "Shiho/Shiho_01.png",
+    "avatar": "avatars/shiho.png"
   },
   {
     "slug": "Minori",
@@ -96,7 +106,8 @@
     "nameZh": "花里实乃理",
     "nameEn": "Minori",
     "color": "#F39E7D",
-    "img": "Minori/Minori_01.png"
+    "img": "Minori/Minori_01.png",
+    "avatar": "avatars/minori.png"
   },
   {
     "slug": "Haruka",
@@ -105,7 +116,8 @@
     "nameZh": "桐谷遥",
     "nameEn": "Haruka",
     "color": "#6495F0",
-    "img": "Haruka/Haruka_01.png"
+    "img": "Haruka/Haruka_01.png",
+    "avatar": "avatars/haruka.png"
   },
   {
     "slug": "airi",
@@ -114,7 +126,8 @@
     "nameZh": "桃井爱莉",
     "nameEn": "Airi",
     "color": "#FB8AAC",
-    "img": "airi/Airi_01.png"
+    "img": "airi/Airi_01.png",
+    "avatar": "avatars/airi.png"
   },
   {
     "slug": "Shizuku",
@@ -123,7 +136,8 @@
     "nameZh": "日野森雫",
     "nameEn": "Shizuku",
     "color": "#5CD0B9",
-    "img": "Shizuku/Shizuku_01.png"
+    "img": "Shizuku/Shizuku_01.png",
+    "avatar": "avatars/shizuku.png"
   },
   {
     "slug": "Kohane",
@@ -132,7 +146,8 @@
     "nameZh": "小豆泽心羽",
     "nameEn": "Kohane",
     "color": "#FF6699",
-    "img": "Kohane/Kohane_01.png"
+    "img": "Kohane/Kohane_01.png",
+    "avatar": "avatars/kohane.png"
   },
   {
     "slug": "an",
@@ -141,7 +156,8 @@
     "nameZh": "白石杏",
     "nameEn": "An",
     "color": "#00BADC",
-    "img": "an/An_01.png"
+    "img": "an/An_01.png",
+    "avatar": "avatars/an.png"
   },
   {
     "slug": "akito",
@@ -150,7 +166,8 @@
     "nameZh": "东云彰人",
     "nameEn": "Akito",
     "color": "#FF7722",
-    "img": "akito/Akito_01.png"
+    "img": "akito/Akito_01.png",
+    "avatar": "avatars/akito.png"
   },
   {
     "slug": "Touya",
@@ -159,7 +176,8 @@
     "nameZh": "青柳冬弥",
     "nameEn": "Touya",
     "color": "#0077DD",
-    "img": "Touya/Touya_01.png"
+    "img": "Touya/Touya_01.png",
+    "avatar": "avatars/touya.png"
   },
   {
     "slug": "Tsukasa",
@@ -168,7 +186,8 @@
     "nameZh": "天马司",
     "nameEn": "Tsukasa",
     "color": "#F09A04",
-    "img": "Tsukasa/Tsukasa_01.png"
+    "img": "Tsukasa/Tsukasa_01.png",
+    "avatar": "avatars/tsukasa.png"
   },
   {
     "slug": "emu",
@@ -177,7 +196,8 @@
     "nameZh": "凤笑梦",
     "nameEn": "Emu",
     "color": "#FF66BB",
-    "img": "emu/Emu_01.png"
+    "img": "emu/Emu_01.png",
+    "avatar": "avatars/emu.png"
   },
   {
     "slug": "Nene",
@@ -186,7 +206,8 @@
     "nameZh": "草薙宁宁",
     "nameEn": "Nene",
     "color": "#19CD94",
-    "img": "Nene/Nene_01.png"
+    "img": "Nene/Nene_01.png",
+    "avatar": "avatars/nene.png"
   },
   {
     "slug": "Rui",
@@ -195,7 +216,8 @@
     "nameZh": "神代类",
     "nameEn": "Rui",
     "color": "#BB88EE",
-    "img": "Rui/Rui_01.png"
+    "img": "Rui/Rui_01.png",
+    "avatar": "avatars/rui.png"
   },
   {
     "slug": "Kanade",
@@ -204,7 +226,8 @@
     "nameZh": "宵崎奏",
     "nameEn": "Kanade",
     "color": "#BB6688",
-    "img": "Kanade/Kanade_01.png"
+    "img": "Kanade/Kanade_01.png",
+    "avatar": "avatars/kanade.png"
   },
   {
     "slug": "Mafuyu",
@@ -213,7 +236,8 @@
     "nameZh": "朝比奈真冬",
     "nameEn": "Mafuyu",
     "color": "#7171AF",
-    "img": "Mafuyu/Mafuyu_01.png"
+    "img": "Mafuyu/Mafuyu_01.png",
+    "avatar": "avatars/mafuyu.png"
   },
   {
     "slug": "ena",
@@ -222,7 +246,8 @@
     "nameZh": "东云绘名",
     "nameEn": "Ena",
     "color": "#B18F6C",
-    "img": "ena/Ena_01.png"
+    "img": "ena/Ena_01.png",
+    "avatar": "avatars/ena.png"
   },
   {
     "slug": "Mizuki",
@@ -231,6 +256,7 @@
     "nameZh": "晓山瑞希",
     "nameEn": "Mizuki",
     "color": "#CA8DB6",
-    "img": "Mizuki/Mizuki_01.png"
+    "img": "Mizuki/Mizuki_01.png",
+    "avatar": "avatars/mizuki.png"
   }
 ]
