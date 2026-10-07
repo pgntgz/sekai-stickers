@@ -28,3 +28,4 @@ yarn-error.log*
 src/*.dev.jsx
 src/*.old
 *.tar.gz
+.cache_stamps

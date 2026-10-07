@@ -67,9 +67,12 @@ npm run build
 
 ---
 
-## 🔐 版权与授权问题
+## 🔐 版权与开源协议
 
-本项目基于 **MIT License** 许可协议开源。
+本项目代码基于 **GNU Affero General Public License v3.0 (AGPL-3.0)** 许可协议开源。
 
-贴图版权属于Project Sekai的版权方或其他被引用作者，均为符合 _非盈利&仅收回成本_ 条件的的合理使用
+### 二次创作与游戏素材声明 (Fan Derivative Guidelines)
+1. 贴图插画、角色设计、原始字样及相关知识产权均归属于 **SEGA / Colorful Palette / Crypton Future Media, INC. (Piapro)** 及相应创作者。
+2. 本工具为纯粹的非商业同人二创项目，严格遵守《プロジェクトセカイ カラフルステージ！ feat. 初音ミク》官方二次利用・二次创作条例。
+3. 本项目承诺**完全免费、无广告联盟、无赞助变现、无付费门槛、无盈利性跟踪**。任何二次分发或托管必须保持非商业性与源码开放。
 
