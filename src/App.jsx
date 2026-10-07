@@ -1,26 +1,18 @@
 import "./App.css";
 import Canvas from "./components/Canvas";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import characters from "./characters.json";
-import Slider from "@mui/material/Slider";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Switch from "@mui/material/Switch";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import Picker from "./components/Picker";
-import Info from "./components/Info";
-import ColorPickerModal from "./components/ColorPickerModal";
 import characterColors from "./characterColors.json";
 import EditableNumberTag from "./components/EditableNumberTag";
+import ColorPickerModal from "./components/ColorPickerModal";
+import Info from "./components/Info";
 import { useTranslation } from "react-i18next";
 import { getRandomQuote, prefetchQuotes, smartBreakText } from "./utils/quotes";
+import { setColorScheme, setTheme } from "mdui";
 
-// 精致单色 SVG 矢量图标（完全去除彩色 Emoji，确保所有操作系统渲染一致）
+// MD3 / Material Icons SVG Fallbacks
 const IconDice = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <rect x="3" y="3" width="18" height="18" rx="4" />
     <circle cx="8" cy="8" r="1.2" fill="currentColor" />
     <circle cx="16" cy="8" r="1.2" fill="currentColor" />
@@ -31,33 +23,47 @@ const IconDice = () => (
 );
 
 const IconPrev = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <polyline points="15 18 9 12 15 6" />
   </svg>
 );
 
 const IconNext = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <polyline points="9 18 15 12 9 6" />
   </svg>
 );
 
 const IconReset = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
     <path d="M3 3v5h5" />
   </svg>
 );
 
 const IconCopy = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <rect x="9" y="9" width="13" height="13" rx="2" />
     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
   </svg>
 );
 
+const IconCheck = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
+
+const IconDownload = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+);
+
 const IconPalette = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: 2 }}>
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
     <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
     <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
@@ -66,55 +72,74 @@ const IconPalette = () => (
   </svg>
 );
 
-const IconDownload = () => (
+const IconSearch = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-    <polyline points="7 10 12 15 17 10" />
-    <line x1="12" y1="15" x2="12" y2="3" />
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
   </svg>
 );
 
-const IconCharacter = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <circle cx="12" cy="7" r="4" />
-    <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+const IconInfo = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10" />
+    <line x1="12" y1="16" x2="12" y2="12" />
+    <line x1="12" y1="8" x2="12.01" y2="8" />
   </svg>
 );
 
 const SekaiDiamond = () => (
-  <svg width="8" height="8" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style={{ color: "var(--pjsk-color-primary)", marginRight: 6 }}>
+  <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style={{ color: "var(--pjsk-color-primary)", marginRight: 6 }}>
     <polygon points="8,0 16,8 8,16 0,8" />
   </svg>
 );
 
-const { ClipboardItem } = window;
+// 建立 slug -> characterColors 字典
+const CHAR_MAP = {};
+for (const item of characterColors) {
+  CHAR_MAP[item.slug.toLowerCase()] = item;
+}
 
-// 全平台通用系统中文回退栈，保证任何字体缺少特定字符（如简体汉字、生僻字）时，绝不空白丢失，平滑降级
+// 758张贴纸绑定原始索引与所属组合
+const STICKERS_WITH_META = characters.map((c, idx) => {
+  const meta = CHAR_MAP[c.character?.toLowerCase()] || {};
+  return {
+    ...c,
+    originalIndex: idx,
+    unit: meta.unit || "Other",
+    nameJa: meta.nameJa || c.name,
+    nameZh: meta.nameZh || c.name,
+    nameEn: meta.nameEn || c.character,
+    charColor: meta.color || c.color || "#33CCBB",
+    charImg: meta.img || c.img,
+    charAvatar: meta.avatar || `avatars/${(meta.slug || c.character).toLowerCase()}.png`,
+  };
+});
+
 const SYSTEM_FALLBACK =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif';
 
-// 贴纸可选字体栈：默认优先采用字库完备且可爱的中文二次元字体，日服原版作为可选
 const STICKER_FONTS = [
-  // 1. 站酷快乐体（国服贴纸同款活泼可爱风，简体常用汉字全收录，绝不缺字）
   { id: "kuaile", label: "font_kuaile", fontFamily: `'ZCOOL KuaiLe', ${SYSTEM_FALLBACK}` },
-  // 2. 文泉驿标准体（中庸大方，字库完整覆盖简繁中日，绝无缺字）
   { id: "wqy", label: "font_wqy", fontFamily: `'WenQuanYi Zen Hei', 'WenQuanYi Micro Hei', 'Noto Sans SC', ${SYSTEM_FALLBACK}` },
-  // 3. 原版经典二次元字体（日服原版贴纸字体，缺部分简中字时平滑回退系统中文）
   { id: "yuruka", label: "font_yuruka", fontFamily: `'YurukaStd', ${SYSTEM_FALLBACK}` },
-  // 4. Dela 爆裂海报（日本高张力黑体，适合喊叫吐槽风格）
   { id: "dela", label: "font_dela", fontFamily: `'Dela Gothic One', ${SYSTEM_FALLBACK}` },
-  // 5. Mochiy 圆滚体（肥润二次元萌感）
   { id: "mochiy", label: "font_mochiy", fontFamily: `'Mochiy Pop One', ${SYSTEM_FALLBACK}` },
-  // 6. 8Bit 像素体（DotGothic16，复古游戏风格）
   { id: "pixel", label: "font_pixel", fontFamily: `'DotGothic16', ${SYSTEM_FALLBACK}` },
-  // 7. 站酷黄油体（圆润厚实中文）
   { id: "huangyou", label: "font_huangyou", fontFamily: `'ZCOOL QingKe HuangYou', ${SYSTEM_FALLBACK}` },
-  // 8. 马善政毛笔狂草体（国风水墨书法）
   { id: "brush", label: "font_brush", fontFamily: `'Ma Shan Zheng', ${SYSTEM_FALLBACK}` },
-  // 9. 系统原生黑体（本地零延迟，最稳兼容）
   { id: "system", label: "font_system", fontFamily: SYSTEM_FALLBACK },
-  // 10. 尚手方糖体（可爱方块风格）
   { id: "tangtang", label: "font_tangtang", fontFamily: `'SSFangTangTi', 'ShangShouFangTangTi', ${SYSTEM_FALLBACK}` },
+];
+
+const PRESET_QUICK_COLORS = [
+  { label: "Sekai青", color: "#33CCBB" },
+  { label: "纯白", color: "#FFFFFF" },
+  { label: "极黑", color: "#1C1E21" },
+  { label: "活力橙", color: "#FF7722" },
+  { label: "蜜桃粉", color: "#FB8AAC" },
+  { label: "琉璃蓝", color: "#33AAEE" },
+  { label: "柠檬黄", color: "#F5B303" },
+  { label: "罗兰紫", color: "#BB88EE" },
 ];
 
 function App() {
@@ -125,56 +150,73 @@ function App() {
     localStorage.setItem("pjsk_lang", lng);
   };
 
-  // 贴纸字体状态
+  // 贴纸字体
   const [stickerFont, setStickerFont] = useState(
     localStorage.getItem("pjsk_font") || "kuaile"
   );
   const handleFontChange = (fontId) => {
     setStickerFont(fontId);
     localStorage.setItem("pjsk_font", fontId);
-    // 切换字体时立即自增版本号，迫使 Canvas 第一时间执行重绘
     setFontLoadedVersion((v) => v + 1);
   };
   const currentFontFamily =
     STICKER_FONTS.find((f) => f.id === stickerFont)?.fontFamily ||
     STICKER_FONTS[0].fontFamily;
 
-  // 强制重绘计数器，作为 Canvas 的响应式刷新触发器
   const [fontLoadedVersion, setFontLoadedVersion] = useState(0);
-
   const [infoOpen, setInfoOpen] = useState(false);
-  const handleClickOpen = () => setInfoOpen(true);
-  const handleClose = () => setInfoOpen(false);
+  const [colorModalOpen, setColorModalOpen] = useState(false);
+  const [copiedStatus, setCopiedStatus] = useState(false);
 
-  const [character, setCharacter] = useState(49);
+  // 动态主题模式：默认使用用户桌面的最爱青色 #59dbc1；开启后随当前角色代表色动态染色
+  const [dynamicTheme, setDynamicTheme] = useState(() => {
+    return localStorage.getItem("pjsk_dynamic_theme") === "true";
+  });
 
-  // 文案历史队列与防误触撤销系统（支持前进/后退/历史找回）
+  const [character, setCharacter] = useState(49); // 初始默认 Emu 13 (わーいわーい！)
+  const activeSticker = STICKERS_WITH_META[character] || STICKERS_WITH_META[0];
+
+  // 动态主题联动：当角色切换或开关切换时调用 MDUI 的 setColorScheme
+  useEffect(() => {
+    if (dynamicTheme && activeSticker?.charColor) {
+      setColorScheme(activeSticker.charColor);
+    } else {
+      setColorScheme("#59dbc1"); // 用户桌面 matugen 最爱青色
+    }
+    setTheme("dark");
+  }, [dynamicTheme, character, activeSticker]);
+
+  const toggleDynamicTheme = () => {
+    setDynamicTheme((prev) => {
+      const next = !prev;
+      localStorage.setItem("pjsk_dynamic_theme", String(next));
+      return next;
+    });
+  };
+
+  // 文案历史与撤销队列
   const [history, setHistory] = useState(() => {
-    const init = smartBreakText(getRandomQuote() || characters[49].defaultText.text);
+    const init = smartBreakText(characters[49].defaultText.text || "わーいわーい！");
     return [init];
   });
   const [historyIndex, setHistoryIndex] = useState(0);
   const text = history[historyIndex] !== undefined ? history[historyIndex] : "";
 
-  // 挂载时后台静默预取更多段子
   useEffect(() => {
     prefetchQuotes();
   }, []);
 
-  // 手动输入文字：就地更新当前词条，防止打字按键刷爆历史队列
   const handleTextChange = (newVal) => {
     setHistory((prev) => {
       const next = [...prev];
       next[historyIndex] = newVal;
       return next;
     });
-    // 若用户手动输入了换行且当前行距过小，自动选用舒适透气的行距
     if (newVal.includes("\n") && spaceSize < 24) {
       setSpaceSize(Math.round(fontSize * 1.15));
     }
   };
 
-  // 摇一发抽象段子（智能断行 + 自动行距防粘连 + 压入历史）
   const handleRandomQuote = () => {
     const raw = getRandomQuote();
     if (raw) {
@@ -185,12 +227,11 @@ function App() {
       });
       setHistoryIndex((prev) => Math.min(prev + 1, 29));
 
-      // 贴纸文字防溢出排版：默认字号微调更克制，依据字数与行数精准自适应
       if (formatted.includes("\n")) {
         const longest = Math.max(...formatted.split("\n").map((l) => l.length));
         const targetFont = longest >= 8 ? 28 : 32;
         setFontSize(targetFont);
-        setSpaceSize(Math.round(targetFont * 1.18)); // 舒适行间距，杜绝两行粘连
+        setSpaceSize(Math.round(targetFont * 1.18));
       } else {
         const targetFont = formatted.length >= 8 ? 32 : 36;
         setFontSize(targetFont);
@@ -199,21 +240,18 @@ function App() {
     }
   };
 
-  // 回到上一条文案（防多按误触）
   const handlePrevQuote = () => {
     if (historyIndex > 0) {
       setHistoryIndex((idx) => idx - 1);
     }
   };
 
-  // 前进到下一条文案
   const handleNextQuote = () => {
     if (historyIndex < history.length - 1) {
       setHistoryIndex((idx) => idx + 1);
     }
   };
 
-  // 恢复角色官方初始文字与推荐参数（文字颜色同步恢复角色代表色）
   const handleResetText = () => {
     const defT = characters[character].defaultText.text;
     const defS = characters[character].defaultText.s;
@@ -230,19 +268,14 @@ function App() {
     setTextColor(characters[character].color);
   };
 
-  // 切换角色贴纸：颜色优先跟随角色专属代表色，同时保留用户精心微调的文案
   const handleSelectSticker = (newIndex) => {
     setCharacter(newIndex);
     const newChar = characters[newIndex];
     if (newChar) {
-      // 优先跟随角色代表色
-      const meta = characterColors.find(
-        (c) => c.slug.toLowerCase() === newChar.character?.toLowerCase()
-      );
+      const meta = CHAR_MAP[newChar.character?.toLowerCase()];
       const repColor = newChar.color || meta?.color || "#FB8AAC";
       setTextColor(repColor);
 
-      // 更新贴纸默认文字坐标与旋转
       if (newChar.defaultText) {
         setPosition({
           x: newChar.defaultText.x,
@@ -252,11 +285,11 @@ function App() {
       }
     }
   };
+
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
     y: characters[character].defaultText.y,
   });
-  // 默认字号适度缩小，确保10字以内排版均不出界
   const [fontSize, setFontSize] = useState(() => {
     const isMulti = history[0] && history[0].includes("\n");
     if (isMulti) {
@@ -274,18 +307,78 @@ function App() {
   const [curve, setCurve] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [textColor, setTextColor] = useState(characters[character].color);
-  const [colorModalOpen, setColorModalOpen] = useState(false);
+
+  // 选项卡状态：支持 hash 响应
+  const [activeTab, setActiveTabState] = useState(() => {
+    if (typeof window !== "undefined") {
+      const h = window.location.hash.replace("#", "");
+      if (["text", "stickers", "style"].includes(h)) return h;
+    }
+    return "text";
+  });
+
+  const switchTab = (tab) => {
+    setActiveTabState(tab);
+    if (typeof window !== "undefined") {
+      window.location.hash = tab;
+    }
+  };
+
+  useEffect(() => {
+    const handleHash = () => {
+      const h = window.location.hash.replace("#", "");
+      if (["text", "stickers", "style"].includes(h)) {
+        setActiveTabState(h);
+      }
+    };
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
+
+  // 贴纸筛选状态（内置贴纸库浏览器）
+  const [selectedUnit, setSelectedUnit] = useState("all");
+  const [stickerSearch, setStickerSearch] = useState("");
+  const [stickerDisplayLimit, setStickerDisplayLimit] = useState(64);
+
+  const units = [
+    { id: "all", name: t("unit_all") },
+    { id: "バーチャル・シンガー", name: "バーチャル・シンガー" },
+    { id: "Leo/need", name: "Leo/need" },
+    { id: "MORE MORE JUMP！", name: "MORE MORE JUMP！" },
+    { id: "Vivid BAD SQUAD", name: "Vivid BAD SQUAD" },
+    { id: "ワンダーランズ×ショウタイム", name: "ワンダーランズ×ショウタイム" },
+    { id: "25時、ナイトコードで。", name: "25時、ナイトコードで。" },
+  ];
+
+  const filteredStickerList = useMemo(() => {
+    const q = stickerSearch.trim().toLowerCase();
+    return STICKERS_WITH_META.filter((item) => {
+      if (selectedUnit !== "all" && item.unit !== selectedUnit) return false;
+      if (q) {
+        const matchName = item.name.toLowerCase().includes(q);
+        const matchChar = item.character?.toLowerCase().includes(q);
+        const matchJa = item.nameJa?.toLowerCase().includes(q);
+        const matchZh = item.nameZh?.toLowerCase().includes(q);
+        const matchEn = item.nameEn?.toLowerCase().includes(q);
+        const matchText = item.defaultText?.text?.toLowerCase().includes(q);
+        return matchName || matchChar || matchJa || matchZh || matchEn || matchText;
+      }
+      return true;
+    });
+  }, [selectedUnit, stickerSearch]);
+
+  const visibleStickerList = useMemo(() => {
+    return filteredStickerList.slice(0, stickerDisplayLimit);
+  }, [filteredStickerList, stickerDisplayLimit]);
+
   const img = new Image();
 
-  // 核心修复：精准监听字体加载与字体切片拉取，彻底杜绝切字体时继承上一个字体未加载状态的 Bug
+  // 字体加载监听
   useEffect(() => {
     let isCancelled = false;
-
-    // 切换字体/文本变化时立即先更新一次
     setFontLoadedVersion((v) => v + 1);
 
     if (document.fonts) {
-      // 提取主字体名进行单独加载验证
       const primaryFontMatch = currentFontFamily.match(/['"]?([^,'"]+)['"]?/);
       const primaryFont = primaryFontMatch ? primaryFontMatch[1].trim() : "";
 
@@ -293,29 +386,21 @@ function App() {
         document.fonts
           .load(`${fontSize}px "${primaryFont}"`, text || "Wonderhoy")
           .then(() => {
-            if (!isCancelled) {
-              setFontLoadedVersion((v) => v + 1);
-            }
+            if (!isCancelled) setFontLoadedVersion((v) => v + 1);
           })
           .catch(() => {});
       }
 
-      // 监听异步字体/切片下载完成
       const handleLoadingDone = () => {
-        if (!isCancelled) {
-          setFontLoadedVersion((v) => v + 1);
-        }
+        if (!isCancelled) setFontLoadedVersion((v) => v + 1);
       };
 
       if (document.fonts.addEventListener) {
         document.fonts.addEventListener("loadingdone", handleLoadingDone);
       }
-
       if (document.fonts.ready) {
         document.fonts.ready.then(() => {
-          if (!isCancelled) {
-            setFontLoadedVersion((v) => v + 1);
-          }
+          if (!isCancelled) setFontLoadedVersion((v) => v + 1);
         });
       }
 
@@ -328,14 +413,12 @@ function App() {
     }
   }, [text, stickerFont, fontSize, currentFontFamily]);
 
-  // 核心体验优化：切换贴纸角色时，完整保留用户精心调整的自定义文案、字号、旋转与间距！
   const isFirstMount = useRef(true);
   useEffect(() => {
     if (isFirstMount.current) {
       isFirstMount.current = false;
       return;
     }
-    // 切换贴纸时仅重新加载图片，保留现有文本和一切排版参数！
     setLoaded(false);
   }, [character]);
 
@@ -361,7 +444,6 @@ function App() {
         centerShift_x, centerShift_y,
         img.width * ratio, img.height * ratio
       );
-      // 防御性重置 font 状态，防止 Canvas 引擎静默继承上一个字体的值
       ctx.font = `${fontSize}px sans-serif`;
       try {
         ctx.font = `${fontSize}px ${currentFontFamily}`;
@@ -402,6 +484,7 @@ function App() {
 
   const download = () => {
     const canvas = document.getElementsByTagName("canvas")[0];
+    if (!canvas) return;
     const link = document.createElement("a");
     link.download = `${characters[character].name}_pjsk-sticker.png`;
     link.href = canvas.toDataURL();
@@ -427,49 +510,89 @@ function App() {
 
   const copy = async () => {
     const canvas = document.getElementsByTagName("canvas")[0];
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        "image/png": b64toBlob(canvas.toDataURL().split(",")[1]),
-      }),
-    ]);
+    if (!canvas) return;
+    try {
+      await navigator.clipboard.write([
+        new ClipboardItem({
+          "image/png": b64toBlob(canvas.toDataURL().split(",")[1]),
+        }),
+      ]);
+      setCopiedStatus(true);
+      setTimeout(() => setCopiedStatus(false), 2400);
+    } catch (err) {
+      console.error("Clipboard copy failed:", err);
+    }
   };
+
+  const activeCharName = useMemo(() => {
+    if (!activeSticker) return "";
+    if (i18n.language.startsWith("zh")) return activeSticker.nameZh || activeSticker.name;
+    if (i18n.language.startsWith("ja")) return activeSticker.nameJa || activeSticker.name;
+    return activeSticker.nameEn || activeSticker.character;
+  }, [activeSticker, i18n.language]);
 
   return (
     <div className="App">
-      {/* 极简精致顶栏 */}
-      <header className="app-header">
-        <div className="brand-badge">
-          <span className="brand-title">Sekai Stickers</span>
-          <SekaiDiamond /><span className="brand-tag">SEKAI</span>
-        </div>
+      {/* MD3 Top App Bar */}
+      <header className="md3-top-app-bar">
+        <div className="top-bar-inner">
+          <div className="brand-cluster">
+            <SekaiDiamond />
+            <span className="brand-title">Sekai Stickers</span>
+            <span className="brand-chip">MD3</span>
+          </div>
 
-        {/* 语言切换胶囊 */}
-        <div className="language-selector">
-          <button
-            type="button"
-            className={i18n.language === "zh" ? "active" : ""}
-            onClick={() => changeLanguage("zh")}
-          >
-            简中
-          </button>
-          <button
-            type="button"
-            className={i18n.language === "en" ? "active" : ""}
-            onClick={() => changeLanguage("en")}
-          >
-            EN
-          </button>
-          <button
-            type="button"
-            className={i18n.language === "ja" ? "active" : ""}
-            onClick={() => changeLanguage("ja")}
-          >
-            日本語
-          </button>
+          <div className="top-bar-actions">
+            {/* 动态角色主题色开关 */}
+            <button
+              type="button"
+              className={`theme-toggle-btn ${dynamicTheme ? "active" : ""}`}
+              onClick={toggleDynamicTheme}
+              title={dynamicTheme ? "正在跟随角色代表色（点击切换回青色主题）" : "正在使用 Matugen 青色主题（点击开启角色动态染色）"}
+            >
+              <span className="theme-dot" style={{ backgroundColor: dynamicTheme ? (activeSticker?.charColor || "#59dbc1") : "#59dbc1" }} />
+              <span className="theme-label">{t("dynamic_theme")}</span>
+            </button>
+
+            {/* 语言切换胶囊 */}
+            <div className="lang-pill-group">
+              <button
+                type="button"
+                className={i18n.language === "zh" ? "active" : ""}
+                onClick={() => changeLanguage("zh")}
+              >
+                简中
+              </button>
+              <button
+                type="button"
+                className={i18n.language === "en" ? "active" : ""}
+                onClick={() => changeLanguage("en")}
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                className={i18n.language === "ja" ? "active" : ""}
+                onClick={() => changeLanguage("ja")}
+              >
+                日本語
+              </button>
+            </div>
+
+            {/* 信息关于弹窗 */}
+            <button
+              type="button"
+              className="info-icon-btn"
+              onClick={() => setInfoOpen(true)}
+              title={t("info_title")}
+            >
+              <IconInfo />
+            </button>
+          </div>
         </div>
       </header>
 
-      <Info open={infoOpen} handleClose={handleClose} />
+      <Info open={infoOpen} handleClose={() => setInfoOpen(false)} />
       <ColorPickerModal
         open={colorModalOpen}
         onClose={() => setColorModalOpen(false)}
@@ -478,303 +601,509 @@ function App() {
         defaultCharacterColor={characters[character].color}
       />
 
-      <main className="container">
-        {/* 贴纸舞台画布卡片 (MD3 Surface) */}
-        <div className="pjsk-card canvas-card">
-          <div className="canvas-wrapper">
-            <div className="canvas-viewport">
-              <Canvas
-                draw={draw}
-                redrawTrigger={fontLoadedVersion}
-                aria-label="Project Sekai Sticker Canvas"
-                role="img"
-              />
+      {/* 复制成功浮动提示 (MD3 Tonal Toast) */}
+      {copiedStatus && (
+        <div className="md3-toast-banner">
+          <IconCheck />
+          <span>{t("copied_to_clipboard")}</span>
+        </div>
+      )}
+
+      {/* 主布局：横屏双栏响应式 / 竖屏紧凑流式 */}
+      <main className="app-main-layout">
+        {/* 左侧 (横屏模式为粘性舞台，竖屏模式为顶部焦点舞台) */}
+        <section className="stage-column">
+          <div className="md3-card stage-card">
+            <div className="canvas-container-box">
+              <div className="canvas-viewport">
+                <Canvas
+                  draw={draw}
+                  redrawTrigger={fontLoadedVersion}
+                  aria-label="Project Sekai Sticker Canvas"
+                  role="img"
+                />
+              </div>
+
+              {/* Y轴垂直拉杆 (带 ±1px 精确微调) */}
+              <div className="canvas-axis-y">
+                <button
+                  type="button"
+                  className="axis-nudge-btn"
+                  onClick={() => setPosition((p) => ({ ...p, y: Math.max(0, p.y - 1) }))}
+                  title="上移 1px"
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                </button>
+                <div className="axis-slider-track-y">
+                  <input
+                    type="range"
+                    min="0"
+                    max="256"
+                    step="1"
+                    value={curve ? 256 - position.y + fontSize * 3 : 256 - position.y}
+                    onChange={(e) => {
+                      const v = Number(e.target.value);
+                      setPosition((p) => ({
+                        ...p,
+                        y: curve ? 256 + fontSize * 3 - v : 256 - v,
+                      }));
+                    }}
+                    className="md3-range-vertical"
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="axis-nudge-btn"
+                  onClick={() => setPosition((p) => ({ ...p, y: Math.min(256, p.y + 1) }))}
+                  title="下移 1px"
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
             </div>
-            {/* Y轴位置微调滑块 (长轨平滑拖拽 + 1px像素级微调) */}
-            <div className="canvas-axis-y">
+
+            {/* X轴水平拉杆 (带 ±1px 精确微调) */}
+            <div className="canvas-axis-x-wrap">
               <button
                 type="button"
                 className="axis-nudge-btn"
-                onClick={() => setPosition((p) => ({ ...p, y: Math.max(0, p.y - 1) }))}
-                title="上移 1px"
-                aria-label="Nudge up"
+                onClick={() => setPosition((p) => ({ ...p, x: Math.max(0, p.x - 1) }))}
+                title="左移 1px"
               >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"/></svg>
               </button>
-              <Slider
-                value={
-                  curve ? 256 - position.y + fontSize * 3 : 256 - position.y
-                }
-                onChange={(e, v) =>
-                  setPosition({
-                    ...position,
-                    y: curve ? 256 + fontSize * 3 - v : 256 - v,
-                  })
-                }
-                valueLabelDisplay="auto"
-                valueLabelFormat={(v) => `Y: ${curve ? 256 + fontSize * 3 - v : 256 - v}`}
-                min={0}
-                max={256}
-                step={1}
-                orientation="vertical"
-                track={false}
-              />
+              <div className="axis-slider-track-x">
+                <input
+                  type="range"
+                  min="0"
+                  max="296"
+                  step="1"
+                  value={position.x}
+                  onChange={(e) => {
+                    const v = Number(e.target.value);
+                    setPosition((p) => ({ ...p, x: v }));
+                  }}
+                  className="md3-range-horizontal"
+                />
+              </div>
               <button
                 type="button"
                 className="axis-nudge-btn"
-                onClick={() => setPosition((p) => ({ ...p, y: Math.min(256, p.y + 1) }))}
-                title="下移 1px"
-                aria-label="Nudge down"
+                onClick={() => setPosition((p) => ({ ...p, x: Math.min(296, p.x + 1) }))}
+                title="右移 1px"
               >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>
               </button>
             </div>
-          </div>
-          {/* X轴位置微调滑块 (带左右 1px 微调) */}
-          <div className="canvas-axis-x-wrap">
-            <button
-              type="button"
-              className="axis-nudge-btn"
-              onClick={() => setPosition((p) => ({ ...p, x: Math.max(0, p.x - 1) }))}
-              title="左移 1px"
-              aria-label="Nudge left"
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <div className="canvas-axis-x">
-              <Slider
-                value={position.x}
-                onChange={(e, v) => setPosition({ ...position, x: v })}
-                valueLabelDisplay="auto"
-                valueLabelFormat={(v) => `X: ${v}`}
-                min={0}
-                max={296}
-                step={1}
-                track={false}
-              />
-            </div>
-            <button
-              type="button"
-              className="axis-nudge-btn"
-              onClick={() => setPosition((p) => ({ ...p, x: Math.min(296, p.x + 1) }))}
-              title="右移 1px"
-              aria-label="Nudge right"
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-          </div>
-        </div>
 
-        {/* 文字与抽象段子灵感卡片 (带撤销/前进历史记录) */}
-        <div className="pjsk-card">
-          <div className="text-input-wrap">
-            <div className="text-action-bar">
-              <span className="section-title">{t("text_label")}</span>
-              <div className="quote-btn-group">
-                {/* 历史回退按钮（防多按误触） */}
-                <button
-                  type="button"
-                  className={`btn-history-step ${historyIndex > 0 ? "" : "disabled"}`}
-                  onClick={handlePrevQuote}
-                  disabled={historyIndex <= 0}
-                  title="回到上一条文案（防多抽误触）"
-                  aria-label="Previous quote"
-                >
-                  <IconPrev />
-                </button>
-                {/* 历史前进按钮 */}
-                <button
-                  type="button"
-                  className={`btn-history-step ${historyIndex < history.length - 1 ? "" : "disabled"}`}
-                  onClick={handleNextQuote}
-                  disabled={historyIndex >= history.length - 1}
-                  title="前进到下一条文案"
-                  aria-label="Next quote"
-                >
-                  <IconNext />
-                </button>
-                {/* 随机段子按钮 */}
-                <button
-                  type="button"
-                  className="btn-random-quote"
-                  onClick={handleRandomQuote}
-                  title="随机摇一条抽象中文短段子（自动分词折行）"
-                >
-                  <IconDice />
-                  <span>{t("random_quote")}</span>
-                </button>
-                {/* 恢复官方默认台词 */}
-                <button
-                  type="button"
-                  className="btn-reset-text"
-                  onClick={handleResetText}
-                  title="恢复角色官方默认台词"
-                  aria-label="Reset to default text"
-                >
-                  <IconReset />
-                </button>
+            {/* 当前选中贴纸元数据胶囊 */}
+            <div className="sticker-meta-strip">
+              <img
+                src={import.meta.env.BASE_URL + activeSticker.charAvatar}
+                alt={activeCharName}
+                className="meta-avatar-img"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
+              />
+              <div className="meta-text-col">
+                <div className="meta-title-row">
+                  <span className="meta-char-name">{activeCharName}</span>
+                  <span className="meta-unit-badge" style={{ borderColor: activeSticker.charColor }}>
+                    {activeSticker.unit}
+                  </span>
+                  <span className={`meta-source-tag ${activeSticker.source === "manual" ? "manual" : "ai"}`}>
+                    {activeSticker.source === "manual" ? t("source_manual") : t("source_ai")}
+                  </span>
+                </div>
+                <div className="meta-sub-row">
+                  <span className="meta-orig-text">“{activeSticker.defaultText?.text}”</span>
+                </div>
               </div>
             </div>
-            <TextField
-              size="small"
-              value={text}
-              multiline={true}
-              fullWidth
-              placeholder="输入表情包文字..."
-              onChange={(e) => handleTextChange(e.target.value)}
-            />
-          </div>
-        </div>
 
-        {/* 控制中心卡片 (字体 / 旋转 / 字号 / 间距 / 弧形) */}
-        <div className="pjsk-card">
-          <div className="section-header">
-            <span className="section-title">{t("settings_title")}</span>
-          </div>
-
-          {/* 贴纸字体下拉 */}
-          <FormControl fullWidth size="small" style={{ marginBottom: 14 }}>
-            <InputLabel id="font-select-label">{t("sticker_font")}</InputLabel>
-            <Select
-              labelId="font-select-label"
-              value={stickerFont}
-              label={t("sticker_font")}
-              onChange={(e) => handleFontChange(e.target.value)}
-            >
-              {STICKER_FONTS.map((f) => (
-                <MenuItem key={f.id} value={f.id}>
-                  {t(f.label)}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-
-          <div className="settings-grid">
-            <div className="setting-row">
-              <span className="setting-label">{t("text_color")}</span>
+            {/* 核心操作按钮组 (MD3 Filled & Tonal 规范) */}
+            <div className="stage-action-bar">
               <button
                 type="button"
-                className="btn-color-palette-trigger"
-                onClick={() => setColorModalOpen(true)}
-                title={t("color_palette")}
+                className="md3-btn-filled action-btn-main"
+                onClick={copy}
               >
-                <span
-                  className="color-swatch-circle"
-                  style={{ backgroundColor: textColor }}
-                />
-                <span className="color-hex-label">{textColor?.toUpperCase()}</span>
-                <IconPalette />
+                {copiedStatus ? <IconCheck /> : <IconCopy />}
+                <span>{copiedStatus ? t("copied_to_clipboard") : t("copy")}</span>
+              </button>
+
+              <button
+                type="button"
+                className="md3-btn-tonal action-btn-main"
+                onClick={download}
+              >
+                <IconDownload />
+                <span>{t("download")}</span>
+              </button>
+
+              <button
+                type="button"
+                className="md3-btn-outlined action-btn-icon"
+                onClick={handleResetText}
+                title={t("reset_text")}
+              >
+                <IconReset />
               </button>
             </div>
-
-            <div className="setting-row">
-              <span className="setting-label">{t("rotate")}</span>
-              <div className="setting-slider-wrap">
-                <Slider
-                  value={rotate}
-                  onChange={(e, v) => setRotate(v)}
-                  min={-10}
-                  max={10}
-                  step={0.2}
-                  track={false}
-                />
-                <EditableNumberTag
-                  value={Math.round(rotate * 5.7296)}
-                  unit="°"
-                  min={-60}
-                  max={60}
-                  step={1}
-                  onChange={(deg) => setRotate(deg / 5.7296)}
-                  title="点击修改文字倾斜角度"
-                />
-              </div>
-            </div>
-
-            <div className="setting-row">
-              <span className="setting-label">{t("font_size")}</span>
-              <div className="setting-slider-wrap">
-                <Slider
-                  value={fontSize}
-                  onChange={(e, v) => setFontSize(v)}
-                  min={10}
-                  max={100}
-                  step={1}
-                  track={false}
-                />
-                <EditableNumberTag
-                  value={fontSize}
-                  unit="px"
-                  min={10}
-                  max={100}
-                  step={1}
-                  onChange={(v) => setFontSize(v)}
-                  title="点击修改字体大小"
-                />
-              </div>
-            </div>
-
-            <div className="setting-row">
-              <span className="setting-label">{t("spacing")}</span>
-              <div className="setting-slider-wrap">
-                <Slider
-                  value={spaceSize}
-                  onChange={(e, v) => setSpaceSize(v)}
-                  min={18}
-                  max={100}
-                  step={1}
-                  track={false}
-                />
-                <EditableNumberTag
-                  value={spaceSize}
-                  unit="px"
-                  min={18}
-                  max={100}
-                  step={1}
-                  onChange={(v) => setSpaceSize(v)}
-                  title="点击修改行间距/字间距"
-                />
-              </div>
-            </div>
-
-            <div className="setting-row" style={{ paddingTop: 4 }}>
-              <span className="setting-label">{t("curve")}</span>
-              <Switch
-                size="small"
-                checked={curve}
-                onChange={(e) => setCurve(e.target.checked)}
-              />
-            </div>
           </div>
-        </div>
+        </section>
 
-        {/* 角色选择器（一级菜单显示当前生效头像与名称） */}
-        <div className="character-picker-bar">
-          <Picker
-            setCharacter={setCharacter}
-            currentCharacter={characters[character]}
-            onSelectSticker={handleSelectSticker}
-          />
-        </div>
+        {/* 右侧 (横屏为控件主控区，竖屏为紧随其后的折叠面板区) */}
+        <section className="controls-column">
+          {/* MD3 选项卡控制器 */}
+          <div className="md3-segmented-tabs">
+            <button
+              type="button"
+              className={`tab-btn ${activeTab === "text" ? "active" : ""}`}
+              onClick={() => switchTab("text")}
+            >
+              <span>✍ {t("tab_text")}</span>
+            </button>
+            <button
+              type="button"
+              className={`tab-btn ${activeTab === "stickers" ? "active" : ""}`}
+              onClick={() => switchTab("stickers")}
+            >
+              <span>🎭 {t("tab_characters")}</span>
+              <span className="tab-count-badge">{characters.length}</span>
+            </button>
+            <button
+              type="button"
+              className={`tab-btn ${activeTab === "style" ? "active" : ""}`}
+              onClick={() => switchTab("style")}
+            >
+              <span>⚙ {t("tab_style")}</span>
+            </button>
+          </div>
 
-        {/* 底部行动主操作栏 */}
-        <div className="action-buttons">
-          <button type="button" className="btn-action btn-copy" onClick={copy}>
-            <IconCopy /><span>{t("copy")}</span>
-          </button>
-          <button type="button" className="btn-action btn-download" onClick={download}>
-            <IconDownload /><span>{t("download")}</span>
-          </button>
-        </div>
+          {/* TAB 1: 文案与灵感 */}
+          {activeTab === "text" && (
+            <div className="md3-card tab-panel-card">
+              <div className="panel-header-row">
+                <span className="panel-title">{t("text_label")}</span>
+                <div className="quote-action-group">
+                  <button
+                    type="button"
+                    className={`btn-step ${historyIndex > 0 ? "" : "disabled"}`}
+                    onClick={handlePrevQuote}
+                    disabled={historyIndex <= 0}
+                    title="上一条历史文案"
+                  >
+                    <IconPrev />
+                  </button>
+                  <button
+                    type="button"
+                    className={`btn-step ${historyIndex < history.length - 1 ? "" : "disabled"}`}
+                    onClick={handleNextQuote}
+                    disabled={historyIndex >= history.length - 1}
+                    title="下一条历史文案"
+                  >
+                    <IconNext />
+                  </button>
+                  <button
+                    type="button"
+                    className="md3-btn-tonal btn-random-quote"
+                    onClick={handleRandomQuote}
+                    title="随机摇一条抽象中文短句"
+                  >
+                    <IconDice />
+                    <span>{t("random_quote")}</span>
+                  </button>
+                </div>
+              </div>
 
-        {/* 页脚说明 */}
-        <footer className="app-footer">
-          <button type="button" className="btn-info-link" onClick={handleClickOpen}>
-            <span>{t("info")}</span>
-          </button>
-        </footer>
+              <div className="md3-textfield-box">
+                <textarea
+                  rows="3"
+                  className="md3-textarea"
+                  value={text}
+                  placeholder="输入表情包自定义文字 (回车即可折行)..."
+                  onChange={(e) => handleTextChange(e.target.value)}
+                />
+              </div>
+
+              {/* 快捷推荐台词 / 贴纸原案一键回填 */}
+              <div className="quick-chips-row">
+                <span className="quick-chips-label">快捷填入:</span>
+                <button
+                  type="button"
+                  className="quick-text-chip"
+                  onClick={() => handleTextChange(activeSticker.defaultText?.text || "")}
+                >
+                  原案: {activeSticker.defaultText?.text}
+                </button>
+                <button
+                  type="button"
+                  className="quick-text-chip"
+                  onClick={() => handleTextChange("わんだほーい！")}
+                >
+                  わんだほーい！
+                </button>
+                <button
+                  type="button"
+                  className="quick-text-chip"
+                  onClick={() => handleTextChange("大天才！！")}
+                >
+                  大天才！！
+                </button>
+                <button
+                  type="button"
+                  className="quick-text-chip"
+                  onClick={() => handleTextChange("お疲れ様！")}
+                >
+                  お疲れ様！
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 2: 角色与贴纸库 (集成式 758 张全贴纸库) */}
+          {activeTab === "stickers" && (
+            <div className="md3-card tab-panel-card">
+              {/* 组合过滤标签 */}
+              <div className="unit-chips-scroll">
+                {units.map((u) => (
+                  <button
+                    key={u.id}
+                    type="button"
+                    className={`unit-chip ${selectedUnit === u.id ? "active" : ""}`}
+                    onClick={() => {
+                      setSelectedUnit(u.id);
+                      setStickerDisplayLimit(64);
+                    }}
+                  >
+                    {u.name}
+                  </button>
+                ))}
+              </div>
+
+              {/* 搜索过滤栏 */}
+              <div className="sticker-search-bar">
+                <IconSearch />
+                <input
+                  type="text"
+                  className="sticker-search-input"
+                  placeholder={t("search_placeholder")}
+                  value={stickerSearch}
+                  onChange={(e) => {
+                    setStickerSearch(e.target.value);
+                    setStickerDisplayLimit(64);
+                  }}
+                />
+                {stickerSearch && (
+                  <button
+                    type="button"
+                    className="search-clear-btn"
+                    onClick={() => setStickerSearch("")}
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+
+              {/* 贴纸卡片网格 */}
+              <div className="sticker-grid-container">
+                {visibleStickerList.map((stk) => {
+                  const isCurrent = character === stk.originalIndex;
+                  return (
+                    <button
+                      key={stk.id}
+                      type="button"
+                      className={`sticker-grid-item ${isCurrent ? "current-selected" : ""}`}
+                      onClick={() => handleSelectSticker(stk.originalIndex)}
+                      title={`${stk.name} - ${stk.defaultText?.text}`}
+                    >
+                      <img
+                        src={`${import.meta.env.BASE_URL}img/${stk.img}`}
+                        alt={stk.name}
+                        loading="lazy"
+                        className="grid-thumb-img"
+                      />
+                      <span className="grid-thumb-label">
+                        {stk.defaultText?.text?.split("\n")[0] || stk.name}
+                      </span>
+                      {stk.source === "manual" && (
+                        <span className="grid-thumb-badge">手工</span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {visibleStickerList.length < filteredStickerList.length && (
+                <div className="load-more-row">
+                  <button
+                    type="button"
+                    className="md3-btn-tonal load-more-btn"
+                    onClick={() => setStickerDisplayLimit((p) => p + 64)}
+                  >
+                    {t("load_more")} ({t("remaining")} {filteredStickerList.length - visibleStickerList.length} {t("count_unit")})
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* TAB 3: 排版与参数 (字体 / 颜色 / 旋转 / 字号 / 间距 / 弯曲) */}
+          {activeTab === "style" && (
+            <div className="md3-card tab-panel-card">
+              {/* 字体选择网格 */}
+              <div className="setting-block">
+                <span className="setting-block-title">{t("sticker_font")}</span>
+                <div className="font-chips-grid">
+                  {STICKER_FONTS.map((f) => (
+                    <button
+                      key={f.id}
+                      type="button"
+                      className={`font-chip ${stickerFont === f.id ? "active" : ""}`}
+                      onClick={() => handleFontChange(f.id)}
+                    >
+                      <span>{t(f.label)}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 文字颜色 */}
+              <div className="setting-block">
+                <div className="setting-row-flex">
+                  <span className="setting-block-title">{t("text_color")}</span>
+                  <button
+                    type="button"
+                    className="btn-palette-trigger"
+                    onClick={() => setColorModalOpen(true)}
+                  >
+                    <IconPalette />
+                    <span>{t("color_palette")}</span>
+                  </button>
+                </div>
+                <div className="color-swatches-row">
+                  {PRESET_QUICK_COLORS.map((c) => (
+                    <button
+                      key={c.color}
+                      type="button"
+                      className={`color-swatch-btn ${textColor?.toLowerCase() === c.color.toLowerCase() ? "active" : ""}`}
+                      style={{ backgroundColor: c.color }}
+                      onClick={() => setTextColor(c.color)}
+                      title={c.label}
+                    />
+                  ))}
+                  <button
+                    type="button"
+                    className="color-swatch-btn current-char-swatch"
+                    style={{ backgroundColor: activeSticker.charColor }}
+                    onClick={() => setTextColor(activeSticker.charColor)}
+                    title={`当前角色专属色 (${activeSticker.charColor})`}
+                  />
+                  <div className="color-hex-tag">
+                    <span>{textColor?.toUpperCase()}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 旋转角度 */}
+              <div className="slider-setting-box">
+                <div className="slider-label-row">
+                  <span className="slider-title">{t("rotate")}</span>
+                  <EditableNumberTag
+                    value={Math.round(rotate * 5.7296)}
+                    unit="°"
+                    min={-60}
+                    max={60}
+                    step={1}
+                    onChange={(deg) => setRotate(deg / 5.7296)}
+                  />
+                </div>
+                <div className="slider-input-row">
+                  <input
+                    type="range"
+                    min="-10"
+                    max="10"
+                    step="0.2"
+                    value={rotate}
+                    onChange={(e) => setRotate(Number(e.target.value))}
+                    className="md3-range-horizontal"
+                  />
+                </div>
+              </div>
+
+              {/* 字号大小 */}
+              <div className="slider-setting-box">
+                <div className="slider-label-row">
+                  <span className="slider-title">{t("font_size")}</span>
+                  <EditableNumberTag
+                    value={fontSize}
+                    unit="px"
+                    min={10}
+                    max={100}
+                    step={1}
+                    onChange={(v) => setFontSize(v)}
+                  />
+                </div>
+                <div className="slider-input-row">
+                  <input
+                    type="range"
+                    min="10"
+                    max="100"
+                    step="1"
+                    value={fontSize}
+                    onChange={(e) => setFontSize(Number(e.target.value))}
+                    className="md3-range-horizontal"
+                  />
+                </div>
+              </div>
+
+              {/* 行间距 */}
+              <div className="slider-setting-box">
+                <div className="slider-label-row">
+                  <span className="slider-title">{t("spacing")}</span>
+                  <EditableNumberTag
+                    value={spaceSize}
+                    unit="px"
+                    min={18}
+                    max={100}
+                    step={1}
+                    onChange={(v) => setSpaceSize(v)}
+                  />
+                </div>
+                <div className="slider-input-row">
+                  <input
+                    type="range"
+                    min="18"
+                    max="100"
+                    step="1"
+                    value={spaceSize}
+                    onChange={(e) => setSpaceSize(Number(e.target.value))}
+                    className="md3-range-horizontal"
+                  />
+                </div>
+              </div>
+
+              {/* 文字弯曲开关 */}
+              <div className="switch-setting-row">
+                <span className="switch-label">{t("curve")}</span>
+                <label className="md3-switch-label">
+                  <input
+                    type="checkbox"
+                    checked={curve}
+                    onChange={(e) => setCurve(e.target.checked)}
+                    className="md3-switch-input"
+                  />
+                  <span className="md3-switch-slider" />
+                </label>
+              </div>
+            </div>
+          )}
+        </section>
       </main>
 
-{/* SEO 贴纸文本与图片列表（视觉上隐藏） */}
+      {/* SEO 贴纸文本列表 */}
       <ul className="visually-hidden" aria-hidden="false">
         {characters.map((c, index) => (
           <li key={index}>
@@ -789,7 +1118,7 @@ function App() {
         ))}
       </ul>
 
-      {/* 预热 WebFonts 切片：实时放入用户输入的实际字符 {text}，促使浏览器立即拉取所需汉字切片 */}
+      {/* 预热 WebFonts 切片 */}
       <div
         aria-hidden="true"
         style={{

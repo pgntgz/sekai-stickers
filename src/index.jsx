@@ -1,37 +1,45 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "mdui/mdui.css";
+import "mdui";
+import { setColorScheme, setTheme } from "mdui";
 import "./index.css";
 import "./i18n";
 import App from "./App";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
-// MD3-inspired MUI theme
+// Initialize MD3 theme with user preferred matugen teal #59dbc1 & dark mode
+setColorScheme("#59dbc1");
+setTheme("dark");
+
+// Harmonized MD3 MUI theme to match Matugen / QuickShell palette
 const md3Theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#d0bcff",
-      contrastText: "#381e72",
+      main: "#59dbc1",
+      contrastText: "#00382f",
     },
     secondary: {
-      main: "#ccc2dc",
-      contrastText: "#332d41",
+      main: "#84d6c2",
+      contrastText: "#00382f",
     },
     background: {
-      default: "#121212",
-      paper: "#2b2930",
+      default: "#0a151a",
+      paper: "#172126",
     },
     text: {
-      primary: "#e6e1e5",
-      secondary: "#cac4d0",
+      primary: "#d9e4eb",
+      secondary: "#b4cad6",
     },
   },
   typography: {
-    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Noto Sans JP", sans-serif',
+    fontFamily:
+      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Noto Sans JP", sans-serif',
   },
   shape: {
-    borderRadius: 16,
+    borderRadius: 20,
   },
   components: {
     MuiButton: {
@@ -50,15 +58,19 @@ const md3Theme = createTheme({
       styleOverrides: {
         paper: {
           borderRadius: 28,
-          backgroundColor: "#2b2930",
+          backgroundColor: "#172126",
+          backgroundImage: "none",
+          border: "1px solid #2c363c",
         },
       },
     },
     MuiPopover: {
       styleOverrides: {
         paper: {
-          borderRadius: 28,
-          backgroundColor: "#36343b",
+          borderRadius: 24,
+          backgroundColor: "#172126",
+          backgroundImage: "none",
+          border: "1px solid #2c363c",
         },
       },
     },

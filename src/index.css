@@ -1,50 +1,57 @@
 /* ============================================
-   PJSK Stickers Maker — MD3 + PJSK Clean Design System
-   Inspired by sekai.best & Material You (M3)
+   PJSK Stickers Maker — Genuine Material Design 3 (Material You)
+   Powered by MDUI 2 & Matugen Palette System
    ============================================ */
 
 :root {
   color-scheme: dark;
 
-  /* --- Fallbacks & Aliases for Dark Mode Modals --- */
-  --card-bg: #14161c;
-  --text-primary: #f3f5f8;
-  --pjsk-color-text-sub: #9aa0b0;
+  /* --- Matugen / QuickShell Inspired M3 Dark Palette --- */
+  --pjsk-color-bg: #0a151a;
+  --pjsk-color-surface: #0a151a;
+  --pjsk-color-surface-container-lowest: #060f14;
+  --pjsk-color-surface-container-low: #131d22;
+  --pjsk-color-surface-container: #172126;
+  --pjsk-color-surface-container-high: #212b31;
+  --pjsk-color-surface-container-highest: #2c363c;
 
-  /* --- Canvas & Background --- */
-  --pjsk-color-bg: #0c0d10;
-  --pjsk-color-surface: #14161c;
-  --pjsk-color-surface-container: #1b1d25;
-  --pjsk-color-surface-container-high: #232631;
-  --pjsk-color-surface-container-highest: #2d313f;
+  /* Primary: Iconic SEKAI Teal / Matugen Preferred */
+  --pjsk-color-primary: #59dbc1;
+  --pjsk-color-primary-container: #005144;
+  --pjsk-color-on-primary: #00382f;
+  --pjsk-color-on-primary-container: #78f8dd;
 
-  /* --- Borders & Outlines --- */
-  --pjsk-color-border: #262936;
-  --pjsk-color-border-hover: #3b3f52;
+  /* Secondary & Tertiary */
+  --pjsk-color-secondary: #84d6c2;
+  --pjsk-color-secondary-container: #005144;
+  --pjsk-color-on-secondary-container: #a0f2de;
+  --pjsk-color-tertiary: #8ccff1;
+  --pjsk-color-tertiary-container: #004d65;
 
-  /* --- Typography Colors --- */
-  --pjsk-color-text-main: #f3f5f8;
-  --pjsk-color-text-secondary: #9aa0b0;
-  --pjsk-color-text-tertiary: #6b7285;
+  /* Outlines & Text */
+  --pjsk-color-outline: #7f949f;
+  --pjsk-color-outline-variant: #364954;
+  --pjsk-color-text-main: #d9e4eb;
+  --pjsk-color-text-secondary: #b4cad6;
+  --pjsk-color-text-tertiary: #7f949f;
 
-  /* --- PJSK Iconic Accents --- */
-  --pjsk-color-primary: #00f5d4;         /* 初音未来核心湖蓝青 */
-  --pjsk-color-primary-dark: #00bfa5;
-  --pjsk-color-on-primary: #04201c;
-  --pjsk-color-primary-container: #083b34;
-  --pjsk-color-secondary: #c084fc;       /* 柔美电音紫 */
-  --pjsk-color-secondary-container: #3c2463;
-
-  /* --- Geometry & Radii --- */
-  --pjsk-radius-lg: 18px;
-  --pjsk-radius-md: 12px;
+  /* M3 Shape System */
+  --pjsk-radius-xs: 4px;
   --pjsk-radius-sm: 8px;
+  --pjsk-radius-md: 12px;
+  --pjsk-radius-lg: 16px;
+  --pjsk-radius-xl: 24px;
+  --pjsk-radius-2xl: 28px;
   --pjsk-radius-pill: 9999px;
 
-  /* --- Checkerboard for Transparent Canvas --- */
+  /* M3 Motion */
+  --pjsk-motion-standard: cubic-bezier(0.2, 0, 0, 1);
+  --pjsk-motion-expressive: cubic-bezier(0.3, 0, 0, 1.2);
+
+  /* Checkerboard Canvas */
   --pjsk-checker-size: 10px;
-  --pjsk-checker-color-1: #1a1c24;
-  --pjsk-checker-color-2: #21232d;
+  --pjsk-checker-color-1: #131d22;
+  --pjsk-checker-color-2: #1b262d;
 }
 
 /* --- Global Reset --- */
@@ -94,5 +101,5 @@ body {
   border-radius: var(--pjsk-radius-pill);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--pjsk-color-border-hover);
+  background-color: var(--pjsk-color-outline);
 }
