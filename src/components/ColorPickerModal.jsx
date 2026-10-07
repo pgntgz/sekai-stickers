@@ -93,11 +93,11 @@ export default function ColorPickerModal({
       fullWidth
       PaperProps={{
         style: {
-          borderRadius: 20,
-          background: "var(--pjsk-color-surface, #14161c)",
-          border: "1px solid var(--pjsk-color-border, #262936)",
+          borderRadius: 28,
+          background: "var(--pjsk-color-surface-container, #172126)",
+          border: "1px solid var(--pjsk-color-border, #2c363c)",
           boxShadow: "0 24px 64px rgba(0, 0, 0, 0.6)",
-          color: "var(--pjsk-color-text-main, #f3f5f8)",
+          color: "var(--pjsk-color-text-main, #d9e4eb)",
         },
       }}
     >
@@ -106,12 +106,12 @@ export default function ColorPickerModal({
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "16px 20px 12px",
-          borderBottom: "1px solid var(--pjsk-color-border, #262936)",
+          padding: "18px 24px 14px",
+          borderBottom: "1px solid var(--pjsk-color-border, #2c363c)",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--pjsk-color-text-main, #f3f5f8)" }}>
+          <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--pjsk-color-text-main)" }}>
             {t("text_color")}
           </span>
           <div
@@ -119,14 +119,14 @@ export default function ColorPickerModal({
               display: "inline-flex",
               alignItems: "center",
               gap: 6,
-              padding: "3px 8px",
+              padding: "4px 10px",
               borderRadius: 20,
-              background: "var(--pjsk-color-surface-container, #1b1d25)",
-              border: "1px solid var(--pjsk-color-border, #262936)",
-              fontSize: "0.78rem",
+              background: "var(--pjsk-color-surface-container-high, #212b31)",
+              border: "1px solid var(--pjsk-color-border, #2c363c)",
+              fontSize: "0.82rem",
               fontFamily: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
-              fontWeight: 600,
-              color: "var(--pjsk-color-text-main, #f3f5f8)",
+              fontWeight: 700,
+              color: "var(--pjsk-color-text-main)",
             }}
           >
             <span
@@ -147,7 +147,7 @@ export default function ColorPickerModal({
           size="small"
           onClick={onClose}
           aria-label="close"
-          style={{ color: "var(--pjsk-color-text-secondary, #9aa0b0)" }}
+          style={{ color: "var(--pjsk-color-text-secondary)" }}
         >
           <IconClose />
         </IconButton>
@@ -168,7 +168,7 @@ export default function ColorPickerModal({
           ))}
         </div>
 
-        {/* 角色头像与色环网格 */}
+        {/* 角色头像与色环网格 (精确限制尺寸) */}
         <div className="character-color-grid">
           {filteredCharacters.map((c) => {
             const isSelected =
@@ -188,22 +188,49 @@ export default function ColorPickerModal({
                 <div
                   className="char-avatar-ring-wrap"
                   style={{
-                    borderColor: c.color,
+                    width: 48,
+                    height: 48,
+                    borderRadius: "50%",
+                    border: `2.5px solid ${c.color}`,
                     boxShadow: isSelected
-                      ? `0 0 0 2px var(--pjsk-color-surface, #14161c), 0 0 0 4px ${c.color}, 0 4px 14px ${c.color}77`
-                      : `0 0 0 1px rgba(0,0,0,0.3), 0 2px 8px ${c.color}44`,
+                      ? `0 0 0 2px var(--pjsk-color-surface-container, #172126), 0 0 0 4px ${c.color}, 0 4px 14px ${c.color}77`
+                      : `0 0 0 1px rgba(0,0,0,0.3), 0 2px 6px ${c.color}44`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    position: "relative",
+                    flexShrink: 0,
+                    overflow: "hidden",
                   }}
                 >
                   <img
                     src={`${import.meta.env.BASE_URL}${c.avatar || `avatars/${c.slug.toLowerCase()}.png`}`}
                     alt={getCharName(c)}
                     className="char-avatar-img"
+                    style={{
+                      width: 44,
+                      height: 44,
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
                     loading="lazy"
                   />
                   {isSelected && (
                     <div
                       className="char-color-check-badge"
-                      style={{ backgroundColor: c.color }}
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        right: 0,
+                        width: 16,
+                        height: 16,
+                        borderRadius: "50%",
+                        backgroundColor: c.color,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
                     >
                       <IconCheck />
                     </div>

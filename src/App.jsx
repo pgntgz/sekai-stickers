@@ -3,9 +3,11 @@ import Canvas from "./components/Canvas";
 import { useState, useEffect, useRef, useMemo } from "react";
 import characters from "./characters.json";
 import characterColors from "./characterColors.json";
+import stampTranslations from "./utils/stampTranslations.json";
 import EditableNumberTag from "./components/EditableNumberTag";
 import ColorPickerModal from "./components/ColorPickerModal";
 import Info from "./components/Info";
+import MD3WavySlider from "./components/MD3WavySlider";
 import { useTranslation } from "react-i18next";
 import { getRandomQuote, prefetchQuotes, smartBreakText } from "./utils/quotes";
 import { setColorScheme, setTheme } from "mdui";
@@ -88,7 +90,7 @@ const IconInfo = () => (
 );
 
 const SekaiDiamond = () => (
-  <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style={{ color: "var(--pjsk-color-primary)", marginRight: 6 }}>
+  <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style={{ color: "var(--pjsk-color-primary)", marginRight: 6 }}>
     <polygon points="8,0 16,8 8,16 0,8" />
   </svg>
 );
@@ -142,6 +144,13 @@ const PRESET_QUICK_COLORS = [
   { label: "罗兰紫", color: "#BB88EE" },
 ];
 
+// 中文对照翻译获取工具
+function getTranslation(japaneseText) {
+  if (!japaneseText) return "";
+  const first = japaneseText.split("\n")[0].trim();
+  return stampTranslations[japaneseText] || stampTranslations[first] || "";
+}
+
 function App() {
   const { t, i18n } = useTranslation();
 
@@ -165,23 +174,24 @@ function App() {
 
   const [fontLoadedVersion, setFontLoadedVersion] = useState(0);
   const [infoOpen, setInfoOpen] = useState(false);
-  const [colorModalOpen, setColorModalOpen] = useState(false);
+  const [colorModalOpen, setColorModalOpen] = useState(() => {
+    return typeof window !== "undefined" && window.location.hash.includes("colorModal");
+  });
   const [copiedStatus, setCopiedStatus] = useState(false);
 
-  // 动态主题模式：默认使用用户桌面的最爱青色 #59dbc1；开启后随当前角色代表色动态染色
+  // 动态主题模式
   const [dynamicTheme, setDynamicTheme] = useState(() => {
     return localStorage.getItem("pjsk_dynamic_theme") === "true";
   });
 
-  const [character, setCharacter] = useState(49); // 初始默认 Emu 13 (わーいわーい！)
+  const [character, setCharacter] = useState(49); // 默认 Emu 13 (わーいわーい！)
   const activeSticker = STICKERS_WITH_META[character] || STICKERS_WITH_META[0];
 
-  // 动态主题联动：当角色切换或开关切换时调用 MDUI 的 setColorScheme
   useEffect(() => {
     if (dynamicTheme && activeSticker?.charColor) {
       setColorScheme(activeSticker.charColor);
     } else {
-      setColorScheme("#59dbc1"); // 用户桌面 matugen 最爱青色
+      setColorScheme("#59dbc1");
     }
     setTheme("dark");
   }, [dynamicTheme, character, activeSticker]);
@@ -308,13 +318,13 @@ function App() {
   const [loaded, setLoaded] = useState(false);
   const [textColor, setTextColor] = useState(characters[character].color);
 
-  // 选项卡状态：支持 hash 响应
+  // 选项卡层级重构：一级为 editor (文案与调参整合主控区)，二级为 stickers (贴纸图库)
   const [activeTab, setActiveTabState] = useState(() => {
     if (typeof window !== "undefined") {
       const h = window.location.hash.replace("#", "");
-      if (["text", "stickers", "style"].includes(h)) return h;
+      if (["editor", "stickers"].includes(h)) return h;
     }
-    return "text";
+    return "editor";
   });
 
   const switchTab = (tab) => {
@@ -327,7 +337,7 @@ function App() {
   useEffect(() => {
     const handleHash = () => {
       const h = window.location.hash.replace("#", "");
-      if (["text", "stickers", "style"].includes(h)) {
+      if (["editor", "stickers"].includes(h)) {
         setActiveTabState(h);
       }
     };
@@ -335,7 +345,7 @@ function App() {
     return () => window.removeEventListener("hashchange", handleHash);
   }, []);
 
-  // 贴纸筛选状态（内置贴纸库浏览器）
+  // 贴纸筛选状态
   const [selectedUnit, setSelectedUnit] = useState("all");
   const [stickerSearch, setStickerSearch] = useState("");
   const [stickerDisplayLimit, setStickerDisplayLimit] = useState(64);
@@ -361,7 +371,8 @@ function App() {
         const matchZh = item.nameZh?.toLowerCase().includes(q);
         const matchEn = item.nameEn?.toLowerCase().includes(q);
         const matchText = item.defaultText?.text?.toLowerCase().includes(q);
-        return matchName || matchChar || matchJa || matchZh || matchEn || matchText;
+        const matchTrans = getTranslation(item.defaultText?.text).toLowerCase().includes(q);
+        return matchName || matchChar || matchJa || matchZh || matchEn || matchText || matchTrans;
       }
       return true;
     });
@@ -531,6 +542,10 @@ function App() {
     return activeSticker.nameEn || activeSticker.character;
   }, [activeSticker, i18n.language]);
 
+  const activeTranslation = useMemo(() => {
+    return getTranslation(activeSticker.defaultText?.text);
+  }, [activeSticker]);
+
   return (
     <div className="App">
       {/* MD3 Top App Bar */}
@@ -539,7 +554,7 @@ function App() {
           <div className="brand-cluster">
             <SekaiDiamond />
             <span className="brand-title">Sekai Stickers</span>
-            <span className="brand-chip">MD3</span>
+            <span className="brand-chip">MD3 Expressive</span>
           </div>
 
           <div className="top-bar-actions">
@@ -548,7 +563,7 @@ function App() {
               type="button"
               className={`theme-toggle-btn ${dynamicTheme ? "active" : ""}`}
               onClick={toggleDynamicTheme}
-              title={dynamicTheme ? "正在跟随角色代表色（点击切换回青色主题）" : "正在使用 Matugen 青色主题（点击开启角色动态染色）"}
+              title={dynamicTheme ? "正在跟随角色代表色（点击切回 Matugen 青色）" : "正在使用 Matugen 青色（点击开启角色动态染色）"}
             >
               <span className="theme-dot" style={{ backgroundColor: dynamicTheme ? (activeSticker?.charColor || "#59dbc1") : "#59dbc1" }} />
               <span className="theme-label">{t("dynamic_theme")}</span>
@@ -611,7 +626,7 @@ function App() {
 
       {/* 主布局：横屏双栏响应式 / 竖屏紧凑流式 */}
       <main className="app-main-layout">
-        {/* 左侧 (横屏模式为粘性舞台，竖屏模式为顶部焦点舞台) */}
+        {/* 左侧：贴纸舞台 */}
         <section className="stage-column">
           <div className="md3-card stage-card">
             <div className="canvas-container-box">
@@ -696,7 +711,7 @@ function App() {
               </button>
             </div>
 
-            {/* 当前选中贴纸元数据胶囊 */}
+            {/* 当前选中贴纸元数据胶囊 (带中文对照翻译与更换贴纸入口) */}
             <div className="sticker-meta-strip">
               <img
                 src={import.meta.env.BASE_URL + activeSticker.charAvatar}
@@ -718,8 +733,23 @@ function App() {
                 </div>
                 <div className="meta-sub-row">
                   <span className="meta-orig-text">“{activeSticker.defaultText?.text}”</span>
+                  {/* 中文用户显示官方台词的中文翻译对照 */}
+                  {i18n.language.startsWith("zh") && activeTranslation && (
+                    <span className="meta-translation-tag">
+                      （{activeTranslation}）
+                    </span>
+                  )}
                 </div>
               </div>
+              {/* 二级菜单快速跳转按钮 */}
+              <button
+                type="button"
+                className="btn-open-gallery-chip"
+                onClick={() => switchTab("stickers")}
+                title="浏览挑选 758 张贴纸库"
+              >
+                <span>更换贴纸</span>
+              </button>
             </div>
 
             {/* 核心操作按钮组 (MD3 Filled & Tonal 规范) */}
@@ -754,116 +784,270 @@ function App() {
           </div>
         </section>
 
-        {/* 右侧 (横屏为控件主控区，竖屏为紧随其后的折叠面板区) */}
+        {/* 右侧：主控舱 (一级：文案与排版整合；二级：贴纸图库) */}
         <section className="controls-column">
-          {/* MD3 选项卡控制器 */}
+          {/* 顶部分段切换器：一级主控 vs 二级贴纸库 */}
           <div className="md3-segmented-tabs">
             <button
               type="button"
-              className={`tab-btn ${activeTab === "text" ? "active" : ""}`}
-              onClick={() => switchTab("text")}
+              className={`tab-btn ${activeTab === "editor" ? "active" : ""}`}
+              onClick={() => switchTab("editor")}
             >
-              <span>✍ {t("tab_text")}</span>
+              <span>🛠️ 文案与排版 (核心主控)</span>
             </button>
             <button
               type="button"
               className={`tab-btn ${activeTab === "stickers" ? "active" : ""}`}
               onClick={() => switchTab("stickers")}
             >
-              <span>🎭 {t("tab_characters")}</span>
+              <span>🎭 贴纸图库</span>
               <span className="tab-count-badge">{characters.length}</span>
-            </button>
-            <button
-              type="button"
-              className={`tab-btn ${activeTab === "style" ? "active" : ""}`}
-              onClick={() => switchTab("style")}
-            >
-              <span>⚙ {t("tab_style")}</span>
             </button>
           </div>
 
-          {/* TAB 1: 文案与灵感 */}
-          {activeTab === "text" && (
-            <div className="md3-card tab-panel-card">
-              <div className="panel-header-row">
-                <span className="panel-title">{t("text_label")}</span>
-                <div className="quote-action-group">
+          {/* 一级主控面板：文案 + 字体 + 颜色 + 异形波浪滑块排版参数 */}
+          {activeTab === "editor" && (
+            <div className="md3-card tab-panel-card editor-unified-panel">
+              {/* 1. 文案输入区 */}
+              <div className="panel-section-group">
+                <div className="panel-header-row">
+                  <span className="panel-title">✍ {t("text_label")}</span>
+                  <div className="quote-action-group">
+                    <button
+                      type="button"
+                      className={`btn-step ${historyIndex > 0 ? "" : "disabled"}`}
+                      onClick={handlePrevQuote}
+                      disabled={historyIndex <= 0}
+                      title="上一条历史文案"
+                    >
+                      <IconPrev />
+                    </button>
+                    <button
+                      type="button"
+                      className={`btn-step ${historyIndex < history.length - 1 ? "" : "disabled"}`}
+                      onClick={handleNextQuote}
+                      disabled={historyIndex >= history.length - 1}
+                      title="下一条历史文案"
+                    >
+                      <IconNext />
+                    </button>
+                    <button
+                      type="button"
+                      className="md3-btn-tonal btn-random-quote"
+                      onClick={handleRandomQuote}
+                      title="随机摇一条抽象中文短句"
+                    >
+                      <IconDice />
+                      <span>{t("random_quote")}</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div className="md3-textfield-box">
+                  <textarea
+                    rows="3"
+                    className="md3-textarea"
+                    value={text}
+                    placeholder="输入表情包自定义文字 (回车即可自动折行)..."
+                    onChange={(e) => handleTextChange(e.target.value)}
+                  />
+                </div>
+
+                {/* 快捷推荐台词 / 原案台词 / 中文翻译快捷填入 */}
+                <div className="quick-chips-row">
+                  <span className="quick-chips-label">快捷填入:</span>
                   <button
                     type="button"
-                    className={`btn-step ${historyIndex > 0 ? "" : "disabled"}`}
-                    onClick={handlePrevQuote}
-                    disabled={historyIndex <= 0}
-                    title="上一条历史文案"
+                    className="quick-text-chip"
+                    onClick={() => handleTextChange(activeSticker.defaultText?.text || "")}
+                    title="填入官方原版日文台词"
                   >
-                    <IconPrev />
+                    原案: {activeSticker.defaultText?.text}
+                  </button>
+                  {/* 中文用户显示官方台词的中文翻译快捷点击 */}
+                  {i18n.language.startsWith("zh") && activeTranslation && (
+                    <button
+                      type="button"
+                      className="quick-text-chip quick-trans-chip"
+                      onClick={() => handleTextChange(activeTranslation)}
+                      title="一键将官方中文释义填入表情包"
+                    >
+                      译文: {activeTranslation}
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    className="quick-text-chip"
+                    onClick={() => handleTextChange("わんだほーい！")}
+                  >
+                    わんだほーい！
                   </button>
                   <button
                     type="button"
-                    className={`btn-step ${historyIndex < history.length - 1 ? "" : "disabled"}`}
-                    onClick={handleNextQuote}
-                    disabled={historyIndex >= history.length - 1}
-                    title="下一条历史文案"
+                    className="quick-text-chip"
+                    onClick={() => handleTextChange("大天才！！")}
                   >
-                    <IconNext />
+                    大天才！！
                   </button>
                   <button
                     type="button"
-                    className="md3-btn-tonal btn-random-quote"
-                    onClick={handleRandomQuote}
-                    title="随机摇一条抽象中文短句"
+                    className="quick-text-chip"
+                    onClick={() => handleTextChange("お疲れ様！")}
                   >
-                    <IconDice />
-                    <span>{t("random_quote")}</span>
+                    お疲れ様！
                   </button>
                 </div>
               </div>
 
-              <div className="md3-textfield-box">
-                <textarea
-                  rows="3"
-                  className="md3-textarea"
-                  value={text}
-                  placeholder="输入表情包自定义文字 (回车即可折行)..."
-                  onChange={(e) => handleTextChange(e.target.value)}
-                />
+              {/* 2. 贴纸字体与颜色区 */}
+              <div className="panel-section-group">
+                <div className="setting-block">
+                  <span className="setting-block-title">🔤 {t("sticker_font")}</span>
+                  <div className="font-chips-grid">
+                    {STICKER_FONTS.map((f) => (
+                      <button
+                        key={f.id}
+                        type="button"
+                        className={`font-chip ${stickerFont === f.id ? "active" : ""}`}
+                        onClick={() => handleFontChange(f.id)}
+                      >
+                        <span>{t(f.label)}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="setting-block" style={{ marginTop: 14 }}>
+                  <div className="setting-row-flex">
+                    <span className="setting-block-title">🎨 {t("text_color")}</span>
+                    <button
+                      type="button"
+                      className="btn-palette-trigger"
+                      onClick={() => setColorModalOpen(true)}
+                    >
+                      <IconPalette />
+                      <span>{t("color_palette")}</span>
+                    </button>
+                  </div>
+                  <div className="color-swatches-row">
+                    {PRESET_QUICK_COLORS.map((c) => (
+                      <button
+                        key={c.color}
+                        type="button"
+                        className={`color-swatch-btn ${textColor?.toLowerCase() === c.color.toLowerCase() ? "active" : ""}`}
+                        style={{ backgroundColor: c.color }}
+                        onClick={() => setTextColor(c.color)}
+                        title={c.label}
+                      />
+                    ))}
+                    <button
+                      type="button"
+                      className="color-swatch-btn current-char-swatch"
+                      style={{ backgroundColor: activeSticker.charColor }}
+                      onClick={() => setTextColor(activeSticker.charColor)}
+                      title={`当前角色专属色 (${activeSticker.charColor})`}
+                    />
+                    <div className="color-hex-tag">
+                      <span>{textColor?.toUpperCase()}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* 快捷推荐台词 / 贴纸原案一键回填 */}
-              <div className="quick-chips-row">
-                <span className="quick-chips-label">快捷填入:</span>
-                <button
-                  type="button"
-                  className="quick-text-chip"
-                  onClick={() => handleTextChange(activeSticker.defaultText?.text || "")}
-                >
-                  原案: {activeSticker.defaultText?.text}
-                </button>
-                <button
-                  type="button"
-                  className="quick-text-chip"
-                  onClick={() => handleTextChange("わんだほーい！")}
-                >
-                  わんだほーい！
-                </button>
-                <button
-                  type="button"
-                  className="quick-text-chip"
-                  onClick={() => handleTextChange("大天才！！")}
-                >
-                  大天才！！
-                </button>
-                <button
-                  type="button"
-                  className="quick-text-chip"
-                  onClick={() => handleTextChange("お疲れ様！")}
-                >
-                  お疲れ様！
-                </button>
+              {/* 3. 排版参数微调区 (引入全新 MD3 波浪线拖动条 Wavy Sliders) */}
+              <div className="panel-section-group">
+                <div className="sliders-cluster">
+                  {/* 旋转角度 (MD3 Wavy Slider) */}
+                  <div className="slider-setting-box">
+                    <div className="slider-label-row">
+                      <span className="slider-title">🔄 {t("rotate")}</span>
+                      <EditableNumberTag
+                        value={Math.round(rotate * 5.7296)}
+                        unit="°"
+                        min={-60}
+                        max={60}
+                        step={1}
+                        onChange={(deg) => setRotate(deg / 5.7296)}
+                      />
+                    </div>
+                    <div className="slider-input-row">
+                      <MD3WavySlider
+                        min="-10"
+                        max="10"
+                        step="0.2"
+                        value={rotate}
+                        onChange={(e) => setRotate(Number(e.target.value))}
+                      />
+                    </div>
+                  </div>
+
+                  {/* 字号大小 (MD3 Wavy Slider) */}
+                  <div className="slider-setting-box">
+                    <div className="slider-label-row">
+                      <span className="slider-title">📏 {t("font_size")}</span>
+                      <EditableNumberTag
+                        value={fontSize}
+                        unit="px"
+                        min={10}
+                        max={100}
+                        step={1}
+                        onChange={(v) => setFontSize(v)}
+                      />
+                    </div>
+                    <div className="slider-input-row">
+                      <MD3WavySlider
+                        min="10"
+                        max="100"
+                        step="1"
+                        value={fontSize}
+                        onChange={(e) => setFontSize(Number(e.target.value))}
+                      />
+                    </div>
+                  </div>
+
+                  {/* 行间距 (MD3 Wavy Slider) */}
+                  <div className="slider-setting-box">
+                    <div className="slider-label-row">
+                      <span className="slider-title">↕️ {t("spacing")}</span>
+                      <EditableNumberTag
+                        value={spaceSize}
+                        unit="px"
+                        min={18}
+                        max={100}
+                        step={1}
+                        onChange={(v) => setSpaceSize(v)}
+                      />
+                    </div>
+                    <div className="slider-input-row">
+                      <MD3WavySlider
+                        min="18"
+                        max="100"
+                        step="1"
+                        value={spaceSize}
+                        onChange={(e) => setSpaceSize(Number(e.target.value))}
+                      />
+                    </div>
+                  </div>
+
+                  {/* 文字弯曲开关 */}
+                  <div className="switch-setting-row">
+                    <span className="switch-label">〰️ {t("curve")}</span>
+                    <label className="md3-switch-label">
+                      <input
+                        type="checkbox"
+                        checked={curve}
+                        onChange={(e) => setCurve(e.target.checked)}
+                        className="md3-switch-input"
+                      />
+                      <span className="md3-switch-slider" />
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           )}
 
-          {/* TAB 2: 角色与贴纸库 (集成式 758 张全贴纸库) */}
+          {/* 二级面板：贴纸图库 (758 张全网格浏览与组合过滤) */}
           {activeTab === "stickers" && (
             <div className="md3-card tab-panel-card">
               {/* 组合过滤标签 */}
@@ -889,7 +1073,7 @@ function App() {
                 <input
                   type="text"
                   className="sticker-search-input"
-                  placeholder={t("search_placeholder")}
+                  placeholder="搜索角色名、日文台词或中文译文..."
                   value={stickerSearch}
                   onChange={(e) => {
                     setStickerSearch(e.target.value);
@@ -911,13 +1095,14 @@ function App() {
               <div className="sticker-grid-container">
                 {visibleStickerList.map((stk) => {
                   const isCurrent = character === stk.originalIndex;
+                  const trans = getTranslation(stk.defaultText?.text);
                   return (
                     <button
                       key={stk.id}
                       type="button"
                       className={`sticker-grid-item ${isCurrent ? "current-selected" : ""}`}
                       onClick={() => handleSelectSticker(stk.originalIndex)}
-                      title={`${stk.name} - ${stk.defaultText?.text}`}
+                      title={`${stk.name} - ${stk.defaultText?.text} ${trans ? `(${trans})` : ""}`}
                     >
                       <img
                         src={`${import.meta.env.BASE_URL}img/${stk.img}`}
@@ -928,6 +1113,11 @@ function App() {
                       <span className="grid-thumb-label">
                         {stk.defaultText?.text?.split("\n")[0] || stk.name}
                       </span>
+                      {i18n.language.startsWith("zh") && trans && (
+                        <span className="grid-thumb-trans">
+                          {trans.slice(0, 7)}
+                        </span>
+                      )}
                       {stk.source === "manual" && (
                         <span className="grid-thumb-badge">手工</span>
                       )}
@@ -947,157 +1137,6 @@ function App() {
                   </button>
                 </div>
               )}
-            </div>
-          )}
-
-          {/* TAB 3: 排版与参数 (字体 / 颜色 / 旋转 / 字号 / 间距 / 弯曲) */}
-          {activeTab === "style" && (
-            <div className="md3-card tab-panel-card">
-              {/* 字体选择网格 */}
-              <div className="setting-block">
-                <span className="setting-block-title">{t("sticker_font")}</span>
-                <div className="font-chips-grid">
-                  {STICKER_FONTS.map((f) => (
-                    <button
-                      key={f.id}
-                      type="button"
-                      className={`font-chip ${stickerFont === f.id ? "active" : ""}`}
-                      onClick={() => handleFontChange(f.id)}
-                    >
-                      <span>{t(f.label)}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* 文字颜色 */}
-              <div className="setting-block">
-                <div className="setting-row-flex">
-                  <span className="setting-block-title">{t("text_color")}</span>
-                  <button
-                    type="button"
-                    className="btn-palette-trigger"
-                    onClick={() => setColorModalOpen(true)}
-                  >
-                    <IconPalette />
-                    <span>{t("color_palette")}</span>
-                  </button>
-                </div>
-                <div className="color-swatches-row">
-                  {PRESET_QUICK_COLORS.map((c) => (
-                    <button
-                      key={c.color}
-                      type="button"
-                      className={`color-swatch-btn ${textColor?.toLowerCase() === c.color.toLowerCase() ? "active" : ""}`}
-                      style={{ backgroundColor: c.color }}
-                      onClick={() => setTextColor(c.color)}
-                      title={c.label}
-                    />
-                  ))}
-                  <button
-                    type="button"
-                    className="color-swatch-btn current-char-swatch"
-                    style={{ backgroundColor: activeSticker.charColor }}
-                    onClick={() => setTextColor(activeSticker.charColor)}
-                    title={`当前角色专属色 (${activeSticker.charColor})`}
-                  />
-                  <div className="color-hex-tag">
-                    <span>{textColor?.toUpperCase()}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* 旋转角度 */}
-              <div className="slider-setting-box">
-                <div className="slider-label-row">
-                  <span className="slider-title">{t("rotate")}</span>
-                  <EditableNumberTag
-                    value={Math.round(rotate * 5.7296)}
-                    unit="°"
-                    min={-60}
-                    max={60}
-                    step={1}
-                    onChange={(deg) => setRotate(deg / 5.7296)}
-                  />
-                </div>
-                <div className="slider-input-row">
-                  <input
-                    type="range"
-                    min="-10"
-                    max="10"
-                    step="0.2"
-                    value={rotate}
-                    onChange={(e) => setRotate(Number(e.target.value))}
-                    className="md3-range-horizontal"
-                  />
-                </div>
-              </div>
-
-              {/* 字号大小 */}
-              <div className="slider-setting-box">
-                <div className="slider-label-row">
-                  <span className="slider-title">{t("font_size")}</span>
-                  <EditableNumberTag
-                    value={fontSize}
-                    unit="px"
-                    min={10}
-                    max={100}
-                    step={1}
-                    onChange={(v) => setFontSize(v)}
-                  />
-                </div>
-                <div className="slider-input-row">
-                  <input
-                    type="range"
-                    min="10"
-                    max="100"
-                    step="1"
-                    value={fontSize}
-                    onChange={(e) => setFontSize(Number(e.target.value))}
-                    className="md3-range-horizontal"
-                  />
-                </div>
-              </div>
-
-              {/* 行间距 */}
-              <div className="slider-setting-box">
-                <div className="slider-label-row">
-                  <span className="slider-title">{t("spacing")}</span>
-                  <EditableNumberTag
-                    value={spaceSize}
-                    unit="px"
-                    min={18}
-                    max={100}
-                    step={1}
-                    onChange={(v) => setSpaceSize(v)}
-                  />
-                </div>
-                <div className="slider-input-row">
-                  <input
-                    type="range"
-                    min="18"
-                    max="100"
-                    step="1"
-                    value={spaceSize}
-                    onChange={(e) => setSpaceSize(Number(e.target.value))}
-                    className="md3-range-horizontal"
-                  />
-                </div>
-              </div>
-
-              {/* 文字弯曲开关 */}
-              <div className="switch-setting-row">
-                <span className="switch-label">{t("curve")}</span>
-                <label className="md3-switch-label">
-                  <input
-                    type="checkbox"
-                    checked={curve}
-                    onChange={(e) => setCurve(e.target.checked)}
-                    className="md3-switch-input"
-                  />
-                  <span className="md3-switch-slider" />
-                </label>
-              </div>
             </div>
           )}
         </section>
