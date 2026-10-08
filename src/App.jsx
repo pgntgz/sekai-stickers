@@ -1,3 +1,23 @@
+import '@mdui/icons/tune--rounded.js';
+import '@mdui/icons/photo-library--rounded.js';
+import '@mdui/icons/edit-note--rounded.js';
+import '@mdui/icons/rotate-right--rounded.js';
+import '@mdui/icons/format-size--rounded.js';
+import '@mdui/icons/height--rounded.js';
+import '@mdui/icons/waves--rounded.js';
+import '@mdui/icons/font-download--rounded.js';
+import '@mdui/icons/palette--rounded.js';
+import '@mdui/icons/auto-awesome--rounded.js';
+import '@mdui/icons/content-copy--rounded.js';
+import '@mdui/icons/download--rounded.js';
+import '@mdui/icons/restart-alt--rounded.js';
+import '@mdui/icons/swap-horiz--rounded.js';
+import '@mdui/icons/search--rounded.js';
+import '@mdui/icons/close--rounded.js';
+import '@mdui/icons/check--rounded.js';
+import '@mdui/icons/info--rounded.js';
+import '@mdui/icons/navigate-before--rounded.js';
+import '@mdui/icons/navigate-next--rounded.js';
 import "./App.css";
 import Canvas from "./components/Canvas";
 import { useState, useEffect, useRef, useMemo } from "react";
@@ -601,7 +621,7 @@ function App() {
               onClick={() => setInfoOpen(true)}
               title={t("info_title")}
             >
-              <IconInfo />
+              <mdui-icon-info--rounded style={{ fontSize: 18 }} />
             </button>
           </div>
         </div>
@@ -619,7 +639,7 @@ function App() {
       {/* 复制成功浮动提示 (MD3 Tonal Toast) */}
       {copiedStatus && (
         <div className="md3-toast-banner">
-          <IconCheck />
+          <mdui-icon-check--rounded style={{ fontSize: 18, color: "var(--pjsk-color-primary)" }} />
           <span>{t("copied_to_clipboard")}</span>
         </div>
       )}
@@ -759,7 +779,7 @@ function App() {
                 className="md3-btn-filled action-btn-main"
                 onClick={copy}
               >
-                {copiedStatus ? <IconCheck /> : <IconCopy />}
+                {copiedStatus ? <mdui-icon-check--rounded style={{ fontSize: 18, color: "var(--pjsk-color-primary)" }} /> : <IconCopy />}
                 <span>{copiedStatus ? t("copied_to_clipboard") : t("copy")}</span>
               </button>
 
@@ -768,8 +788,7 @@ function App() {
                 className="md3-btn-tonal action-btn-main"
                 onClick={download}
               >
-                <IconDownload />
-                <span>{t("download")}</span>
+                <mdui-icon-download--rounded style={{ fontSize: 18, marginRight: 6, verticalAlign: "middle" }} /><span>{t("download")}</span>
               </button>
 
               <button
@@ -778,7 +797,7 @@ function App() {
                 onClick={handleResetText}
                 title={t("reset_text")}
               >
-                <IconReset />
+                <mdui-icon-restart-alt--rounded style={{ fontSize: 18, verticalAlign: "middle" }} />
               </button>
             </div>
           </div>
@@ -793,14 +812,14 @@ function App() {
               className={`tab-btn ${activeTab === "editor" ? "active" : ""}`}
               onClick={() => switchTab("editor")}
             >
-              <span>🛠️ 文案与排版 (核心主控)</span>
+              <mdui-icon-tune--rounded style={{ fontSize: 18, marginRight: 6, verticalAlign: "middle" }} /><span>{t("tab_editor", "文案与排版")}</span>
             </button>
             <button
               type="button"
               className={`tab-btn ${activeTab === "stickers" ? "active" : ""}`}
               onClick={() => switchTab("stickers")}
             >
-              <span>🎭 贴纸图库</span>
+              <mdui-icon-photo-library--rounded style={{ fontSize: 18, marginRight: 6, verticalAlign: "middle" }} /><span>{t("tab_stickers", "贴纸图库")}</span>
               <span className="tab-count-badge">{characters.length}</span>
             </button>
           </div>
@@ -808,36 +827,155 @@ function App() {
           {/* 一级主控面板：文案 + 字体 + 颜色 + 异形波浪滑块排版参数 */}
           {activeTab === "editor" && (
             <div className="md3-card tab-panel-card editor-unified-panel">
-              {/* 1. 文案输入区 */}
+              {/* 1. 排版参数微调区 (置顶主控，2x2 紧凑网格，波浪线拖动条与弯曲开关) */}
               <div className="panel-section-group">
                 <div className="panel-header-row">
-                  <span className="panel-title">✍ {t("text_label")}</span>
+                  <span className="panel-title">
+                    <mdui-icon-tune--rounded style={{ fontSize: 18, marginRight: 6, verticalAlign: "middle" }} />
+                    {t("tab_style", "排版参数")}
+                  </span>
+                </div>
+
+                <div className="typography-grid">
+                  {/* 字号大小 */}
+                  <div className="slider-card-compact">
+                    <div className="slider-card-header">
+                      <span className="slider-card-label">
+                        <mdui-icon-format-size--rounded style={{ fontSize: 16, marginRight: 4, verticalAlign: "middle" }} />
+                        {t("font_size")}
+                      </span>
+                      <EditableNumberTag
+                        value={fontSize}
+                        unit="px"
+                        min={10}
+                        max={100}
+                        step={1}
+                        onChange={(v) => setFontSize(v)}
+                      />
+                    </div>
+                    <div className="slider-input-row">
+                      <MD3WavySlider
+                        min="10"
+                        max="100"
+                        step="1"
+                        value={fontSize}
+                        onChange={(e) => setFontSize(Number(e.target.value))}
+                      />
+                    </div>
+                  </div>
+
+                  {/* 字间距 */}
+                  <div className="slider-card-compact">
+                    <div className="slider-card-header">
+                      <span className="slider-card-label">
+                        <mdui-icon-height--rounded style={{ fontSize: 16, marginRight: 4, verticalAlign: "middle" }} />
+                        {t("spacing")}
+                      </span>
+                      <EditableNumberTag
+                        value={spaceSize}
+                        unit="px"
+                        min={18}
+                        max={100}
+                        step={1}
+                        onChange={(v) => setSpaceSize(v)}
+                      />
+                    </div>
+                    <div className="slider-input-row">
+                      <MD3WavySlider
+                        min="18"
+                        max="100"
+                        step="1"
+                        value={spaceSize}
+                        onChange={(e) => setSpaceSize(Number(e.target.value))}
+                      />
+                    </div>
+                  </div>
+
+                  {/* 旋转角度 */}
+                  <div className="slider-card-compact">
+                    <div className="slider-card-header">
+                      <span className="slider-card-label">
+                        <mdui-icon-rotate-right--rounded style={{ fontSize: 16, marginRight: 4, verticalAlign: "middle" }} />
+                        {t("rotate")}
+                      </span>
+                      <EditableNumberTag
+                        value={Math.round(rotate * 5.7296)}
+                        unit="°"
+                        min={-60}
+                        max={60}
+                        step={1}
+                        onChange={(deg) => setRotate(deg / 5.7296)}
+                      />
+                    </div>
+                    <div className="slider-input-row">
+                      <MD3WavySlider
+                        min="-10"
+                        max="10"
+                        step="0.2"
+                        value={rotate}
+                        onChange={(e) => setRotate(Number(e.target.value))}
+                      />
+                    </div>
+                  </div>
+
+                  {/* 文字弯曲开关 */}
+                  <div className="slider-card-compact curve-card-compact">
+                    <div className="slider-card-header">
+                      <span className="slider-card-label">
+                        <mdui-icon-waves--rounded style={{ fontSize: 16, marginRight: 4, verticalAlign: "middle" }} />
+                        {t("curve")}
+                      </span>
+                      <span className="curve-status-badge">{curve ? "已开启" : "未开启"}</span>
+                    </div>
+                    <div className="curve-toggle-wrap">
+                      <label className="md3-switch-label">
+                        <input
+                          type="checkbox"
+                          checked={curve}
+                          onChange={(e) => setCurve(e.target.checked)}
+                          className="md3-switch-input"
+                        />
+                        <span className="md3-switch-slider" />
+                      </label>
+                      <span className="curve-desc-text">弧形环绕</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 2. 文案输入与台词区 */}
+              <div className="panel-section-group">
+                <div className="panel-header-row">
+                  <span className="panel-title">
+                    <mdui-icon-edit-note--rounded style={{ fontSize: 18, marginRight: 6, verticalAlign: "middle" }} />
+                    {t("text_label")}
+                  </span>
                   <div className="quote-action-group">
                     <button
                       type="button"
                       className={`btn-step ${historyIndex > 0 ? "" : "disabled"}`}
                       onClick={handlePrevQuote}
                       disabled={historyIndex <= 0}
-                      title="上一条历史文案"
+                      title="上一条"
                     >
-                      <IconPrev />
+                      <mdui-icon-navigate-before--rounded style={{ fontSize: 18, verticalAlign: "middle" }} />
                     </button>
                     <button
                       type="button"
                       className={`btn-step ${historyIndex < history.length - 1 ? "" : "disabled"}`}
                       onClick={handleNextQuote}
                       disabled={historyIndex >= history.length - 1}
-                      title="下一条历史文案"
+                      title="下一条"
                     >
-                      <IconNext />
+                      <mdui-icon-navigate-next--rounded style={{ fontSize: 18, verticalAlign: "middle" }} />
                     </button>
                     <button
                       type="button"
                       className="md3-btn-tonal btn-random-quote"
                       onClick={handleRandomQuote}
-                      title="随机摇一条抽象中文短句"
+                      title="随机生成趣味台词"
                     >
-                      <IconDice />
+                      <mdui-icon-auto-awesome--rounded style={{ fontSize: 16, marginRight: 4, verticalAlign: "middle" }} />
                       <span>{t("random_quote")}</span>
                     </button>
                   </div>
@@ -845,32 +983,31 @@ function App() {
 
                 <div className="md3-textfield-box">
                   <textarea
-                    rows="3"
+                    rows="2"
                     className="md3-textarea"
                     value={text}
-                    placeholder="输入表情包自定义文字 (回车即可自动折行)..."
+                    placeholder="输入文字（支持换行）..."
                     onChange={(e) => handleTextChange(e.target.value)}
                   />
                 </div>
 
-                {/* 快捷推荐台词 / 原案台词 / 中文翻译快捷填入 */}
+                {/* 常用台词 / 原案台词 / 中文翻译快捷填入 */}
                 <div className="quick-chips-row">
-                  <span className="quick-chips-label">快捷填入:</span>
+                  <span className="quick-chips-label">常用台词:</span>
                   <button
                     type="button"
                     className="quick-text-chip"
                     onClick={() => handleTextChange(activeSticker.defaultText?.text || "")}
-                    title="填入官方原版日文台词"
+                    title="官方原案"
                   >
                     原案: {activeSticker.defaultText?.text}
                   </button>
-                  {/* 中文用户显示官方台词的中文翻译快捷点击 */}
                   {i18n.language.startsWith("zh") && activeTranslation && (
                     <button
                       type="button"
                       className="quick-text-chip quick-trans-chip"
                       onClick={() => handleTextChange(activeTranslation)}
-                      title="一键将官方中文释义填入表情包"
+                      title="填入中文释义"
                     >
                       译文: {activeTranslation}
                     </button>
@@ -899,10 +1036,13 @@ function App() {
                 </div>
               </div>
 
-              {/* 2. 贴纸字体与颜色区 */}
+              {/* 3. 贴纸字体与颜色区 */}
               <div className="panel-section-group">
                 <div className="setting-block">
-                  <span className="setting-block-title">🔤 {t("sticker_font")}</span>
+                  <span className="setting-block-title">
+                    <mdui-icon-font-download--rounded style={{ fontSize: 16, marginRight: 4, verticalAlign: "middle" }} />
+                    {t("sticker_font")}
+                  </span>
                   <div className="font-chips-grid">
                     {STICKER_FONTS.map((f) => (
                       <button
@@ -917,15 +1057,18 @@ function App() {
                   </div>
                 </div>
 
-                <div className="setting-block" style={{ marginTop: 14 }}>
+                <div className="setting-block" style={{ marginTop: 12 }}>
                   <div className="setting-row-flex">
-                    <span className="setting-block-title">🎨 {t("text_color")}</span>
+                    <span className="setting-block-title">
+                      <mdui-icon-palette--rounded style={{ fontSize: 16, marginRight: 4, verticalAlign: "middle" }} />
+                      {t("text_color")}
+                    </span>
                     <button
                       type="button"
                       className="btn-palette-trigger"
                       onClick={() => setColorModalOpen(true)}
                     >
-                      <IconPalette />
+                      <mdui-icon-palette--rounded style={{ fontSize: 15, marginRight: 4, verticalAlign: "middle" }} />
                       <span>{t("color_palette")}</span>
                     </button>
                   </div>
@@ -953,98 +1096,7 @@ function App() {
                   </div>
                 </div>
               </div>
-
-              {/* 3. 排版参数微调区 (引入全新 MD3 波浪线拖动条 Wavy Sliders) */}
-              <div className="panel-section-group">
-                <div className="sliders-cluster">
-                  {/* 旋转角度 (MD3 Wavy Slider) */}
-                  <div className="slider-setting-box">
-                    <div className="slider-label-row">
-                      <span className="slider-title">🔄 {t("rotate")}</span>
-                      <EditableNumberTag
-                        value={Math.round(rotate * 5.7296)}
-                        unit="°"
-                        min={-60}
-                        max={60}
-                        step={1}
-                        onChange={(deg) => setRotate(deg / 5.7296)}
-                      />
-                    </div>
-                    <div className="slider-input-row">
-                      <MD3WavySlider
-                        min="-10"
-                        max="10"
-                        step="0.2"
-                        value={rotate}
-                        onChange={(e) => setRotate(Number(e.target.value))}
-                      />
-                    </div>
-                  </div>
-
-                  {/* 字号大小 (MD3 Wavy Slider) */}
-                  <div className="slider-setting-box">
-                    <div className="slider-label-row">
-                      <span className="slider-title">📏 {t("font_size")}</span>
-                      <EditableNumberTag
-                        value={fontSize}
-                        unit="px"
-                        min={10}
-                        max={100}
-                        step={1}
-                        onChange={(v) => setFontSize(v)}
-                      />
-                    </div>
-                    <div className="slider-input-row">
-                      <MD3WavySlider
-                        min="10"
-                        max="100"
-                        step="1"
-                        value={fontSize}
-                        onChange={(e) => setFontSize(Number(e.target.value))}
-                      />
-                    </div>
-                  </div>
-
-                  {/* 行间距 (MD3 Wavy Slider) */}
-                  <div className="slider-setting-box">
-                    <div className="slider-label-row">
-                      <span className="slider-title">↕️ {t("spacing")}</span>
-                      <EditableNumberTag
-                        value={spaceSize}
-                        unit="px"
-                        min={18}
-                        max={100}
-                        step={1}
-                        onChange={(v) => setSpaceSize(v)}
-                      />
-                    </div>
-                    <div className="slider-input-row">
-                      <MD3WavySlider
-                        min="18"
-                        max="100"
-                        step="1"
-                        value={spaceSize}
-                        onChange={(e) => setSpaceSize(Number(e.target.value))}
-                      />
-                    </div>
-                  </div>
-
-                  {/* 文字弯曲开关 */}
-                  <div className="switch-setting-row">
-                    <span className="switch-label">〰️ {t("curve")}</span>
-                    <label className="md3-switch-label">
-                      <input
-                        type="checkbox"
-                        checked={curve}
-                        onChange={(e) => setCurve(e.target.checked)}
-                        className="md3-switch-input"
-                      />
-                      <span className="md3-switch-slider" />
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
+</div>
           )}
 
           {/* 二级面板：贴纸图库 (758 张全网格浏览与组合过滤) */}
@@ -1069,7 +1121,7 @@ function App() {
 
               {/* 搜索过滤栏 */}
               <div className="sticker-search-bar">
-                <IconSearch />
+                <mdui-icon-search--rounded style={{ fontSize: 18, color: "var(--pjsk-color-text-tertiary)" }} />
                 <input
                   type="text"
                   className="sticker-search-input"
@@ -1086,7 +1138,7 @@ function App() {
                     className="search-clear-btn"
                     onClick={() => setStickerSearch("")}
                   >
-                    ✕
+                    <mdui-icon-close--rounded style={{ fontSize: 16, verticalAlign: "middle" }} />
                   </button>
                 )}
               </div>

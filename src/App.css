@@ -1559,3 +1559,100 @@
   white-space: nowrap;
   border: 0;
 }
+
+
+/* ---------------------------------------------------
+   8. MD3 紧凑 2x2 排版参数控制区 (字号、字距、旋转、弯曲)
+   --------------------------------------------------- */
+mdui-icon,
+[class*="mdui-icon-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.typography-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.slider-card-compact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  background: var(--pjsk-color-surface-container-high);
+  border: 1px solid var(--pjsk-color-border);
+  border-radius: var(--pjsk-radius-lg);
+  padding: 10px 14px;
+  transition: border-color 0.18s ease, background-color 0.18s ease;
+  min-height: 74px;
+}
+
+.slider-card-compact:hover {
+  border-color: var(--pjsk-color-border-hover);
+  background: var(--pjsk-color-surface-container-highest);
+}
+
+.slider-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-card-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pjsk-color-text-main);
+}
+
+.slider-card-label mdui-icon,
+.slider-card-label [class*="mdui-icon-"] {
+  color: var(--pjsk-color-primary);
+}
+
+.curve-card-compact {
+  justify-content: space-between;
+}
+
+.curve-status-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--pjsk-color-text-secondary);
+  background: var(--pjsk-color-surface-container);
+  padding: 2px 8px;
+  border-radius: var(--pjsk-radius-pill);
+  border: 1px solid var(--pjsk-color-border);
+}
+
+.curve-toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 0;
+}
+
+.curve-desc-text {
+  font-size: 12px;
+  color: var(--pjsk-color-text-tertiary);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .typography-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .slider-card-compact {
+    padding: 8px 10px;
+    min-height: 70px;
+  }
+  .slider-card-label {
+    font-size: 12px;
+  }
+}
