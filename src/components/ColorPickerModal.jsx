@@ -50,13 +50,13 @@ export default function ColorPickerModal({
   }, [currentColor]);
 
   const units = [
-    { id: "all", label: t("unit_all") },
-    { id: "バーチャル・シンガー", label: "バーチャル・シンガー" },
-    { id: "Leo/need", label: "Leo/need" },
-    { id: "MORE MORE JUMP！", label: "MORE MORE JUMP！" },
-    { id: "Vivid BAD SQUAD", label: "Vivid BAD SQUAD" },
-    { id: "ワンダーランズ×ショウタイム", label: "ワンダーランズ×ショウタイム" },
-    { id: "25時、ナイトコードで。", label: "25時、ナイトコードで。" },
+    { id: "all", label: t("unit_all"), icon: null, logo: null },
+    { id: "バーチャル・シンガー", label: "VIRTUAL SINGER", icon: "units/vs_icon.svg", logo: "units/vs_logo.png" },
+    { id: "Leo/need", label: "Leo/need", icon: "units/ln_icon.svg", logo: "units/ln_logo.png" },
+    { id: "MORE MORE JUMP！", label: "MORE MORE JUMP!", icon: "units/mmj_icon.svg", logo: "units/mmj_logo.png" },
+    { id: "Vivid BAD SQUAD", label: "Vivid BAD SQUAD", icon: "units/vbs_icon.svg", logo: "units/vbs_logo.png" },
+    { id: "ワンダーランズ×ショウタイム", label: "Wonderlands×Showtime", icon: "units/wxs_icon.svg", logo: "units/wxs_logo.png" },
+    { id: "25時、ナイトコードで。", label: "25-ji, Nightcord de.", icon: "units/n25_icon.svg", logo: "units/n25_logo.png" },
   ];
 
   const filteredCharacters = React.useMemo(() => {
@@ -162,8 +162,28 @@ export default function ColorPickerModal({
               type="button"
               className={`color-unit-tab ${selectedUnit === u.id ? "active" : ""}`}
               onClick={() => setSelectedUnit(u.id)}
+              title={u.label}
             >
-              {u.label}
+              {u.id === "all" ? (
+                <span>{u.label}</span>
+              ) : (
+                <div className="color-unit-tab-inner">
+                  {u.icon && (
+                    <img
+                      src={import.meta.env.BASE_URL + u.icon}
+                      alt=""
+                      className="color-unit-icon"
+                    />
+                  )}
+                  {u.logo && (
+                    <img
+                      src={import.meta.env.BASE_URL + u.logo}
+                      alt={u.label}
+                      className="color-unit-logo"
+                    />
+                  )}
+                </div>
+              )}
             </button>
           ))}
         </div>
@@ -214,7 +234,7 @@ export default function ColorPickerModal({
                       objectFit: "cover",
                       display: "block",
                     }}
-                    loading="lazy"
+                    decoding="async"
                   />
                   {isSelected && (
                     <div

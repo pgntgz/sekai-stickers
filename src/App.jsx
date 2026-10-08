@@ -1,3 +1,4 @@
+import '@mdui/icons/view-comfy--rounded.js';
 import '@mdui/icons/tune--rounded.js';
 import '@mdui/icons/photo-library--rounded.js';
 import '@mdui/icons/edit-note--rounded.js';
@@ -114,6 +115,60 @@ const SekaiDiamond = () => (
     <polygon points="8,0 16,8 8,16 0,8" />
   </svg>
 );
+
+
+// Project Sekai 官方团队官方图标与长 Logo 资源映射
+const UNIT_MAP = {
+  "バーチャル・シンガー": {
+    id: "vs",
+    name: "VIRTUAL SINGER",
+    icon: "units/vs_icon.svg",
+    logo: "units/vs_logo.png",
+    color: "#33CCBB",
+  },
+  "Leo/need": {
+    id: "ln",
+    name: "Leo/need",
+    icon: "units/ln_icon.svg",
+    logo: "units/ln_logo.png",
+    color: "#4455DD",
+  },
+  "MORE MORE JUMP！": {
+    id: "mmj",
+    name: "MORE MORE JUMP!",
+    icon: "units/mmj_icon.svg",
+    logo: "units/mmj_logo.png",
+    color: "#88DD44",
+  },
+  "MORE MORE JUMP !": {
+    id: "mmj",
+    name: "MORE MORE JUMP!",
+    icon: "units/mmj_icon.svg",
+    logo: "units/mmj_logo.png",
+    color: "#88DD44",
+  },
+  "Vivid BAD SQUAD": {
+    id: "vbs",
+    name: "Vivid BAD SQUAD",
+    icon: "units/vbs_icon.svg",
+    logo: "units/vbs_logo.png",
+    color: "#EE1166",
+  },
+  "ワンダーランズ×ショウタイム": {
+    id: "wxs",
+    name: "Wonderlands×Showtime",
+    icon: "units/wxs_icon.svg",
+    logo: "units/wxs_logo.png",
+    color: "#FF9900",
+  },
+  "25時、ナイトコードで。": {
+    id: "n25",
+    name: "25-ji, Nightcord de.",
+    icon: "units/n25_icon.svg",
+    logo: "units/n25_logo.png",
+    color: "#884499",
+  },
+};
 
 // 建立 slug -> characterColors 字典
 const CHAR_MAP = {};
@@ -371,13 +426,13 @@ function App() {
   const [stickerDisplayLimit, setStickerDisplayLimit] = useState(64);
 
   const units = [
-    { id: "all", name: t("unit_all") },
-    { id: "バーチャル・シンガー", name: "バーチャル・シンガー" },
-    { id: "Leo/need", name: "Leo/need" },
-    { id: "MORE MORE JUMP！", name: "MORE MORE JUMP！" },
-    { id: "Vivid BAD SQUAD", name: "Vivid BAD SQUAD" },
-    { id: "ワンダーランズ×ショウタイム", name: "ワンダーランズ×ショウタイム" },
-    { id: "25時、ナイトコードで。", name: "25時、ナイトコードで。" },
+    { id: "all", name: t("unit_all"), icon: null, logo: null },
+    { id: "バーチャル・シンガー", name: "VIRTUAL SINGER", icon: "units/vs_icon.svg", logo: "units/vs_logo.png" },
+    { id: "Leo/need", name: "Leo/need", icon: "units/ln_icon.svg", logo: "units/ln_logo.png" },
+    { id: "MORE MORE JUMP！", name: "MORE MORE JUMP!", icon: "units/mmj_icon.svg", logo: "units/mmj_logo.png" },
+    { id: "Vivid BAD SQUAD", name: "Vivid BAD SQUAD", icon: "units/vbs_icon.svg", logo: "units/vbs_logo.png" },
+    { id: "ワンダーランズ×ショウタイム", name: "Wonderlands×Showtime", icon: "units/wxs_icon.svg", logo: "units/wxs_logo.png" },
+    { id: "25時、ナイトコードで。", name: "25-ji, Nightcord de.", icon: "units/n25_icon.svg", logo: "units/n25_logo.png" },
   ];
 
   const filteredStickerList = useMemo(() => {
@@ -744,9 +799,18 @@ function App() {
               <div className="meta-text-col">
                 <div className="meta-title-row">
                   <span className="meta-char-name">{activeCharName}</span>
-                  <span className="meta-unit-badge" style={{ borderColor: activeSticker.charColor }}>
-                    {activeSticker.unit}
-                  </span>
+                  {UNIT_MAP[activeSticker.unit]?.logo ? (
+                    <img
+                      src={import.meta.env.BASE_URL + UNIT_MAP[activeSticker.unit].logo}
+                      alt={activeSticker.unit}
+                      className="meta-unit-logo-banner"
+                      title={UNIT_MAP[activeSticker.unit].name}
+                    />
+                  ) : (
+                    <span className="meta-unit-badge" style={{ borderColor: activeSticker.charColor }}>
+                      {activeSticker.unit}
+                    </span>
+                  )}
                   <span className={`meta-source-tag ${activeSticker.source === "manual" ? "manual" : "ai"}`}>
                     {activeSticker.source === "manual" ? t("source_manual") : t("source_ai")}
                   </span>
@@ -1113,8 +1177,31 @@ function App() {
                       setSelectedUnit(u.id);
                       setStickerDisplayLimit(64);
                     }}
+                    title={u.name}
                   >
-                    {u.name}
+                    {u.id === "all" ? (
+                      <>
+                        <mdui-icon-view-comfy--rounded style={{ fontSize: 16, marginRight: 5, verticalAlign: "middle" }} />
+                        <span>{u.name}</span>
+                      </>
+                    ) : (
+                      <div className="unit-chip-content">
+                        {u.icon && (
+                          <img
+                            src={import.meta.env.BASE_URL + u.icon}
+                            alt=""
+                            className="unit-chip-circle-icon"
+                          />
+                        )}
+                        {u.logo && (
+                          <img
+                            src={import.meta.env.BASE_URL + u.logo}
+                            alt={u.name}
+                            className="unit-chip-logo-img"
+                          />
+                        )}
+                      </div>
+                    )}
                   </button>
                 ))}
               </div>

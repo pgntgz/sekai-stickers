@@ -798,7 +798,7 @@
   background: var(--pjsk-color-surface-container-high);
   border: 1px solid var(--pjsk-color-border);
   border-radius: var(--pjsk-radius-pill);
-  padding: 5px 12px;
+  padding: 4px 9px;
   font-size: 12px;
   color: var(--pjsk-color-text-secondary);
   cursor: pointer;
@@ -1327,7 +1327,7 @@
   background: var(--pjsk-color-surface-container-high, #212b31);
   border: 1px solid var(--pjsk-color-border, #2c363c);
   border-radius: var(--pjsk-radius-pill);
-  padding: 5px 12px;
+  padding: 4px 9px;
   font-size: 12px;
   font-weight: 600;
   color: var(--pjsk-color-text-secondary);
@@ -1655,4 +1655,135 @@ mdui-icon,
   .slider-card-label {
     font-size: 12px;
   }
+}
+
+
+/* ---------------------------------------------------
+   11. MD3 编辑数值标签 (EditableNumberTag)
+   --------------------------------------------------- */
+.editable-val-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: var(--pjsk-color-surface-container-highest, #2c363c);
+  border: 1px solid var(--pjsk-color-border, #3a464d);
+  border-radius: var(--pjsk-radius-pill, 9999px);
+  padding: 3px 9px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--pjsk-color-primary, #59dbc1);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  line-height: 1;
+}
+
+.editable-val-tag:hover {
+  background: rgba(89, 219, 193, 0.16);
+  border-color: var(--pjsk-color-primary, #59dbc1);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(89, 219, 193, 0.28);
+}
+
+.editable-val-tag:active {
+  transform: scale(0.92);
+}
+
+.editable-val-icon {
+  font-size: 13px !important;
+  color: var(--pjsk-color-primary, #59dbc1);
+  opacity: 0.85;
+}
+
+.editable-val-wrap.editing {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--pjsk-color-surface-container-highest, #2c363c);
+  border: 1.5px solid var(--pjsk-color-primary, #59dbc1);
+  border-radius: var(--pjsk-radius-pill, 9999px);
+  padding: 2px 7px;
+  box-shadow: 0 0 0 3px rgba(89, 219, 193, 0.25);
+}
+
+.editable-val-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--pjsk-color-primary, #59dbc1);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  width: 44px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.editable-val-unit {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--pjsk-color-text-secondary);
+}
+
+/* ---------------------------------------------------
+   12. Project Sekai 团队官方 Logo & 图标组件样式
+   --------------------------------------------------- */
+.meta-unit-logo-banner {
+  height: 22px;
+  max-width: 96px;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+  transition: transform 0.18s ease;
+}
+
+.meta-unit-logo-banner:hover {
+  transform: scale(1.05);
+}
+
+.unit-chip-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.unit-chip-circle-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+}
+
+.unit-chip-logo-img {
+  height: 18px;
+  max-width: 85px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+}
+
+.color-unit-tab-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.color-unit-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.color-unit-logo {
+  height: 16px;
+  max-width: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
