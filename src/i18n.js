@@ -60,19 +60,20 @@ const resources = {
       "remaining": "剩余",
       "no_stickers_found": "未找到匹配的贴纸",
       
-      // 字体翻译
+      // 字体翻译 (精简单行，避免换行与高度不均)
       "sticker_font": "贴纸字体",
-      "font_yuruka": "日服原版 (Yuruka/缺简中)",
-      "font_tangtang": "唐糖体",
-      "font_huangyou": "黄油体",
-      "font_kuaile": "可爱圆体 (推荐/全字库)",
-      "font_brush": "狂草毛笔",
-      "font_loli": "陈宇萝莉体",
-      "font_dela": "Dela爆裂海报",
-      "font_mochiy": "Mochiy圆滚",
+      "font_kuaile": "可爱圆体",
+      "font_wqy": "文泉驿圆",
+      "font_yuruka": "日服原版",
+      "font_dela": "爆裂海报",
+      "font_mochiy": "Mochiy圆",
       "font_pixel": "8Bit像素",
-      "font_wqy": "文泉驿圆体 (标准)",
-      "font_system": "系统黑体"
+      "font_huangyou": "黄油体",
+      "font_brush": "狂草毛笔",
+      "font_system": "系统黑体",
+      "font_tangtang": "唐糖体",
+      "font_hachi": "八丸萌体",
+      "font_rocknroll": "动感摇滚"
     }
   },
   en: {
@@ -134,17 +135,18 @@ const resources = {
 
       // 字体翻译
       "sticker_font": "Sticker Font: ",
-      "font_yuruka": "JP Original (Yuruka Std)",
-      "font_tangtang": "TangTang",
-      "font_huangyou": "HuangYou",
-      "font_kuaile": "Cute Round (Full CJK)",
-      "font_brush": "Brush",
-      "font_loli": "Loli Type v2",
+      "font_kuaile": "Cute Round",
+      "font_wqy": "WenQuanYi",
+      "font_yuruka": "Yuruka (JP)",
       "font_dela": "Dela Poster",
-      "font_mochiy": "Mochiy Round",
-      "font_pixel": "8Bit Pixel",
-      "font_wqy": "WenQuanYi Zen (Standard)",
-      "font_system": "System Sans"
+      "font_mochiy": "Mochiy Pop",
+      "font_pixel": "8-Bit Pixel",
+      "font_huangyou": "HuangYou",
+      "font_brush": "Brush",
+      "font_system": "System Sans",
+      "font_tangtang": "FangTang",
+      "font_hachi": "Hachi Maru",
+      "font_rocknroll": "RocknRoll"
     }
   },
   ja: {
@@ -206,17 +208,18 @@ const resources = {
 
       // 字体翻译
       "sticker_font": "スタンプフォント：",
-      "font_yuruka": "JP公式スタンプ (ゆる文字)",
-      "font_tangtang": "唐糖体",
-      "font_huangyou": "黄油体",
-      "font_kuaile": "可爱圆体 (推荐/全字库)",
-      "font_brush": "毛筆ブラシ",
-      "font_loli": "ロリ体V2",
+      "font_kuaile": "カワイイ丸",
+      "font_wqy": "文泉驛丸",
+      "font_yuruka": "ユルカ原版",
       "font_dela": "デラゴシック",
-      "font_mochiy": "モチポップ",
-      "font_pixel": "ドットゴシック",
-      "font_wqy": "文泉円体 (標準)",
-      "font_system": "システム"
+      "font_mochiy": "モッチーPOP",
+      "font_pixel": "8Bitドット",
+      "font_huangyou": "黄油体",
+      "font_brush": "狂草毛筆",
+      "font_system": "システム",
+      "font_tangtang": "唐糖体",
+      "font_hachi": "ハチマルPOP",
+      "font_rocknroll": "ロックンロール"
     }
   }
 };

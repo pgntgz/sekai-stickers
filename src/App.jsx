@@ -196,16 +196,18 @@ const SYSTEM_FALLBACK =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif';
 
 const STICKER_FONTS = [
-  { id: "kuaile", label: "font_kuaile", fontFamily: `'ZCOOL KuaiLe', ${SYSTEM_FALLBACK}` },
-  { id: "wqy", label: "font_wqy", fontFamily: `'WenQuanYi Zen Hei', 'WenQuanYi Micro Hei', 'Noto Sans SC', ${SYSTEM_FALLBACK}` },
-  { id: "yuruka", label: "font_yuruka", fontFamily: `'YurukaStd', ${SYSTEM_FALLBACK}` },
-  { id: "dela", label: "font_dela", fontFamily: `'Dela Gothic One', ${SYSTEM_FALLBACK}` },
-  { id: "mochiy", label: "font_mochiy", fontFamily: `'Mochiy Pop One', ${SYSTEM_FALLBACK}` },
-  { id: "pixel", label: "font_pixel", fontFamily: `'DotGothic16', ${SYSTEM_FALLBACK}` },
-  { id: "huangyou", label: "font_huangyou", fontFamily: `'ZCOOL QingKe HuangYou', ${SYSTEM_FALLBACK}` },
-  { id: "brush", label: "font_brush", fontFamily: `'Ma Shan Zheng', ${SYSTEM_FALLBACK}` },
-  { id: "system", label: "font_system", fontFamily: SYSTEM_FALLBACK },
-  { id: "tangtang", label: "font_tangtang", fontFamily: `'SSFangTangTi', 'ShangShouFangTangTi', ${SYSTEM_FALLBACK}` },
+  { id: "kuaile", label: "font_kuaile", hint: "可爱圆体 (站酷快乐体 / 全字库推荐)", fontFamily: `'ZCOOL KuaiLe', ${SYSTEM_FALLBACK}` },
+  { id: "wqy", label: "font_wqy", hint: "文泉驿圆 (文泉驿正黑/微米黑)", fontFamily: `'WenQuanYi Zen Hei', 'WenQuanYi Micro Hei', 'Noto Sans SC', ${SYSTEM_FALLBACK}` },
+  { id: "yuruka", label: "font_yuruka", hint: "日服原版 (YurukaStd 官方游戏贴纸原版字体)", fontFamily: `'YurukaStd', ${SYSTEM_FALLBACK}` },
+  { id: "dela", label: "font_dela", hint: "爆裂海报 (Dela Gothic One 粗粝爆裂海报体)", fontFamily: `'Dela Gothic One', ${SYSTEM_FALLBACK}` },
+  { id: "mochiy", label: "font_mochiy", hint: "Mochiy圆 (Mochiy Pop One 软萌圆滚体)", fontFamily: `'Mochiy Pop One', ${SYSTEM_FALLBACK}` },
+  { id: "pixel", label: "font_pixel", hint: "8Bit像素 (DotGothic16 复古点阵体)", fontFamily: `'DotGothic16', ${SYSTEM_FALLBACK}` },
+  { id: "huangyou", label: "font_huangyou", hint: "黄油体 (站酷庆科黄油体)", fontFamily: `'ZCOOL QingKe HuangYou', ${SYSTEM_FALLBACK}` },
+  { id: "brush", label: "font_brush", hint: "狂草毛笔 (马善政毛笔狂草体)", fontFamily: `'Ma Shan Zheng', ${SYSTEM_FALLBACK}` },
+  { id: "system", label: "font_system", hint: "系统黑体 (设备原生无衬线黑体)", fontFamily: SYSTEM_FALLBACK },
+  { id: "tangtang", label: "font_tangtang", hint: "唐糖体 (上手方糖甜心体)", fontFamily: `'SSFangTangTi', 'ShangShouFangTangTi', ${SYSTEM_FALLBACK}` },
+  { id: "hachi", label: "font_hachi", hint: "八丸萌体 (Hachi Maru Pop 萌系漫画手写圆体)", fontFamily: `'Hachi Maru Pop', ${SYSTEM_FALLBACK}` },
+  { id: "rocknroll", label: "font_rocknroll", hint: "动感摇滚 (RocknRoll One 动感POP体)", fontFamily: `'RocknRoll One', ${SYSTEM_FALLBACK}` },
 ];
 
 const PRESET_QUICK_COLORS = [
@@ -248,7 +250,9 @@ function App() {
     STICKER_FONTS[0].fontFamily;
 
   const [fontLoadedVersion, setFontLoadedVersion] = useState(0);
-  const [infoOpen, setInfoOpen] = useState(false);
+  const [infoOpen, setInfoOpen] = useState(() => {
+    return typeof window !== "undefined" && window.location.hash.includes("info");
+  });
   const [colorModalOpen, setColorModalOpen] = useState(() => {
     return typeof window !== "undefined" && window.location.hash.includes("colorModal");
   });
@@ -1114,6 +1118,7 @@ function App() {
                         type="button"
                         className={`font-chip ${stickerFont === f.id ? "active" : ""}`}
                         onClick={() => handleFontChange(f.id)}
+                        title={f.hint}
                       >
                         <span>{t(f.label)}</span>
                       </button>
