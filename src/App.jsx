@@ -19,6 +19,8 @@ import '@mdui/icons/check--rounded.js';
 import '@mdui/icons/info--rounded.js';
 import '@mdui/icons/navigate-before--rounded.js';
 import '@mdui/icons/navigate-next--rounded.js';
+import '@mdui/icons/translate--rounded.js';
+import '@mdui/icons/arrow-drop-down--rounded.js';
 import "./App.css";
 import Canvas from "./components/Canvas";
 import { useState, useEffect, useRef, useMemo } from "react";
@@ -237,6 +239,23 @@ function App() {
   };
 
   // 贴纸字体
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const langMenuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(e.target)) {
+        setLangMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
+
   const [stickerFont, setStickerFont] = useState(
     localStorage.getItem("pjsk_font") || "kuaile"
   );
@@ -648,8 +667,8 @@ function App() {
               <span className="theme-label">{t("dynamic_theme")}</span>
             </button>
 
-            {/* 语言切换胶囊 */}
-            <div className="lang-pill-group">
+            {/* 语言切换：桌面横屏显示平铺胶囊，竖屏/移动端显示统一二级下拉菜单 */}
+            <div className="lang-pill-group desktop-only-lang">
               <button
                 type="button"
                 className={i18n.language === "zh" ? "active" : ""}
@@ -671,6 +690,51 @@ function App() {
               >
                 日本語
               </button>
+            </div>
+
+            <div className="lang-menu-wrapper mobile-only-lang" ref={langMenuRef}>
+              <button
+                type="button"
+                className={`lang-menu-trigger-btn ${langMenuOpen ? "active" : ""}`}
+                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                aria-label="选择语言 / Select Language"
+                title="选择语言 / Select Language"
+              >
+                <mdui-icon-translate--rounded style={{ fontSize: 16 }} />
+                <span className="lang-current-label">
+                  {i18n.language === "zh" ? "简中" : i18n.language === "ja" ? "日本語" : "EN"}
+                </span>
+                <mdui-icon-arrow-drop-down--rounded style={{ fontSize: 18 }} />
+              </button>
+
+              {langMenuOpen && (
+                <div className="lang-dropdown-menu">
+                  <button
+                    type="button"
+                    className={`lang-menu-item ${i18n.language === "zh" ? "active" : ""}`}
+                    onClick={() => { changeLanguage("zh"); setLangMenuOpen(false); }}
+                  >
+                    <span className="lang-item-name">简体中文</span>
+                    {i18n.language === "zh" && <mdui-icon-check--rounded style={{ fontSize: 16, color: "var(--pjsk-color-primary)" }} />}
+                  </button>
+                  <button
+                    type="button"
+                    className={`lang-menu-item ${i18n.language === "en" ? "active" : ""}`}
+                    onClick={() => { changeLanguage("en"); setLangMenuOpen(false); }}
+                  >
+                    <span className="lang-item-name">English</span>
+                    {i18n.language === "en" && <mdui-icon-check--rounded style={{ fontSize: 16, color: "var(--pjsk-color-primary)" }} />}
+                  </button>
+                  <button
+                    type="button"
+                    className={`lang-menu-item ${i18n.language === "ja" ? "active" : ""}`}
+                    onClick={() => { changeLanguage("ja"); setLangMenuOpen(false); }}
+                  >
+                    <span className="lang-item-name">日本語</span>
+                    {i18n.language === "ja" && <mdui-icon-check--rounded style={{ fontSize: 16, color: "var(--pjsk-color-primary)" }} />}
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* 信息关于弹窗 */}
